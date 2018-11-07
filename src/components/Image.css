@@ -20,3 +20,16 @@
   right: 0;
   bottom: 0;
 }
+
+.opener .BackgroundImage {
+  opacity: 0.7;
+}
+
+.opener .gradient {
+  width: 100%;
+  height: 50rem;
+  background: linear-gradient(transparent, var(--medium));
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+}

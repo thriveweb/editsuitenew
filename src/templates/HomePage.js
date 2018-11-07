@@ -5,7 +5,7 @@ import { SectionsContainer, Section } from 'react-fullpage'
 // import PageHeader from '../components/PageHeader'
 // import Content from '../components/Content'
 import Layout from '../components/Layout'
-// import Accordion from '../components/Accordion'
+import Image from '../components/Image'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title }) => {
@@ -15,12 +15,15 @@ export const HomePageTemplate = ({ title }) => {
     scrollBar: false,
     navigation: false,
     verticalAlign: false,
-    arrowNavigation: true
+    controlArrows: true
   }
 
   return (
     <SectionsContainer {...options}>
-      <Section>{title}</Section>
+      <Section className="opener relative">
+        <div className="gradient" />
+        <Image background src="images/home.jpg" alt={title} />
+      </Section>
       <Section>Page 2</Section>
       <Section>Page 3</Section>
     </SectionsContainer>
