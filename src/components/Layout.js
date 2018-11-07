@@ -35,7 +35,10 @@ export default ({ children, meta, title }) => {
               titleTemplate={`%s | ${siteTitle}`}
             >
               {title}
-              {/* Add font link tags here */}
+              <link
+                rel="stylesheet"
+                href="https://use.typekit.net/rdy6jzy.css"
+              />
             </Helmet>
 
             <Meta
@@ -47,8 +50,6 @@ export default ({ children, meta, title }) => {
               }
               {...meta}
             />
-
-            <GithubCorner url="https://github.com/thriveweb/yellowcake" />
 
             <Nav />
 
