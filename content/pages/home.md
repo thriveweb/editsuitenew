@@ -2,7 +2,8 @@
 template: HomePage
 slug: ''
 title: The Edit Suite
-sectionIntro:
+opener: 'https://ucarecdn.com/33ec3494-00f8-4191-b410-287b36f264b0/home.jpg'
+intro:
   title: We are creators
   subtitle: What we do
   description: |-

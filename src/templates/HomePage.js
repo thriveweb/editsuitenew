@@ -7,7 +7,7 @@ import Image from '../components/Image'
 import Testimonials from '../components/Testimonials'
 
 // Export Template for use in CMS preview
-export const HomePageTemplate = ({ title, sectionIntro, testimonials }) => {
+export const HomePageTemplate = ({ title, opener, intro, testimonials }) => {
   let options = {
     sectionClassName: 'section',
     anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
@@ -21,22 +21,22 @@ export const HomePageTemplate = ({ title, sectionIntro, testimonials }) => {
     <SectionsContainer {...options}>
       <Section className="opener relative">
         <div className="gradient" />
-        <Image background src="/images/home.jpg" alt={title} />
+        <Image background src={opener} t={title} />
       </Section>
 
       {/* Intro Section */}
 
-      {sectionIntro && (
+      {intro && (
         <Section>
           <div className="thin flex">
             <div className="title">
-              <h5>{sectionIntro.subtitle}</h5>
-              <h2>{sectionIntro.title}</h2>
+              <h5>{intro.subtitle}</h5>
+              <h2>{intro.title}</h2>
             </div>
             <div>
-              <p>{sectionIntro.description}</p>
+              <p>{intro.description}</p>
               <button>
-                <h5>{sectionIntro.buttonText}</h5>
+                <h5>{intro.buttonText}</h5>
               </button>
             </div>
           </div>
@@ -67,16 +67,18 @@ export const HomePageTemplate = ({ title, sectionIntro, testimonials }) => {
 
       {/* Testimonials Section */}
 
-      <Section>
-        <div className="thin">
-          <div className="title">
-            <h5>Testimonials</h5>
-            <h2>Don't take our word for it</h2>
-          </div>
+      {testimonials && (
+        <Section>
+          <div className="thin">
+            <div className="title">
+              <h5>Testimonials</h5>
+              <h2>Don't take our word for it</h2>
+            </div>
 
-          <Testimonials testimonials={testimonials} />
-        </div>
-      </Section>
+            <Testimonials testimonials={testimonials} />
+          </div>
+        </Section>
+      )}
 
       {/* Contact Section */}
 
@@ -127,7 +129,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        sectionIntro {
+        opener
+        intro {
           title
           subtitle
           description
