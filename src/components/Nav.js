@@ -11,8 +11,6 @@ export default class Nav extends Component {
   }
 
   handleMenuToggle = () => this.setState({ active: !this.state.active })
-
-  // Only close nav if it is open
   handleLinkClick = () => this.state.active && this.handleMenuToggle()
 
   render() {
@@ -29,34 +27,23 @@ export default class Nav extends Component {
     )
 
     return (
-      <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
-        <div className="Nav--Container container">
+      <nav className={`nav ${active ? 'nav-active' : ''}`}>
+        <div className="wide">
+          <div className="menu-button" onClick={this.handleMenuToggle}>
+            <div className="bar" />
+            <div className="bar" />
+          </div>
+
           <Link to="/" onClick={this.handleLinkClick}>
             <Logo />
           </Link>
-          <div className="Nav--Links">
-            <NavLink to="/" exact="true">
-              Home
-            </NavLink>
-            <NavLink to="/about/" exact="true">
-              About
-            </NavLink>
-            <NavLink to="/blog/" exact="true">
-              Blog
-            </NavLink>
-            <NavLink to="/default/" exact="true">
-              Default
-            </NavLink>
-            <NavLink to="/contact/" exact="true">
-              Contact
-            </NavLink>
+
+          <div className="nav-links">
+            <NavLink to="/about/">About</NavLink>
+            <NavLink to="/work/">Work</NavLink>
+            <NavLink to="/blog/">Blog</NavLink>
+            <NavLink to="/contact/">Contact</NavLink>
           </div>
-          <button
-            className="Button-blank Nav--MenuButton"
-            onClick={this.handleMenuToggle}
-          >
-            {active ? <X /> : <Menu />}
-          </button>
         </div>
       </nav>
     )
