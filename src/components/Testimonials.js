@@ -32,7 +32,7 @@ class Testimonials extends React.Component {
         <Image src="images/quote.svg" alt="" />
         <Swiper {...params}>
           {testimonials.map((item, index) => (
-            <div key={item.name}>
+            <div key={`${item.name} + ${index}`}>
               <p>{item.content}</p>
               <h5>
                 {item.name}, {item.company}

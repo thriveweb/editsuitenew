@@ -1,2 +1,29 @@
-.About {
+.icon {
+  width: 28%;
+  text-align: center;
+}
+
+.icon .LazyImage,
+.icon h5 {
+  margin-bottom: 2.5rem;
+}
+
+.icon p {
+  opacity: 0.6;
+}
+
+.blurb .Content,
+.blurb .LazyImage {
+  width: 48%;
+}
+
+@media screen and (max-width: 850px) {
+  .blurb .Content,
+  .blurb .LazyImage {
+    width: 100%;
+  }
+
+  .blurb .LazyImage {
+    margin-bottom: 2rem;
+  }
 }
