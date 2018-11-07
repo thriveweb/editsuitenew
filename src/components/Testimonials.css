@@ -1,0 +1,45 @@
+.testimonials img.LazyImage {
+  align-self: flex-start;
+  padding-right: 4rem;
+  opacity: 0.2;
+}
+
+.swiper-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  width: 90%;
+  text-align: left;
+  height: 12rem;
+}
+
+.swiper-slide {
+  min-height: 12rem;
+}
+
+.swiper-slide p {
+  font-size: 1.8rem;
+}
+
+.swiper-pagination {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 1rem;
+  width: 2px;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.1);
+  height: 2rem;
+  width: 1px;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
+}

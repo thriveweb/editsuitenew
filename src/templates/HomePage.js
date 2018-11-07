@@ -2,16 +2,15 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { SectionsContainer, Section } from 'react-fullpage'
 
-// import PageHeader from '../components/PageHeader'
-// import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Image from '../components/Image'
+import Testimonials from '../components/Testimonials'
 
 // Export Template for use in CMS preview
-export const HomePageTemplate = ({ title }) => {
+export const HomePageTemplate = ({ title, sectionIntro, testimonials }) => {
   let options = {
     sectionClassName: 'section',
-    anchors: ['sectionOne', 'sectionTwo', 'sectionThree'],
+    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
     scrollBar: false,
     navigation: false,
     verticalAlign: true,
@@ -26,27 +25,85 @@ export const HomePageTemplate = ({ title }) => {
         <Image background src="images/home.jpg" alt={title} />
       </Section>
 
-      <Section>
-        <div className="thin flex">
-          <div className="title">
-            <h5>Who we are</h5>
-            <h2>We are creators</h2>
+      {/* Intro Section */}
+
+      {sectionIntro && (
+        <Section>
+          <div className="thin flex">
+            <div className="title">
+              <h5>{sectionIntro.subtitle}</h5>
+              <h2>{sectionIntro.title}</h2>
+            </div>
+            <div>
+              <p>{sectionIntro.description}</p>
+              <button>
+                <h5>{sectionIntro.buttonText}</h5>
+              </button>
+            </div>
           </div>
-          <div>
-            <p>
-              We are a video, photography and CASA certified drone aerial
-              company based in Mermaid Beach on the Gold Coast of Australia
-              specializing in the creation of video, motion graphics, drone
-              videos, aerial photography, and much more.
-            </p>
-            <button>
-              <h5>About us</h5>
-            </button>
+        </Section>
+      )}
+
+      {/* Services Section */}
+
+      <Section className="light">
+        <div className="thin">
+          <div className="title">
+            <h5>Our specialties</h5>
+            <h2>What we can offer</h2>
           </div>
         </div>
       </Section>
 
-      <Section>Page 3</Section>
+      {/* Clients Section */}
+
+      <Section className="dark">
+        <div className="thin">
+          <div className="title">
+            <h5>Our clients</h5>
+            <h2>Who we work with</h2>
+          </div>
+        </div>
+      </Section>
+
+      {/* Testimonials Section */}
+
+      <Section>
+        <div className="thin">
+          <div className="title">
+            <h5>Testimonials</h5>
+            <h2>Don't take our word for it</h2>
+          </div>
+
+          <Testimonials testimonials={testimonials} />
+        </div>
+      </Section>
+
+      {/* Contact Section */}
+
+      <Section className="dark">
+        <div className="thin">
+          <div className="title">
+            <h5>Get in touch</h5>
+            <h2>Let's work together</h2>
+          </div>
+          <div className="flex">
+            <div className="map">
+              <Image src="images/map.png" alt="" />
+            </div>
+            <div>
+              <h5>Office</h5>
+              <p>2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia</p>
+              <br />
+              <h5>Phone</h5>
+              <p>(07) 5575 2185</p>
+              <br />
+              <h5>Email</h5>
+              <p>info@theeditsuite.com.aua</p>
+            </div>
+          </div>
+        </div>
+      </Section>
     </SectionsContainer>
   )
 }
@@ -71,11 +128,16 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        subtitle
-        featuredImage
-        accordion {
+        sectionIntro {
           title
+          subtitle
+          description
+          buttonText
+        }
+        testimonials {
           content
+          name
+          company
         }
       }
     }
