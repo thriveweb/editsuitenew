@@ -14,7 +14,6 @@ export const HomePageTemplate = ({ title, sectionIntro, testimonials }) => {
     scrollBar: false,
     navigation: false,
     verticalAlign: true,
-    controlArrows: true,
     v2compatible: true
   }
 
@@ -22,7 +21,7 @@ export const HomePageTemplate = ({ title, sectionIntro, testimonials }) => {
     <SectionsContainer {...options}>
       <Section className="opener relative">
         <div className="gradient" />
-        <Image background src="images/home.jpg" alt={title} />
+        <Image background src="/images/home.jpg" alt={title} />
       </Section>
 
       {/* Intro Section */}
