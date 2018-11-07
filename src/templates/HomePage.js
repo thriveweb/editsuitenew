@@ -14,8 +14,9 @@ export const HomePageTemplate = ({ title }) => {
     anchors: ['sectionOne', 'sectionTwo', 'sectionThree'],
     scrollBar: false,
     navigation: false,
-    verticalAlign: false,
-    controlArrows: true
+    verticalAlign: true,
+    controlArrows: true,
+    v2compatible: true
   }
 
   return (
@@ -24,7 +25,27 @@ export const HomePageTemplate = ({ title }) => {
         <div className="gradient" />
         <Image background src="images/home.jpg" alt={title} />
       </Section>
-      <Section>Page 2</Section>
+
+      <Section>
+        <div className="thin flex">
+          <div className="title">
+            <h5>Who we are</h5>
+            <h2>We are creators</h2>
+          </div>
+          <div>
+            <p>
+              We are a video, photography and CASA certified drone aerial
+              company based in Mermaid Beach on the Gold Coast of Australia
+              specializing in the creation of video, motion graphics, drone
+              videos, aerial photography, and much more.
+            </p>
+            <button>
+              <h5>About us</h5>
+            </button>
+          </div>
+        </div>
+      </Section>
+
       <Section>Page 3</Section>
     </SectionsContainer>
   )

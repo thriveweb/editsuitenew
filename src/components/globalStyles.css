@@ -21,13 +21,13 @@ body {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
   transition: all 0.5s ease;
 }
 
 a:hover {
-  color: var(--medium);
+  color: white;
 }
 
 p,
@@ -62,25 +62,15 @@ h6 {
   line-height: 150%;
 }
 
-h1,
-h2 {
-  max-width: 120rem;
-  margin: auto;
-  padding: 0 3rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
 h1 {
   font-size: 6rem;
   color: white;
 }
 
 h2 {
-  font-size: 4.5rem;
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 0.5px;
 }
 
 h3 {
@@ -98,9 +88,17 @@ h4 {
 
 h5 {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.title {
+  width: 100%;
+}
+
+.title h5 {
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 700px) {
@@ -119,16 +117,6 @@ h5 {
 
 .clear {
   clear: both;
-}
-
-.white {
-  background: white;
-  color: black;
-}
-
-.black {
-  background: black;
-  color: white;
 }
 
 .relative {
@@ -160,10 +148,6 @@ h5 {
   text-align: center;
 }
 
-section {
-  padding: 10rem 0;
-}
-
 .wide,
 .thin {
   margin: auto;
@@ -175,16 +159,11 @@ section {
 }
 
 .thin {
-  max-width: 110rem;
+  max-width: 90rem;
 }
 
 .half {
   width: 47%;
-}
-
-.banner {
-  background: black;
-  padding: 8rem 0;
 }
 
 @media screen and (max-width: 400px) {
@@ -208,34 +187,24 @@ section {
   .half:last-child {
     margin: 0;
   }
-
-  section {
-    padding: 5rem 0;
-  }
 }
 
 /* button */
 
-.button {
-  background: black;
+button {
+  border: 0;
+  border-bottom: 3px solid white;
+  background: none;
   color: white;
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  margin: auto;
-  padding: 1.2rem 3.5rem;
-  display: inline-block;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.5s ease;
+  margin-top: 2rem;
+  transition: 0.2s ease all;
 }
 
-.button:hover,
-.button:focus {
-  background: var(--medium);
-  color: white;
+button:hover {
+  cursor: pointer;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+button:focus {
+  outline: none;
 }
