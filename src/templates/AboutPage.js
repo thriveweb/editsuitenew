@@ -51,14 +51,16 @@ export const AboutPageTemplate = ({
 
       {/* Blurb Section */}
 
-      <Section className="light blurb">
+      <Section className="light">
         <div className="wide">
           <div className="title">
             <h5>{blurb.subtitle}</h5>
             <h2>{blurb.title}</h2>
           </div>
-          <div className="blurb flex">
-            <Image src={blurb.column1} alt={blurb.title} />
+          <div className="flex half">
+            <div>
+              <Image src={blurb.column1} alt={blurb.title} className="cover" />
+            </div>
             <Content src={blurb.column2} />
           </div>
         </div>

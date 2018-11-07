@@ -88,9 +88,13 @@ export const HomePageTemplate = ({ title, opener, intro, testimonials }) => {
             <h5>Get in touch</h5>
             <h2>Let's work together</h2>
           </div>
-          <div className="flex">
+          <div className="flex half">
             <div className="map">
-              <Image src="images/map.png" alt="" />
+              <Image
+                src="https://ucarecdn.com/c72d16a8-46bc-42e7-9186-4e221a19591b/"
+                className="cover"
+                alt=""
+              />
             </div>
             <div>
               <h5>Office</h5>

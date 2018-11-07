@@ -173,8 +173,14 @@ h5 {
   max-width: 90rem;
 }
 
-.half {
-  width: 47%;
+.half div {
+  width: 48%;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 400px) {
@@ -190,7 +196,7 @@ h5 {
     display: block;
   }
 
-  .half {
+  .half div {
     width: 100%;
     margin-bottom: 4rem;
   }
