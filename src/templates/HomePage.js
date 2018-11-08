@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { SectionsContainer, Section } from 'react-fullpage'
 
 import Layout from '../components/Layout'
@@ -7,7 +7,13 @@ import Image from '../components/Image'
 import Testimonials from '../components/Testimonials'
 
 // Export Template for use in CMS preview
-export const HomePageTemplate = ({ title, opener, intro, testimonials }) => {
+export const HomePageTemplate = ({
+  title,
+  opener,
+  intro,
+  testimonials,
+  contact
+}) => {
   let options = {
     sectionClassName: 'section',
     anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
@@ -21,7 +27,7 @@ export const HomePageTemplate = ({ title, opener, intro, testimonials }) => {
     <SectionsContainer {...options}>
       <Section className="opener relative">
         <div className="gradient" />
-        <Image background src={opener} t={title} />
+        <Image background src={opener} alt={title} />
       </Section>
 
       {/* Intro Section */}
@@ -30,14 +36,14 @@ export const HomePageTemplate = ({ title, opener, intro, testimonials }) => {
         <Section>
           <div className="thin flex">
             <div className="title">
-              <h5>{intro.subtitle}</h5>
-              <h2>{intro.title}</h2>
+              <h5>What we do</h5>
+              <h2>We are creators</h2>
             </div>
             <div>
               <p>{intro.description}</p>
-              <button>
-                <h5>{intro.buttonText}</h5>
-              </button>
+              <Link to={intro.buttonLink} className="button">
+                {intro.buttonText}
+              </Link>
             </div>
           </div>
         </Section>
@@ -82,33 +88,37 @@ export const HomePageTemplate = ({ title, opener, intro, testimonials }) => {
 
       {/* Contact Section */}
 
-      <Section className="dark">
-        <div className="thin">
-          <div className="title">
-            <h5>Get in touch</h5>
-            <h2>Let's work together</h2>
-          </div>
-          <div className="flex half">
-            <div className="map">
-              <Image
-                src="https://ucarecdn.com/c72d16a8-46bc-42e7-9186-4e221a19591b/"
-                className="cover"
-                alt=""
-              />
+      {contact && (
+        <Section className="dark">
+          <div className="thin">
+            <div className="title">
+              <h5>Get in touch</h5>
+              <h2>Let's work together</h2>
             </div>
-            <div>
-              <h5>Office</h5>
-              <p>2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia</p>
-              <br />
-              <h5>Phone</h5>
-              <p>(07) 5575 2185</p>
-              <br />
-              <h5>Email</h5>
-              <p>info@theeditsuite.com.aua</p>
+            <div className="flex half">
+              <div className="map">
+                <Image src={contact.map} className="cover" alt={title} />
+              </div>
+              <div>
+                <h5>Office</h5>
+                <p>{contact.address}</p>
+                <br />
+
+                <h5>Phone</h5>
+                <a href={`tel:${contact.phone}`}>
+                  <p>{contact.phone}</p>
+                </a>
+                <br />
+
+                <h5>Email</h5>
+                <a href={`mailto:${contact.email}`}>
+                  <p>{contact.email}</p>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      )}
     </SectionsContainer>
   )
 }
@@ -135,15 +145,20 @@ export const pageQuery = graphql`
         title
         opener
         intro {
-          title
-          subtitle
           description
           buttonText
+          buttonLink
         }
         testimonials {
           content
           name
           company
+        }
+        contact {
+          map
+          address
+          email
+          phone
         }
       }
     }
