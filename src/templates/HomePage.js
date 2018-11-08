@@ -4,6 +4,7 @@ import { SectionsContainer, Section } from 'react-fullpage'
 
 import Layout from '../components/Layout'
 import Image from '../components/Image'
+import ProjectCategories from '../components/ProjectCategories'
 import ClientsSection from '../components/ClientsSection'
 import Testimonials from '../components/Testimonials'
 
@@ -12,6 +13,7 @@ export const HomePageTemplate = ({
   title,
   opener,
   intro,
+  projectCategories = [],
   clients,
   testimonials,
   contact
@@ -51,16 +53,20 @@ export const HomePageTemplate = ({
         </Section>
       )}
 
-      {/* Services Section */}
+      {/* Project Categories */}
 
-      <Section className="light">
-        <div className="thin">
-          <div className="title">
-            <h5>Our specialties</h5>
-            <h2>What we can offer</h2>
+      {!!projectCategories.length && (
+        <Section>
+          <div className="thin">
+            <div className="title">
+              <h5>Our specialities</h5>
+              <h2>We are can offer</h2>
+            </div>
+
+            <ProjectCategories categories={projectCategories} />
           </div>
-        </div>
-      </Section>
+        </Section>
+      )}
 
       {/* Clients Section */}
 
@@ -128,7 +134,7 @@ export const HomePageTemplate = ({
 }
 
 // Export Default HomePage for front-end
-const HomePage = ({ data: { page, clients } }) => (
+const HomePage = ({ data: { page, clients, projectCategories } }) => (
   <Layout meta={page.frontmatter.meta || false}>
     <HomePageTemplate
       {...page}
@@ -137,6 +143,11 @@ const HomePage = ({ data: { page, clients } }) => (
       clients={clients.edges.map(item => ({
         ...item.node,
         ...item.node.frontmatter
+      }))}
+      projectCategories={projectCategories.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
       }))}
     />
   </Layout>
@@ -184,6 +195,25 @@ export const pageQuery = graphql`
             title
             logo
             link
+          }
+        }
+      }
+    }
+
+    projectCategories: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "projectCategories" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            order
+            preview
+            slug
           }
         }
       }

@@ -88,7 +88,7 @@
 
 .NavLink:hover:after {
   width: 100%;
-  animation: hover 0.5s ease-in-out;
+  animation: hover 0.8s ease-in-out;
 }
 
 @keyframes hover {
