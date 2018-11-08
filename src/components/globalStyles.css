@@ -98,6 +98,7 @@ h5,
 .title {
   width: 100%;
   margin-bottom: 4rem;
+  align-self: baseline;
 }
 
 .title h5 {
@@ -204,6 +205,11 @@ h5,
 
   .half:last-child {
     margin: 0;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
   }
 }
 

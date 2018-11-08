@@ -11,3 +11,12 @@
 .icon p {
   opacity: 0.6;
 }
+
+@media screen and (max-width: 750px) {
+  .icon {
+    width: 80%;
+    margin: auto;
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+  }
+}
