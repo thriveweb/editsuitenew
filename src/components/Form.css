@@ -70,7 +70,7 @@
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
 
-.button {
+.form .button {
   float: right;
   padding-bottom: 1rem;
   line-height: 150%;

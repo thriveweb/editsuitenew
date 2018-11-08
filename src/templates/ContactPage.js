@@ -8,7 +8,7 @@ import FormSimpleAjax from '../components/FormSimpleAjax'
 import './ContactPage.css'
 
 // Export Template for use in CMS preview
-export const ContactPageTemplate = ({ title }) => {
+export const ContactPageTemplate = ({ title, contact }) => {
   let options = {
     sectionClassName: 'section',
     anchors: ['one'],
@@ -31,21 +31,23 @@ export const ContactPageTemplate = ({ title }) => {
 
           <div className="flex half">
             <div className="map">
-              <Image
-                src="https://ucarecdn.com/c72d16a8-46bc-42e7-9186-4e221a19591b/"
-                className="cover"
-                alt=""
-              />
+              <Image src={contact.map} className="cover" alt={title} />
             </div>
             <div>
               <h5>Office</h5>
-              <p>2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia</p>
+              <p>{contact.address}</p>
               <br />
+
               <h5>Phone</h5>
-              <p>(07) 5575 2185</p>
+              <a href={`tel:${contact.phone}`}>
+                <p>{contact.phone}</p>
+              </a>
               <br />
+
               <h5>Email</h5>
-              <p>info@theeditsuite.com.aua</p>
+              <a href={`mailto:${contact.email}`}>
+                <p>{contact.email}</p>
+              </a>
             </div>
           </div>
         </div>
@@ -71,7 +73,12 @@ export const pageQuery = graphql`
       ...Meta
       html
       frontmatter {
-        title
+        contact {
+          map
+          address
+          phone
+          email
+        }
       }
     }
   }
