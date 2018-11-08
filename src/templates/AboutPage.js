@@ -5,6 +5,7 @@ import { SectionsContainer, Section } from 'react-fullpage'
 import Layout from '../components/Layout.js'
 import Image from '../components/Image.js'
 import Content from '../components/Content.js'
+import ClientsSection from '../components/ClientsSection.js'
 import Testimonials from '../components/Testimonials.js'
 
 import './AboutPage.css'
@@ -15,6 +16,7 @@ export const AboutPageTemplate = ({
   opener,
   icons = [],
   blurb,
+  clients,
   testimonials = []
 }) => {
   let options = {
@@ -56,7 +58,7 @@ export const AboutPageTemplate = ({
         <div className="wide">
           <div className="title">
             <h5>Our story</h5>
-            <h2>More than just a pretty</h2>
+            <h2>More than just a pretty face</h2>
           </div>
           <div className="flex half">
             <div>
@@ -75,6 +77,8 @@ export const AboutPageTemplate = ({
             <h5>Our clients</h5>
             <h2>Who we work with</h2>
           </div>
+
+          <ClientsSection clients={clients} />
         </div>
       </Section>
 
@@ -96,12 +100,20 @@ export const AboutPageTemplate = ({
   )
 }
 
-const AboutPage = ({ data: { page } }) => (
+const AboutPage = ({ data: { page, clients } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <AboutPageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <AboutPageTemplate
+      {...page}
+      {...page.frontmatter}
+      body={page.html}
+      clients={clients.edges.map(item => ({
+        ...item.node,
+        ...item.node.frontmatter
+      }))}
+    />
   </Layout>
 )
 
@@ -128,6 +140,20 @@ export const pageQuery = graphql`
           content
           name
           company
+        }
+      }
+    }
+
+    clients: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/clients/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            logo
+            link
+          }
         }
       }
     }

@@ -11,19 +11,3 @@
 .icon p {
   opacity: 0.6;
 }
-
-/* .blurb .Content,
-.blurb .LazyImage {
-  width: 48%;
-}
-
-@media screen and (max-width: 850px) {
-  .blurb .Content,
-  .blurb .LazyImage {
-    width: 100%;
-  }
-
-  .blurb .LazyImage {
-    margin-bottom: 2rem;
-  }
-} */

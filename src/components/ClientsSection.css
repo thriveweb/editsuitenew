@@ -1,0 +1,44 @@
+.clients.flex,
+.clients .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: calc(33.33% - 1rem);
+  position: relative;
+  justify-content: center !important;
+  margin-bottom: 1.5rem;
+}
+
+.item:after {
+  content: '';
+  position: absolute;
+  background: url(/images/search.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  opacity: 0;
+  z-index: 10;
+  transition: 0.5s ease all;
+}
+
+.item:hover:after {
+  opacity: 1;
+}
+
+.item .LazyImage {
+  transition: 0.5s ease all;
+}
+
+.item:hover .LazyImage {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 750px) {
+  .item {
+    width: 50%;
+    margin: 0;
+  }
+}

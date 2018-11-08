@@ -4,6 +4,7 @@ import { SectionsContainer, Section } from 'react-fullpage'
 
 import Layout from '../components/Layout'
 import Image from '../components/Image'
+import ClientsSection from '../components/ClientsSection'
 import Testimonials from '../components/Testimonials'
 
 // Export Template for use in CMS preview
@@ -11,6 +12,7 @@ export const HomePageTemplate = ({
   title,
   opener,
   intro,
+  clients,
   testimonials,
   contact
 }) => {
@@ -68,6 +70,8 @@ export const HomePageTemplate = ({
             <h5>Our clients</h5>
             <h2>Who we work with</h2>
           </div>
+
+          <ClientsSection clients={clients} />
         </div>
       </Section>
 
@@ -124,9 +128,17 @@ export const HomePageTemplate = ({
 }
 
 // Export Default HomePage for front-end
-const HomePage = ({ data: { page } }) => (
+const HomePage = ({ data: { page, clients } }) => (
   <Layout meta={page.frontmatter.meta || false}>
-    <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <HomePageTemplate
+      {...page}
+      {...page.frontmatter}
+      body={page.html}
+      clients={clients.edges.map(item => ({
+        ...item.node,
+        ...item.node.frontmatter
+      }))}
+    />
   </Layout>
 )
 
@@ -159,6 +171,20 @@ export const pageQuery = graphql`
           address
           email
           phone
+        }
+      }
+    }
+
+    clients: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/clients/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            logo
+            link
+          }
         }
       }
     }
