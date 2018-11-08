@@ -1,70 +1,58 @@
 import React from 'react'
-import { MapPin, Smartphone, Mail } from 'react-feather'
 import { graphql } from 'gatsby'
+import { SectionsContainer, Section } from 'react-fullpage'
 
-import PageHeader from '../components/PageHeader'
-import FormSimpleAjax from '../components/FormSimpleAjax'
-import Content from '../components/Content'
-import GoogleMap from '../components/GoogleMap'
 import Layout from '../components/Layout'
+import Image from '../components/Image'
+import FormSimpleAjax from '../components/FormSimpleAjax'
 import './ContactPage.css'
 
 // Export Template for use in CMS preview
-export const ContactPageTemplate = ({
-  body,
-  title,
-  subtitle,
-  featuredImage,
-  address,
-  phone,
-  email,
-  locations
-}) => (
-  <main className="Contact">
-    <PageHeader
-      title={title}
-      subtitle={subtitle}
-      backgroundImage={featuredImage}
-    />
-    <section className="section Contact--Section1">
-      <div className="container Contact--Section1--Container">
-        <div>
-          <Content source={body} />
-          <div className="Contact--Details">
-            {address && (
-              <a
-                className="Contact--Details--Item"
-                href={`https://www.google.com.au/maps/search/${encodeURI(
-                  address
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MapPin /> {address}
-              </a>
-            )}
-            {phone && (
-              <a className="Contact--Details--Item" href={`tel:${phone}`}>
-                <Smartphone /> {phone}
-              </a>
-            )}
-            {email && (
-              <a className="Contact--Details--Item" href={`mailto:${email}`}>
-                <Mail /> {email}
-              </a>
-            )}
+export const ContactPageTemplate = ({ title }) => {
+  let options = {
+    sectionClassName: 'section',
+    anchors: ['one'],
+    scrollBar: false,
+    navigation: false,
+    verticalAlign: true,
+    v2compatible: true
+  }
+
+  return (
+    <SectionsContainer {...options}>
+      <Section>
+        <div className="thin">
+          <div className="title">
+            <h5>Get in touch</h5>
+            <h2>Let's work together</h2>
+          </div>
+
+          <FormSimpleAjax />
+
+          <div className="flex half">
+            <div className="map">
+              <Image
+                src="https://ucarecdn.com/c72d16a8-46bc-42e7-9186-4e221a19591b/"
+                className="cover"
+                alt=""
+              />
+            </div>
+            <div>
+              <h5>Office</h5>
+              <p>2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia</p>
+              <br />
+              <h5>Phone</h5>
+              <p>(07) 5575 2185</p>
+              <br />
+              <h5>Email</h5>
+              <p>info@theeditsuite.com.aua</p>
+            </div>
           </div>
         </div>
-
-        <div>
-          <FormSimpleAjax name="Simple Form Ajax" />
-        </div>
-      </div>
-    </section>
-
-    <GoogleMap locations={locations} />
-  </main>
-)
+      </Section>
+    </SectionsContainer>
+  )
+}
 
 const ContactPage = ({ data: { page } }) => (
   <Layout
@@ -84,17 +72,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        template
-        subtitle
-        featuredImage
-        address
-        phone
-        email
-        locations {
-          mapLink
-          lat
-          lng
-        }
       }
     }
   }

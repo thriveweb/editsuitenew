@@ -18,7 +18,7 @@ export const AboutPageTemplate = ({
 }) => {
   let options = {
     sectionClassName: 'section',
-    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
+    anchors: ['one', 'two', 'three', 'four', 'five'],
     scrollBar: false,
     navigation: false,
     verticalAlign: true,

@@ -208,7 +208,8 @@ h5 {
 
 /* button */
 
-button {
+button,
+.button {
   border: 0;
   border-bottom: 3px solid white;
   background: none;
@@ -217,11 +218,13 @@ button {
   transition: 0.2s ease all;
 }
 
-button:hover {
+button:hover,
+.button:hover {
   cursor: pointer;
   border-bottom: 3px solid rgba(255, 255, 255, 0.6);
 }
 
-button:focus {
+button:focus,
+.button:focus {
   outline: none;
 }

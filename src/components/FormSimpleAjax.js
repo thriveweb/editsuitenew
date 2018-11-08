@@ -58,72 +58,66 @@ class Form extends React.Component {
 
     return (
       <form
-        className="Form"
+        className="form"
         name={name}
         action={action}
         onSubmit={this.handleSubmit}
         data-netlify=""
         data-netlify-honeypot={honeypot}
       >
-        {this.state.alert && (
-          <div className="Form--Alert">{this.state.alert}</div>
-        )}
-        <label className="Form--Label">
-          <input
-            className="Form--Input"
-            type="text"
-            placeholder="Name"
-            name="name"
-            required
-          />
-        </label>
-        <label className="Form--Label">
-          <input
-            className="Form--Input"
-            type="email"
-            placeholder="Email"
-            name="emailAddress"
-            required
-          />
-        </label>
-        <label className="Form--Label has-arrow">
-          <select
-            className="Form--Input Form--Select"
-            name="type"
-            defaultValue="Type of Enquiry"
-            required
-          >
-            <option disabled hidden>
-              Type of Enquiry
-            </option>
-            <option>Need to know more</option>
-            <option>Found a bug</option>
-            <option>Want to say hello</option>
-          </select>
-        </label>
-        <label className="Form--Label">
-          <textarea
-            className="Form--Input Form--Textarea"
-            placeholder="Message"
-            name="message"
-            rows="10"
-            required
-          />
-        </label>
+        <div className="flex">
+          {this.state.alert && <div className="alert">{this.state.alert}</div>}
+          <label className="label">
+            <input
+              className="input"
+              type="text"
+              placeholder="What's your name?"
+              name="name"
+              required
+            />
+          </label>
+          <label className="label">
+            <input
+              className="input"
+              type="email"
+              placeholder="What's your email address?"
+              name="email"
+              required
+            />
+          </label>
+          <label className="label">
+            <input
+              className="input"
+              type="text"
+              placeholder="What is this regarding?"
+              name="subject"
+              required
+            />
+          </label>
+          <label className="label">
+            <textarea
+              className="input textarea"
+              placeholder="How can we help?"
+              name="message"
+              required
+            />
+          </label>
+        </div>
         <input
           type="text"
           name={honeypot}
-          className="Form--Input-honey"
+          className="input-honey"
           placeholder="Leave blank if you are a human"
         />
         {!!subject && <input type="hidden" name="subject" value={subject} />}
         <input type="hidden" name="form-name" value={name} />
         <input
-          className="Button Form--SubmitButton"
+          className="button"
           type="submit"
-          value="Enquire"
+          value="Submit"
           disabled={this.state.disabled}
         />
+        <div className="clear" />
       </form>
     )
   }
