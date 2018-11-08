@@ -191,7 +191,7 @@ h5,
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
   .flex {
     width: 100%;
     display: block;

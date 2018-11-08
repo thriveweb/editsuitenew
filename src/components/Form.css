@@ -7,13 +7,7 @@
   flex-wrap: wrap;
 }
 
-@media screen and (min-width: 850px) {
-  .form .flex {
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 750px) {
   .form .flex {
     display: block;
   }
