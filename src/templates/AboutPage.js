@@ -12,6 +12,7 @@ import './AboutPage.css'
 // Export Template for use in CMS preview
 export const AboutPageTemplate = ({
   title,
+  opener,
   icons = [],
   blurb,
   testimonials = []
@@ -30,7 +31,7 @@ export const AboutPageTemplate = ({
       <Section className="opener relative">
         <h1>{title}</h1>
         <div className="gradient" />
-        <Image background src="/images/about.jpg" alt={title} />
+        <Image background src={opener} alt={title} />
       </Section>
 
       {/* Icon Section */}
@@ -54,14 +55,14 @@ export const AboutPageTemplate = ({
       <Section className="light">
         <div className="wide">
           <div className="title">
-            <h5>{blurb.subtitle}</h5>
-            <h2>{blurb.title}</h2>
+            <h5>Our story</h5>
+            <h2>More than just a pretty</h2>
           </div>
           <div className="flex half">
             <div>
-              <Image src={blurb.column1} alt={blurb.title} className="cover" />
+              <Image src={blurb.image} alt={title} className="cover" />
             </div>
-            <Content src={blurb.column2} />
+            <Content src={blurb.content} />
           </div>
         </div>
       </Section>
@@ -113,16 +114,15 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        opener
         icons {
           title
           icon
           description
         }
         blurb {
-          title
-          subtitle
-          column1
-          column2
+          image
+          content
         }
         testimonials {
           content
