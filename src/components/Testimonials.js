@@ -29,7 +29,7 @@ class Testimonials extends React.Component {
 
     return (
       <div className="testimonials relative flex">
-        <Image src="images/quote.svg" alt="" />
+        <Image src="http://localhost:8000/images/quote.svg" alt="" />
         <Swiper {...params}>
           {testimonials.map((item, index) => (
             <div key={`${item.name} + ${index}`}>
