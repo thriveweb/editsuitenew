@@ -1,6 +1,6 @@
 .testimonials img.LazyImage {
-  align-self: flex-start;
-  padding-right: 4rem;
+  align-self: center;
+  padding: 0 4rem 2rem;
   opacity: 0.2;
 }
 
@@ -9,14 +9,19 @@
   overflow: hidden;
 }
 
+.swiper-wrapper,
+.swiper-slide {
+  height: 24rem;
+}
+
 .swiper-wrapper {
-  width: 90%;
+  padding-right: 6rem;
   text-align: left;
-  height: 12rem;
 }
 
 .swiper-slide {
-  min-height: 12rem;
+  display: flex;
+  align-items: center;
 }
 
 .swiper-slide p {
@@ -24,12 +29,15 @@
 }
 
 .swiper-pagination {
-  display: block;
-  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
   right: 0;
   top: 0;
-  height: 1rem;
-  width: 2px;
+  align-self: center;
+  height: auto;
+  width: 1px;
 }
 
 .swiper-pagination-bullet {
@@ -42,4 +50,52 @@
 
 .swiper-pagination-bullet-active {
   background: white;
+}
+
+@media screen and (max-width: 750px) {
+  .swiper-container {
+    display: block;
+  }
+  .testimonials,
+  .swiper-slide {
+    text-align: center;
+  }
+
+  .testimonials img.LazyImage {
+    height: 3rem;
+    padding: 0;
+    margin-bottom: 2rem;
+    align-self: center;
+  }
+
+  .swiper-slide p {
+    font-size: 1.5rem;
+  }
+
+  .swiper-slide {
+    padding-bottom: 2rem;
+  }
+
+  .swiper-wrapper {
+    padding: 0;
+  }
+
+  .swiper-wrapper,
+  .swiper-slide {
+    width: 100%;
+  }
+
+  .swiper-pagination {
+    display: block;
+    width: 100%;
+    top: auto;
+    bottom: 0 !important;
+  }
+
+  .swiper-pagination-bullet {
+    height: 1px;
+    width: 2rem;
+    margin: 0 1rem;
+    display: inline-block;
+  }
 }

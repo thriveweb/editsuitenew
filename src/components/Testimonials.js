@@ -10,16 +10,15 @@ class Testimonials extends React.Component {
     const { testimonials = [] } = this.props
     const params = {
       slidesPerView: 1,
-      spaceBetween: 30,
       direction: 'vertical',
       pagination: {
         el: '.swiper-pagination',
         clickable: true
       },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false
+      // },
       breakpoints: {
         700: {
           slidesPerView: 1
@@ -33,10 +32,12 @@ class Testimonials extends React.Component {
         <Swiper {...params}>
           {testimonials.map((item, index) => (
             <div key={`${item.name} + ${index}`}>
-              <p>{item.content}</p>
-              <h5>
-                {item.name}, {item.company}
-              </h5>
+              <div>
+                <p>{item.content}</p>
+                <h5>
+                  {item.name}, {item.company}
+                </h5>
+              </div>
             </div>
           ))}
         </Swiper>
