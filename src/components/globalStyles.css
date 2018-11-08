@@ -131,6 +131,10 @@ h5,
   background: var(--dark);
 }
 
+section {
+  padding: 10rem 0 !important;
+}
+
 .relative {
   position: relative;
 }
@@ -215,9 +219,17 @@ h5,
 
 /* items */
 
+.thin .item {
+  height: 15rem;
+}
+
+.wide .item {
+  height: 21rem;
+}
+
 .item {
   width: calc(33.33% - 1rem);
-  height: 15rem;
+
   position: relative;
   justify-content: center !important;
   margin-bottom: 1.5rem;

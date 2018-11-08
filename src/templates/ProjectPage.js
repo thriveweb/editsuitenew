@@ -19,7 +19,7 @@ export const ProjectPageTemplate = ({
 }) => {
   let options = {
     sectionClassName: 'section',
-    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
+    anchors: ['one', 'two', 'three'],
     scrollBar: false,
     navigation: false,
     verticalAlign: true,
@@ -38,7 +38,7 @@ export const ProjectPageTemplate = ({
 
       {!!projectCategories.length && (
         <Section>
-          <div className="thin">
+          <div className="wide">
             <div className="title">
               <h5>Our specialities</h5>
               <h2>We are can offer</h2>

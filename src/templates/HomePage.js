@@ -57,7 +57,7 @@ export const HomePageTemplate = ({
 
       {!!projectCategories.length && (
         <Section>
-          <div className="thin">
+          <div className="wide">
             <div className="title">
               <h5>Our specialities</h5>
               <h2>We are can offer</h2>
@@ -71,7 +71,7 @@ export const HomePageTemplate = ({
       {/* Clients Section */}
 
       <Section className="dark">
-        <div className="thin">
+        <div className="wide">
           <div className="title">
             <h5>Our clients</h5>
             <h2>Who we work with</h2>

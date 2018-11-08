@@ -4,7 +4,8 @@
   flex-wrap: wrap;
 }
 
-.clients .item:after {
+.clients .item:after,
+.project .item:after {
   content: '';
   position: absolute;
   background: url(/images/search.svg);
@@ -17,14 +18,17 @@
   transition: 0.5s ease all;
 }
 
-.clients .item:hover:after {
+.clients .item:hover:after,
+.project .item:hover:after {
   opacity: 1;
 }
 
-.clients .item .LazyImage {
+.clients .item .LazyImage,
+.project .item .LazyImage {
   transition: 0.5s ease all;
 }
 
-.clients .item:hover .LazyImage {
+.clients .item:hover .LazyImage,
+.project .item:hover .LazyImage {
   opacity: 0.6;
 }
