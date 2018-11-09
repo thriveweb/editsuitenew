@@ -5,7 +5,12 @@ import { SectionsContainer, Section } from 'react-fullpage'
 import Layout from '../components/Layout'
 import './SingleProject.css'
 
-export const SingleProjectTemplate = ({ title, excerpt, categories = [] }) => {
+export const SingleProjectTemplate = ({
+  title,
+  excerpt,
+  video,
+  categories = []
+}) => {
   let options = {
     sectionClassName: 'section',
     anchors: ['one'],
@@ -29,7 +34,7 @@ export const SingleProjectTemplate = ({ title, excerpt, categories = [] }) => {
             <div className="video">
               <iframe
                 title={title}
-                src="https://player.vimeo.com/video/155115360?color=ffffff&title=0&byline=0"
+                src={`https://player.vimeo.com/${video}`}
                 frameBorder="0"
               />
             </div>
@@ -71,6 +76,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         excerpt
+        video
         categories {
           category
         }
