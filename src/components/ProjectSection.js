@@ -44,7 +44,9 @@ class ProjectSection extends React.Component {
         {showLoadMore &&
           visibleProject.length < projects.length && (
             <div className="taCenter">
-              <button onClick={this.increaseLimit}>{loadMoreTitle}</button>
+              <div className="button" onClick={this.increaseLimit}>
+                {loadMoreTitle}
+              </div>
             </div>
           )}
       </div>

@@ -1,3 +1,8 @@
+.projects .flex {
+  flex-wrap: wrap;
+  display: flex;
+}
+
 .project .opener {
   width: 100%;
   height: 100vh;

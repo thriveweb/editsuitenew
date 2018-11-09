@@ -33,13 +33,15 @@ export const ProjectCategoryPageTemplate = ({
 
       {/* Description Section */}
 
-      <section className="thin flex">
-        <div className="title">
-          <h5>Our work</h5>
-          <h2>{title}</h2>
-        </div>
-        <div>
-          <p>{overview}</p>
+      <section>
+        <div className="thin flex">
+          <div className="title">
+            <h5>Our work</h5>
+            <h2>{title}</h2>
+          </div>
+          <div>
+            <p>{overview}</p>
+          </div>
         </div>
       </section>
 
@@ -109,7 +111,7 @@ export const pageQuery = graphql`
 
     projects: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "projects" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___title] }
     ) {
       edges {
         node {

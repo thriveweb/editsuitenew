@@ -34,7 +34,7 @@ export const SingleProjectTemplate = ({
             <div className="video">
               <iframe
                 title={title}
-                src={`https://player.vimeo.com/${video}`}
+                src={`https://player.vimeo.com/video/${video}`}
                 frameBorder="0"
               />
             </div>
