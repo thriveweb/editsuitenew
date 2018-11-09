@@ -20,10 +20,10 @@ export const ProjectPageTemplate = ({
   let options = {
     sectionClassName: 'section',
     anchors: ['one', 'two', 'three'],
-    scrollBar: false,
     navigation: false,
     verticalAlign: true,
-    v2compatible: true
+    v2compatible: true,
+    afterResponsive: function(isResponsive) {}
   }
 
   return (

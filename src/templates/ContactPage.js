@@ -12,10 +12,11 @@ export const ContactPageTemplate = ({ title, contact }) => {
   let options = {
     sectionClassName: 'section',
     anchors: ['one'],
-    scrollBar: false,
+    responsiveWidth: 900,
     navigation: false,
     verticalAlign: true,
-    v2compatible: true
+    v2compatible: true,
+    afterResponsive: function(isResponsive) {}
   }
 
   return (
