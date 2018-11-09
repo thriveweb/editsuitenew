@@ -22,10 +22,11 @@ export const AboutPageTemplate = ({
   let options = {
     sectionClassName: 'section',
     anchors: ['one', 'two', 'three', 'four', 'five'],
-    scrollBar: false,
     navigation: false,
     verticalAlign: true,
-    v2compatible: true
+    v2compatible: true,
+    responsiveWidth: 900,
+    afterResponsive: function(isResponsive) {}
   }
 
   return (

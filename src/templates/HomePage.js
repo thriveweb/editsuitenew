@@ -21,10 +21,11 @@ export const HomePageTemplate = ({
   let options = {
     sectionClassName: 'section',
     anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
-    scrollBar: false,
+    responsiveWidth: 900,
     navigation: false,
     verticalAlign: true,
-    v2compatible: true
+    v2compatible: true,
+    afterResponsive: function(isResponsive) {}
   }
 
   return (
@@ -56,7 +57,7 @@ export const HomePageTemplate = ({
       {/* Project Categories */}
 
       {!!projectCategories.length && (
-        <Section>
+        <Section className="light">
           <div className="wide">
             <div className="title">
               <h5>Our specialities</h5>
