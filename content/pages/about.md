@@ -4,13 +4,13 @@ slug: about
 title: We are creators
 opener: 'https://ucarecdn.com/fafe6aea-4133-4b5b-8fbf-db25f6539ffe/'
 icons:
-  - icon: 'http://localhost:8000/images/icon1.svg'
+  - icon: 'https://theeditsuite.netlify.com/images/icon1.svg'
     title: Expertise
     description: We are experts in all aspects of video production.
-  - icon: 'http://localhost:8000/images/icon2.svg'
+  - icon: 'https://theeditsuite.netlify.com/images/icon2.svg'
     title: Passion
     description: We are passionate about making our craft the best as possible.
-  - icon: 'http://localhost:8000/images/icon3.svg'
+  - icon: 'https://theeditsuite.netlify.com/images/icon3.svg'
     title: Dedication
     description: We have over 50 combined years in the industry.
 blurb:

@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: The Edit Suite
-opener: 'http://localhost:8000/images/home.jpg'
+opener: 'https://theeditsuite.netlify.com/images/home.jpg'
 intro:
   description: |-
     We are a video, photography and CASA certified drone aerial company based in Mermaid Beach on the Gold Coast of Australia specializing in the creation of video, motion graphics,  drone videos, aerial photography, and much more.

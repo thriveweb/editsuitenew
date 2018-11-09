@@ -28,7 +28,7 @@ class Testimonials extends React.Component {
 
     return (
       <div className="testimonials relative flex">
-        <Image src="http://localhost:8000/images/quote.svg" alt="" />
+        <Image src="https://theeditsuite.netlify.com/images/quote.svg" alt="" />
         <Swiper {...params}>
           {testimonials.map((item, index) => (
             <div key={`${item.name} + ${index}`}>
