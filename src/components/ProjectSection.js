@@ -2,12 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Image from '../components/Image'
-// import './ProjectSection.css'
 
 class ProjectSection extends React.Component {
   static defaultProps = {
     projects: [],
-    title: '',
     limit: 12,
     showLoadMore: true,
     loadMoreTitle: 'Load More',
@@ -24,7 +22,7 @@ class ProjectSection extends React.Component {
     }))
 
   render() {
-    const { projects, title, showLoadMore, loadMoreTitle } = this.props
+    const { projects, showLoadMore, loadMoreTitle } = this.props
     const { limit } = this.state
 
     const visibleProject = projects.slice(0, limit || projects.length)
