@@ -1,5 +1,5 @@
 ---
 title: Southport Sharks
-logo: 'https://ucarecdn.com/6b30edad-a895-430c-8d5c-df4ba6d3c682/'
+logo: 'https://ucarecdn.com/d21e98b6-8cb7-4d0c-a0eb-f81c36aca1d9/'
 link: ''
 ---

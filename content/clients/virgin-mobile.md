@@ -1,5 +1,5 @@
 ---
 title: Virgin Mobile
-logo: 'https://ucarecdn.com/c326e556-3b8c-4ade-9d83-540ea26cf717/'
+logo: 'https://ucarecdn.com/31a3ef96-9d8f-43e4-91bb-5a52174447ea/'
 link: ''
 ---

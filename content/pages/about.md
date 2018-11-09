@@ -2,7 +2,7 @@
 template: AboutPage
 slug: about
 title: We are creators
-opener: 'https://ucarecdn.com/fafe6aea-4133-4b5b-8fbf-db25f6539ffe/'
+opener: 'https://ucarecdn.com/ae580428-bd9f-4388-a0d0-824f54dff10a/'
 icons:
   - icon: 'https://theeditsuite.netlify.com/images/icon1.svg'
     title: Expertise
@@ -14,7 +14,7 @@ icons:
     title: Dedication
     description: We have over 50 combined years in the industry.
 blurb:
-  image: 'https://ucarecdn.com/427b918a-b435-4670-b314-8b6ee6c7158a/'
+  image: 'https://ucarecdn.com/252a0ef9-f34e-4ee2-8df2-f6a107b90618/'
   content: |-
     Our videographers, photographers, RPA pilots and motion graphics designers take a new school approach to all of the videos we create and are constantly adding to our vast array of professional film production gear to make all of our videos stand out.
 

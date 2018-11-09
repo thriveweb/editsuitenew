@@ -1,5 +1,5 @@
 ---
 title: Uber
-logo: 'https://ucarecdn.com/2f4c6156-8b7c-4404-9dca-ea479926c791/'
+logo: 'https://ucarecdn.com/179db132-6707-480f-8e3d-ef4403c1897d/'
 link: ''
 ---
