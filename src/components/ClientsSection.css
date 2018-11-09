@@ -4,6 +4,10 @@
   flex-wrap: wrap;
 }
 
+.clients .item {
+  height: auto;
+}
+
 .clients .item:after,
 .project .item:after {
   content: '';
@@ -31,4 +35,11 @@
 .clients .item:hover .LazyImage,
 .project .item:hover .LazyImage {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 750px) {
+  .clients .item {
+    width: 50%;
+    margin: 0;
+  }
 }

@@ -229,7 +229,6 @@ section {
 
 .item {
   width: calc(33.33% - 1rem);
-
   position: relative;
   justify-content: center !important;
   margin-bottom: 1.5rem;
@@ -237,8 +236,14 @@ section {
 
 @media screen and (max-width: 750px) {
   .item {
-    width: 50%;
-    margin: 0;
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .item {
+    width: 100%;
+    margin: 0 0 2rem 0;
   }
 }
 
