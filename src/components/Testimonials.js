@@ -7,7 +7,7 @@ import './Testimonials.css'
 
 class Testimonials extends React.Component {
   render() {
-    const { testimonials = [] } = this.props
+    const { testimonials } = this.props
     const params = {
       slidesPerView: 1,
       direction: 'vertical',
@@ -15,10 +15,6 @@ class Testimonials extends React.Component {
         el: '.swiper-pagination',
         clickable: true
       },
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false
-      // },
       breakpoints: {
         700: {
           slidesPerView: 1
@@ -28,7 +24,10 @@ class Testimonials extends React.Component {
 
     return (
       <div className="testimonials relative flex">
-        <Image src="https://theeditsuite.netlify.com/images/quote.svg" alt="" />
+        <Image
+          src="https://theeditsuite.netlify.com/images/quote.svg"
+          alt="quote"
+        />
         <Swiper {...params}>
           {testimonials.map((item, index) => (
             <div key={`${item.name} + ${index}`}>

@@ -16,7 +16,8 @@ export const AboutPageTemplate = ({
   icons = [],
   blurb,
   clients,
-  testimonials = []
+  testimonials,
+  isPreview
 }) => (
   <div className="about">
     {!!opener && (
@@ -81,18 +82,19 @@ export const AboutPageTemplate = ({
 
     {/* Testimonials Section */}
 
-    {!!testimonials && (
-      <section className="dark">
-        <div className="thin">
-          <div className="title">
-            <h5>Testimonials</h5>
-            <h2>Don't take our word for it</h2>
-          </div>
+    {!isPreview &&
+      !!testimonials && (
+        <section className="dark">
+          <div className="thin">
+            <div className="title">
+              <h5>Testimonials</h5>
+              <h2>Don't take our word for it</h2>
+            </div>
 
-          <Testimonials testimonials={testimonials} />
-        </div>
-      </section>
-    )}
+            <Testimonials testimonials={testimonials} />
+          </div>
+        </section>
+      )}
   </div>
 )
 

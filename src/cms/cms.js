@@ -22,7 +22,7 @@ if (
 }
 
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
-  <HomePageTemplate {...entry.toJS().data} />
+  <HomePageTemplate {...entry.toJS().data} isPreview />
 ))
 CMS.registerPreviewTemplate('about-page', ({ entry }) => (
   <AboutPageTemplate {...entry.toJS().data} isPreview />
