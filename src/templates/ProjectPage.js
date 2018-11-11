@@ -31,7 +31,7 @@ export const ProjectPageTemplate = ({
       <Section className="opener relative">
         <h1>{title}</h1>
         <div className="gradient" />
-        <Image background src={opener} alt={title} />
+        <Image background resolutions="large" src={opener} alt={title} />
       </Section>
 
       {/* Project Categories */}

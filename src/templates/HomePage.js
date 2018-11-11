@@ -32,7 +32,7 @@ export const HomePageTemplate = ({
     <SectionsContainer {...options}>
       <Section className="opener relative">
         <div className="gradient" />
-        <Image background src={opener} alt={title} />
+        <Image background resolutions="large" src={opener} alt={title} />
       </Section>
 
       {/* Intro Section */}
