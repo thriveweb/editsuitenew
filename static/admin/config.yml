@@ -271,7 +271,7 @@ collections: # A list of collections the CMS should be able to edit
     label: Project Category
     editor:
       preview: false
-    folder: content/projectCategories
+    folder: 'content/projectCategories'
     slug: '{{slug}}'
     create: true
     fields:
@@ -308,7 +308,7 @@ collections: # A list of collections the CMS should be able to edit
     label: Single Project
     editor:
       preview: false
-    folder: content/projects
+    folder: 'content/projects'
     slug: '{{slug}}'
     create: true
     fields:
@@ -358,7 +358,7 @@ collections: # A list of collections the CMS should be able to edit
     label: Single Post
     editor:
       preview: false
-    folder: content/posts
+    folder: 'content/posts/'
     slug: '{{slug}}'
     create: true
     fields:
@@ -367,11 +367,11 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Date / Order, name: date, widget: date }
 
       - {
-          label: Status
-          name: status
-          widget: select
-          options: ['Published', 'Featured', 'Draft']
-          default: Published
+          label: Status,
+          name: status,
+          widget: select,
+          options: ['Published', 'Featured', 'Draft'],
+          default: Published,
         }
 
       - { label: Content, name: body, widget: markdown }
