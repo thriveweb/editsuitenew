@@ -24,6 +24,6 @@ contact:
   address: '2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia'
   email: 'info@theeditsuite.com.au'
 meta:
-  description: ''
-  title: ''
+  description: The Edit Suite is a Gold Coast video production and photography company that produces high quality and engaging digital content nationally and internationally.
+  title: The Edit Suite
 ---

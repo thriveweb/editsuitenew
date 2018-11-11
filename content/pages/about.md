@@ -33,6 +33,6 @@ testimonials:
     name: John doe
     company: Company name3
 meta:
-  description: ''
-  title: ''
+  description: Gold Coast Video Production and Photography Services
+  title: We are creators
 ---
