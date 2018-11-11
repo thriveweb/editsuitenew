@@ -227,8 +227,13 @@ section {
   height: 21rem;
 }
 
-.item {
+.item,
+.projects .flex:after {
+  content: '';
   width: calc(33.33% - 1rem);
+}
+
+.item {
   position: relative;
   justify-content: center !important;
   margin-bottom: 1.5rem;
