@@ -15,88 +15,37 @@ export const SinglePostTemplate = ({
   featuredImage,
   body,
   nextPostURL,
-  prevPostURL,
-  categories = []
+  prevPostURL
 }) => (
-  <main>
-    <article
-      className="SinglePost section light"
-      itemScope
-      itemType="http://schema.org/BlogPosting"
-    >
-      {featuredImage && (
-        <Image
-          background
-          className="SinglePost--BackgroundImage"
-          src={featuredImage}
-          alt={title}
-        />
-      )}
+  <div className="single-post">
+    <div className="opener relative">
+      <div className="taCenter">
+        <h1>{title}</h1>
+        <h5>{date}</h5>
+      </div>
+      <div className="gradient" />
+      <Image background resolutions="large" src={featuredImage} alt={title} />
+    </div>
 
-      <div className="container skinny">
-        <Link className="SinglePost--BackButton" to="/blog/">
-          <ChevronLeft /> BACK
-        </Link>
-        <div className="SinglePost--Content relative">
-          <div className="SinglePost--Meta">
-            {date && (
-              <time
-                className="SinglePost--Meta--Date"
-                itemProp="dateCreated pubdate datePublished"
-                date={date}
-              >
-                {_format(date, 'MMMM Do, YYYY')}
-              </time>
-            )}
-            {categories && (
-              <Fragment>
-                <span>|</span>
-                {categories.map((cat, index) => (
-                  <span
-                    key={cat.category}
-                    className="SinglePost--Meta--Category"
-                  >
-                    {cat.category}
-                    {/* Add a comma on all but last category */}
-                    {index !== categories.length - 1 ? ',' : ''}
-                  </span>
-                ))}
-              </Fragment>
-            )}
-          </div>
+    <section>
+      <div className="thin">
+        <Content src={body} />
 
-          {title && (
-            <h1 className="SinglePost--Title" itemProp="title">
-              {title}
-            </h1>
+        <div className="pagination flex">
+          {prevPostURL && (
+            <Link className="button" to={prevPostURL}>
+              Previous
+            </Link>
           )}
-
-          <div className="SinglePost--InnerContent">
-            <Content source={body} />
-          </div>
-
-          <div className="SinglePost--Pagination">
-            {prevPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link prev"
-                to={prevPostURL}
-              >
-                Previous Post
-              </Link>
-            )}
-            {nextPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link next"
-                to={nextPostURL}
-              >
-                Next Post
-              </Link>
-            )}
-          </div>
+          {nextPostURL && (
+            <Link className="button" to={nextPostURL}>
+              Next
+            </Link>
+          )}
         </div>
       </div>
-    </article>
-  </main>
+    </section>
+  </div>
 )
 
 // Export Default SinglePost for front-end
