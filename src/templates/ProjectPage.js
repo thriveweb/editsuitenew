@@ -28,11 +28,13 @@ export const ProjectPageTemplate = ({
 
   return (
     <SectionsContainer {...options}>
-      <Section className="opener relative">
-        <h1>{title}</h1>
-        <div className="gradient" />
-        <Image background resolutions="large" src={opener} alt={title} />
-      </Section>
+      {opener && (
+        <Section className="opener relative">
+          <h1>{title}</h1>
+          <div className="gradient" />
+          <Image background resolutions="large" src={opener} alt={title} />
+        </Section>
+      )}
 
       {/* Project Categories */}
 

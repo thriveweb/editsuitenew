@@ -16,11 +16,13 @@ export const BlogIndexTemplate = ({
 }) => {
   return (
     <div className="blog">
-      <div className="opener relative">
-        <h1>{title}</h1>
-        <div className="gradient" />
-        <Image background resolutions="large" src={opener} alt={title} />
-      </div>
+      {opener && (
+        <div className="opener relative">
+          <h1>{title}</h1>
+          <div className="gradient" />
+          <Image background resolutions="large" src={opener} alt={title} />
+        </div>
+      )}
 
       {/* Projects */}
 

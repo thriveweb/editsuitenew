@@ -32,22 +32,26 @@ export const ContactPageTemplate = ({ title, contact }) => {
 
           <div className="flex half">
             <div className="map">
-              <Image src={contact.map} className="cover" alt={title} />
+              <Image
+                src="https://ucarecdn.com/d125b741-0a56-41d3-a358-bdfd18ce905f/"
+                className="cover"
+                alt={title}
+              />
             </div>
             <div>
               <h5>Office</h5>
-              <p>{contact.address}</p>
+              <p>2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia</p>
               <br />
 
               <h5>Phone</h5>
-              <a href={`tel:${contact.phone}`}>
-                <p>{contact.phone}</p>
+              <a href={`tel:(07) 5575 2185`}>
+                <p>(07) 5575 2185</p>
               </a>
               <br />
 
               <h5>Email</h5>
-              <a href={`mailto:${contact.email}`}>
-                <p>{contact.email}</p>
+              <a href={`mailto:$info@theeditsuite.com.au`}>
+                <p>info@theeditsuite.com.au</p>
               </a>
             </div>
           </div>

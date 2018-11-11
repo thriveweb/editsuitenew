@@ -18,11 +18,6 @@ testimonials:
   - content: Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis condimentum id ut dolor. Integer nec eros consectetur ante aliquet consectetur a sit amet ex. Integer placerat tincidunt mollis.
     name: John doe
     company: Company name3
-contact:
-  map: 'https://ucarecdn.com/d125b741-0a56-41d3-a358-bdfd18ce905f/'
-  phone: '(07) 5575 2185'
-  address: '2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia'
-  email: 'info@theeditsuite.com.au'
 meta:
   description: The Edit Suite is a Gold Coast video production and photography company that produces high quality and engaging digital content nationally and internationally.
   title: ''

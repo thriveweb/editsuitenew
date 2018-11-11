@@ -16,35 +16,39 @@ export const SinglePostTemplate = ({
   prevPostURL
 }) => (
   <div className="single-post">
-    <div className="opener relative">
-      <div className="taCenter">
-        <h1>{title}</h1>
-        <h5>{date}</h5>
-      </div>
-      <div className="gradient" />
-      <Image background resolutions="large" src={featuredImage} alt={title} />
-    </div>
-
-    <section>
-      <div className="thin">
-        <Content src={body} />
-
-        <div className="pagination">
-          {prevPostURL && (
-            <Link className="button prev" to={prevPostURL}>
-              Previous
-            </Link>
-          )}
-          {nextPostURL && (
-            <Link className="button next" to={nextPostURL}>
-              Next
-            </Link>
-          )}
-
-          <div className="clear" />
+    {featuredImage && (
+      <div className="opener relative">
+        <div className="taCenter">
+          <h1>{title}</h1>
+          <h5>{date}</h5>
         </div>
+        <div className="gradient" />
+        <Image background resolutions="large" src={featuredImage} alt={title} />
       </div>
-    </section>
+    )}
+
+    {body && (
+      <section>
+        <div className="thin">
+          <Content src={body} />
+
+          <div className="pagination">
+            {prevPostURL && (
+              <Link className="button prev" to={prevPostURL}>
+                Previous
+              </Link>
+            )}
+            {nextPostURL && (
+              <Link className="button next" to={nextPostURL}>
+                Next
+              </Link>
+            )}
+
+            <div className="clear" />
+          </div>
+        </div>
+      </section>
+    )}
   </div>
 )
 

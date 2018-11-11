@@ -31,13 +31,15 @@ export const SingleProjectTemplate = ({
               <p>{excerpt}</p>
             </div>
 
-            <div className="video">
-              <iframe
-                title={title}
-                src={`https://player.vimeo.com/video/${video}`}
-                frameBorder="0"
-              />
-            </div>
+            {video && (
+              <div className="video">
+                <iframe
+                  title={title}
+                  src={`https://player.vimeo.com/video/${video}`}
+                  frameBorder="0"
+                />
+              </div>
+            )}
           </div>
         </Section>
       </SectionsContainer>

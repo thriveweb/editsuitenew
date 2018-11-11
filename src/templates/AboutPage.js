@@ -31,11 +31,13 @@ export const AboutPageTemplate = ({
 
   return (
     <SectionsContainer {...options}>
-      <Section className="opener relative">
-        <h1>{title}</h1>
-        <div className="gradient" />
-        <Image background resolutions="large" src={opener} alt={title} />
-      </Section>
+      {opener && (
+        <Section className="opener relative">
+          <h1>{title}</h1>
+          <div className="gradient" />
+          <Image background resolutions="large" src={opener} alt={title} />
+        </Section>
+      )}
 
       {/* Icon Section */}
 
@@ -55,33 +57,37 @@ export const AboutPageTemplate = ({
 
       {/* Blurb Section */}
 
-      <Section className="light">
-        <div className="wide">
-          <div className="title">
-            <h5>Our story</h5>
-            <h2>More than just a pretty face</h2>
-          </div>
-          <div className="flex half">
-            <div>
-              <Image src={blurb.image} alt={title} className="cover" />
+      {blurb && (
+        <Section className="light">
+          <div className="wide">
+            <div className="title">
+              <h5>Our story</h5>
+              <h2>More than just a pretty face</h2>
             </div>
-            <Content src={blurb.content} />
+            <div className="flex half">
+              <div>
+                <Image src={blurb.image} alt={title} className="cover" />
+              </div>
+              <Content src={blurb.content} />
+            </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      )}
 
       {/* Clients Section */}
 
-      <Section>
-        <div className="wide">
-          <div className="title">
-            <h5>Our clients</h5>
-            <h2>Who we work with</h2>
-          </div>
+      {clients && (
+        <Section>
+          <div className="wide">
+            <div className="title">
+              <h5>Our clients</h5>
+              <h2>Who we work with</h2>
+            </div>
 
-          <ClientsSection clients={clients} />
-        </div>
-      </Section>
+            <ClientsSection clients={clients} />
+          </div>
+        </Section>
+      )}
 
       {/* Testimonials Section */}
 

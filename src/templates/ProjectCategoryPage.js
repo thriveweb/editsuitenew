@@ -25,35 +25,39 @@ export const ProjectCategoryPageTemplate = ({
 
   return (
     <div className="project">
-      <div className="opener relative">
-        <h1>{title}</h1>
-        <div className="gradient" />
-        <Image background resolutions="large" src={opener} alt={title} />
-      </div>
+      {opener && (
+        <div className="opener relative">
+          <h1>{title}</h1>
+          <div className="gradient" />
+          <Image background resolutions="large" src={opener} alt={title} />
+        </div>
+      )}
 
       {/* Description Section */}
 
-      <section>
-        <div className="thin flex">
-          <div className="title">
-            <h5>Our work</h5>
-            <h2>{title}</h2>
+      {overview && (
+        <section>
+          <div className="thin flex">
+            <div className="title">
+              <h5>Our work</h5>
+              <h2>{title}</h2>
+            </div>
+            <div>
+              <p>{overview}</p>
+            </div>
           </div>
-          <div>
-            <p>{overview}</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Projects */}
 
-      <section className="dark">
-        {!!projects.length && (
+      {!!projects.length && (
+        <section className="dark">
           <div className="wide">
             <ProjectSection projects={filteredProjects} />
           </div>
-        )}
-      </section>
+        </section>
+      )}
     </div>
   )
 }
