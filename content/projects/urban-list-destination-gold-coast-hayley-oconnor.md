@@ -7,6 +7,7 @@ video: '247411848'
 preview: 'https://ucarecdn.com/b0951063-9d5a-4774-a033-ddd650c50ffd/'
 categories:
   - category: Promo
+  - category: From Above
 meta:
   title: The Urban List – Ambassador Hayley O’Connor
   description: |-

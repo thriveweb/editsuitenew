@@ -7,6 +7,7 @@ video: '235864059'
 preview: 'https://ucarecdn.com/c8a495b5-deda-41c7-b4a7-f824667039b2/'
 categories:
   - category: Promo
+  - category: From Above
 meta:
   title: Study Gold Coast Video Highlight – India
   description: |-

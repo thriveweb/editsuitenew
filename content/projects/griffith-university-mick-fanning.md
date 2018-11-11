@@ -7,6 +7,7 @@ video: '205502994'
 preview: 'https://ucarecdn.com/4aec3377-ec14-4dbd-abdf-818771ed7e9a/'
 categories:
   - category: Promo
+  - category: From Above
 meta:
   title: Griffith University – Mick Fanning
   description: |-

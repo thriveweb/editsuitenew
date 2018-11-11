@@ -10,6 +10,7 @@ preview: 'https://ucarecdn.com/052f2e7f-b8e0-40d5-b145-e79cfcd6c3af/'
 categories:
   - category: Motion Graphics
   - category: Promo
+  - category: From Above
 meta:
   description: |-
     This project for IBSI was created over a few weeks from Brisbane down to Port Macquarie. IBSI creates smart building systems, all with immediate ‘connect and use’ methodology.

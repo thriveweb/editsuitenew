@@ -9,6 +9,7 @@ video: '263696344'
 preview: 'https://ucarecdn.com/e67767e8-8c00-4cd3-8dfe-ba6cd3992cf0/'
 categories:
   - category: Your Story
+  - category: From Above
 meta:
   description: |-
     In this video series – Impact of the Games’ Jess Skarratt explores the Future and Legacy of GC2018.
