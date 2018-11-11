@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
-import PostCard from '../components/PostCard'
-import './PostSection.css'
+import Image from '../components/Image'
+
+import '../components/PostSection.css'
 
 class PostSection extends React.Component {
   static defaultProps = {
     posts: [],
-    title: '',
     limit: 12,
     showLoadMore: true,
     loadMoreTitle: 'Load More',
@@ -23,27 +24,37 @@ class PostSection extends React.Component {
     }))
 
   render() {
-    const { posts, title, showLoadMore, loadMoreTitle } = this.props
+    const { posts, showLoadMore, loadMoreTitle } = this.props
     const { limit } = this.state
 
-    const visiblePosts = posts.slice(0, limit || posts.length)
+    const visiblePost = posts.slice(0, limit || posts.length)
 
     return (
-      <div className="PostSection">
-        {title && <h2 className="PostSection--Title">{title}</h2>}
-        {!!visiblePosts.length && (
-          <div className="PostSection--Grid">
-            {visiblePosts.map((post, index) => (
-              <PostCard key={post.title + index} {...post} />
-            ))}
-          </div>
-        )}
+      <div className="posts">
+        <div className="flex">
+          {visiblePost.map((item, index) => (
+            <Link className="item" to={item.slug} key={`post-${item.title}`}>
+              <div className="post-card flex">
+                <Image
+                  className="cover"
+                  src={item.featuredImage}
+                  alt={item.title}
+                />
+              </div>
+              <div className="card taCenter">
+                <h5>{item.date}</h5>
+                <h4>{item.title}</h4>
+              </div>
+            </Link>
+          ))}
+        </div>
+
         {showLoadMore &&
-          visiblePosts.length < posts.length && (
+          visiblePost.length < posts.length && (
             <div className="taCenter">
-              <button className="button" onClick={this.increaseLimit}>
+              <div className="button" onClick={this.increaseLimit}>
                 {loadMoreTitle}
-              </button>
+              </div>
             </div>
           )}
       </div>

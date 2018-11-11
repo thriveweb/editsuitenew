@@ -1,51 +1,28 @@
-.PostSection {
-}
-
-.PostSection--Grid {
-  display: flex;
-  justify-content: space-between;
+.posts .flex {
   flex-wrap: wrap;
-  align-items: stretch;
 }
 
-.PostSection--Grid > * {
-  width: calc(33.33% - 2rem);
-  margin-bottom: 4rem;
+.posts .item {
+  height: auto;
 }
 
-@supports (display: grid) {
-  .PostSection--Grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 4rem;
-  }
-
-  .PostSection--Grid > * {
-    width: auto;
-    margin: 0;
-  }
+.posts .item .post-card.flex {
+  height: 25rem;
+  justify-content: center !important;
 }
 
-.PostSection--Title {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto 4rem auto;
-  line-height: 1.2;
+.posts .item .card {
+  background: white;
+  color: black;
+  padding: 2rem 3rem;
+  min-height: 12rem;
 }
 
-@media screen and (max-width: 888px) {
-  .PostSection--Grid > * {
-    width: 100%;
-    max-width: 50rem;
-    margin: 0 auto 4rem;
-    display: block;
-  }
+.posts .item .card h5 {
+  opacity: 0.4;
+}
 
-  @supports (display: grid) {
-    .PostSection--Grid {
-      display: block;
-      grid-template-columns: 1;
-      grid-gap: 0;
-    }
-  }
+.posts .item .card h4 {
+  font-size: 1.8rem;
+  margin: 0;
 }

@@ -9,7 +9,8 @@
 }
 
 .clients .item:after,
-.project .item:after {
+.project .item:after,
+.posts .post-card:after {
   content: '';
   position: absolute;
   background: url(/images/search.svg);
@@ -23,17 +24,20 @@
 }
 
 .clients .item:hover:after,
-.project .item:hover:after {
+.project .item:hover:after,
+.posts .item:hover .post-card:after {
   opacity: 1;
 }
 
 .clients .item .LazyImage,
-.project .item .LazyImage {
+.project .item .LazyImage,
+.posts .post-card .LazyImage {
   transition: 0.5s ease all;
 }
 
 .clients .item:hover .LazyImage,
-.project .item:hover .LazyImage {
+.project .item:hover .LazyImage,
+.posts .item:hover .post-card .LazyImage {
   opacity: 0.6;
 }
 

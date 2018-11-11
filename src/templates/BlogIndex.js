@@ -15,7 +15,7 @@ export const BlogIndexTemplate = ({
   contentType
 }) => {
   return (
-    <div className="project">
+    <div className="blog">
       <div className="opener relative">
         <h1>{title}</h1>
         <div className="gradient" />
@@ -24,7 +24,7 @@ export const BlogIndexTemplate = ({
 
       {/* Projects */}
 
-      <section className="dark">
+      <section>
         {!!posts.length && (
           <div className="wide">
             <PostSection posts={posts} />
@@ -86,7 +86,8 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            preview
+            date
+            featuredImage
             slug
           }
         }

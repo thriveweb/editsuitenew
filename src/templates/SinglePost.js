@@ -133,6 +133,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         template
+        date
         featuredImage
       }
     }
