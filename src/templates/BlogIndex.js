@@ -13,29 +13,27 @@ export const BlogIndexTemplate = ({
   featuredImage,
   posts = [],
   contentType
-}) => {
-  return (
-    <div className="blog">
-      {!!opener && (
+}) => (
+  <div className="blog">
+    {!!opener && (
+      <section>
         <div className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
           <Image background resolutions="large" src={opener} alt={title} />
         </div>
-      )}
+      </section>
+    )}
 
-      {/* Projects */}
+    {/* Projects */}
 
-      {!!posts.length && (
-        <section>
-          <div className="wide">
-            <PostSection posts={posts} />
-          </div>
-        </section>
-      )}
-    </div>
-  )
-}
+    {!!posts.length && (
+      <div className="wide thick">
+        <PostSection posts={posts} />
+      </div>
+    )}
+  </div>
+)
 
 // Export Default BlogIndex for front-end
 const BlogIndex = ({ data: { page, posts } }) => (

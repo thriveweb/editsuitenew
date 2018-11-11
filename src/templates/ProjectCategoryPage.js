@@ -26,11 +26,13 @@ export const ProjectCategoryPageTemplate = ({
   return (
     <div className="project">
       {!!opener && (
-        <div className="opener relative">
-          <h1>{title}</h1>
-          <div className="gradient" />
-          <Image background resolutions="large" src={opener} alt={title} />
-        </div>
+        <section>
+          <div className="opener relative">
+            <h1>{title}</h1>
+            <div className="gradient" />
+            <Image background resolutions="large" src={opener} alt={title} />
+          </div>
+        </section>
       )}
 
       {/* Description Section */}
@@ -52,11 +54,11 @@ export const ProjectCategoryPageTemplate = ({
       {/* Projects */}
 
       {!!projects.length && (
-        <section className="dark">
+        <div className="dark thick">
           <div className="wide">
             <ProjectSection projects={filteredProjects} />
           </div>
-        </section>
+        </div>
       )}
     </div>
   )

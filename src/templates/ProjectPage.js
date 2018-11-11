@@ -1,9 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SectionsContainer, Section } from 'react-fullpage'
 
-// import PageHeader from '../components/PageHeader'
-// import PostSection from '../components/PostSection'
 import Image from '../components/Image'
 import ProjectCategories from '../components/ProjectCategories'
 import Testimonials from '../components/Testimonials'
@@ -16,58 +13,49 @@ export const ProjectPageTemplate = ({
   projectCategories = [],
   testimonials,
   contentType
-}) => {
-  let options = {
-    sectionClassName: 'section',
-    anchors: ['one', 'two', 'three'],
-    navigation: false,
-    verticalAlign: true,
-    v2compatible: true,
-    afterResponsive: function(isResponsive) {}
-  }
-
-  return (
-    <SectionsContainer {...options}>
-      {!!opener && (
-        <Section className="opener relative">
+}) => (
+  <div>
+    {!!opener && (
+      <section>
+        <div className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
           <Image background resolutions="large" src={opener} alt={title} />
-        </Section>
-      )}
+        </div>
+      </section>
+    )}
 
-      {/* Project Categories */}
+    {/* Project Categories */}
 
-      {!!projectCategories.length && (
-        <Section>
-          <div className="wide">
-            <div className="title">
-              <h5>Our specialities</h5>
-              <h2>We are can offer</h2>
-            </div>
-
-            <ProjectCategories categories={projectCategories} />
+    {!!projectCategories.length && (
+      <section>
+        <div className="wide">
+          <div className="title">
+            <h5>Our specialities</h5>
+            <h2>We are can offer</h2>
           </div>
-        </Section>
-      )}
 
-      {/* Testimonials Section */}
+          <ProjectCategories categories={projectCategories} />
+        </div>
+      </section>
+    )}
 
-      {!!testimonials && (
-        <Section className="dark">
-          <div className="thin">
-            <div className="title">
-              <h5>Testimonials</h5>
-              <h2>Don't take our word for it</h2>
-            </div>
+    {/* Testimonials Section */}
 
-            <Testimonials testimonials={testimonials} />
+    {!!testimonials && (
+      <section className="dark">
+        <div className="thin">
+          <div className="title">
+            <h5>Testimonials</h5>
+            <h2>Don't take our word for it</h2>
           </div>
-        </Section>
-      )}
-    </SectionsContainer>
-  )
-}
+
+          <Testimonials testimonials={testimonials} />
+        </div>
+      </section>
+    )}
+  </div>
+)
 
 // Export Default ProjectPage for front-end
 const ProjectPage = ({ data: { page, projectCategories } }) => (

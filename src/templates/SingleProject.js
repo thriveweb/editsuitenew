@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SectionsContainer, Section } from 'react-fullpage'
 
 import Layout from '../components/Layout'
 import './SingleProject.css'
@@ -10,42 +9,28 @@ export const SingleProjectTemplate = ({
   excerpt,
   video,
   categories = []
-}) => {
-  let options = {
-    sectionClassName: 'section',
-    anchors: ['one'],
-    responsiveWidth: 900,
-    navigation: false,
-    verticalAlign: true,
-    v2compatible: true,
-    afterResponsive: function(isResponsive) {}
-  }
+}) => (
+  <div className="project-single">
+    <section>
+      <div className="thin">
+        <div className="taCenter">
+          <h1>{title}</h1>
+          <p>{excerpt}</p>
+        </div>
 
-  return (
-    <div className="project-single">
-      <SectionsContainer {...options}>
-        <Section className="opener relative">
-          <div className="thin">
-            <div className="taCenter">
-              <h1>{title}</h1>
-              <p>{excerpt}</p>
-            </div>
-
-            {!!video && (
-              <div className="video">
-                <iframe
-                  title={title}
-                  src={`https://player.vimeo.com/video/${video}`}
-                  frameBorder="0"
-                />
-              </div>
-            )}
+        {!!video && (
+          <div className="video">
+            <iframe
+              title={title}
+              src={`https://player.vimeo.com/video/${video}`}
+              frameBorder="0"
+            />
           </div>
-        </Section>
-      </SectionsContainer>
-    </div>
-  )
-}
+        )}
+      </div>
+    </section>
+  </div>
+)
 
 // Export Default SingleProject for front-end
 const SingleProject = ({ data: { project, allProjects } }) => {

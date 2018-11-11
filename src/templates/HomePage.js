@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { SectionsContainer, Section } from 'react-fullpage'
 
 import Layout from '../components/Layout'
 import Image from '../components/Image'
@@ -17,128 +16,118 @@ export const HomePageTemplate = ({
   clients,
   testimonials,
   contact
-}) => {
-  let options = {
-    sectionClassName: 'section',
-    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
-    responsiveWidth: 900,
-    navigation: false,
-    verticalAlign: true,
-    v2compatible: true,
-    afterResponsive: function(isResponsive) {}
-  }
-
-  return (
-    <SectionsContainer {...options}>
-      {!!opener && (
-        <Section className="opener relative">
+}) => (
+  <div className="home">
+    {!!opener && (
+      <section>
+        <div className="opener relative">
           <div className="gradient" />
           <Image background resolutions="large" src={opener} alt={title} />
-        </Section>
-      )}
+        </div>
+      </section>
+    )}
 
-      {/* Intro Section */}
+    {/* Intro Section */}
 
-      {!!intro && (
-        <Section>
-          <div className="thin flex">
-            <div className="title">
-              <h5>What we do</h5>
-              <h2>We are creators</h2>
-            </div>
-            <div>
-              <p>{intro.description}</p>
-              <Link to={intro.buttonLink} className="button">
-                {intro.buttonText}
-              </Link>
-            </div>
-          </div>
-        </Section>
-      )}
-
-      {/* Project Categories */}
-
-      {!!projectCategories.length && (
-        <Section className="light">
-          <div className="wide">
-            <div className="title">
-              <h5>Our specialities</h5>
-              <h2>We are can offer</h2>
-            </div>
-
-            <ProjectCategories categories={projectCategories} />
-          </div>
-        </Section>
-      )}
-
-      {/* Clients Section */}
-
-      {!!clients && (
-        <Section className="dark">
-          <div className="wide">
-            <div className="title">
-              <h5>Our clients</h5>
-              <h2>Who we work with</h2>
-            </div>
-
-            <ClientsSection clients={clients} />
-          </div>
-        </Section>
-      )}
-
-      {/* Testimonials Section */}
-
-      {!!testimonials && (
-        <Section>
-          <div className="thin">
-            <div className="title">
-              <h5>Testimonials</h5>
-              <h2>Don't take our word for it</h2>
-            </div>
-
-            <Testimonials testimonials={testimonials} />
-          </div>
-        </Section>
-      )}
-
-      {/* Contact Section */}
-
-      <Section className="dark">
-        <div className="thin">
+    {!!intro && (
+      <section>
+        <div className="thin flex">
           <div className="title">
-            <h5>Get in touch</h5>
-            <h2>Let's work together</h2>
+            <h5>What we do</h5>
+            <h2>We are creators</h2>
           </div>
-          <div className="flex half">
-            <div className="map">
-              <Image
-                src="https://ucarecdn.com/d125b741-0a56-41d3-a358-bdfd18ce905f/"
-                className="cover"
-                alt={title}
-              />
-            </div>
-            <div>
-              <h5>Office</h5>
-              <p>2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia</p>
-              <br />
-
-              <h5>Phone</h5>
-              <a href={`tel:(07) 5575 2185`}>
-                <p>(07) 5575 2185</p>
-              </a>
-              <br />
-
-              <h5>Email</h5>
-              <a href={`mailto:$info@theeditsuite.com.au`}>
-                <p>info@theeditsuite.com.au</p>
-              </a>
-            </div>
+          <div>
+            <p>{intro.description}</p>
+            <Link to={intro.buttonLink} className="button">
+              {intro.buttonText}
+            </Link>
           </div>
         </div>
-      </Section>
-    </SectionsContainer>
-  )
-}
+      </section>
+    )}
+
+    {/* Project Categories */}
+
+    {!!projectCategories.length && (
+      <section className="light">
+        <div className="wide">
+          <div className="title">
+            <h5>Our specialities</h5>
+            <h2>We are can offer</h2>
+          </div>
+
+          <ProjectCategories categories={projectCategories} />
+        </div>
+      </section>
+    )}
+
+    {/* Clients Section */}
+
+    {!!clients && (
+      <section className="dark">
+        <div className="wide">
+          <div className="title">
+            <h5>Our clients</h5>
+            <h2>Who we work with</h2>
+          </div>
+
+          <ClientsSection clients={clients} />
+        </div>
+      </section>
+    )}
+
+    {/* Testimonials Section */}
+
+    {!!testimonials && (
+      <section>
+        <div className="thin">
+          <div className="title">
+            <h5>Testimonials</h5>
+            <h2>Don't take our word for it</h2>
+          </div>
+
+          <Testimonials testimonials={testimonials} />
+        </div>
+      </section>
+    )}
+
+    {/* Contact Section */}
+
+    <section className="dark">
+      <div className="thin">
+        <div className="title">
+          <h5>Get in touch</h5>
+          <h2>Let's work together</h2>
+        </div>
+        <div className="flex half">
+          <div className="map">
+            <Image
+              src="https://ucarecdn.com/d125b741-0a56-41d3-a358-bdfd18ce905f/"
+              className="cover"
+              alt={title}
+            />
+          </div>
+          <div>
+            <h5>Office</h5>
+            <p>2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia</p>
+            <br />
+
+            <h5>Phone</h5>
+            <a href={`tel:(07) 5575 2185`}>
+              <p>(07) 5575 2185</p>
+            </a>
+            <br />
+
+            <h5>Email</h5>
+            <a href={`mailto:$info@theeditsuite.com.au`}>
+              <p>info@theeditsuite.com.au</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+)
 
 // Export Default HomePage for front-end
 const HomePage = ({ data: { page, clients, projectCategories } }) => (

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SectionsContainer, Section } from 'react-fullpage'
 
 import Layout from '../components/Layout.js'
 import Image from '../components/Image.js'
@@ -18,94 +17,84 @@ export const AboutPageTemplate = ({
   blurb,
   clients,
   testimonials = []
-}) => {
-  let options = {
-    sectionClassName: 'section',
-    anchors: ['one', 'two', 'three', 'four', 'five'],
-    responsiveWidth: 900,
-    navigation: false,
-    verticalAlign: true,
-    v2compatible: true,
-    afterResponsive: function(isResponsive) {}
-  }
-
-  return (
-    <SectionsContainer {...options}>
-      {!!opener && (
-        <Section className="opener relative">
+}) => (
+  <div className="about">
+    {!!opener && (
+      <section>
+        <div className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
           <Image background resolutions="large" src={opener} alt={title} />
-        </Section>
-      )}
+        </div>
+      </section>
+    )}
 
-      {/* Icon Section */}
+    {/* Icon Section */}
 
-      {!!icons && (
-        <Section>
-          <div className="thin flex">
-            {icons.map((item, index) => (
-              <div className="icon" key={`${item.title} + ${index}`}>
-                <Image src={item.icon} alt={item.title} />
-                <h5>{item.title}</h5>
-                <p>{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {/* Blurb Section */}
-
-      {!!blurb && (
-        <Section className="light">
-          <div className="wide">
-            <div className="title">
-              <h5>Our story</h5>
-              <h2>More than just a pretty face</h2>
+    {!!icons && (
+      <section>
+        <div className="thin flex">
+          {icons.map((item, index) => (
+            <div className="icon" key={`${item.title} + ${index}`}>
+              <Image src={item.icon} alt={item.title} />
+              <h5>{item.title}</h5>
+              <p>{item.description}</p>
             </div>
-            <div className="flex half">
-              <div>
-                <Image src={blurb.image} alt={title} className="cover" />
-              </div>
-              <Content src={blurb.content} />
-            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {/* Blurb Section */}
+
+    {!!blurb && (
+      <section className="light">
+        <div className="wide">
+          <div className="title">
+            <h5>Our story</h5>
+            <h2>More than just a pretty face</h2>
           </div>
-        </Section>
-      )}
-
-      {/* Clients Section */}
-
-      {!!clients && (
-        <Section>
-          <div className="wide">
-            <div className="title">
-              <h5>Our clients</h5>
-              <h2>Who we work with</h2>
+          <div className="flex half">
+            <div>
+              <Image src={blurb.image} alt={title} className="cover" />
             </div>
-
-            <ClientsSection clients={clients} />
+            <Content src={blurb.content} />
           </div>
-        </Section>
-      )}
+        </div>
+      </section>
+    )}
 
-      {/* Testimonials Section */}
+    {/* Clients Section */}
 
-      {!!testimonials && (
-        <Section className="dark">
-          <div className="thin">
-            <div className="title">
-              <h5>Testimonials</h5>
-              <h2>Don't take our word for it</h2>
-            </div>
-
-            <Testimonials testimonials={testimonials} />
+    {!!clients && (
+      <section>
+        <div className="wide">
+          <div className="title">
+            <h5>Our clients</h5>
+            <h2>Who we work with</h2>
           </div>
-        </Section>
-      )}
-    </SectionsContainer>
-  )
-}
+
+          <ClientsSection clients={clients} />
+        </div>
+      </section>
+    )}
+
+    {/* Testimonials Section */}
+
+    {!!testimonials && (
+      <section className="dark">
+        <div className="thin">
+          <div className="title">
+            <h5>Testimonials</h5>
+            <h2>Don't take our word for it</h2>
+          </div>
+
+          <Testimonials testimonials={testimonials} />
+        </div>
+      </section>
+    )}
+  </div>
+)
 
 const AboutPage = ({ data: { page, clients } }) => (
   <Layout
