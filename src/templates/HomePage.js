@@ -30,7 +30,7 @@ export const HomePageTemplate = ({
 
   return (
     <SectionsContainer {...options}>
-      {opener && (
+      {!!opener && (
         <Section className="opener relative">
           <div className="gradient" />
           <Image background resolutions="large" src={opener} alt={title} />
@@ -39,7 +39,7 @@ export const HomePageTemplate = ({
 
       {/* Intro Section */}
 
-      {intro && (
+      {!!intro && (
         <Section>
           <div className="thin flex">
             <div className="title">
@@ -73,7 +73,7 @@ export const HomePageTemplate = ({
 
       {/* Clients Section */}
 
-      {clients && (
+      {!!clients && (
         <Section className="dark">
           <div className="wide">
             <div className="title">
@@ -88,7 +88,7 @@ export const HomePageTemplate = ({
 
       {/* Testimonials Section */}
 
-      {testimonials && (
+      {!!testimonials && (
         <Section>
           <div className="thin">
             <div className="title">

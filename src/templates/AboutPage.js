@@ -31,7 +31,7 @@ export const AboutPageTemplate = ({
 
   return (
     <SectionsContainer {...options}>
-      {opener && (
+      {!!opener && (
         <Section className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
@@ -41,7 +41,7 @@ export const AboutPageTemplate = ({
 
       {/* Icon Section */}
 
-      {icons && (
+      {!!icons && (
         <Section>
           <div className="thin flex">
             {icons.map((item, index) => (
@@ -57,7 +57,7 @@ export const AboutPageTemplate = ({
 
       {/* Blurb Section */}
 
-      {blurb && (
+      {!!blurb && (
         <Section className="light">
           <div className="wide">
             <div className="title">
@@ -76,7 +76,7 @@ export const AboutPageTemplate = ({
 
       {/* Clients Section */}
 
-      {clients && (
+      {!!clients && (
         <Section>
           <div className="wide">
             <div className="title">
@@ -91,7 +91,7 @@ export const AboutPageTemplate = ({
 
       {/* Testimonials Section */}
 
-      {testimonials && (
+      {!!testimonials && (
         <Section className="dark">
           <div className="thin">
             <div className="title">

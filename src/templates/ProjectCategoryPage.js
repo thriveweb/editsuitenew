@@ -25,7 +25,7 @@ export const ProjectCategoryPageTemplate = ({
 
   return (
     <div className="project">
-      {opener && (
+      {!!opener && (
         <div className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
@@ -35,7 +35,7 @@ export const ProjectCategoryPageTemplate = ({
 
       {/* Description Section */}
 
-      {overview && (
+      {!!overview && (
         <section>
           <div className="thin flex">
             <div className="title">

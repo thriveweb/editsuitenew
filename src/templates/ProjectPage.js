@@ -28,7 +28,7 @@ export const ProjectPageTemplate = ({
 
   return (
     <SectionsContainer {...options}>
-      {opener && (
+      {!!opener && (
         <Section className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
@@ -53,7 +53,7 @@ export const ProjectPageTemplate = ({
 
       {/* Testimonials Section */}
 
-      {testimonials && (
+      {!!testimonials && (
         <Section className="dark">
           <div className="thin">
             <div className="title">

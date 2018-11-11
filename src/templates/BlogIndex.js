@@ -16,7 +16,7 @@ export const BlogIndexTemplate = ({
 }) => {
   return (
     <div className="blog">
-      {opener && (
+      {!!opener && (
         <div className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
@@ -26,13 +26,13 @@ export const BlogIndexTemplate = ({
 
       {/* Projects */}
 
-      <section>
-        {!!posts.length && (
+      {!!posts.length && (
+        <section>
           <div className="wide">
             <PostSection posts={posts} />
           </div>
-        )}
-      </section>
+        </section>
+      )}
     </div>
   )
 }

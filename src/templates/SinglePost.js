@@ -16,7 +16,7 @@ export const SinglePostTemplate = ({
   prevPostURL
 }) => (
   <div className="single-post">
-    {featuredImage && (
+    {!!featuredImage && (
       <div className="opener relative">
         <div className="taCenter">
           <h1>{title}</h1>
@@ -27,7 +27,7 @@ export const SinglePostTemplate = ({
       </div>
     )}
 
-    {body && (
+    {!!body && (
       <section>
         <div className="thin">
           <Content src={body} />

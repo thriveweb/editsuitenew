@@ -31,7 +31,7 @@ export const SingleProjectTemplate = ({
               <p>{excerpt}</p>
             </div>
 
-            {video && (
+            {!!video && (
               <div className="video">
                 <iframe
                   title={title}
