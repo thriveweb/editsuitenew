@@ -1,55 +1,42 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import PageHeader from '../components/PageHeader'
+import Image from '../components/Image'
 import PostSection from '../components/PostSection'
-import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 
 // Export Template for use in CMS preview
 export const BlogIndexTemplate = ({
   title,
-  subtitle,
+  opener,
+  overview,
   featuredImage,
   posts = [],
-  postCategories = [],
   contentType
 }) => {
-  const isCategory = contentType === 'postCategories'
-  const byCategory = post =>
-    post.categories &&
-    post.categories.filter(cat => cat.category === title).length
-  const filteredPosts = isCategory ? posts.filter(byCategory) : posts
-
   return (
-    <main className="Blog">
-      <PageHeader
-        title={title}
-        subtitle={subtitle}
-        backgroundImage={featuredImage}
-      />
+    <div className="project">
+      <div className="opener relative">
+        <h1>{title}</h1>
+        <div className="gradient" />
+        <Image background src={opener} alt={title} />
+      </div>
 
-      {!!postCategories.length && (
-        <section className="section thin">
-          <div className="container">
-            <PostCategoriesNav categories={postCategories} />
-          </div>
-        </section>
-      )}
+      {/* Projects */}
 
-      {!!posts.length && (
-        <section className="section">
-          <div className="container">
-            <PostSection posts={filteredPosts} />
+      <section className="dark">
+        {!!posts.length && (
+          <div className="wide">
+            <PostSection posts={posts} />
           </div>
-        </section>
-      )}
-    </main>
+        )}
+      </section>
+    </div>
   )
 }
 
 // Export Default BlogIndex for front-end
-const BlogIndex = ({ data: { page, posts, postCategories } }) => (
+const BlogIndex = ({ data: { page, posts } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -59,11 +46,6 @@ const BlogIndex = ({ data: { page, posts, postCategories } }) => (
       {...page.fields}
       {...page.frontmatter}
       posts={posts.edges.map(post => ({
-        ...post.node,
-        ...post.node.frontmatter,
-        ...post.node.fields
-      }))}
-      postCategories={postCategories.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -87,10 +69,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        excerpt
-        template
-        subtitle
-        featuredImage
+        opener
+        overview
       }
     }
 
@@ -106,25 +86,8 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            categories {
-              category
-            }
-            featuredImage
-          }
-        }
-      }
-    }
-    postCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "postCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          fields {
+            preview
             slug
-          }
-          frontmatter {
-            title
           }
         }
       }
