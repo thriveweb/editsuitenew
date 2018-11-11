@@ -5,7 +5,8 @@ import './cms-utils'
 import { HomePageTemplate } from '../templates/HomePage'
 import { AboutPageTemplate } from '../templates/AboutPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
-import { DefaultPageTemplate } from '../templates/DefaultPage'
+import { ProjectCategoryPageTemplate } from '../templates/ProjectCategoryPage'
+import { SingleProjectTemplate } from '../templates/SingleProject'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { SinglePostTemplate } from '../templates/SinglePost'
 
@@ -14,7 +15,7 @@ if (
   window.localStorage.getItem('netlifySiteURL')
 ) {
   CMS.registerPreviewStyle(
-    window.localStorage.getItem('netlifySiteURL') + '/styles.css'
+    window.localStorage.getItem('netlifySiteURL') + 'styles.css'
   )
 } else {
   CMS.registerPreviewStyle('/styles.css')
@@ -29,11 +30,14 @@ CMS.registerPreviewTemplate('about-page', ({ entry }) => (
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
-  <DefaultPageTemplate {...entry.toJS().data} />
-))
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
   <BlogIndexTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('projectCategories', ({ entry }) => (
+  <ProjectCategoryPageTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('projects', ({ entry }) => (
+  <SingleProjectTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('posts', ({ entry }) => (
   <SinglePostTemplate {...entry.toJS().data} />

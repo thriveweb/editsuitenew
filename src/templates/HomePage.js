@@ -14,8 +14,7 @@ export const HomePageTemplate = ({
   intro,
   projectCategories = [],
   clients,
-  testimonials,
-  contact
+  testimonials
 }) => (
   <div className="home">
     {!!opener && (
@@ -172,12 +171,6 @@ export const pageQuery = graphql`
           content
           name
           company
-        }
-        contact {
-          map
-          address
-          email
-          phone
         }
       }
     }

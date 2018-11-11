@@ -16,7 +16,7 @@ media_library:
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'
-    label: 'Page'
+    label: 'Pages'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: true
@@ -40,17 +40,17 @@ collections: # A list of collections the CMS should be able to edit
             name: 'intro'
             widget: 'object'
             fields:
-              - { label: Description, name: description, widget: text }
+              - { label: Description, name: description, widget: markdown }
               - { label: Button Text, name: buttonText, widget: string }
               - { label: Button Link, name: buttonLink, widget: string }
 
-          - label: 'Testimonials Section'
-            name: 'testimonials'
-            widget: 'list'
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Company, name: company, widget: string }
-              - { label: Content, name: content, widget: text }
+          # - label: 'Testimonials Section'
+          #   name: 'testimonials'
+          #   widget: 'list'
+          #   fields:
+          #     - { label: Name, name: name, widget: string }
+          #     - { label: Company, name: company, widget: string }
+          #     - { label: Content, name: content, widget: text }
 
           - label: 'Meta'
             required: false
@@ -106,7 +106,15 @@ collections: # A list of collections the CMS should be able to edit
             widget: 'object'
             fields:
               - { label: Image, name: image, widget: image }
-              - { label: Content, name: content, widget: string }
+              - { label: Content, name: content, widget: markdown }
+
+          - label: 'Testimonials Section'
+            name: 'testimonials'
+            widget: 'list'
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Company, name: company, widget: string }
+              - { label: Content, name: content, widget: markdown }
 
           - label: 'Meta'
             required: false
