@@ -7,6 +7,6 @@ preview: 'https://ucarecdn.com/92eb2951-8748-4573-b20b-b3e58259db26/'
 categories:
   - category: Motion Graphics
 meta:
-  description: ''
-  title: ''
+  description: In this motion graphic styled video we explain Minchin Moore key message.
+  title: Minchin Moore
 ---

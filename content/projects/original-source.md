@@ -7,6 +7,6 @@ preview: 'https://ucarecdn.com/6a70b876-4be0-4dac-8df1-50a5067ba2c4/'
 categories:
   - category: Motion Graphics
 meta:
-  description: ''
-  title: ''
+  description: We created this motion graphic styled ad for Original Source social media channels.
+  title: Original Source Social Media Advert
 ---
