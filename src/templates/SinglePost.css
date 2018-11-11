@@ -20,9 +20,16 @@
 }
 
 .single-post .pagination {
-  display: flex !important;
   border-top: 1px solid var(--light);
   margin-top: 3rem;
+}
+
+.single-post .pagination .prev {
+  float: left;
+}
+
+.single-post .pagination .next {
+  float: right;
 }
 
 .single-post .Content p {

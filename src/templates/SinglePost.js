@@ -1,8 +1,6 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import _get from 'lodash/get'
-import _format from 'date-fns/format'
 import { Link, graphql } from 'gatsby'
-import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import Image from '../components/Image'
@@ -31,17 +29,19 @@ export const SinglePostTemplate = ({
       <div className="thin">
         <Content src={body} />
 
-        <div className="pagination flex">
+        <div className="pagination">
           {prevPostURL && (
-            <Link className="button" to={prevPostURL}>
+            <Link className="button prev" to={prevPostURL}>
               Previous
             </Link>
           )}
           {nextPostURL && (
-            <Link className="button" to={nextPostURL}>
+            <Link className="button next" to={nextPostURL}>
               Next
             </Link>
           )}
+
+          <div className="clear" />
         </div>
       </div>
     </section>
