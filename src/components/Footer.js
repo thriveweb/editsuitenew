@@ -13,7 +13,11 @@ export default ({ globalSettings, socialSettings, navLinks }) => (
     <div className="taRight">
       <p>
         Site by{' '}
-        <a href="https://thriveweb.com.au/" target="_blank">
+        <a
+          href="https://thriveweb.com.au/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Thrive
         </a>
       </p>

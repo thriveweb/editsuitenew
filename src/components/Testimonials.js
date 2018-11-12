@@ -15,6 +15,9 @@ class Testimonials extends React.Component {
         el: '.swiper-pagination',
         clickable: true
       },
+      autoplay: {
+        delay: 5000
+      },
       breakpoints: {
         700: {
           slidesPerView: 1
