@@ -87,7 +87,7 @@ Shooting a meeting in the boardroom which overlooks the Brisbane river.
 
 Our last shot was to capture Milton Green at night!
 
-![Behind the Scenes of Milton Green]()
+![Behind the Scenes of Milton Green](https://ucarecdn.com/b87f436f-05a2-4cbd-8f80-6affdc789e0c/)
 
 Until next time Brisbane! 
 
