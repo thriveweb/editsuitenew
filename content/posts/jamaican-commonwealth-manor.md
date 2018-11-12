@@ -24,9 +24,9 @@ Josh and Louise meeting the Head Chef Karl Thomas who was especially flown in fr
 
 Below are some of the AMAZING Jamaican dishes that will be featured on the menu – like jerk Chicken, jerk pork, oxtail festival, bammies and cornmeal pudding.
 
-![Jamaican Commonwealth Manor](https://ucarecdn.com/a701c446-aec1-4b63-9c83-1aec4e4c5358/)
+![Jamaican food](https://ucarecdn.com/a701c446-aec1-4b63-9c83-1aec4e4c5358/)
 
-![Jamaican Commonwealth Manor](https://ucarecdn.com/d06ae50e-cafc-4339-9007-00be8f8c52d2/)
+![Jamaican food](https://ucarecdn.com/d06ae50e-cafc-4339-9007-00be8f8c52d2/)
 
 ![Jamaican Commonwealth Manor](https://ucarecdn.com/4144c467-7355-4644-84eb-454c41c6c2fe/)
 
@@ -36,19 +36,19 @@ Opening night of the Jamaican Manor with a live Reggae band, Jamaican cuisine pl
 
 Meet Mango the python.
 
-![Jamaican Commonwealth Manor](https://ucarecdn.com/7daca6dc-54eb-4a82-b423-d3576303b2cf/)
+![Meet Mango the python](https://ucarecdn.com/7daca6dc-54eb-4a82-b423-d3576303b2cf/)
 
-![Jamaican Commonwealth Manor](https://ucarecdn.com/a8a00408-d449-48b4-b833-02a9cd2f70e6/)
+![Meet Mango the python](https://ucarecdn.com/a8a00408-d449-48b4-b833-02a9cd2f70e6/)
 
-![Jamaican Commonwealth Manor](https://ucarecdn.com/00266091-733d-4736-baec-0d6403caf746/)
+![Moments of the night](https://ucarecdn.com/00266091-733d-4736-baec-0d6403caf746/)
 
-![Jamaican Commonwealth Manor](https://ucarecdn.com/5ab1e70e-a4ca-4fbe-a0b4-09077d437eac/)
+![Jamaican food](https://ucarecdn.com/5ab1e70e-a4ca-4fbe-a0b4-09077d437eac/)
 
 ## Moments of the night
 
 Monique capturing the live band and the Jamaican food
 
-![Jamaican Commonwealth Manor](https://ucarecdn.com/cb1687b2-1e54-4195-ab83-673051072410/)
+![Louise chatting with Julie](https://ucarecdn.com/cb1687b2-1e54-4195-ab83-673051072410/)
 
 ## Interviews and chats
 
