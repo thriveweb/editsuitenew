@@ -7,7 +7,7 @@ import FormSimpleAjax from '../components/FormSimpleAjax'
 import './ContactPage.css'
 
 // Export Template for use in CMS preview
-export const ContactPageTemplate = ({ title }) => (
+export const ContactPageTemplate = ({ title, phone, email, address }) => (
   <div className="contact">
     <section>
       <div className="thin">
@@ -28,18 +28,18 @@ export const ContactPageTemplate = ({ title }) => (
           </div>
           <div>
             <h5>Office</h5>
-            <p>2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia</p>
+            <p>{address}</p>
             <br />
 
             <h5>Phone</h5>
-            <a href={`tel:(07) 5575 2185`}>
-              <p>(07) 5575 2185</p>
+            <a href={`tel:${phone}`}>
+              <p>{phone}</p>
             </a>
             <br />
 
             <h5>Email</h5>
-            <a href={`mailto:$info@theeditsuite.com.au`}>
-              <p>info@theeditsuite.com.au</p>
+            <a href={`mailto:${email}`}>
+              <p>{email}</p>
             </a>
           </div>
         </div>
@@ -48,12 +48,16 @@ export const ContactPageTemplate = ({ title }) => (
   </div>
 )
 
-const ContactPage = ({ data: { page } }) => (
+const ContactPage = ({ data: { page, globalSettings } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <ContactPageTemplate {...page.frontmatter} body={page.html} />
+    <ContactPageTemplate
+      {...page.frontmatter}
+      {...globalSettings}
+      body={page.html}
+    />
   </Layout>
 )
 
@@ -67,6 +71,12 @@ export const pageQuery = graphql`
       frontmatter {
         title
       }
+    }
+
+    globalSettings: settingsYaml {
+      phone
+      address
+      email
     }
   }
 `
