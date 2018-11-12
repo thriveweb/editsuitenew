@@ -16,15 +16,15 @@ The Edit Suite are working with Gold Coast Commonwealth Games organizers to crea
 
 It was awesome to be amongst the action in Broadbeach – here are our highlights from the Festival so far!
 
-![Gold Coast Commonwealth Games](https://ucarecdn.com/9e6bc956-3ad6-4e7e-aeeb-ddf0bbf09c06/)
+![Gold Coast Commonwealth Games](https://ucarecdn.com/30bb6a8d-abc1-4c28-ae5b-a5ece3ee31d3/)
 
 ## Jarjums Learning Space
 
 This was a really fun and exciting space for children – lots of activities including weaving, colouring in, puzzles and artworks.
 
-![Jarjums Learning Space](https://ucarecdn.com/9746aa74-2d96-4f64-bbd0-c0da298ce1da/)
+![Jarjums Learning Space](https://ucarecdn.com/ecbf2d52-72e9-41c0-ae9e-d8a1b01f52e2/)
 
-![Jarjums Learning Space](https://ucarecdn.com/bc21488a-f5da-4c3a-9a48-19c65af79ed7/)
+![Jarjums Learning Space](https://ucarecdn.com/3fab3e3c-84f1-4061-a478-34039e9dc0a6/)
 
 ## Arboria Architects of Air (United Kingdom)
 
@@ -32,26 +32,26 @@ This was AMAZING – when we entered, it felt like you where transported into an
 
 P.s make sure you wear matching socks as you have to remove your shoes on entry!
 
-![Arboria Architects of Air (United Kingdom)](https://ucarecdn.com/0296399f-4011-4076-a72e-5bcf0c9f3a40/)
+![Arboria Architects of Air (United Kingdom)](https://ucarecdn.com/66c17641-58cc-4980-9e1f-9ef491606169/)
 
-![Arboria Architects of Air (United Kingdom)](https://ucarecdn.com/f53125c1-2545-4bd9-be07-49ff681d7708/)
+![Arboria Architects of Air (United Kingdom)](https://ucarecdn.com/889b3203-28cb-468a-b238-c3e1faeba0a0/)
 
-![Arboria Architects of Air (United Kingdom)](https://ucarecdn.com/949be0cc-2f52-4cfb-8d3e-b0acc747cb95/)
+![Arboria Architects of Air (United Kingdom)](https://ucarecdn.com/431b8baa-9680-45b3-ab0c-ee2cc2139f0b/)
 
 ## Weaving Water Stories
 
 What a great way to be part of this installation with your very own words. Weaving water stories is all about the celebration of water – the giver of life!
 
-![Weaving Water Stories](https://ucarecdn.com/6f60e871-6a28-4881-8c88-9b2449a9450a/)
+![Weaving Water Stories](https://ucarecdn.com/5ef80fe9-86fb-47d9-a8b6-d8a59f5a5d8f/)
 
 ## Gathering – Directed by Luther Cora (AUS)
 
 For generations, Yugambeh People have given life to this country – histories have been retold, stories have been shared and lessons have been passed down. This was absolutely incredible performance, highly recommend heading down to see this in Kurrawa park.
 
-![Gathering – Directed by Luther Cora (AUS)](https://ucarecdn.com/0e19a102-920f-4ce2-875d-d9afd9f4d4bd/)
+![Gathering – Directed by Luther Cora (AUS)](https://ucarecdn.com/857b1a6e-ea0c-4189-9206-298ec54c1ee0/)
 
-![Gathering – Directed by Luther Cora (AUS)](https://ucarecdn.com/fe781023-18a3-4024-87db-30abd2fe9df5/)
+![Gathering – Directed by Luther Cora (AUS)](https://ucarecdn.com/4a756746-d54c-4b6d-89f0-66e85dcc1c34/)
 
-![Gathering – Directed by Luther Cora (AUS)](https://ucarecdn.com/25fce693-e2cf-493e-b00e-2f724fa1b9c6/)
+![Gathering – Directed by Luther Cora (AUS)](https://ucarecdn.com/582c3bac-2933-4b3f-979f-8de1aa927f23/)
 
 Click [here](https://vimeo.com/263300831) to view the highlight video!
