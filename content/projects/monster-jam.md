@@ -6,7 +6,7 @@ excerpt: |-
 video: '186080468'
 preview: 'https://ucarecdn.com/c00acdfe-8a19-44a1-96f7-fa17cf60401d/'
 categories:
-  - category: Promo
+  - category: Promos & Ads
   - category: Events
 meta:
   description: |-

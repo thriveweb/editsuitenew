@@ -8,7 +8,7 @@ excerpt: |-
 video: '215450162'
 preview: 'https://ucarecdn.com/8f4e12fa-715c-4164-8ebd-bbed7c21ce14/'
 categories:
-  - category: Promo
+  - category: Promos & Ads
 meta:
   description: |-
     Virgin Mobile’s new brand platform and ‘Now that’s Virgin Mobile’ tagline. The campaign takes the stories of five real Virgin Mobile customers, who deliver ‘turned up testimonials’ about why they choose Virgin Mobile.

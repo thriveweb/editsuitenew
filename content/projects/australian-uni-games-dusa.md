@@ -6,7 +6,7 @@ excerpt: |-
 video: '238012372'
 preview: 'https://ucarecdn.com/9fbf2619-c4b9-4ffb-9035-651a76847ff3/'
 categories:
-  - category: From Above
+  - category: Drone Aerials
   - category: Events
 meta:
   description: |-

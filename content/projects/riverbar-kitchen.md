@@ -6,7 +6,7 @@ excerpt: |-
 video: '236369915'
 preview: 'https://ucarecdn.com/3e8cd630-2aab-494e-b5f0-a6dfb1d84d4d/'
 categories:
-  - category: Promo
+  - category: Promos & Ads
 meta:
   title: Riverbar & Kitchen Hype Reel
   description: |-

@@ -5,7 +5,7 @@ excerpt: FOOTY’S BACK – A video production on AFL Queensland, speaking with 
 video: '256539601'
 preview: 'https://ucarecdn.com/e744c692-74e2-4fe7-843a-4da4e10344c1/'
 categories:
-  - category: Promo
+  - category: Promos & Ads
 meta:
   title: AFL Queensland – Season Launch
   description: FOOTY’S BACK – A video production on AFL Queensland, speaking with players about their personal experiences and why they love to play footy.

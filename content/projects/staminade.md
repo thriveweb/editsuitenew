@@ -5,7 +5,7 @@ excerpt: A brand video created for the long time Aussie sports drink company Sta
 video: '202167719'
 preview: 'https://ucarecdn.com/c1cf7370-d26c-4eb7-b2c5-703a4f455237/'
 categories:
-  - category: Promo
+  - category: Promos & Ads
 meta:
   title: Staminade
   description: A brand video created for the long time Aussie sports drink company Staminade.

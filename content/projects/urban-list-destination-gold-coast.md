@@ -6,8 +6,8 @@ excerpt: |-
 video: '250366306'
 preview: 'https://ucarecdn.com/985be919-a543-4464-bb0b-8a10538bee2f/'
 categories:
-  - category: Promo
-  - category: From Above
+  - category: Promos & Ads
+  - category: Drone Aerials
 meta:
   title: The Urban List & Destination Gold Coast
   description: |-

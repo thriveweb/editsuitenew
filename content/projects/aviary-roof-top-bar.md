@@ -5,7 +5,7 @@ excerpt: We created this video for the brand new Aviary Rooftop Bar! This exclus
 video: '268785064'
 preview: 'https://ucarecdn.com/a64f2bed-b4de-4ab6-bde9-b37c278ea447/'
 categories:
-  - category: Promo
+  - category: Promos & Ads
   - category: Events
 meta:
   title: Southport Sharks Aviary – Roof Top Bar

@@ -6,7 +6,7 @@ excerpt: |-
 video: '240782239'
 preview: 'https://ucarecdn.com/fb1af2d7-ec95-4479-b2a3-8347f4b2a06c/'
 categories:
-  - category: Promo
+  - category: Promos & Ads
 meta:
   title: Stockland Green Hills Cinema
   description: |-
