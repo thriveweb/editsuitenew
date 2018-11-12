@@ -40,3 +40,19 @@ It was a process to get Josh and myself ready for the climb – Josh had to have
 After getting a quick demonstration about how we are connected to the railing we moved outside the building and started our climb to the summit.
 
 ![SkyPoint Observation Deck](https://ucarecdn.com/11f551b8-e28c-4ff1-ad31-425117ee9dca/)
+
+When we reached the top it was absolutely breathtaking – very calming and freeing. I was quiet surprised how relaxed I became after reaching the top!
+
+![Winston was a daredevil](https://ucarecdn.com/caef0bdd-b2a6-4b19-ab86-e676398b3caf/)
+
+Winston was a daredevil – he did a handstand at the top of the climb! #crazy
+
+![Josh](https://ucarecdn.com/0e970c1c-de19-4f67-ae5f-e218778952d1/)
+
+Josh capturing the stunning view from the top. The weather wasn’t ideal – but there was breaks of blue sky and sunshine so we definitely had to be quick to capture the shots.
+
+![Sunset](https://ucarecdn.com/ff5fe685-6535-4ecd-8e83-39a4440c4e60/)
+
+Sunset was incredible – climbing in the evening was spectacular, definitely a must do! It was incredible when the sky started changing, such a beautiful sunset with intense colour
+
+![Sunset](https://ucarecdn.com/5cc90268-9e14-42ac-b000-4527d36099ae/)
