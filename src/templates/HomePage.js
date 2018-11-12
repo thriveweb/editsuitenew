@@ -110,20 +110,32 @@ export const HomePageTemplate = ({
               <GoogleMap />
             </div>
             <div>
-              <h5>Office</h5>
-              <p>{address}</p>
-              <br />
+              {!!address && (
+                <div>
+                  <h5>Office</h5>
+                  <p>{address}</p>
+                  <br />
+                </div>
+              )}
 
-              <h5>Phone</h5>
-              <a href={`tel:${phone}`}>
-                <p>{phone}</p>
-              </a>
-              <br />
+              {!!phone && (
+                <div>
+                  <h5>Phone</h5>
+                  <a href={`tel:${phone}`}>
+                    <p>{phone}</p>
+                  </a>
+                  <br />
+                </div>
+              )}
 
-              <h5>Email</h5>
-              <a href={`mailto:${email}`}>
-                <p>{email}</p>
-              </a>
+              {!!email && (
+                <div>
+                  <h5>Email</h5>
+                  <a href={`mailto:${email}`}>
+                    <p>{email}</p>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>

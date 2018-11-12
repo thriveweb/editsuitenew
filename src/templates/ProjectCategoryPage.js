@@ -38,17 +38,15 @@ export const ProjectCategoryPageTemplate = ({
       {/* Description Section */}
 
       {!!overview && (
-        <section>
-          <div className="thin flex">
-            <div className="title">
-              <h5>Our work</h5>
-              <h2>{title}</h2>
-            </div>
-            <div>
-              <p>{overview}</p>
-            </div>
+        <div className="thin thick flex">
+          <div className="title">
+            <h5>Our work</h5>
+            <h2>{title}</h2>
           </div>
-        </section>
+          <div>
+            <p>{overview}</p>
+          </div>
+        </div>
       )}
 
       {/* Projects */}
