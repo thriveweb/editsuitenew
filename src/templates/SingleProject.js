@@ -7,7 +7,7 @@ import './SingleProject.css'
 export const SingleProjectTemplate = ({ title, excerpt, video, tags }) => (
   <div className="project-single">
     <section>
-      <div className="thin">
+      <div className="wide">
         <div className="taCenter">
           <h1>{title}</h1>
           <p>{excerpt}</p>
