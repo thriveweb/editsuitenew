@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Image from '../components/Image'
+import GoogleMap from '../components/GoogleMap'
 import ProjectCategories from '../components/ProjectCategories'
 import ClientsSection from '../components/ClientsSection'
 import Testimonials from '../components/Testimonials'
@@ -99,18 +100,14 @@ export const HomePageTemplate = ({
       {/* Contact Section */}
 
       <section className="dark">
-        <div className="thin">
+        <div className="wide">
           <div className="title">
             <h5>Get in touch</h5>
             <h2>Let's work together</h2>
           </div>
           <div className="flex half">
             <div className="map">
-              <Image
-                src="https://ucarecdn.com/d125b741-0a56-41d3-a358-bdfd18ce905f/"
-                className="cover"
-                alt={title}
-              />
+              <GoogleMap />
             </div>
             <div>
               <h5>Office</h5>

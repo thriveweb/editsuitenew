@@ -2,15 +2,16 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Image from '../components/Image'
 import FormSimpleAjax from '../components/FormSimpleAjax'
+import GoogleMap from '../components/GoogleMap'
+
 import './ContactPage.css'
 
 // Export Template for use in CMS preview
 export const ContactPageTemplate = ({ title, phone, email, address }) => (
   <div className="contact">
     <section>
-      <div className="thin">
+      <div className="wide">
         <div className="title">
           <h5>Get in touch</h5>
           <h2>Let's work together</h2>
@@ -20,12 +21,9 @@ export const ContactPageTemplate = ({ title, phone, email, address }) => (
 
         <div className="flex half">
           <div className="map">
-            <Image
-              src="https://ucarecdn.com/d125b741-0a56-41d3-a358-bdfd18ce905f/"
-              className="cover"
-              alt={title}
-            />
+            <GoogleMap />
           </div>
+
           <div>
             <h5>Office</h5>
             <p>{address}</p>

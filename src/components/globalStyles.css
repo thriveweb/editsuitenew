@@ -176,7 +176,7 @@ section {
 }
 
 .wide {
-  max-width: 120rem;
+  width: 110rem !important;
 }
 
 .thin {
