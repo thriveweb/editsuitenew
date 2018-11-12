@@ -19,7 +19,7 @@ Cheating death was not on my Tuesday afternoon list of ‘to dos’ but never a 
 
 Working with Urban List and SkyPoint – The Edit Suite was engaged to capture and highlight the SkyPoint climb – not just through the day but also at Sunset.
 
-Here are our behind the scenes picture 🙂 Definitely worth the trip up – the views are INCREDIBLE!
+Here are our behind the scenes pictures. Definitely worth the trip up – the views are INCREDIBLE!
 
 ![SkyPoint Climb – Video Production](https://ucarecdn.com/e5eb471a-57cc-4d3a-b70d-ad87fe401041/)
 
@@ -36,3 +36,7 @@ It was a process to get Josh and myself ready for the climb – Josh had to have
 ![SkyPoint Observation Deck](https://ucarecdn.com/26b28376-d053-4a2e-8228-da740bef3df6/)
 
 ![SkyPoint Observation Deck](https://ucarecdn.com/6d4310cd-6423-404e-96e8-38ce3dbf0660/)
+
+After getting a quick demonstration about how we are connected to the railing we moved outside the building and started our climb to the summit.
+
+![SkyPoint Observation Deck](https://ucarecdn.com/11f551b8-e28c-4ff1-ad31-425117ee9dca/)
