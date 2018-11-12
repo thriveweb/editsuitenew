@@ -7,8 +7,9 @@ excerpt: |-
   Joseph highlights living and studying on the Gold Coast and also being a Student Ambassador for Study Gold Coast – It’s definitely world class when it comes to education and training destinations plus it has been ranked NO. 1 as ‘best student cities by the beach’.
 video: '238530422'
 preview: 'https://ucarecdn.com/af70eb80-80c0-4a5d-b5a0-bf67050480ed/'
+tags: promo, ad, drone, aerial, video, videography
 categories:
-  - category: Promos & Ads
+  - category: Promos and Ads
   - category: Drone Aerials
 meta:
   title: Study Gold Coast Video Highlight – Singapore

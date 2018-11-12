@@ -11,6 +11,7 @@ excerpt: |-
   Make sure you watch video 3 – Future and Legacy.
 video: '264008154'
 preview: 'https://ucarecdn.com/7389fa63-00e5-416c-9ad0-57bf81f936cd/'
+tags: business, story, interview, drone, aerial, video, videography
 categories:
   - category: Business Stories
   - category: Drone Aerials

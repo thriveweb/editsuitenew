@@ -9,6 +9,7 @@ excerpt: |-
   We are here to connect everyone to a blockchain-powered future.
 video: '295972227'
 preview: 'https://ucarecdn.com/910d9448-7421-4dd0-abfb-85c9118c61a2/'
+tags: motion graphics, animation, branding, video, videography
 categories:
   - category: Motion Graphics
 meta:

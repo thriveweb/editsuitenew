@@ -9,6 +9,7 @@ excerpt: |-
   This series conveys important messages about the impact of the games- make sure to watch Video 2 – Local Business and Communities and Video 3 – Future And Legacy
 video: '263124615'
 preview: 'https://ucarecdn.com/905fb4e2-2f9f-4235-b147-a128d81e378a/'
+tags: business, story, interview, drone, aerial, video, videography
 categories:
   - category: Business Stories
   - category: Drone Aerials

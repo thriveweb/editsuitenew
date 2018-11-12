@@ -25,6 +25,10 @@
   position: relative !important;
 }
 
+.project-single h5 {
+  opacity: 0.2;
+}
+
 @media screen and (max-width: 670px) {
   .project-single .video {
     margin-top: 3rem;

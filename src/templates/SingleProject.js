@@ -4,12 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import './SingleProject.css'
 
-export const SingleProjectTemplate = ({
-  title,
-  excerpt,
-  video,
-  categories = []
-}) => (
+export const SingleProjectTemplate = ({ title, excerpt, video, tags }) => (
   <div className="project-single">
     <section>
       <div className="thin">
@@ -27,6 +22,8 @@ export const SingleProjectTemplate = ({
             />
           </div>
         )}
+
+        {!!tags && <h5>tags: {tags}</h5>}
       </div>
     </section>
   </div>
@@ -64,9 +61,7 @@ export const pageQuery = graphql`
         title
         excerpt
         video
-        categories {
-          category
-        }
+        tags
       }
     }
 

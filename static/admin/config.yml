@@ -334,6 +334,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Title, name: title, widget: string }
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: Video, name: video, widget: string }
+      - { label: Tags, name: tags, widget: string }
 
       - label: 'Categories'
         name: 'categories'

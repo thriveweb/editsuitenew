@@ -7,9 +7,10 @@ excerpt: |-
   This video highlights the innovation in build technologies, how IBSI can save time and money delivering quality outcomes with Eco-Panel and modular solutions.
 video: '230557614'
 preview: 'https://ucarecdn.com/052f2e7f-b8e0-40d5-b145-e79cfcd6c3af/'
+tags: promo, ad, motion graphics, branding, animation, drone, aerial, video, videography
 categories:
   - category: Motion Graphics
-  - category: Promos & Ads
+  - category: Promos and Ads
   - category: Drone Aerials
 meta:
   description: |-
