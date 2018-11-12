@@ -11,7 +11,6 @@ meta:
     Bar a Vins in Armadale!
   title: Visit Victoria – Melbourne Highlights
 ---
-
 We love travelling and food! Well who doesn’t?! 😉
 
 We were thrilled that Visit Victoria asked us to shoot a food focused campaign for Melbourne. We can’t give away to much YET but we definitely got an insight into some of the creative, new and colourful cuisine Melbourne has to offer!
