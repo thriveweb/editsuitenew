@@ -36,3 +36,5 @@ Here are our behind the scenes pictures 🙂
 ![Mick Fanning Surf Lesson](https://ucarecdn.com/335a83f7-11fe-4c07-9afb-98f8126de1e3/)
 
 ![Mick Fanning Surf Lesson](https://ucarecdn.com/5b06bdd7-c5a5-4bce-b4f3-5f257f5f1e8c/)
+
+Click [here](https://vimeo.com/264184206) to view the video from the day!
