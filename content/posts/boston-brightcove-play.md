@@ -11,7 +11,6 @@ meta:
     sessions, next-generation product demos, all-star keynotes and networking.
   title: Boston x Brightcove Play
 ---
-
 The Edit Suite’s Creative Director Josh attended Brightcove Play in Boston.
 
 What is Brightcove Play? Well each year, media companies and marketers from around the world convene in Boston for hands-on learning, in-depth strategy sessions, next-generation product demos, all-star keynotes and networking.
