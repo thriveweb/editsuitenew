@@ -289,3 +289,26 @@ section {
 .button:focus {
   outline: none;
 }
+
+/* 404 */
+
+.four04 {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.four04 h3,
+.four04 h3 a {
+  font-size: 2.4rem;
+  font-weight: 100;
+}
+
+.four04 .BackgroundImage {
+  background-size: contain !important;
+  opacity: 0.03;
+  position: absolute;
+  z-index: -99;
+}
