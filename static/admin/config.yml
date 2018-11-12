@@ -283,6 +283,11 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{slug}}'
     create: true
     fields:
+      - label: 'Template'
+        name: 'template'
+        widget: 'hidden'
+        default: 'ProjectCategoryPage'
+
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
       - { label: Overview, name: overview, widget: text }
@@ -320,6 +325,11 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{slug}}'
     create: true
     fields:
+      - label: 'Template'
+        name: 'template'
+        widget: 'hidden'
+        default: 'SingleProject'
+
       - { label: Preview, name: preview, widget: image }
       - { label: Title, name: title, widget: string }
       - { label: Excerpt, name: excerpt, widget: text }
@@ -370,6 +380,11 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true
     fields:
+      - label: 'Template'
+        name: 'template'
+        widget: 'hidden'
+        default: 'SinglePost'
+
       - { label: Featured Image, name: featuredImage, widget: image }
       - { label: Title, name: title, widget: string }
       - { label: Date / Order, name: date, widget: date }
