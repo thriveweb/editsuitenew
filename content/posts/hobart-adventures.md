@@ -65,7 +65,7 @@ This drone is like a mini pocket rocket! With automatic quick shot modes and the
 
 ![Hobart Adventures!](https://ucarecdn.com/30e14877-2f42-410e-8b8c-c83f8e86ee11/)
 
-\##Seafood!
+## Seafood!
 
 Josh checked out one of the most iconic restaurants in Hobart called The Drunken Admiral (pictured on the bottom left) #bestseafoodever
 
