@@ -3,9 +3,20 @@ import React from 'react'
 import './Footer.css'
 
 export default ({ globalSettings, socialSettings, navLinks }) => (
-  <footer className='Footer'>
-    <div className='container taCenter'>
-      <span>© Copyright {new Date().getFullYear()} All rights reserved.</span>
+  <footer className="flex">
+    <div className="taLeft">
+      <p>
+        © Copyright {new Date().getFullYear()} The Edit Suite. All rights
+        reserved.
+      </p>
+    </div>
+    <div className="taRight">
+      <p>
+        Site by{' '}
+        <a href="https://thriveweb.com.au/" target="_blank">
+          Thrive
+        </a>
+      </p>
     </div>
   </footer>
 )

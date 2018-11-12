@@ -7,7 +7,7 @@ import 'modern-normalize/modern-normalize.css'
 import './globalStyles.css'
 import Meta from './Meta'
 import Nav from './Nav'
-// import Footer from './Footer'
+import Footer from './Footer'
 
 export default ({ children, meta, title }) => {
   return (
@@ -54,7 +54,7 @@ export default ({ children, meta, title }) => {
 
             <Fragment>{children}</Fragment>
 
-            {/* <Footer /> */}
+            <Footer />
           </Fragment>
         )
       }}

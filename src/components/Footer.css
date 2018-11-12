@@ -1,4 +1,24 @@
-.Footer {
-  padding: 3rem 0;
-  background: var(--lightGrey);
+footer {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+}
+
+footer p,
+footer a {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  footer p {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
 }
