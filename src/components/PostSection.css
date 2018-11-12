@@ -3,7 +3,7 @@
 }
 
 .posts .item {
-  height: auto;
+  height: auto !important;
 }
 
 .posts .item .post-card.flex {
