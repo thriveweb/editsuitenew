@@ -7,7 +7,6 @@ import GoogleMap from '../components/GoogleMap'
 
 import './ContactPage.css'
 
-// Export Template for use in CMS preview
 export const ContactPageTemplate = ({ title, phone, email, address }) => (
   <div className="contact">
     <section>

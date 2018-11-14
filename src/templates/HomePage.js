@@ -1,58 +1,50 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Observer from '@researchgate/react-intersection-observer'
+
+import { SectionsContainer, Section } from 'react-fullpage'
 
 import Layout from '../components/Layout'
 import Image from '../components/Image'
 import GoogleMap from '../components/GoogleMap'
-import Anchor from '../components/Anchor'
 import ProjectCategories from '../components/ProjectCategories'
 import ClientsSection from '../components/ClientsSection'
 import Testimonials from '../components/Testimonials'
 
-// Export Template for use in CMS preview
-class HomePageTemplate extends React.Component {
-  state = {
-    visibility: 'hidden'
+export const HomePageTemplate = ({
+  title,
+  opener,
+  intro,
+  projectCategories = [],
+  clients,
+  testimonials,
+  isPreview,
+  phone,
+  email,
+  address
+}) => {
+  let options = {
+    licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
+    responsiveWidth: 900,
+    verticalAlign: true,
+    navigation: false
   }
 
-  handleChange = event => {
-    this.setState({
-      visibility: event.isIntersecting ? 'visible' : ''
-    })
-  }
-
-  render() {
-    const {
-      title,
-      opener,
-      intro,
-      projectCategories = [],
-      clients,
-      testimonials,
-      isPreview,
-      phone,
-      email,
-      address
-    } = this.props
-
-    return (
-      <div className="home">
-        {/* Opener */}
-
-        <section id="one">
-          <Anchor down to="two" />
+  return (
+    <div className="home">
+      <SectionsContainer
+        {...options}
+        scrollBar={window && window.innerWidth < 700}
+      >
+        <Section>
           <div className="opener relative">
             <div className="gradient" />
             <Image background resolutions="large" src={opener} alt={title} />
           </div>
-        </section>
-
-        {/* Intro Section */}
+        </Section>
 
         {!!intro && (
-          <section id="two">
-            <Anchor up to="one" /> <Anchor down to="three" />
+          <Section>
             <div className="thin flex">
               <div className="title">
                 <h5>What we do</h5>
@@ -65,14 +57,11 @@ class HomePageTemplate extends React.Component {
                 </Link>
               </div>
             </div>
-          </section>
+          </Section>
         )}
 
-        {/* Project Categories */}
-
         {!!projectCategories.length && (
-          <section id="three" className="light">
-            <Anchor up to="two" /> <Anchor down to="four" />
+          <Section className="dark">
             <div className="wide">
               <div className="title">
                 <h5>Our specialities</h5>
@@ -80,14 +69,11 @@ class HomePageTemplate extends React.Component {
               </div>
               <ProjectCategories categories={projectCategories} />
             </div>
-          </section>
+          </Section>
         )}
 
-        {/* Clients Section */}
-
         {!!clients && (
-          <section id="four" className="dark">
-            <Anchor up to="three" /> <Anchor down to="five" />
+          <Section>
             <div className="wide">
               <div className="title">
                 <h5>Our clients</h5>
@@ -96,15 +82,12 @@ class HomePageTemplate extends React.Component {
 
               <ClientsSection clients={clients} />
             </div>
-          </section>
+          </Section>
         )}
-
-        {/* Testimonials Section */}
 
         {!isPreview &&
           !!testimonials && (
-            <section id="five">
-              <Anchor up to="four" /> <Anchor down to="six" />
+            <Section className="light">
               <div className="thin">
                 <div className="title">
                   <h5>Testimonials</h5>
@@ -113,14 +96,10 @@ class HomePageTemplate extends React.Component {
 
                 <Testimonials testimonials={testimonials} />
               </div>
-            </section>
+            </Section>
           )}
 
-        {/* Contact Section */}
-
-        <section id="six" className="dark">
-          <Anchor up to="five" />
-
+        <Section className="dark">
           <div className="wide">
             <div className="title">
               <h5>Get in touch</h5>
@@ -160,12 +139,12 @@ class HomePageTemplate extends React.Component {
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    )
-  }
+        </Section>
+      </SectionsContainer>
+    </div>
+  )
 }
-// Export Default HomePage for front-end
+
 const HomePage = ({
   data: { page, clients, projectCategories, globalSettings }
 }) => (
@@ -191,10 +170,6 @@ const HomePage = ({
 export default HomePage
 
 export const pageQuery = graphql`
-  ## Query for HomePage data
-  ## Use GraphiQL interface (http://localhost:8000/___graphql)
-  ## $id is processed via gatsby-node.js
-  ## query name must be unique to this file
   query HomePage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta

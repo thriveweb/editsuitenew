@@ -6,7 +6,6 @@ import ProjectCategories from '../components/ProjectCategories'
 import Testimonials from '../components/Testimonials'
 import Layout from '../components/Layout'
 
-// Export Template for use in CMS preview
 export const ProjectPageTemplate = ({
   title,
   opener,
@@ -25,8 +24,6 @@ export const ProjectPageTemplate = ({
       </section>
     )}
 
-    {/* Project Categories */}
-
     {!!projectCategories.length && (
       <section>
         <div className="wide">
@@ -39,8 +36,6 @@ export const ProjectPageTemplate = ({
         </div>
       </section>
     )}
-
-    {/* Testimonials Section */}
 
     {!!testimonials && (
       <section className="dark">
@@ -57,7 +52,6 @@ export const ProjectPageTemplate = ({
   </div>
 )
 
-// Export Default ProjectPage for front-end
 const ProjectPage = ({ data: { page, projectCategories } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
@@ -79,10 +73,6 @@ const ProjectPage = ({ data: { page, projectCategories } }) => (
 export default ProjectPage
 
 export const pageQuery = graphql`
-  ## Query for ProjectPage data
-  ## Use GraphiQL interface (http://localhost:8000/___graphql)
-  ## $id is processed via gatsby-node.js
-  ## query name must be unique to this file
   query ProjectPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta

@@ -6,7 +6,7 @@
 .project-single .video {
   margin-top: 8rem;
   margin-bottom: 3rem;
-  height: 40rem;
+  height: 60rem;
   width: 100%;
   position: relative;
 }
@@ -30,7 +30,14 @@
   opacity: 0.2;
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 750px) {
+  .project-single .video {
+    margin: 2rem 0;
+    height: 40rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
   .project-single .video {
     margin: 3rem 0;
     height: 20rem;

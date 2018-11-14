@@ -29,7 +29,6 @@ export const SingleProjectTemplate = ({ title, excerpt, video, tags }) => (
   </div>
 )
 
-// Export Default SingleProject for front-end
 const SingleProject = ({ data: { project, allProjects } }) => {
   return (
     <Layout
@@ -48,10 +47,6 @@ const SingleProject = ({ data: { project, allProjects } }) => {
 export default SingleProject
 
 export const pageQuery = graphql`
-  ## Query for SingleProject data
-  ## Use GraphiQL interface (http://localhost:8000/___graphql)
-  ## $id is processed via gatsby-node.js
-  ## query name must be unique to this file
   query SingleProject($id: String!) {
     project: markdownRemark(id: { eq: $id }) {
       ...Meta

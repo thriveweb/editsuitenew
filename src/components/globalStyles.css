@@ -132,15 +132,6 @@ h5,
   background: var(--dark);
 }
 
-section {
-  width: 100%;
-  height: calc(100vh + 10rem);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .relative {
   position: relative;
 }
@@ -178,7 +169,7 @@ section {
 }
 
 .wide {
-  width: 110rem !important;
+  width: 110rem;
 }
 
 .thin {
@@ -207,10 +198,19 @@ section {
   object-fit: cover;
 }
 
+@media screen and (max-width: 1010px) {
+  .wide {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 400px) {
-  .wide,
   .thin {
     width: 100%;
+  }
+
+  .Section {
+    padding: 3rem 0 !important;
   }
 }
 

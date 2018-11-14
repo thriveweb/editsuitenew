@@ -9,7 +9,6 @@ import Testimonials from '../components/Testimonials.js'
 
 import './AboutPage.css'
 
-// Export Template for use in CMS preview
 export const AboutPageTemplate = ({
   title,
   opener,
@@ -30,8 +29,6 @@ export const AboutPageTemplate = ({
       </section>
     )}
 
-    {/* Icon Section */}
-
     {!!icons && (
       <section>
         <div className="thin flex">
@@ -45,8 +42,6 @@ export const AboutPageTemplate = ({
         </div>
       </section>
     )}
-
-    {/* Blurb Section */}
 
     {!!blurb && (
       <section className="light">
@@ -65,8 +60,6 @@ export const AboutPageTemplate = ({
       </section>
     )}
 
-    {/* Clients Section */}
-
     {!!clients && (
       <section>
         <div className="wide">
@@ -79,8 +72,6 @@ export const AboutPageTemplate = ({
         </div>
       </section>
     )}
-
-    {/* Testimonials Section */}
 
     {!isPreview &&
       !!testimonials && (
