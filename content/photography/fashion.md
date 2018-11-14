@@ -1,12 +1,15 @@
 ---
 template: SinglePhotography
-order: '7'
-title: Fashion
 preview: 'https://ucarecdn.com/1ca77a76-0669-49ce-9083-c96c3aa7f54f/'
+title: Fashion
 images:
-  - 'https://ucarecdn.com/f29e0ead-465b-42b3-8397-9e40191b9d3f/'
-  - 'https://ucarecdn.com/1a103cf8-ec33-4e7b-90bf-11341e4fc332/'
+  - 'https://ucarecdn.com/a8059a59-8365-4eeb-a451-4b51360726f9~5/nth/0/'
+  - 'https://ucarecdn.com/a8059a59-8365-4eeb-a451-4b51360726f9~5/nth/1/'
+  - 'https://ucarecdn.com/a8059a59-8365-4eeb-a451-4b51360726f9~5/nth/2/'
+  - 'https://ucarecdn.com/a8059a59-8365-4eeb-a451-4b51360726f9~5/nth/3/'
+  - 'https://ucarecdn.com/a8059a59-8365-4eeb-a451-4b51360726f9~5/nth/4/'
 meta:
-  title: Fashion
   description: Some of our fashion shots.
+  title: Fashion
 ---
+
