@@ -36,7 +36,11 @@ class SinglePhotographyTemplate extends React.Component {
 
           <Popup modal open={this.state.popupOpen} onClose={this.closeModal}>
             <div className="close" onClick={this.closeModal} />
-            <Image src={this.state.popupImagePath} alt={title} />
+            <Image
+              resolutions="large"
+              src={this.state.popupImagePath}
+              alt={title}
+            />
           </Popup>
 
           {!!images && (
@@ -49,7 +53,12 @@ class SinglePhotographyTemplate extends React.Component {
                     this.openModal(item)
                   }}
                 >
-                  <Image src={item} alt={title} className="cover" />
+                  <Image
+                    resolutions="large"
+                    src={item}
+                    alt={title}
+                    className="cover"
+                  />
                 </div>
               ))}
             </div>

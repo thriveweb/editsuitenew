@@ -1,6 +1,6 @@
 ---
 template: SinglePhotography
-preview: 'https://ucarecdn.com/1ca77a76-0669-49ce-9083-c96c3aa7f54f/'
+preview: 'https://ucarecdn.com/9841edc4-f32f-47ba-ace5-dcc7ea7498f9~11/nth/2/'
 title: Landscapes
 images:
   - 'https://ucarecdn.com/9841edc4-f32f-47ba-ace5-dcc7ea7498f9~11/nth/0/'
@@ -18,4 +18,3 @@ meta:
   description: Some of our landscape photography.
   title: Landscapes
 ---
-

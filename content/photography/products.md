@@ -1,6 +1,6 @@
 ---
 template: SinglePhotography
-preview: 'https://ucarecdn.com/1ca77a76-0669-49ce-9083-c96c3aa7f54f/'
+preview: 'https://ucarecdn.com/9d6ae12c-bdb4-44b8-bbd1-c8b792280ef3~11/nth/0/'
 title: Products
 images:
   - 'https://ucarecdn.com/9d6ae12c-bdb4-44b8-bbd1-c8b792280ef3~11/nth/0/'
@@ -20,4 +20,3 @@ meta:
     crisp shots.
   title: Products
 ---
-

@@ -6,11 +6,6 @@
   margin-bottom: 6rem;
 }
 
-.photography-single .image-list:after {
-  content: '';
-  width: 30%;
-}
-
 .image-list.flex {
   display: flex;
   flex-wrap: wrap;

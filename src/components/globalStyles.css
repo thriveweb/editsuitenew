@@ -196,11 +196,11 @@ section {
 }
 
 .wide {
-  max-width: 110rem;
+  width: 110rem;
 }
 
 .thin {
-  max-width: 90rem;
+  width: 90rem;
 }
 
 .thick {
@@ -270,9 +270,11 @@ section {
 
 .item,
 .projects .flex:after,
-.project-cat.flex:after {
+.image-list.flex:after,
+.project-cat:after {
   content: '';
   width: calc(33.33% - 1rem);
+  order: 100;
 }
 
 .item {

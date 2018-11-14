@@ -1,8 +1,9 @@
 ---
 template: SinglePhotography
-preview: 'https://ucarecdn.com/1ca77a76-0669-49ce-9083-c96c3aa7f54f/'
+preview: 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/0/'
 title: Events
 images:
+  - 'https://ucarecdn.com/30912304-636e-4ea4-a276-09f8ea630b18/'
   - 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/0/'
   - 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/1/'
   - 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/2/'
@@ -13,6 +14,11 @@ images:
   - 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/7/'
   - 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/8/'
   - 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/9/'
+  - 'https://ucarecdn.com/977181d9-01b9-4330-b837-5d7b773af71a/'
+  - 'https://ucarecdn.com/7b96caa1-60fc-4b28-8eb0-2e69e3c08f29/'
+  - 'https://ucarecdn.com/2c1819f1-e9c9-4c06-a008-81c17a92ac85/'
+  - 'https://ucarecdn.com/687bc1d2-d790-4756-a18b-cc2c7add3cb5/'
+  - 'https://ucarecdn.com/946cae99-f278-43a5-999f-106722c3d0d5/'
   - 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/10/'
   - 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/11/'
   - 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/12/'
@@ -24,4 +30,3 @@ meta:
   description: Events are fun. We have covered a lot!
   title: Events
 ---
-
