@@ -11,6 +11,10 @@
   width: 30%;
 }
 
+.image-list .flex {
+  flex-wrap: wrap;
+}
+
 .popup-overlay {
   background: rgba(0, 0, 0, 0.8);
   z-index: 1000000;

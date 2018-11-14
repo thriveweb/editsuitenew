@@ -468,7 +468,7 @@ collections: # A list of collections the CMS should be able to edit
   # Clients
 
   - name: clients
-    label: Client
+    label: Clients
     editor:
       preview: false
     folder: content/clients
