@@ -196,7 +196,7 @@ section {
 }
 
 .wide {
-  width: 110rem !important;
+  max-width: 110rem;
 }
 
 .thin {
@@ -225,8 +225,13 @@ section {
   object-fit: cover;
 }
 
+@media screen and (max-width: 1110px) {
+  .wide {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 400px) {
-  .wide,
   .thin {
     width: 100%;
   }

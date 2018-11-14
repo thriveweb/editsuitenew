@@ -27,7 +27,7 @@ export default class Nav extends Component {
 
     return (
       <nav className={`nav ${active ? 'nav-active' : ''}`}>
-        <div className="wide">
+        <div className="wrap">
           <div className="menu-button" onClick={this.handleMenuToggle}>
             <div className="bar" />
             <div className="bar" />

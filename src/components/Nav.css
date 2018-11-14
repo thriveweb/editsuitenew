@@ -12,7 +12,9 @@
   margin: 0 auto;
 }
 
-.nav .wide {
+.nav .wrap {
+  max-width: 80%;
+  margin: auto;
   display: flex;
   align-items: center;
 }
@@ -143,5 +145,11 @@
 @keyframes nav-links {
   from {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .nav .wrap {
+    width: 90%;
   }
 }

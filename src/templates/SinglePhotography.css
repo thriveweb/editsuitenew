@@ -11,53 +11,48 @@
   width: 30%;
 }
 
-.image-list .flex {
+.image-list.flex {
+  display: flex;
   flex-wrap: wrap;
 }
 
 .popup-overlay {
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1000000;
+  background: rgba(0, 0, 0, 0.8) !important;
+  z-index: 10000 !important;
 }
 
-.popup-overlay .close {
+.popup-overlay:before {
+  content: '';
   width: 4rem;
   height: 4rem;
-  right: 0;
+  top: 3rem;
+  right: 3rem;
   position: absolute;
-  float: right;
-  background: white;
-}
-
-.popup-overlay .close:before,
-.popup-overlay .close:after {
-  content: '';
-  position: absolute;
-  top: 1.8rem;
-  left: 0.9rem;
-  width: 2rem;
-  height: 2px;
-  background: black;
-  display: block;
-}
-
-.popup-overlay .close:before {
-  transform: rotate(-45deg);
-}
-
-.popup-overlay .close:after {
-  transform: rotate(45deg);
+  background: url('/images/close.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .popup-content {
+  margin-top: 14rem !important;
+  width: 100rem !important;
+  height: 80%;
   padding: 0 !important;
   border: 0 !important;
   background: none !important;
+  position: absolute;
 }
 
 .popup-content .LazyImage {
   margin: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+@media screen and (max-height: 900px) {
+  .popup-content {
+    padding: 0 2rem !important;
+    height: 60%;
+  }
 }
