@@ -371,6 +371,50 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
+  # Single Photography
+
+  - name: photography
+    label: Photography
+    editor:
+      preview: false
+    folder: 'content/photography'
+    slug: '{{slug}}'
+    create: true
+    fields:
+      - label: 'Template'
+        name: 'template'
+        widget: 'hidden'
+        default: 'SinglePhotography'
+
+      - { label: Preview, name: preview, widget: image }
+      - { label: Title, name: title, widget: string }
+
+      - label: 'Image List'
+        name: 'images'
+        widget: 'image'
+        options: { media_library: { config: { multiple: true } } }
+
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+              pattern: ['.{,300}', 'Must not exceed 300 characters'],
+            }
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+
   # Single Post
 
   - name: posts
