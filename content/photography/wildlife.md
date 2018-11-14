@@ -1,12 +1,15 @@
 ---
 template: SinglePhotography
-order: '6'
-title: Wildlife
 preview: 'https://ucarecdn.com/1ca77a76-0669-49ce-9083-c96c3aa7f54f/'
+title: Wildlife
 images:
-  - 'https://ucarecdn.com/f29e0ead-465b-42b3-8397-9e40191b9d3f/'
-  - 'https://ucarecdn.com/1a103cf8-ec33-4e7b-90bf-11341e4fc332/'
+  - 'https://ucarecdn.com/727be494-1911-49bc-8218-11c17ecf9ad1~5/nth/0/'
+  - 'https://ucarecdn.com/727be494-1911-49bc-8218-11c17ecf9ad1~5/nth/1/'
+  - 'https://ucarecdn.com/727be494-1911-49bc-8218-11c17ecf9ad1~5/nth/2/'
+  - 'https://ucarecdn.com/727be494-1911-49bc-8218-11c17ecf9ad1~5/nth/3/'
+  - 'https://ucarecdn.com/727be494-1911-49bc-8218-11c17ecf9ad1~5/nth/4/'
 meta:
-  title: Wildlife
   description: We love getting out into nature...or a zoo!
+  title: Wildlife
 ---
+
