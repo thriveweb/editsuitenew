@@ -1,171 +1,143 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Observer from '@researchgate/react-intersection-observer'
 
 import Layout from '../components/Layout'
+import Anchor from '../components/Anchor'
 import Image from '../components/Image'
 import GoogleMap from '../components/GoogleMap'
-import Anchor from '../components/Anchor'
 import ProjectCategories from '../components/ProjectCategories'
 import ClientsSection from '../components/ClientsSection'
 import Testimonials from '../components/Testimonials'
 
-// Export Template for use in CMS preview
-class HomePageTemplate extends React.Component {
-  state = {
-    visibility: 'hidden'
-  }
+export const HomePageTemplate = ({
+  title,
+  opener,
+  intro,
+  projectCategories = [],
+  clients,
+  testimonials,
+  isPreview,
+  phone,
+  email,
+  address
+}) => {
+  return (
+    <div className="home">
+      <section id="one">
+        <Anchor down to="two" />
+        <div className="opener relative">
+          <div className="gradient" />
+          <Image background resolutions="large" src={opener} alt={title} />
+        </div>
+      </section>
 
-  handleChange = event => {
-    this.setState({
-      visibility: event.isIntersecting ? 'visible' : ''
-    })
-  }
-
-  render() {
-    const {
-      title,
-      opener,
-      intro,
-      projectCategories = [],
-      clients,
-      testimonials,
-      isPreview,
-      phone,
-      email,
-      address
-    } = this.props
-
-    return (
-      <div className="home">
-        {/* Opener */}
-
-        <section id="one">
-          <Anchor down to="two" />
-          <div className="opener relative">
-            <div className="gradient" />
-            <Image background resolutions="large" src={opener} alt={title} />
+      {!!intro && (
+        <section id="two">
+          <Anchor up to="one" /> <Anchor down to="three" />
+          <div className="thin flex">
+            <div className="title">
+              <h5>What we do</h5>
+              <h2>We are creators</h2>
+            </div>
+            <div>
+              <p>{intro.description}</p>
+              <Link to={intro.buttonLink} className="button">
+                {intro.buttonText}
+              </Link>
+            </div>
           </div>
         </section>
+      )}
 
-        {/* Intro Section */}
-
-        {!!intro && (
-          <section id="two">
-            <Anchor up to="one" /> <Anchor down to="three" />
-            <div className="thin flex">
-              <div className="title">
-                <h5>What we do</h5>
-                <h2>We are creators</h2>
-              </div>
-              <div>
-                <p>{intro.description}</p>
-                <Link to={intro.buttonLink} className="button">
-                  {intro.buttonText}
-                </Link>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Project Categories */}
-
-        {!!projectCategories.length && (
-          <section id="three" className="light">
-            <Anchor up to="two" /> <Anchor down to="four" />
-            <div className="wide">
-              <div className="title">
-                <h5>Our specialities</h5>
-                <h2>We are can offer</h2>
-              </div>
-              <ProjectCategories categories={projectCategories} />
-            </div>
-          </section>
-        )}
-
-        {/* Clients Section */}
-
-        {!!clients && (
-          <section id="four" className="dark">
-            <Anchor up to="three" /> <Anchor down to="five" />
-            <div className="wide">
-              <div className="title">
-                <h5>Our clients</h5>
-                <h2>Who we work with</h2>
-              </div>
-
-              <ClientsSection clients={clients} />
-            </div>
-          </section>
-        )}
-
-        {/* Testimonials Section */}
-
-        {!isPreview &&
-          !!testimonials && (
-            <section id="five">
-              <Anchor up to="four" /> <Anchor down to="six" />
-              <div className="thin">
-                <div className="title">
-                  <h5>Testimonials</h5>
-                  <h2>Don't take our word for it</h2>
-                </div>
-
-                <Testimonials testimonials={testimonials} />
-              </div>
-            </section>
-          )}
-
-        {/* Contact Section */}
-
-        <section id="six" className="dark">
-          <Anchor up to="five" />
-
+      {!!projectCategories.length && (
+        <section id="three" className="light">
+          <Anchor up to="two" /> <Anchor down to="four" />
           <div className="wide">
             <div className="title">
-              <h5>Get in touch</h5>
-              <h2>Let's work together</h2>
+              <h5>Our specialities</h5>
+              <h2>We are can offer</h2>
             </div>
-            <div className="flex half">
-              <div className="map">
-                <GoogleMap />
-              </div>
-              <div>
-                {!!address && (
-                  <div>
-                    <h5>Office</h5>
-                    <p>{address}</p>
-                    <br />
-                  </div>
-                )}
-
-                {!!phone && (
-                  <div>
-                    <h5>Phone</h5>
-                    <a href={`tel:${phone}`}>
-                      <p>{phone}</p>
-                    </a>
-                    <br />
-                  </div>
-                )}
-
-                {!!email && (
-                  <div>
-                    <h5>Email</h5>
-                    <a href={`mailto:${email}`}>
-                      <p>{email}</p>
-                    </a>
-                  </div>
-                )}
-              </div>
-            </div>
+            <ProjectCategories categories={projectCategories} />
           </div>
         </section>
-      </div>
-    )
-  }
+      )}
+
+      {!!clients && (
+        <section id="four" className="dark">
+          <Anchor up to="three" /> <Anchor down to="five" />
+          <div className="wide">
+            <div className="title">
+              <h5>Our clients</h5>
+              <h2>Who we work with</h2>
+            </div>
+
+            <ClientsSection clients={clients} />
+          </div>
+        </section>
+      )}
+
+      {!isPreview &&
+        !!testimonials && (
+          <section id="five">
+            <Anchor up to="four" /> <Anchor down to="six" />
+            <div className="thin">
+              <div className="title">
+                <h5>Testimonials</h5>
+                <h2>Don't take our word for it</h2>
+              </div>
+
+              <Testimonials testimonials={testimonials} />
+            </div>
+          </section>
+        )}
+
+      <section id="six" className="dark">
+        <Anchor up to="five" />
+
+        <div className="wide">
+          <div className="title">
+            <h5>Get in touch</h5>
+            <h2>Let's work together</h2>
+          </div>
+          <div className="flex half">
+            <div className="map">
+              <GoogleMap />
+            </div>
+            <div>
+              {!!address && (
+                <div>
+                  <h5>Office</h5>
+                  <p>{address}</p>
+                  <br />
+                </div>
+              )}
+
+              {!!phone && (
+                <div>
+                  <h5>Phone</h5>
+                  <a href={`tel:${phone}`}>
+                    <p>{phone}</p>
+                  </a>
+                  <br />
+                </div>
+              )}
+
+              {!!email && (
+                <div>
+                  <h5>Email</h5>
+                  <a href={`mailto:${email}`}>
+                    <p>{email}</p>
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
 }
-// Export Default HomePage for front-end
+
 const HomePage = ({
   data: { page, clients, projectCategories, globalSettings }
 }) => (
@@ -191,10 +163,6 @@ const HomePage = ({
 export default HomePage
 
 export const pageQuery = graphql`
-  ## Query for HomePage data
-  ## Use GraphiQL interface (http://localhost:8000/___graphql)
-  ## $id is processed via gatsby-node.js
-  ## query name must be unique to this file
   query HomePage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout.js'
+import Anchor from '../components/Anchor'
 import Image from '../components/Image.js'
 import Content from '../components/Content.js'
 import ClientsSection from '../components/ClientsSection.js'
@@ -9,7 +10,6 @@ import Testimonials from '../components/Testimonials.js'
 
 import './AboutPage.css'
 
-// Export Template for use in CMS preview
 export const AboutPageTemplate = ({
   title,
   opener,
@@ -21,7 +21,8 @@ export const AboutPageTemplate = ({
 }) => (
   <div className="about">
     {!!opener && (
-      <section>
+      <section id="one">
+        <Anchor down to="two" />
         <div className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
@@ -30,10 +31,9 @@ export const AboutPageTemplate = ({
       </section>
     )}
 
-    {/* Icon Section */}
-
     {!!icons && (
-      <section>
+      <section id="two">
+        <Anchor up to="one" /> <Anchor down to="three" />
         <div className="thin flex">
           {icons.map((item, index) => (
             <div className="icon" key={`${item.title} + ${index}`}>
@@ -46,10 +46,9 @@ export const AboutPageTemplate = ({
       </section>
     )}
 
-    {/* Blurb Section */}
-
     {!!blurb && (
-      <section className="light">
+      <section id="three" className="light">
+        <Anchor up to="two" /> <Anchor down to="four" />
         <div className="wide">
           <div className="title">
             <h5>Our story</h5>
@@ -65,10 +64,9 @@ export const AboutPageTemplate = ({
       </section>
     )}
 
-    {/* Clients Section */}
-
     {!!clients && (
-      <section>
+      <section id="four">
+        <Anchor up to="three" /> <Anchor down to="five" />
         <div className="wide">
           <div className="title">
             <h5>Our clients</h5>
@@ -80,11 +78,10 @@ export const AboutPageTemplate = ({
       </section>
     )}
 
-    {/* Testimonials Section */}
-
     {!isPreview &&
       !!testimonials && (
-        <section className="dark">
+        <section id="five" className="dark">
+          <Anchor up to="four" />
           <div className="thin">
             <div className="title">
               <h5>Testimonials</h5>

@@ -8,39 +8,6 @@
   height: auto;
 }
 
-.clients .item:after,
-.project .item:after,
-.posts .post-card:after {
-  content: '';
-  position: absolute;
-  background: url(/images/search.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 5rem;
-  height: 5rem;
-  opacity: 0;
-  z-index: 10;
-  transition: 0.5s ease all;
-}
-
-.clients .item:hover:after,
-.project .item:hover:after,
-.posts .item:hover .post-card:after {
-  opacity: 1;
-}
-
-.clients .item .LazyImage,
-.project .item .LazyImage,
-.posts .post-card .LazyImage {
-  transition: 0.5s ease all;
-}
-
-.clients .item:hover .LazyImage,
-.project .item:hover .LazyImage,
-.posts .item:hover .post-card .LazyImage {
-  opacity: 0.6;
-}
-
 @media screen and (max-width: 750px) {
   .clients .item {
     width: 50%;

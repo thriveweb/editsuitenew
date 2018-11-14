@@ -2,26 +2,35 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Image from '../components/Image'
+import ProjectCategories from '../components/ProjectCategories'
 import ProjectSection from '../components/ProjectSection'
 import Layout from '../components/Layout'
 
 import './ProjectCategoryPage.css'
 
-// Export Template for use in CMS preview
 export const ProjectCategoryPageTemplate = ({
   title,
   opener,
   overview,
   projects = [],
   projectCategories = [],
+  photography = [],
   testimonials,
-  contentType
+  contentType,
+  slug
 }) => {
   const isCategory = contentType === 'projectCategories'
   const byCategory = post =>
     post.categories &&
     post.categories.filter(cat => cat.category === title).length
   const filteredProjects = isCategory ? projects.filter(byCategory) : projects
+
+  let categorySelector = []
+  if ('/project-categories/photography/' === slug) {
+    categorySelector = photography
+  } else {
+    categorySelector = filteredProjects
+  }
 
   return (
     <div className="project">
@@ -35,8 +44,6 @@ export const ProjectCategoryPageTemplate = ({
         </section>
       )}
 
-      {/* Description Section */}
-
       {!!overview && (
         <div className="thin thick flex">
           <div className="title">
@@ -49,12 +56,16 @@ export const ProjectCategoryPageTemplate = ({
         </div>
       )}
 
-      {/* Projects */}
-
       {!!projects.length && (
         <div className="dark thick">
           <div className="wide">
-            <ProjectSection projects={filteredProjects} />
+            {categorySelector === filteredProjects && (
+              <ProjectSection projects={categorySelector} />
+            )}
+
+            {categorySelector === photography && (
+              <ProjectCategories categories={photography} />
+            )}
           </div>
         </div>
       )}
@@ -62,9 +73,8 @@ export const ProjectCategoryPageTemplate = ({
   )
 }
 
-// Export Default ProjectCategoryPage for front-end
 const ProjectCategoryPage = ({
-  data: { page, projects, projectCategories }
+  data: { page, projects, projectCategories, photography }
 }) => (
   <Layout
     meta={page.frontmatter.meta || false}
@@ -84,6 +94,11 @@ const ProjectCategoryPage = ({
         ...post.node.frontmatter,
         ...post.node.fields
       }))}
+      photography={photography.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
     />
   </Layout>
 )
@@ -91,14 +106,11 @@ const ProjectCategoryPage = ({
 export default ProjectCategoryPage
 
 export const pageQuery = graphql`
-  ## Query for ProjectCategoryPage data
-  ## Use GraphiQL interface (http://localhost:8000/___graphql)
-  ## $id is processed via gatsby-node.js
-  ## query name must be unique to this file
   query ProjectCategoryPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       fields {
+        slug
         contentType
       }
       frontmatter {
@@ -146,6 +158,24 @@ export const pageQuery = graphql`
           }
           frontmatter {
             slug
+          }
+        }
+      }
+    }
+
+    photography: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "photography" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            preview
           }
         }
       }

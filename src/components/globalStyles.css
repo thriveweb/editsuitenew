@@ -11,6 +11,24 @@ html {
   min-height: 100%;
   background: var(--medium);
   scroll-behavior: smooth;
+  /* overflow-y: hidden; */
+}
+
+@media screen and (max-height: 920px), screen and (max-width: 750px) {
+  section:first-of-type {
+    height: 100vh !important;
+    padding: 0;
+  }
+
+  section {
+    height: auto !important;
+    padding: 10rem 0;
+  }
+
+  .arrow-up,
+  .arrow-down {
+    display: none;
+  }
 }
 
 body {
@@ -246,7 +264,8 @@ section {
 }
 
 .item,
-.projects .flex:after {
+.projects .flex:after,
+.project-cat.flex:after {
   content: '';
   width: calc(33.33% - 1rem);
 }
