@@ -6,6 +6,8 @@ import SectionTitle from '../components/SectionTitle'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import ContactInfo from '../components/ContactInfo'
 
+import './ContactPage.css'
+
 export const ContactPageTemplate = ({ title, phone, email, address }) => (
   <div className="contact">
     <section>

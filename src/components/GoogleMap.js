@@ -15,12 +15,13 @@ class GoogleMap extends Component {
       lat: -28.044112,
       lng: 153.435043
     },
-    zoom: 15
+    zoom: 15,
+    zoomControl: true,
+    gestureHandling: 'greedy'
   }
 
   render() {
     const mapOptions = {
-      disableDefaultUI: true,
       styles: [
         {
           featureType: 'water',
