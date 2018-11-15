@@ -2,22 +2,16 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import SectionTitle from '../components/SectionTitle.js'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import ContactInfo from '../components/ContactInfo'
-
-import './ContactPage.css'
 
 export const ContactPageTemplate = ({ title, phone, email, address }) => (
   <div className="contact">
     <section>
       <div className="wide">
-        <div className="title">
-          <h5>Get in touch</h5>
-          <h2>Let's work together</h2>
-        </div>
-
+        <SectionTitle title="Let's work together" subtitle="Get in touch" />
         <FormSimpleAjax />
-
         <ContactInfo address={address} phone={phone} email={email} />
       </div>
     </section>

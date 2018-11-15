@@ -2,11 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Image from '../components/Image'
+import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import ProjectSection from '../components/ProjectSection'
 import Layout from '../components/Layout'
-
-import './ProjectCategoryPage.css'
 
 export const ProjectCategoryPageTemplate = ({
   title,
@@ -46,10 +45,7 @@ export const ProjectCategoryPageTemplate = ({
 
       {!!overview && (
         <div className="thin thick flex">
-          <div className="title">
-            <h5>Our work</h5>
-            <h2>{title}</h2>
-          </div>
+          <SectionTitle title={title} subtitle="Our work" />
           <div>
             <p>{overview}</p>
           </div>

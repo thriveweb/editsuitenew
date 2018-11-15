@@ -5,6 +5,8 @@ import Layout from '../components/Layout.js'
 import Anchor from '../components/Anchor'
 import Image from '../components/Image.js'
 import Content from '../components/Content.js'
+import SectionTitle from '../components/SectionTitle.js'
+import Icons from '../components/Icons.js'
 import ClientsSection from '../components/ClientsSection.js'
 import Testimonials from '../components/Testimonials.js'
 
@@ -34,15 +36,7 @@ export const AboutPageTemplate = ({
     {!!icons && (
       <section id="two">
         <Anchor up to="one" /> <Anchor down to="three" />
-        <div className="thin flex">
-          {icons.map((item, index) => (
-            <div className="icon" key={`${item.title} + ${index}`}>
-              <Image src={item.icon} alt={item.title} />
-              <h5>{item.title}</h5>
-              <p>{item.description}</p>
-            </div>
-          ))}
-        </div>
+        <Icons icons={icons} />
       </section>
     )}
 
@@ -50,10 +44,10 @@ export const AboutPageTemplate = ({
       <section id="three" className="light">
         <Anchor up to="two" /> <Anchor down to="four" />
         <div className="wide">
-          <div className="title">
-            <h5>Our story</h5>
-            <h2>More than just a pretty face</h2>
-          </div>
+          <SectionTitle
+            title="More than just a pretty face"
+            subtitle="Our story"
+          />
           <div className="flex half">
             <div>
               <Image src={blurb.image} alt={title} className="cover" />
@@ -68,11 +62,7 @@ export const AboutPageTemplate = ({
       <section id="four">
         <Anchor up to="three" /> <Anchor down to="five" />
         <div className="wide">
-          <div className="title">
-            <h5>Our clients</h5>
-            <h2>Who we work with</h2>
-          </div>
-
+          <SectionTitle title="Who we work with" subtitle="Our clients" />
           <ClientsSection clients={clients} />
         </div>
       </section>
@@ -83,11 +73,10 @@ export const AboutPageTemplate = ({
         <section id="five" className="dark">
           <Anchor up to="four" />
           <div className="thin">
-            <div className="title">
-              <h5>Testimonials</h5>
-              <h2>Don't take our word for it</h2>
-            </div>
-
+            <SectionTitle
+              title="Don't take our word for it"
+              subtitle="Testimonials"
+            />
             <Testimonials testimonials={testimonials} />
           </div>
         </section>

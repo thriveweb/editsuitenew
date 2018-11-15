@@ -4,6 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Anchor from '../components/Anchor'
 import Image from '../components/Image'
+import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import ClientsSection from '../components/ClientsSection'
 import Testimonials from '../components/Testimonials'
@@ -34,10 +35,7 @@ export const HomePageTemplate = ({
       <section id="two">
         <Anchor up to="one" /> <Anchor down to="three" />
         <div className="thin flex">
-          <div className="title">
-            <h5>What we do</h5>
-            <h2>We are creators</h2>
-          </div>
+          <SectionTitle title="We are creators" subtitle="What we do" />
           <div>
             <p>{intro.description}</p>
             <Link to={intro.buttonLink} className="button">
@@ -52,10 +50,7 @@ export const HomePageTemplate = ({
       <section id="three" className="light">
         <Anchor up to="two" /> <Anchor down to="four" />
         <div className="wide">
-          <div className="title">
-            <h5>Our specialities</h5>
-            <h2>We are can offer</h2>
-          </div>
+          <SectionTitle title="What we can offer" subtitle="Our specialities" />
           <ProjectCategories categories={projectCategories} />
         </div>
       </section>
@@ -65,11 +60,7 @@ export const HomePageTemplate = ({
       <section id="four" className="dark">
         <Anchor up to="three" /> <Anchor down to="five" />
         <div className="wide">
-          <div className="title">
-            <h5>Our clients</h5>
-            <h2>Who we work with</h2>
-          </div>
-
+          <SectionTitle title="Who we work with" subtitle="Our clients" />
           <ClientsSection clients={clients} />
         </div>
       </section>
@@ -80,11 +71,10 @@ export const HomePageTemplate = ({
         <section id="five">
           <Anchor up to="four" /> <Anchor down to="six" />
           <div className="thin">
-            <div className="title">
-              <h5>Testimonials</h5>
-              <h2>Don't take our word for it</h2>
-            </div>
-
+            <SectionTitle
+              title="Don't take our word for it"
+              subtitle="Testimonials"
+            />
             <Testimonials testimonials={testimonials} />
           </div>
         </section>
@@ -93,10 +83,7 @@ export const HomePageTemplate = ({
     <section id="six" className="dark">
       <Anchor up to="five" />
       <div className="wide">
-        <div className="title">
-          <h5>Get in touch</h5>
-          <h2>Let's work together</h2>
-        </div>
+        <SectionTitle title="Let's work together" subtitle="Get in touch" />
         <ContactInfo address={address} phone={phone} email={email} />
       </div>
     </section>

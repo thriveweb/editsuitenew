@@ -1,16 +1,12 @@
-.clients.flex,
-.clients .flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.clients .item {
-  height: auto;
-}
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
+  .clients.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .clients .item {
-    width: 50%;
+    width: 50% !important;
+    display: flex;
+    height: auto;
     margin: 0;
   }
 }

@@ -28,7 +28,7 @@ class ProjectSection extends React.Component {
     const visibleProject = projects.slice(0, limit || projects.length)
 
     return (
-      <div className="projects">
+      <div className="items-expand">
         <div className="flex">
           {visibleProject.map((item, index) => (
             <Link

@@ -44,7 +44,7 @@ class SinglePhotographyTemplate extends React.Component {
           </Popup>
 
           {!!images && (
-            <div className="image-list flex">
+            <div className="items-expand flex">
               {images.map((item, index) => (
                 <div
                   className="item flex"

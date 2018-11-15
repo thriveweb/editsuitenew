@@ -6,11 +6,6 @@
   margin-bottom: 6rem;
 }
 
-.image-list.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .popup-overlay {
   background: rgba(0, 0, 0, 0.8) !important;
   z-index: 10000 !important;

@@ -2,10 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Image from './Image.js'
-import './ProjectCategories.css'
 
 const ProjectCategories = ({ categories }) => (
-  <div className="project-cat flex">
+  <div className="items-title flex">
     {categories.map((item, index) => (
       <Link
         className="item flex"
