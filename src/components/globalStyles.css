@@ -5,30 +5,14 @@
   --font-primary: 'europa', sans-serif;
 }
 
+/* --- global --- */
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
   min-height: 100%;
   background: var(--medium);
   scroll-behavior: smooth;
-  /* overflow-y: hidden; */
-}
-
-@media screen and (max-height: 920px), screen and (max-width: 750px) {
-  section:first-of-type {
-    height: 100vh !important;
-    padding: 0;
-  }
-
-  section {
-    height: auto !important;
-    padding: 10rem 0;
-  }
-
-  .arrow-up,
-  .arrow-down {
-    display: none;
-  }
 }
 
 body {
@@ -36,8 +20,13 @@ body {
   font-weight: 300;
   color: white;
   font-size: 1.4rem;
+  overflow: auto;
+  overflow: initial;
+  z-index: -2;
   -webkit-font-smoothing: antialiased;
 }
+
+/* --- typography --- */
 
 a {
   color: white;
@@ -114,6 +103,8 @@ h5,
   text-transform: uppercase;
 }
 
+/* --- title --- */
+
 .title {
   width: 100%;
   margin-bottom: 4rem;
@@ -124,19 +115,7 @@ h5,
   opacity: 0.4;
 }
 
-@media screen and (max-width: 700px) {
-  h1,
-  h2 {
-    font-size: 3rem;
-  }
-
-  h3 {
-    font-size: 2.2rem;
-    padding: 0 1rem;
-  }
-}
-
-/* --- layout --- */
+/* --- options --- */
 
 .clear {
   clear: both;
@@ -148,15 +127,6 @@ h5,
 
 .dark {
   background: var(--dark);
-}
-
-section {
-  width: 100%;
-  height: calc(100vh + 10rem);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .relative {
@@ -177,6 +147,8 @@ section {
   align-items: center;
 }
 
+/* --- align --- */
+
 .taLeft {
   text-align: left;
 }
@@ -187,6 +159,17 @@ section {
 
 .taCenter {
   text-align: center;
+}
+
+/* --- layout --- */
+
+section {
+  width: 100%;
+  height: calc(100vh + 10rem);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wide,
@@ -211,6 +194,8 @@ section {
   width: 48%;
 }
 
+/* --- images --- */
+
 .opener {
   width: 100%;
   height: 100%;
@@ -225,40 +210,7 @@ section {
   object-fit: cover;
 }
 
-@media screen and (max-width: 1110px) {
-  .wide {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .thin {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .flex {
-    width: 100%;
-    display: block;
-  }
-
-  .half div {
-    width: 100%;
-    margin-bottom: 4rem;
-  }
-
-  .half:last-child {
-    margin: 0;
-  }
-
-  .title {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* items */
+/* --- items --- */
 
 .thin .item {
   height: 15rem;
@@ -268,35 +220,113 @@ section {
   height: 21rem;
 }
 
-.item,
-.projects .flex:after,
-.image-list.flex:after,
-.project-cat:after {
-  content: '';
-  width: calc(33.33% - 1rem);
-  order: 100;
-}
-
 .item {
-  position: relative;
-  justify-content: center !important;
+  width: calc(33.33% - 1rem);
   margin-bottom: 1.5rem;
 }
 
-@media screen and (max-width: 750px) {
-  .item {
-    width: calc(50% - 1rem);
-  }
+.items-title.flex,
+.items-title .flex,
+.items-expand.flex,
+.items-expand .flex {
+  flex-wrap: wrap;
+  display: flex;
 }
 
-@media screen and (max-width: 500px) {
-  .item {
-    width: 100%;
-    margin: 0 0 2rem 0;
-  }
+.items-title:after,
+.items-expand:after {
+  content: '';
+  width: calc(33.33% - 1rem);
+  order: 10000;
 }
 
-/* arrows */
+.items-title .item {
+  justify-content: center;
+}
+
+.items-title .LazyImage {
+  opacity: 0.4;
+  transition: 0.5s ease all;
+}
+
+.items-title .item:hover .LazyImage {
+  opacity: 0.2;
+}
+
+.items-title .item h3 {
+  position: absolute;
+  z-index: 10;
+}
+
+.items-title .item h3:after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: white;
+  display: block;
+}
+
+.items-title .item:hover h3:after {
+  width: 100%;
+  animation: hover 0.8s ease-in-out;
+}
+
+.items-expand .item {
+  justify-content: center;
+  cursor: pointer;
+}
+
+.items-expand .item:after {
+  content: '';
+  position: absolute;
+  background: url(/images/search.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  opacity: 0;
+  z-index: 100;
+  transition: 0.5s ease all;
+}
+
+.items-expand .item:hover:after {
+  opacity: 1;
+}
+
+.items-expand .item:hover .LazyImage {
+  opacity: 0.6;
+}
+
+.items-expand .LazyImage {
+  transition: 0.5s ease all;
+}
+
+/* --- scrolling --- */
+
+.scroll-jack {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* --- arrows --- */
 
 .arrow-down,
 .arrow-up {
@@ -320,7 +350,7 @@ section {
   border-left: 2px solid white;
 }
 
-/* button */
+/* --- button --- */
 
 .button {
   border: 0;
@@ -342,7 +372,7 @@ section {
   outline: none;
 }
 
-/* 404 */
+/* --- 404 --- */
 
 .four04 {
   width: 80vw;
@@ -363,4 +393,94 @@ section {
   opacity: 0.03;
   position: absolute;
   z-index: -99;
+}
+
+/* --- responsive --- */
+
+@media screen and (max-width: 1110px) {
+  .wide {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .thick {
+    padding: 10rem 2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  h1,
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+    padding: 0 1rem;
+  }
+
+  .flex {
+    width: 100%;
+    display: block;
+  }
+
+  .half div {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .half:last-child {
+    margin: 0;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .item {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .thin {
+    width: 100%;
+  }
+
+  .item {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+
+@media screen and (max-height: 920px), screen and (max-width: 750px) {
+  .opener {
+    padding-bottom: 5rem;
+  }
+
+  .scroll-jack {
+    overflow-y: scroll !important;
+  }
+
+  section:first-of-type {
+    height: 100vh !important;
+    padding: 0;
+  }
+
+  section {
+    height: auto !important;
+    padding: 10rem 0;
+  }
+
+  .arrow-down:first-of-type {
+    display: block;
+    bottom: 5rem;
+  }
+
+  .arrow-up,
+  .arrow-down {
+    display: none;
+  }
 }
