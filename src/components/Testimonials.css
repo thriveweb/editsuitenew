@@ -1,27 +1,16 @@
-.testimonials img.LazyImage {
-  align-self: center;
-  padding: 0 4rem 2rem;
+.testimonials .LazyImage {
+  width: 7rem;
   opacity: 0.2;
 }
 
-.swiper-container {
-  display: flex;
-  overflow: hidden;
+.testimonials .wrap {
+  width: calc(100% - 10rem);
+  float: right;
 }
 
-.swiper-wrapper,
-.swiper-slide {
-  height: 24rem;
-}
-
-.swiper-wrapper {
-  padding-right: 6rem;
-  text-align: left;
-}
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
+.swiper-slide p,
+.swiper-slide h5 {
+  margin-bottom: 3rem;
 }
 
 .swiper-slide p {
@@ -31,71 +20,46 @@
 .swiper-pagination {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 2rem;
-  right: 0;
-  top: 0;
-  align-self: center;
-  height: auto;
-  width: 1px;
+  bottom: 0 !important;
 }
 
-.swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.1);
-  height: 2rem;
-  width: 1px;
-  margin-bottom: 0.8rem;
+.swiper-pagination .swiper-pagination-bullet {
+  width: 2rem;
+  height: 2px;
+  margin: 0 0.8rem !important;
   display: block;
-}
-
-.swiper-pagination-bullet-active {
   background: white;
+  opacity: 0.3;
+  border-radius: 0;
 }
 
-@media screen and (max-width: 750px) {
-  .swiper-container {
-    display: block;
-  }
-  .testimonials,
-  .swiper-slide {
+.swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .testimonials {
     text-align: center;
   }
+  .testimonials .LazyImage {
+    width: 4rem;
+    opacity: 0.2;
+    margin: 0 auto 3rem;
+  }
 
-  .testimonials img.LazyImage {
-    height: 3rem;
-    padding: 0;
-    margin-bottom: 2rem;
-    align-self: center;
+  .testimonials .wrap {
+    width: 90vw;
+    display: block;
+    float: left;
+  }
+
+  .swiper-slide {
+    width: 100% !important;
   }
 
   .swiper-slide p {
     font-size: 1.5rem;
-  }
-
-  .swiper-slide {
-    padding-bottom: 2rem;
-  }
-
-  .swiper-wrapper {
-    padding: 0;
-  }
-
-  .swiper-wrapper,
-  .swiper-slide {
-    width: 100%;
-  }
-
-  .swiper-pagination {
-    display: block;
-    width: 100%;
-    top: auto;
-    bottom: 0 !important;
-  }
-
-  .swiper-pagination-bullet {
-    height: 1px;
-    width: 2rem;
-    margin: 0 1rem;
-    display: inline-block;
   }
 }
