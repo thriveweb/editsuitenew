@@ -3,15 +3,18 @@
   margin: auto;
 }
 
-.project-single .video {
-  margin-top: 8rem;
-  margin-bottom: 3rem;
-  height: 40rem;
-  width: 100%;
+.video {
+  margin: 4rem 0 2rem;
   position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 }
 
-.project-single iframe {
+.video iframe,
+.video object,
+.video embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,20 +22,6 @@
   height: 100%;
 }
 
-.video .vp-player-layout {
-  width: 100% !important;
-  height: 100% !important;
-  left: 0 !important;
-  position: relative !important;
-}
-
 .project-single h5 {
   opacity: 0.2;
-}
-
-@media screen and (max-width: 670px) {
-  .project-single .video {
-    margin: 3rem 0;
-    height: 20rem;
-  }
 }
