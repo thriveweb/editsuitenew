@@ -95,7 +95,7 @@ class Form extends React.Component {
             />
           </label>
           <label className="label">
-            <textarea
+            <input
               className="input textarea"
               placeholder="How can we help?"
               name="message"
