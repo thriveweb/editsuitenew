@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import SectionTitle from '../components/SectionTitle.js'
+import SectionTitle from '../components/SectionTitle'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import ContactInfo from '../components/ContactInfo'
 

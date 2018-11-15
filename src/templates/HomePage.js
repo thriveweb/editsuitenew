@@ -22,7 +22,7 @@ export const HomePageTemplate = ({
   email,
   address
 }) => (
-  <div className="home">
+  <div className="scroll-jack">
     <section id="one">
       <Anchor down to="two" />
       <div className="opener relative">

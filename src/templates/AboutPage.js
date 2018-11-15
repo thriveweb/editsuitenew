@@ -1,16 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout.js'
+import Layout from '../components/Layout'
 import Anchor from '../components/Anchor'
-import Image from '../components/Image.js'
-import Content from '../components/Content.js'
-import SectionTitle from '../components/SectionTitle.js'
-import Icons from '../components/Icons.js'
-import ClientsSection from '../components/ClientsSection.js'
-import Testimonials from '../components/Testimonials.js'
-
-import './AboutPage.css'
+import Image from '../components/Image'
+import Content from '../components/Content'
+import SectionTitle from '../components/SectionTitle'
+import Icons from '../components/Icons'
+import ClientsSection from '../components/ClientsSection'
+import Testimonials from '../components/Testimonials'
 
 export const AboutPageTemplate = ({
   title,
@@ -21,7 +19,7 @@ export const AboutPageTemplate = ({
   testimonials,
   isPreview
 }) => (
-  <div className="about">
+  <div className="scroll-jack">
     {!!opener && (
       <section id="one">
         <Anchor down to="two" />

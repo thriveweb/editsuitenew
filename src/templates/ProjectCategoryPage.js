@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/Layout'
 import Image from '../components/Image'
+import Anchor from '../components/Anchor'
 import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import ProjectSection from '../components/ProjectSection'
-import Layout from '../components/Layout'
 
 export const ProjectCategoryPageTemplate = ({
   title,
@@ -35,6 +36,7 @@ export const ProjectCategoryPageTemplate = ({
     <div className="project">
       {!!opener && (
         <section>
+          <Anchor down to="two" />
           <div className="opener relative">
             <h1>{title}</h1>
             <div className="gradient" />
@@ -44,7 +46,7 @@ export const ProjectCategoryPageTemplate = ({
       )}
 
       {!!overview && (
-        <div className="thin thick flex">
+        <div id="two" className="thin thick flex">
           <SectionTitle title={title} subtitle="Our work" />
           <div>
             <p>{overview}</p>

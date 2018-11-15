@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Image from '../components/Image'
+import Anchor from '../components/Anchor'
 import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import Testimonials from '../components/Testimonials'
@@ -14,9 +15,10 @@ export const ProjectPageTemplate = ({
   testimonials,
   contentType
 }) => (
-  <div>
+  <div className="scroll-jack">
     {!!opener && (
-      <section>
+      <section id="one">
+        <Anchor down to="two" />
         <div className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
@@ -26,7 +28,8 @@ export const ProjectPageTemplate = ({
     )}
 
     {!!projectCategories.length && (
-      <section>
+      <section id="two">
+        <Anchor up to="one" /> <Anchor down to="three" />
         <div className="wide">
           <SectionTitle title="What we can offer" subtitle="Our specialties" />
           <ProjectCategories categories={projectCategories} />
@@ -35,7 +38,8 @@ export const ProjectPageTemplate = ({
     )}
 
     {!!testimonials && (
-      <section className="dark">
+      <section id="three" className="dark">
+        <Anchor up to="two" />
         <div className="thin">
           <SectionTitle
             title="Don't take our word for it"

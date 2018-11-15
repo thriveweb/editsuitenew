@@ -1,9 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/Layout'
+import Anchor from '../components/Anchor'
 import Image from '../components/Image'
 import PostSection from '../components/PostSection'
-import Layout from '../components/Layout'
 
 export const BlogIndexTemplate = ({
   title,
@@ -13,9 +14,10 @@ export const BlogIndexTemplate = ({
   posts = [],
   contentType
 }) => (
-  <div className="blog">
+  <div>
     {!!opener && (
       <section>
+        <Anchor down to="two" />
         <div className="opener relative">
           <h1>{title}</h1>
           <div className="gradient" />
@@ -25,7 +27,7 @@ export const BlogIndexTemplate = ({
     )}
 
     {!!posts.length && (
-      <div className="wide thick">
+      <div id="two" className="wide thick">
         <PostSection posts={posts} />
       </div>
     )}

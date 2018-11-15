@@ -234,7 +234,8 @@ section {
 }
 
 .items-title:after,
-.items-expand:after {
+.items-expand:after,
+.items-expand .flex:after {
   content: '';
   width: calc(33.33% - 1rem);
   order: 10000;
