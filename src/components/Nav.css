@@ -24,10 +24,19 @@
   margin: auto;
 }
 
+.nav .social,
+.menu-button {
+  width: 12rem;
+}
+
+.nav .social .fab {
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
 .menu-button {
   z-index: 1;
-  padding: 3rem 0;
-  position: absolute;
+  padding: 2rem 0;
 }
 
 .menu-button .bar {

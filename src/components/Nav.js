@@ -15,7 +15,7 @@ export default class Nav extends Component {
   render() {
     const { active } = this.state
 
-    const NavLink = ({ className, children, ...props }) => (
+    const NavLink = ({ className, children, social, ...props }) => (
       <Link
         {...props}
         className={`NavLink ${className || ''}`}
@@ -24,6 +24,8 @@ export default class Nav extends Component {
         {children}
       </Link>
     )
+
+    const { social } = this.props
 
     return (
       <nav className={`nav ${active ? 'nav-active' : ''}`}>
@@ -43,6 +45,35 @@ export default class Nav extends Component {
             <NavLink to="/blog/">Blog</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
           </div>
+
+          {!!social && (
+            <div className="social">
+              <a
+                href={social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-facebook-f" />
+              </a>
+              <a href={social.vimeo} target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-vimeo-v" />
+              </a>
+              <a
+                href={social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-instagram" />
+              </a>
+              <a
+                href={social.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-youtube" />
+              </a>
+            </div>
+          )}
         </div>
       </nav>
     )
