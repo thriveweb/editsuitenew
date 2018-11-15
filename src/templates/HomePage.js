@@ -25,10 +25,12 @@ export const HomePageTemplate = ({
   <div className="scroll-jack">
     <section id="one">
       <Anchor down to="two" />
-      <div className="opener relative">
-        <div className="gradient" />
-        <Image background resolutions="large" src={opener} alt={title} />
-      </div>
+      {!!opener && (
+        <div className="opener relative">
+          <div className="gradient" />
+          <Image background resolutions="large" src={opener} alt={title} />
+        </div>
+      )}
     </section>
 
     {!!intro && (
