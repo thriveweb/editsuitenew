@@ -89,7 +89,7 @@ class Form extends React.Component {
             <input
               className="input"
               type="text"
-              placeholder="What is this regarding?"
+              placeholder="Give this email a subject"
               name="subject"
               required
             />
