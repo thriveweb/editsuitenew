@@ -1,31 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Popup from 'reactjs-popup'
 
 import Layout from '../components/Layout'
-import Image from '../components/Image'
 import './SinglePhotography.css'
 
 class SinglePhotographyTemplate extends React.Component {
-  static defaultProps = {
-    popup: []
-  }
-
-  state = {
-    popupOpen: false,
-    popupImagePath: null
-  }
-
-  openModal = popupImagePath => {
-    this.setState({ popupOpen: true })
-    this.setState({ popupImagePath: popupImagePath })
-  }
-  closeModal = () => {
-    this.setState({ popupOpen: false })
-  }
-
   render() {
     const { title, images } = this.props
+    var defaults = {
+      buttons: ['close'],
+      arrows: false
+    }
 
     return (
       <div className="photography-single dark">
@@ -34,35 +19,19 @@ class SinglePhotographyTemplate extends React.Component {
             <h1>{title}</h1>
           </div>
 
-          <Popup modal open={this.state.popupOpen} onClose={this.closeModal}>
-            <div className="close" onClick={this.closeModal} />
-            <Image
-              resolutions="large"
-              src={this.state.popupImagePath}
-              alt={title}
-            />
-          </Popup>
-
-          {!!images && (
-            <div className="items-expand flex">
-              {images.map((item, index) => (
-                <div
-                  className="item flex"
-                  key={title + index}
-                  onClick={() => {
-                    this.openModal(item)
-                  }}
-                >
-                  <Image
-                    resolutions="large"
-                    src={item}
-                    alt={title}
-                    className="cover"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="items-expand flex">
+            {images.map((item, index) => (
+              <div
+                className="item flex"
+                data-fancybox="gallery"
+                key={title + index}
+                href={item}
+                data-options={defaults}
+              >
+                <img className="cover" src={item} alt={title} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     )

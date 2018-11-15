@@ -38,6 +38,12 @@ export default ({ children, meta, title }) => {
                 rel="stylesheet"
                 href="https://use.typekit.net/rdy6jzy.css"
               />
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css"
+              />
+              <script src="//code.jquery.com/jquery-3.3.1.min.js" />
+              <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js" />
             </Helmet>
 
             <Meta

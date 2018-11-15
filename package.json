@@ -3,6 +3,7 @@
   "description": "An opinionated starter project for creating lightning-fast websites with Gatsby v2 and Netlify CMS v2",
   "version": "2.0.0",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.2",
     "@fullpage/react-fullpage": "^0.1.2",
     "@researchgate/react-intersection-observer": "^0.7.3",
     "date-fns": "^1.29.0",
@@ -38,6 +39,7 @@
     "react-addons-create-fragment": "^15.4.2",
     "react-addons-transition-group": "^15.4.2",
     "react-dom": "^16.5.2",
+    "react-fancybox": "^0.2.3",
     "react-feather": "^1.1.4",
     "react-fullpage": "^0.1.19",
     "react-helmet": "^5.2.0",

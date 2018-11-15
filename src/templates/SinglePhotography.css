@@ -6,43 +6,20 @@
   margin-bottom: 6rem;
 }
 
-.popup-overlay {
-  background: rgba(0, 0, 0, 0.8) !important;
-  z-index: 10000 !important;
+.fancybox-bg {
+  background: black !important;
 }
 
-.popup-overlay:before {
-  content: '';
-  width: 4rem;
-  height: 4rem;
-  top: 3rem;
-  right: 3rem;
-  position: absolute;
-  background: url('/images/close.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
+.fancybox-container .fancybox-button--thumbs,
+.fancybox-container .fancybox-button--play,
+.fancybox-container .fancybox-button--zoom {
+  display: none !important;
 }
 
-.popup-content {
-  margin-top: 14rem !important;
-  width: 100rem !important;
-  height: 80%;
-  padding: 0 !important;
-  border: 0 !important;
-  background: none !important;
-  position: absolute;
+.fancybox-container button {
+  background: white;
 }
 
-.popup-content .LazyImage {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-@media screen and (max-height: 900px) {
-  .popup-content {
-    padding: 0 2rem !important;
-    height: 60%;
-  }
+.fancybox-container .fancybox-button svg {
+  color: black;
 }
