@@ -28,7 +28,7 @@ class SinglePhotographyTemplate extends React.Component {
                 href={item}
                 data-options={defaults}
               >
-                <img className="cover" src={item} alt={title} />
+                <img className="cover" src={item} alt={title + '-' + index} />
               </div>
             ))}
           </div>
