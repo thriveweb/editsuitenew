@@ -165,7 +165,7 @@ h5,
 
 section {
   width: 100%;
-  height: calc(100vh + 10rem);
+  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -202,6 +202,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.opener h1 {
+  z-index: 10;
 }
 
 .cover {
@@ -325,30 +329,6 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #bbb;
-}
-
-/* --- arrows --- */
-
-.arrow-down,
-.arrow-up {
-  width: 1.2rem;
-  height: 1.2rem;
-  position: absolute;
-  z-index: 100;
-}
-
-.arrow-down {
-  transform: rotate(45deg);
-  bottom: 16rem;
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
-}
-
-.arrow-up {
-  top: 16rem;
-  transform: rotate(45deg);
-  border-top: 2px solid white;
-  border-left: 2px solid white;
 }
 
 /* --- button --- */

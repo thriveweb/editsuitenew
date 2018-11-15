@@ -1,5 +1,5 @@
 .nav {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   position: fixed;
   left: 0;
   right: 0;
@@ -151,5 +151,9 @@
 @media screen and (max-width: 750px) {
   .nav .wrap {
     width: 90%;
+  }
+
+  .NavLink {
+    font-size: 4rem;
   }
 }

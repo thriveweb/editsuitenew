@@ -3,6 +3,10 @@
   margin: auto;
 }
 
+.project-single h5 {
+  opacity: 0.2;
+}
+
 .video {
   margin: 4rem 0 2rem;
   position: relative;
@@ -22,6 +26,11 @@
   height: 100%;
 }
 
-.project-single h5 {
-  opacity: 0.2;
+@media screen and (max-height: 1000px), screen (max-width: 900px) {
+  .project-single section {
+    height: auto !important;
+  }
+  .project-single {
+    padding: 12rem 0 5rem;
+  }
 }
