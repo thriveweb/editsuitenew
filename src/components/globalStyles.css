@@ -106,7 +106,7 @@ h5,
 /* --- title --- */
 
 .title {
-  width: 100%;
+  min-width: 30rem;
   margin-bottom: 4rem;
   align-self: baseline;
 }

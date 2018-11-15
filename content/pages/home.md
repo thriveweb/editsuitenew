@@ -8,9 +8,7 @@ intro:
   buttonLink: /about
   buttonText: About Us
   description: >-
-    We are a video, photography and CASA certified drone aerial company based in
-    Mermaid Beach on the Gold Coast of Australia specializing in the creation of
-    video, motion graphics,  drone videos, aerial photography, and much more!
+    We are a film production, photography and drone aerial company based in Mermaid Beach on the Gold Coast of Australia specialising in the creation of film, motion graphics, explainer videos, aerial photography and cinematography.
 testimonials:
   - company: Company name
     content: >-
