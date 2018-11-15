@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import Anchor from '../components/Anchor'
 import Image from '../components/Image'
 import Content from '../components/Content'
+import OpenerVideo from '../components/OpenerVideo'
+import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
 import Icons from '../components/Icons'
 import ClientsSection from '../components/ClientsSection'
@@ -12,7 +14,8 @@ import Testimonials from '../components/Testimonials'
 
 export const AboutPageTemplate = ({
   title,
-  opener,
+  openerVideo,
+  openerImage,
   icons = [],
   blurb,
   clients,
@@ -20,16 +23,11 @@ export const AboutPageTemplate = ({
   isPreview
 }) => (
   <div className="scroll-jack">
-    {!!opener && (
-      <section id="one">
-        <Anchor down to="two" />
-        <div className="opener relative">
-          <h1>{title}</h1>
-          <div className="gradient" />
-          <Image background resolutions="large" src={opener} alt={title} />
-        </div>
-      </section>
-    )}
+    <section id="one">
+      <Anchor down to="two" />
+      {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
+      {!!openerImage && <OpenerImage src={openerImage} title={title} />}
+    </section>
 
     {!!icons && (
       <section id="two">
@@ -108,7 +106,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        opener
+        openerVideo
+        openerImage
         icons {
           title
           icon

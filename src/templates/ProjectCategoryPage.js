@@ -2,15 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Image from '../components/Image'
 import Anchor from '../components/Anchor'
+import OpenerVideo from '../components/OpenerVideo'
+import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import ProjectSection from '../components/ProjectSection'
 
 export const ProjectCategoryPageTemplate = ({
   title,
-  opener,
+  openerVideo,
+  openerImage,
   overview,
   projects = [],
   projectCategories = [],
@@ -34,16 +36,11 @@ export const ProjectCategoryPageTemplate = ({
 
   return (
     <div className="project">
-      {!!opener && (
-        <section>
-          <Anchor down to="two" />
-          <div className="opener relative">
-            <h1>{title}</h1>
-            <div className="gradient" />
-            <Image background resolutions="large" src={opener} alt={title} />
-          </div>
-        </section>
-      )}
+      <section>
+        <Anchor down to="two" />
+        {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
+        {!!openerImage && <OpenerImage src={openerImage} title={title} />}
+      </section>
 
       {!!overview && (
         <div id="two" className="thin thick flex">
@@ -113,7 +110,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        opener
+        openerVideo
+        openerImage
         overview
         testimonials {
           content

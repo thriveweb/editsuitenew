@@ -2,7 +2,8 @@
 template: AboutPage
 slug: about
 title: We are creators
-opener: 'https://ucarecdn.com/ae580428-bd9f-4388-a0d0-824f54dff10a/'
+openerImage: 'https://ucarecdn.com/ae580428-bd9f-4388-a0d0-824f54dff10a/'
+openerVideo: ''
 icons:
   - icon: 'https://theeditsuite.netlify.com/images/icon1.svg'
     title: Expertise

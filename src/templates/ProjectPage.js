@@ -1,31 +1,28 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Image from '../components/Image'
+import Layout from '../components/Layout'
 import Anchor from '../components/Anchor'
+import OpenerVideo from '../components/OpenerVideo'
+import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import Testimonials from '../components/Testimonials'
-import Layout from '../components/Layout'
 
 export const ProjectPageTemplate = ({
   title,
-  opener,
+  openerVideo,
+  openerImage,
   projectCategories = [],
   testimonials,
   contentType
 }) => (
   <div className="scroll-jack">
-    {!!opener && (
-      <section id="one">
-        <Anchor down to="two" />
-        <div className="opener relative">
-          <h1>{title}</h1>
-          <div className="gradient" />
-          <Image background resolutions="large" src={opener} alt={title} />
-        </div>
-      </section>
-    )}
+    <section id="one">
+      <Anchor down to="two" />
+      {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
+      {!!openerImage && <OpenerImage src={openerImage} title={title} />}
+    </section>
 
     {!!projectCategories.length && (
       <section id="two">
@@ -81,7 +78,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        opener
+        openerVideo
+        openerImage
         testimonials {
           content
           name

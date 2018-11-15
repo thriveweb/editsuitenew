@@ -7,7 +7,7 @@
   opacity: 0.2;
 }
 
-.video {
+.project-single .video {
   margin: 4rem 0 2rem;
   position: relative;
   padding-bottom: 56.25%;
@@ -16,9 +16,9 @@
   max-width: 100%;
 }
 
-.video iframe,
-.video object,
-.video embed {
+.project-single .video iframe,
+.project-single .video object,
+.project-single .video embed {
   position: absolute;
   top: 0;
   left: 0;

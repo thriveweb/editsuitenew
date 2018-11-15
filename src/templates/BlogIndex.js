@@ -3,28 +3,25 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Anchor from '../components/Anchor'
-import Image from '../components/Image'
+import OpenerVideo from '../components/OpenerVideo'
+import OpenerImage from '../components/OpenerImage'
 import PostSection from '../components/PostSection'
 
 export const BlogIndexTemplate = ({
   title,
-  opener,
+  openerVideo,
+  openerImage,
   overview,
   featuredImage,
   posts = [],
   contentType
 }) => (
   <div>
-    {!!opener && (
-      <section>
-        <Anchor down to="two" />
-        <div className="opener relative">
-          <h1>{title}</h1>
-          <div className="gradient" />
-          <Image background resolutions="large" src={opener} alt={title} />
-        </div>
-      </section>
-    )}
+    <section>
+      <Anchor down to="two" />
+      {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
+      {!!openerImage && <OpenerImage src={openerImage} title={title} />}
+    </section>
 
     {!!posts.length && (
       <div id="two" className="wide thick">
@@ -63,7 +60,8 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        opener
+        openerVideo
+        openerImage
         overview
       }
     }

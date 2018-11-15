@@ -3,7 +3,8 @@ import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Anchor from '../components/Anchor'
-import Image from '../components/Image'
+import OpenerVideo from '../components/OpenerVideo'
+import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import ClientsSection from '../components/ClientsSection'
@@ -12,25 +13,22 @@ import ContactInfo from '../components/ContactInfo'
 
 export const HomePageTemplate = ({
   title,
-  opener,
+  openerImage,
+  openerVideo,
   intro,
   projectCategories = [],
   clients,
   testimonials,
-  isPreview,
   phone,
   email,
-  address
+  address,
+  isPreview
 }) => (
   <div className="scroll-jack">
     <section id="one">
       <Anchor down to="two" />
-      {!!opener && (
-        <div className="opener relative">
-          <div className="gradient" />
-          <Image background resolutions="large" src={opener} alt={title} />
-        </div>
-      )}
+      {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
+      {!!openerImage && <OpenerImage src={openerImage} title={title} />}
     </section>
 
     {!!intro && (
@@ -123,7 +121,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        opener
+        openerVideo
+        openerImage
         intro {
           description
           buttonText

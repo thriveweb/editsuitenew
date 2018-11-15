@@ -2,7 +2,8 @@
 template: ProjectPage
 slug: work
 title: Our Work
-opener: 'https://ucarecdn.com/ae9bdcfb-d0df-4c18-9c6d-ed57fff015c0/'
+openerImage: ''
+openerVideo: '291636317'
 testimonials:
   - content: Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis condimentum id ut dolor. Integer nec eros consectetur ante aliquet consectetur a sit amet ex. Integer placerat tincidunt mollis.
     name: John doe

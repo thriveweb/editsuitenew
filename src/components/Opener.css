@@ -1,0 +1,46 @@
+.opener {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opener h1 {
+  z-index: 10;
+}
+
+.opener .BackgroundImage {
+  z-index: -9;
+  opacity: 0.5;
+}
+
+.opener .gradient {
+  width: 100%;
+  height: 50rem;
+  background: linear-gradient(transparent, var(--medium));
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+}
+
+.opener.video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.opener.video iframe {
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

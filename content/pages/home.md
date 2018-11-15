@@ -2,7 +2,8 @@
 template: HomePage
 slug: ''
 title: The Edit Suite
-opener: 'https://ucarecdn.com/19cf5cbe-b78b-47f3-bbce-6f8893891016/'
+openerImage: ''
+openerVideo: '147984619'
 intro:
   buttonLink: /about
   buttonText: About Us
