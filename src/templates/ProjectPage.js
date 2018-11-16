@@ -15,7 +15,8 @@ export const ProjectPageTemplate = ({
   openerImage,
   projectCategories = [],
   testimonials,
-  contentType
+  contentType,
+  isPreview
 }) => (
   <div className="scroll-jack">
     <section id="one">
@@ -34,18 +35,19 @@ export const ProjectPageTemplate = ({
       </section>
     )}
 
-    {!!testimonials && (
-      <section id="three" className="dark">
-        <Anchor up to="two" />
-        <div className="thin">
-          <SectionTitle
-            title="Don't take our word for it"
-            subtitle="Testimonials"
-          />
-          <Testimonials testimonials={testimonials} />
-        </div>
-      </section>
-    )}
+    {!isPreview &&
+      !!testimonials && (
+        <section id="three" className="dark">
+          <Anchor up to="two" />
+          <div className="thin">
+            <SectionTitle
+              title="Don't take our word for it"
+              subtitle="Testimonials"
+            />
+            <Testimonials testimonials={testimonials} />
+          </div>
+        </section>
+      )}
   </div>
 )
 

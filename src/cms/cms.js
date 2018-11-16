@@ -2,10 +2,10 @@ import React from 'react'
 import CMS from 'netlify-cms'
 import './cms-utils'
 
-import { AboutPageTemplate } from '../templates/AboutPage'
-import { BlogIndexTemplate } from '../templates/BlogIndex'
-import { ContactPageTemplate } from '../templates/ContactPage'
-import { HomePageTemplate } from '../templates/HomePage'
+// import { AboutPageTemplate } from '../templates/AboutPage'
+// import { BlogIndexTemplate } from '../templates/BlogIndex'
+// import { ContactPageTemplate } from '../templates/ContactPage'
+// import { HomePageTemplate } from '../templates/HomePage'
 import { ProjectCategoryPageTemplate } from '../templates/ProjectCategoryPage'
 import { ProjectPageTemplate } from '../templates/ProjectPage'
 import { SinglePhotographyTemplate } from '../templates/SinglePhotography'
@@ -23,23 +23,23 @@ if (
   CMS.registerPreviewStyle('/styles.css')
 }
 
-CMS.registerPreviewTemplate('about-page', ({ entry }) => (
-  <AboutPageTemplate {...entry.toJS().data} isPreview />
-))
-CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
-  <BlogIndexTemplate {...entry.toJS().data} />
-))
-CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
-  <ContactPageTemplate {...entry.toJS().data} />
-))
-CMS.registerPreviewTemplate('home-page', ({ entry }) => (
-  <HomePageTemplate {...entry.toJS().data} isPreview />
-))
+// CMS.registerPreviewTemplate('about-page', ({ entry }) => (
+//   <AboutPageTemplate {...entry.toJS().data} isPreview />
+// ))
+// CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
+//   <BlogIndexTemplate {...entry.toJS().data} />
+// ))
+// CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
+//   <ContactPageTemplate {...entry.toJS().data} />
+// ))
+// CMS.registerPreviewTemplate('home-page', ({ entry }) => (
+//   <HomePageTemplate {...entry.toJS().data} isPreview />
+// ))
 CMS.registerPreviewTemplate('projectCategories', ({ entry }) => (
   <ProjectCategoryPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('work-page', ({ entry }) => (
-  <ProjectPageTemplate {...entry.toJS().data} />
+  <ProjectPageTemplate {...entry.toJS().data} isPreview />
 ))
 CMS.registerPreviewTemplate('photography', ({ entry }) => (
   <SinglePhotographyTemplate {...entry.toJS().data} />
