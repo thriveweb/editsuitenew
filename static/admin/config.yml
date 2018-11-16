@@ -34,7 +34,8 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener, name: opener, widget: image }
+          - { label: Opener Image, name: openerImage, widget: image }
+          - { label: Opener Video, name: openerVideo, widget: string }
 
           - label: 'Intro Section'
             name: 'intro'
@@ -91,7 +92,8 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'about' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener, name: opener, widget: image }
+          - { label: Opener Image, name: openerImage, widget: image }
+          - { label: Opener Video, name: openerVideo, widget: string }
 
           - label: 'Icon Section'
             name: 'icons'
@@ -155,7 +157,8 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'work' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener, name: opener, widget: image }
+          - { label: Opener Image, name: openerImage, widget: image }
+          - { label: Opener Video, name: openerVideo, widget: string }
 
           - label: 'Testimonials Section'
             name: 'testimonials'
@@ -204,7 +207,6 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'contact' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener, name: opener, widget: image }
 
           - label: 'Meta'
             required: false
@@ -245,7 +247,8 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'blog' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener, name: opener, widget: image }
+          - { label: Opener Image, name: openerImage, widget: image }
+          - { label: Opener Video, name: openerVideo, widget: string }
 
           - label: 'Meta'
             required: false
@@ -292,7 +295,8 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Order, name: order, widget: number }
       - { label: Overview, name: overview, widget: text }
       - { label: Preview, name: preview, widget: image }
-      - { label: Opener, name: opener, widget: image }
+      - { label: Opener Image, name: openerImage, widget: image }
+      - { label: Opener Video, name: openerVideo, widget: string }
 
       - label: 'Meta'
         required: false
@@ -513,3 +517,40 @@ collections: # A list of collections the CMS should be able to edit
               widget: text,
               required: false,
             }
+
+          - label: Contact Info
+            name: contact
+            widget: object
+            fields:
+              - {
+                  label: Address,
+                  name: address,
+                  widget: string,
+                  required: false,
+                }
+              - { label: Phone, name: phone, widget: string, required: false }
+              - { label: Email, name: email, widget: string, required: false }
+
+          - label: Social Media
+            name: social
+            widget: object
+            fields:
+              - {
+                  label: Facebook,
+                  name: facebook,
+                  widget: string,
+                  required: false,
+                }
+              - { label: Vimeo, name: vimeo, widget: string, required: false }
+              - {
+                  label: Instagram,
+                  name: instagram,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Youtube,
+                  name: youtube,
+                  widget: string,
+                  required: false,
+                }

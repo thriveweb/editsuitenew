@@ -8,13 +8,13 @@ import ContactInfo from '../components/ContactInfo'
 
 import './ContactPage.css'
 
-export const ContactPageTemplate = ({ title, phone, email, address }) => (
+export const ContactPageTemplate = ({ title, contact }) => (
   <div className="contact">
     <section>
       <div className="wide">
         <SectionTitle title="Let's work together" subtitle="Get in touch" />
         <FormSimpleAjax />
-        <ContactInfo address={address} phone={phone} email={email} />
+        <ContactInfo contact={contact} />
       </div>
     </section>
   </div>
@@ -46,9 +46,11 @@ export const pageQuery = graphql`
     }
 
     globalSettings: settingsYaml {
-      phone
-      address
-      email
+      contact {
+        phone
+        address
+        email
+      }
     }
   }
 `

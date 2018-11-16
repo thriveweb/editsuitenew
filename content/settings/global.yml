@@ -1,14 +1,14 @@
 siteTitle: The Edit Suite
-siteUrl: 'https://yellowcake.netlify.com'
+siteUrl: 'https://theeditsuite.netlify.com'
 siteDescription: >-
-  A starter project for creating lightning-fast websites with Gatsby v2 Netlify
-  CMS v2 and Uploadcare media library.
+  The Edit Suite is a Gold Coast video production and photography company that produces high quality and engaging digital content nationally and internationally.
 socialMediaCard:
   image: 'https://ucarecdn.com/fcc8d148-a9a8-42ee-a793-0f12b1437f61/'
 headerScripts: <!-- Add your analytics scripts / verification meta here -->
-phone: '(07) 5575 2185'
-email: 'info@theeditsuite.com.au'
-address: '2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia'
+contact:
+  phone: '(07) 5575 2185'
+  email: 'info@theeditsuite.com.au'
+  address: '2/2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia'
 social:
   instagram: 'https://www.instagram.com/theeditsuite/'
   facebook: 'https://www.facebook.com/theeditsuite.com.au'

@@ -19,9 +19,7 @@ export const HomePageTemplate = ({
   projectCategories = [],
   clients,
   testimonials,
-  phone,
-  email,
-  address,
+  contact,
   isPreview
 }) => (
   <div className="scroll-jack">
@@ -84,7 +82,7 @@ export const HomePageTemplate = ({
       <Anchor up to="five" />
       <div className="wide">
         <SectionTitle title="Let's work together" subtitle="Get in touch" />
-        <ContactInfo address={address} phone={phone} email={email} />
+        <ContactInfo contact={contact} />
       </div>
     </section>
   </div>
@@ -170,9 +168,11 @@ export const pageQuery = graphql`
     }
 
     globalSettings: settingsYaml {
-      phone
-      address
-      email
+      contact {
+        phone
+        address
+        email
+      }
     }
   }
 `
