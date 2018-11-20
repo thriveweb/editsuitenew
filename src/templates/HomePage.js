@@ -37,14 +37,13 @@ export const HomePageTemplate = ({
       scrollBar={window && window.innerWidth < 700}
     >
       <Section>
-        <Anchor down to="two" />
         {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
         {!!openerImage && <OpenerImage src={openerImage} title={title} />}
+        <button onClick={fullpage_api.moveSectionDown()}>down</button>
       </Section>
 
       {!!intro && (
         <Section>
-          <Anchor up to="one" /> <Anchor down to="three" />
           <div className="thin flex">
             <SectionTitle title="We are creators" subtitle="What we do" />
             <div>
@@ -59,7 +58,6 @@ export const HomePageTemplate = ({
 
       {!!projectCategories.length && (
         <Section className="light">
-          <Anchor up to="two" /> <Anchor down to="four" />
           <div className="wide">
             <SectionTitle
               title="What we can offer"
@@ -72,7 +70,6 @@ export const HomePageTemplate = ({
 
       {!!clients && (
         <Section className="dark">
-          <Anchor up to="three" /> <Anchor down to="five" />
           <div className="wide">
             <SectionTitle title="Who we work with" subtitle="Our clients" />
             <ClientsSection clients={clients} />
@@ -83,7 +80,6 @@ export const HomePageTemplate = ({
       {!isPreview &&
         !!testimonials && (
           <Section>
-            <Anchor up to="four" /> <Anchor down to="six" />
             <div className="thin">
               <SectionTitle
                 title="Don't take our word for it"
@@ -95,7 +91,6 @@ export const HomePageTemplate = ({
         )}
 
       <Section className="dark">
-        <Anchor up to="five" />
         <div className="wide">
           <SectionTitle title="Let's work together" subtitle="Get in touch" />
           <ContactInfo contact={contact} />
@@ -103,29 +98,29 @@ export const HomePageTemplate = ({
       </Section>
     </SectionsContainer>
   )
-
-  const HomePage = ({
-    data: { page, clients, projectCategories, globalSettings }
-  }) => (
-    <Layout meta={page.frontmatter.meta || false}>
-      <HomePageTemplate
-        {...page}
-        {...page.frontmatter}
-        {...globalSettings}
-        body={page.html}
-        clients={clients.edges.map(item => ({
-          ...item.node,
-          ...item.node.frontmatter
-        }))}
-        projectCategories={projectCategories.edges.map(post => ({
-          ...post.node,
-          ...post.node.frontmatter,
-          ...post.node.fields
-        }))}
-      />
-    </Layout>
-  )
 }
+
+const HomePage = ({
+  data: { page, clients, projectCategories, globalSettings }
+}) => (
+  <Layout meta={page.frontmatter.meta || false}>
+    <HomePageTemplate
+      {...page}
+      {...page.frontmatter}
+      {...globalSettings}
+      body={page.html}
+      clients={clients.edges.map(item => ({
+        ...item.node,
+        ...item.node.frontmatter
+      }))}
+      projectCategories={projectCategories.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+    />
+  </Layout>
+)
 
 export default HomePage
 
