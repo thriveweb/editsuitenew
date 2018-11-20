@@ -22,7 +22,7 @@ export const HomePageTemplate = ({
   testimonials,
   contact,
   isPreview
-}) => (
+}) => {
   let options = {
     licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
@@ -30,96 +30,102 @@ export const HomePageTemplate = ({
     verticalAlign: true,
     navigation: false
   }
+
+  return (
     <SectionsContainer
       {...options}
       scrollBar={window && window.innerWidth < 700}
     >
-    <Section>
-      <Anchor down to="two" />
-      {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
-      {!!openerImage && <OpenerImage src={openerImage} title={title} />}
-    </Section>
-
-    {!!intro && (
       <Section>
-        <Anchor up to="one" /> <Anchor down to="three" />
-        <div className="thin flex">
-          <SectionTitle title="We are creators" subtitle="What we do" />
-          <div>
-            <p>{intro.description}</p>
-            <Link to={intro.buttonLink} className="button">
-              {intro.buttonText}
-            </Link>
-          </div>
-        </div>
+        <Anchor down to="two" />
+        {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
+        {!!openerImage && <OpenerImage src={openerImage} title={title} />}
       </Section>
-    )}
 
-    {!!projectCategories.length && (
-      <Section className="light">
-        <Anchor up to="two" /> <Anchor down to="four" />
-        <div className="wide">
-          <SectionTitle title="What we can offer" subtitle="Our specialities" />
-          <ProjectCategories categories={projectCategories} />
-        </div>
-      </Section>
-    )}
-
-    {!!clients && (
-      <Section className="dark">
-        <Anchor up to="three" /> <Anchor down to="five" />
-        <div className="wide">
-          <SectionTitle title="Who we work with" subtitle="Our clients" />
-          <ClientsSection clients={clients} />
-        </div>
-      </Section>
-    )}
-
-    {!isPreview &&
-      !!testimonials && (
+      {!!intro && (
         <Section>
-          <Anchor up to="four" /> <Anchor down to="six" />
-          <div className="thin">
-            <SectionTitle
-              title="Don't take our word for it"
-              subtitle="Testimonials"
-            />
-            <Testimonials testimonials={testimonials} />
+          <Anchor up to="one" /> <Anchor down to="three" />
+          <div className="thin flex">
+            <SectionTitle title="We are creators" subtitle="What we do" />
+            <div>
+              <p>{intro.description}</p>
+              <Link to={intro.buttonLink} className="button">
+                {intro.buttonText}
+              </Link>
+            </div>
           </div>
         </Section>
       )}
 
-    <Section className="dark">
-      <Anchor up to="five" />
-      <div className="wide">
-        <SectionTitle title="Let's work together" subtitle="Get in touch" />
-        <ContactInfo contact={contact} />
-      </div>
-    </Section>
-  </SectionsContainer>
-)
+      {!!projectCategories.length && (
+        <Section className="light">
+          <Anchor up to="two" /> <Anchor down to="four" />
+          <div className="wide">
+            <SectionTitle
+              title="What we can offer"
+              subtitle="Our specialities"
+            />
+            <ProjectCategories categories={projectCategories} />
+          </div>
+        </Section>
+      )}
 
-const HomePage = ({
-  data: { page, clients, projectCategories, globalSettings }
-}) => (
-  <Layout meta={page.frontmatter.meta || false}>
-    <HomePageTemplate
-      {...page}
-      {...page.frontmatter}
-      {...globalSettings}
-      body={page.html}
-      clients={clients.edges.map(item => ({
-        ...item.node,
-        ...item.node.frontmatter
-      }))}
-      projectCategories={projectCategories.edges.map(post => ({
-        ...post.node,
-        ...post.node.frontmatter,
-        ...post.node.fields
-      }))}
-    />
-  </Layout>
-)
+      {!!clients && (
+        <Section className="dark">
+          <Anchor up to="three" /> <Anchor down to="five" />
+          <div className="wide">
+            <SectionTitle title="Who we work with" subtitle="Our clients" />
+            <ClientsSection clients={clients} />
+          </div>
+        </Section>
+      )}
+
+      {!isPreview &&
+        !!testimonials && (
+          <Section>
+            <Anchor up to="four" /> <Anchor down to="six" />
+            <div className="thin">
+              <SectionTitle
+                title="Don't take our word for it"
+                subtitle="Testimonials"
+              />
+              <Testimonials testimonials={testimonials} />
+            </div>
+          </Section>
+        )}
+
+      <Section className="dark">
+        <Anchor up to="five" />
+        <div className="wide">
+          <SectionTitle title="Let's work together" subtitle="Get in touch" />
+          <ContactInfo contact={contact} />
+        </div>
+      </Section>
+    </SectionsContainer>
+  )
+
+  const HomePage = ({
+    data: { page, clients, projectCategories, globalSettings }
+  }) => (
+    <Layout meta={page.frontmatter.meta || false}>
+      <HomePageTemplate
+        {...page}
+        {...page.frontmatter}
+        {...globalSettings}
+        body={page.html}
+        clients={clients.edges.map(item => ({
+          ...item.node,
+          ...item.node.frontmatter
+        }))}
+        projectCategories={projectCategories.edges.map(post => ({
+          ...post.node,
+          ...post.node.frontmatter,
+          ...post.node.fields
+        }))}
+      />
+    </Layout>
+  )
+}
 
 export default HomePage
 
