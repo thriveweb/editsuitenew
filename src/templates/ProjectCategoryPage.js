@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Anchor from '../components/Anchor'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
@@ -37,7 +36,6 @@ export const ProjectCategoryPageTemplate = ({
   return (
     <div className="project">
       <section>
-        <Anchor down to="two" />
         {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
         {!!openerImage && <OpenerImage src={openerImage} title={title} />}
       </section>

@@ -1,9 +1,10 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { SectionsContainer, Section } from 'react-fullpage'
+import ReactFullpage from '@fullpage/react-fullpage'
 
 import Layout from '../components/Layout'
-import Anchor from '../components/Anchor'
+import ArrowDown from '../components/ArrowDown'
+import ArrowUp from '../components/ArrowUp'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
@@ -24,79 +25,101 @@ export const HomePageTemplate = ({
   isPreview
 }) => {
   let options = {
-    licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
-    responsiveWidth: 900,
     verticalAlign: true,
-    navigation: false
+    navigation: false,
+    responsiveWidth: 900,
+    scrollHorizontally: true
   }
 
   return (
-    <SectionsContainer
+    <ReactFullpage
       {...options}
-      scrollBar={window && window.innerWidth < 700}
-    >
-      <Section>
-        {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
-        {!!openerImage && <OpenerImage src={openerImage} title={title} />}
-        <button onClick={fullpage_api.moveSectionDown()}>down</button>
-      </Section>
+      render={({ state, fullpageApi }) => {
+        return (
+          <div>
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <h1>The Edit Suite</h1>
+                {!!openerVideo && (
+                  <OpenerVideo src={openerVideo} title={title} />
+                )}
+                {!!openerImage && (
+                  <OpenerImage src={openerImage} title={title} />
+                )}
+              </div>
 
-      {!!intro && (
-        <Section>
-          <div className="thin flex">
-            <SectionTitle title="We are creators" subtitle="What we do" />
-            <div>
-              <p>{intro.description}</p>
-              <Link to={intro.buttonLink} className="button">
-                {intro.buttonText}
-              </Link>
-            </div>
+              {!!intro && (
+                <div className="section">
+                  <div className="thin flex">
+                    <SectionTitle
+                      title="We are creators"
+                      subtitle="What we do"
+                    />
+                    <div>
+                      <p>{intro.description}</p>
+                      <Link to={intro.buttonLink} className="button">
+                        {intro.buttonText}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {!!projectCategories && (
+                <div className="section dark">
+                  <div className="wide">
+                    <SectionTitle
+                      title="What we can offer"
+                      subtitle="Our specialities"
+                    />
+                    <ProjectCategories categories={projectCategories} />
+                  </div>
+                </div>
+              )}
+
+              {!!clients && (
+                <div className="section light">
+                  <div className="wide">
+                    <SectionTitle
+                      title="Who we work with"
+                      subtitle="Our clients"
+                    />
+                    <ClientsSection clients={clients} />
+                  </div>
+                </div>
+              )}
+
+              {!!isPreview &&
+                !!testimonials && (
+                  <div className="section">
+                    <div className="thin">
+                      <SectionTitle
+                        title="Don't take our word for it"
+                        subtitle="Testimonials"
+                      />
+                      <Testimonials testimonials={testimonials} />
+                    </div>
+                  </div>
+                )}
+
+              {!!contact && (
+                <div className="section dark">
+                  <div className="wide">
+                    <SectionTitle
+                      title="Let's work together"
+                      subtitle="Get in touch"
+                    />
+                    <ContactInfo contact={contact} />
+                  </div>
+                </div>
+              )}
+            </ReactFullpage.Wrapper>
           </div>
-        </Section>
-      )}
-
-      {!!projectCategories.length && (
-        <Section className="light">
-          <div className="wide">
-            <SectionTitle
-              title="What we can offer"
-              subtitle="Our specialities"
-            />
-            <ProjectCategories categories={projectCategories} />
-          </div>
-        </Section>
-      )}
-
-      {!!clients && (
-        <Section className="dark">
-          <div className="wide">
-            <SectionTitle title="Who we work with" subtitle="Our clients" />
-            <ClientsSection clients={clients} />
-          </div>
-        </Section>
-      )}
-
-      {!isPreview &&
-        !!testimonials && (
-          <Section>
-            <div className="thin">
-              <SectionTitle
-                title="Don't take our word for it"
-                subtitle="Testimonials"
-              />
-              <Testimonials testimonials={testimonials} />
-            </div>
-          </Section>
-        )}
-
-      <Section className="dark">
-        <div className="wide">
-          <SectionTitle title="Let's work together" subtitle="Get in touch" />
-          <ContactInfo contact={contact} />
-        </div>
-      </Section>
-    </SectionsContainer>
+        )
+      }}
+    />
   )
 }
 

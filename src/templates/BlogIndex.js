@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Anchor from '../components/Anchor'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import PostSection from '../components/PostSection'
@@ -18,7 +17,6 @@ export const BlogIndexTemplate = ({
 }) => (
   <div>
     <section>
-      <Anchor down to="two" />
       {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
       {!!openerImage && <OpenerImage src={openerImage} title={title} />}
     </section>

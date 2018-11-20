@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Anchor from '../components/Anchor'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
@@ -20,14 +19,12 @@ export const ProjectPageTemplate = ({
 }) => (
   <div className="scroll-jack">
     <section id="one">
-      <Anchor down to="two" />
       {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
       {!!openerImage && <OpenerImage src={openerImage} title={title} />}
     </section>
 
     {!!projectCategories.length && (
       <section id="two">
-        <Anchor up to="one" /> <Anchor down to="three" />
         <div className="wide">
           <SectionTitle title="What we can offer" subtitle="Our specialties" />
           <ProjectCategories categories={projectCategories} />
@@ -38,7 +35,6 @@ export const ProjectPageTemplate = ({
     {!isPreview &&
       !!testimonials && (
         <section id="three" className="dark">
-          <Anchor up to="two" />
           <div className="thin">
             <SectionTitle
               title="Don't take our word for it"
