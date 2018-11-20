@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import { SectionsContainer, Section } from 'react-fullpage'
 
 import Layout from '../components/Layout'
 import Anchor from '../components/Anchor'
@@ -22,15 +23,25 @@ export const HomePageTemplate = ({
   contact,
   isPreview
 }) => (
-  <div className="scroll-jack">
-    <section id="one">
+  let options = {
+    licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
+    responsiveWidth: 900,
+    verticalAlign: true,
+    navigation: false
+  }
+    <SectionsContainer
+      {...options}
+      scrollBar={window && window.innerWidth < 700}
+    >
+    <Section>
       <Anchor down to="two" />
       {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
       {!!openerImage && <OpenerImage src={openerImage} title={title} />}
-    </section>
+    </Section>
 
     {!!intro && (
-      <section id="two">
+      <Section>
         <Anchor up to="one" /> <Anchor down to="three" />
         <div className="thin flex">
           <SectionTitle title="We are creators" subtitle="What we do" />
@@ -41,32 +52,32 @@ export const HomePageTemplate = ({
             </Link>
           </div>
         </div>
-      </section>
+      </Section>
     )}
 
     {!!projectCategories.length && (
-      <section id="three" className="light">
+      <Section className="light">
         <Anchor up to="two" /> <Anchor down to="four" />
         <div className="wide">
           <SectionTitle title="What we can offer" subtitle="Our specialities" />
           <ProjectCategories categories={projectCategories} />
         </div>
-      </section>
+      </Section>
     )}
 
     {!!clients && (
-      <section id="four" className="dark">
+      <Section className="dark">
         <Anchor up to="three" /> <Anchor down to="five" />
         <div className="wide">
           <SectionTitle title="Who we work with" subtitle="Our clients" />
           <ClientsSection clients={clients} />
         </div>
-      </section>
+      </Section>
     )}
 
     {!isPreview &&
       !!testimonials && (
-        <section id="five">
+        <Section>
           <Anchor up to="four" /> <Anchor down to="six" />
           <div className="thin">
             <SectionTitle
@@ -75,17 +86,17 @@ export const HomePageTemplate = ({
             />
             <Testimonials testimonials={testimonials} />
           </div>
-        </section>
+        </Section>
       )}
 
-    <section id="six" className="dark">
+    <Section className="dark">
       <Anchor up to="five" />
       <div className="wide">
         <SectionTitle title="Let's work together" subtitle="Get in touch" />
         <ContactInfo contact={contact} />
       </div>
-    </section>
-  </div>
+    </Section>
+  </SectionsContainer>
 )
 
 const HomePage = ({
