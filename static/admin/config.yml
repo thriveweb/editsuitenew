@@ -34,8 +34,18 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener Image, name: openerImage, widget: image }
-          - { label: Opener Video, name: openerVideo, widget: string }
+          - {
+              label: Opener Image,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Video,
+              name: openerVideo,
+              widget: string,
+              required: false,
+            }
 
           - label: 'Intro Section'
             name: 'intro'
@@ -92,8 +102,18 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'about' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener Image, name: openerImage, widget: image }
-          - { label: Opener Video, name: openerVideo, widget: string }
+          - {
+              label: Opener Image,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Video,
+              name: openerVideo,
+              widget: string,
+              required: false,
+            }
 
           - label: 'Icon Section'
             name: 'icons'
@@ -157,8 +177,18 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'work' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener Image, name: openerImage, widget: image }
-          - { label: Opener Video, name: openerVideo, widget: string }
+          - {
+              label: Opener Image,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Video,
+              name: openerVideo,
+              widget: string,
+              required: false,
+            }
 
           - label: 'Testimonials Section'
             name: 'testimonials'
@@ -247,8 +277,18 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'blog' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener Image, name: openerImage, widget: image }
-          - { label: Opener Video, name: openerVideo, widget: string }
+          - {
+              label: Opener Image,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Video,
+              name: openerVideo,
+              widget: string,
+              required: false,
+            }
 
           - label: 'Meta'
             required: false
@@ -295,8 +335,18 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Order, name: order, widget: number }
       - { label: Overview, name: overview, widget: text }
       - { label: Preview, name: preview, widget: image }
-      - { label: Opener Image, name: openerImage, widget: image }
-      - { label: Opener Video, name: openerVideo, widget: string }
+      - {
+          label: Opener Image,
+          name: openerImage,
+          widget: image,
+          required: false,
+        }
+      - {
+          label: Opener Video,
+          name: openerVideo,
+          widget: string,
+          required: false,
+        }
 
       - label: 'Meta'
         required: false
