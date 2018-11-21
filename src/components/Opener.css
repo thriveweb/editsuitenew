@@ -8,7 +8,7 @@
 
 .opener h1 {
   position: absolute;
-  z-index: 10;
+  z-index: 101;
 }
 
 .opener .BackgroundImage {
@@ -18,8 +18,8 @@
 
 .opener .gradient {
   width: 100%;
-  height: 50rem;
-  background: linear-gradient(transparent, var(--medium) 95%);
+  height: 100%;
+  background: linear-gradient(transparent -30%, var(--medium) 79%);
   position: absolute;
   bottom: 0;
   z-index: 100;
