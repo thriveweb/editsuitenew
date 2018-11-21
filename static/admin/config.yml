@@ -34,8 +34,25 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener Image, name: openerImage, widget: image }
-          - { label: Opener Video, name: openerVideo, widget: string }
+
+          - {
+              label: Opener Image,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Text,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Video,
+              name: openerVideo,
+              widget: string,
+              required: false,
+            }
 
           - label: 'Intro Section'
             name: 'intro'
@@ -44,14 +61,6 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Description, name: description, widget: markdown }
               - { label: Button Text, name: buttonText, widget: string }
               - { label: Button Link, name: buttonLink, widget: string }
-
-          - label: 'Testimonials Section'
-            name: 'testimonials'
-            widget: 'list'
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Company, name: company, widget: string }
-              - { label: Content, name: content, widget: text }
 
           - label: 'Meta'
             required: false
@@ -92,8 +101,25 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'about' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener Image, name: openerImage, widget: image }
-          - { label: Opener Video, name: openerVideo, widget: string }
+
+          - {
+              label: Opener Image,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Text,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Video,
+              name: openerVideo,
+              widget: string,
+              required: false,
+            }
 
           - label: 'Icon Section'
             name: 'icons'
@@ -108,14 +134,6 @@ collections: # A list of collections the CMS should be able to edit
             widget: 'object'
             fields:
               - { label: Image, name: image, widget: image }
-              - { label: Content, name: content, widget: markdown }
-
-          - label: 'Testimonials Section'
-            name: 'testimonials'
-            widget: 'list'
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Company, name: company, widget: string }
               - { label: Content, name: content, widget: markdown }
 
           - label: 'Meta'
@@ -157,16 +175,25 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'work' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener Image, name: openerImage, widget: image }
-          - { label: Opener Video, name: openerVideo, widget: string }
 
-          - label: 'Testimonials Section'
-            name: 'testimonials'
-            widget: 'list'
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Company, name: company, widget: string }
-              - { label: Content, name: content, widget: text }
+          - {
+              label: Opener Image,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Text,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Video,
+              name: openerVideo,
+              widget: string,
+              required: false,
+            }
 
           - label: 'Meta'
             required: false
@@ -247,8 +274,25 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'blog' }
           - { label: Title, name: title, widget: string }
-          - { label: Opener Image, name: openerImage, widget: image }
-          - { label: Opener Video, name: openerVideo, widget: string }
+
+          - {
+              label: Opener Image,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Text,
+              name: openerImage,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Opener Video,
+              name: openerVideo,
+              widget: string,
+              required: false,
+            }
 
           - label: 'Meta'
             required: false
@@ -468,6 +512,20 @@ collections: # A list of collections the CMS should be able to edit
               required: false,
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+  # Testimonials
+
+  - name: testimonials
+    label: Testimonials
+    editor:
+      preview: false
+    folder: content/testimonials
+    slug: '{{slug}}'
+    create: true
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Company, name: company, widget: string }
+      - { label: Content, name: content, widget: text }
 
   # Clients
 
