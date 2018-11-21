@@ -24,11 +24,11 @@ export const HomePageTemplate = ({
   isPreview
 }) => {
   let options = {
-    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
+    responsiveWidth: 900,
     verticalAlign: true,
-    navigation: false,
-    responsiveWidth: 900
+    navigation: false
   }
 
   return (

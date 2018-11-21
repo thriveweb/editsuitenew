@@ -321,19 +321,21 @@ h5,
   cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
-  position: sticky;
+  position: absolute;
   left: 50%;
   right: 50%;
   z-index: 100;
 }
 
 .arrow-down {
+  bottom: 5rem;
   transform: rotate(45deg);
   border-bottom: 2px solid white;
   border-right: 2px solid white;
 }
 
 .arrow-up {
+  top: 14rem;
   transform: rotate(45deg);
   border-top: 2px solid white;
   border-left: 2px solid white;
@@ -453,11 +455,11 @@ h5,
     overflow-y: scroll !important;
   }
 
-  /* .section.fp-section.fp-table:first-of-type,
+  .section.fp-section.fp-table:first-of-type,
   .section.fp-section.fp-table:first-of-type .fp-tableCell {
     height: 100vh !important;
     padding: 0;
-  } */
+  }
 
   .section.fp-section.fp-table,
   .section .fp-tableCell {
