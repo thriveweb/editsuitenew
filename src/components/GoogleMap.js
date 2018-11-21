@@ -12,8 +12,8 @@ if (process.env.NETLIFY_MAP_KEY) {
 class GoogleMap extends Component {
   static defaultProps = {
     center: {
-      lat: -28.044112,
-      lng: 153.435043
+      lat: -28.046012,
+      lng: 153.434539
     },
     zoom: 15
   }
@@ -207,7 +207,7 @@ class GoogleMap extends Component {
           defaultZoom={this.props.zoom}
           options={mapOptions}
         >
-          <Marker lat={-28.044112} lng={153.435043} />
+          <Marker lat={-28.046012} lng={153.434539} />
         </GoogleMapReact>
       </div>
     )
