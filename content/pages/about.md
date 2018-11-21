@@ -16,7 +16,7 @@ icons:
     title: Dedication
 blurb:
   content: >-
-    The Edit Suite are a team of videographers, photographers, licenced drone
+    The Edit Suite are a team of videographers, photographers, licensed drone
     operators and motion graphics designers. We take a new school approach to
     all of the videos we create and are constantly coming up with new and
     creative ideas in order to create something special for our clients and of
@@ -34,14 +34,15 @@ blurb:
 
 
     We have a large variety of professional lenses, professional gimbals for
-    silky smooth movement, a Ronin S Gimbal, motion control timelapse equipmet,
-    professional audio and lighting equipment, 3X battery powered outdoor studio
-    flashes and much more.
+    silky smooth movement, motion control timelapse equipment, professional
+    audio and lighting equipment, battery powered outdoor studio flashes and
+    much more.
 
 
     Let us show you how your next video or photography project can be something
     you are super proud to show the world!
-  image: 'https://ucarecdn.com/9a9ef067-9274-4715-99ce-bc2904c124eb/'
+  image: >-
+    https://ucarecdn.com/71620626-07cf-47e8-a8e1-4d0ffccdeca3/-/preview/-/enhance/43/
 testimonials:
   - company: Company name
     content: >-
