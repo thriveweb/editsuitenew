@@ -2,6 +2,7 @@
 template: HomePage
 slug: ''
 title: The Edit Suite
+openerText: Production company based on Gold Coast
 openerImage: ''
 openerVideo: '147984619'
 intro:

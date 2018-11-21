@@ -3,8 +3,6 @@ import { graphql, Link } from 'gatsby'
 import ReactFullpage from '@fullpage/react-fullpage'
 
 import Layout from '../components/Layout'
-import ArrowDown from '../components/ArrowDown'
-import ArrowUp from '../components/ArrowUp'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
@@ -15,6 +13,7 @@ import ContactInfo from '../components/ContactInfo'
 
 export const HomePageTemplate = ({
   title,
+  openerText,
   openerImage,
   openerVideo,
   intro,
@@ -29,8 +28,7 @@ export const HomePageTemplate = ({
     anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
     verticalAlign: true,
     navigation: false,
-    responsiveWidth: 900,
-    scrollHorizontally: true
+    responsiveWidth: 900
   }
 
   return (
@@ -41,17 +39,28 @@ export const HomePageTemplate = ({
           <div>
             <ReactFullpage.Wrapper>
               <div className="section">
-                <h1>The Edit Suite</h1>
+                <div
+                  className="arrow-down"
+                  onClick={() => fullpageApi.moveSectionDown()}
+                />
                 {!!openerVideo && (
-                  <OpenerVideo src={openerVideo} title={title} />
+                  <OpenerVideo src={openerVideo} title={openerText} />
                 )}
                 {!!openerImage && (
-                  <OpenerImage src={openerImage} title={title} />
+                  <OpenerImage src={openerImage} title={openerText} />
                 )}
               </div>
 
               {!!intro && (
                 <div className="section">
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
                   <div className="thin flex">
                     <SectionTitle
                       title="We are creators"
@@ -69,6 +78,14 @@ export const HomePageTemplate = ({
 
               {!!projectCategories && (
                 <div className="section dark">
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
                   <div className="wide">
                     <SectionTitle
                       title="What we can offer"
@@ -81,6 +98,14 @@ export const HomePageTemplate = ({
 
               {!!clients && (
                 <div className="section light">
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
                   <div className="wide">
                     <SectionTitle
                       title="Who we work with"
@@ -94,6 +119,14 @@ export const HomePageTemplate = ({
               {!!isPreview &&
                 !!testimonials && (
                   <div className="section">
+                    <div
+                      className="arrow-up"
+                      onClick={() => fullpageApi.moveSectionUp()}
+                    />
+                    <div
+                      className="arrow-down"
+                      onClick={() => fullpageApi.moveSectionDown()}
+                    />
                     <div className="thin">
                       <SectionTitle
                         title="Don't take our word for it"
@@ -106,6 +139,10 @@ export const HomePageTemplate = ({
 
               {!!contact && (
                 <div className="section dark">
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="wide">
                     <SectionTitle
                       title="Let's work together"
@@ -154,6 +191,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        openerText
         openerVideo
         openerImage
         intro {

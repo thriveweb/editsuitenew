@@ -318,6 +318,7 @@ h5,
 
 .arrow-down,
 .arrow-up {
+  cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
   position: sticky;
@@ -336,13 +337,6 @@ h5,
   transform: rotate(45deg);
   border-top: 2px solid white;
   border-left: 2px solid white;
-}
-
-.section h1 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
 }
 
 /* --- button --- */
@@ -459,11 +453,11 @@ h5,
     overflow-y: scroll !important;
   }
 
-  .section.fp-section.fp-table:first-of-type,
+  /* .section.fp-section.fp-table:first-of-type,
   .section.fp-section.fp-table:first-of-type .fp-tableCell {
     height: 100vh !important;
     padding: 0;
-  }
+  } */
 
   .section.fp-section.fp-table,
   .section .fp-tableCell {

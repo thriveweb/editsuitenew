@@ -7,6 +7,7 @@
 }
 
 .opener h1 {
+  position: absolute;
   z-index: 10;
 }
 
@@ -20,8 +21,8 @@
   height: 50rem;
   background: linear-gradient(transparent, var(--medium));
   position: absolute;
-  bottom: 0;
-  z-index: 9;
+  bottom: -1rem;
+  z-index: 100;
 }
 
 .opener.video {
@@ -36,10 +37,12 @@
 }
 .opener.video iframe {
   width: 100vw;
-  height: 56.25vw;
-  min-height: 99.6vh;
+  height: 56vw;
+  top: 0;
+  min-height: 100vh;
   min-width: 177.77vh;
   position: absolute;
+  z-index: -99;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
