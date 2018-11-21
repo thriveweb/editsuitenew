@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import ReactFullpage from '@fullpage/react-fullpage'
 
 import Layout from '../components/Layout'
 import Image from '../components/Image'
@@ -13,68 +14,112 @@ import Testimonials from '../components/Testimonials'
 
 export const AboutPageTemplate = ({
   title,
-  openerVideo,
+  openerText,
   openerImage,
+  openerVideo,
   icons = [],
   blurb,
   clients,
   testimonials,
   isPreview
-}) => (
-  <div className="scroll-jack">
-    <section id="one">
-      {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
-      {!!openerImage && <OpenerImage src={openerImage} title={title} />}
-    </section>
+}) => {
+  let options = {
+    licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    anchors: ['one', 'two', 'three', 'four', 'five'],
+    responsiveWidth: 900,
+    verticalAlign: true,
+    navigation: false
+  }
 
-    {!!icons && (
-      <section id="two">
-        <Icons icons={icons} />
-      </section>
-    )}
+  return (
+    <ReactFullpage
+      {...options}
+      render={({ state, fullpageApi }) => {
+        return (
+          <div>
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <div
+                  className="arrow-down"
+                  onClick={() => fullpageApi.moveSectionDown()}
+                >
+                  {''}
+                </div>
+                {!!openerVideo && (
+                  <OpenerVideo
+                    src={openerVideo}
+                    title={openerText}
+                    alt={title}
+                  />
+                )}
+                {!!openerImage && (
+                  <OpenerImage
+                    src={openerImage}
+                    title={openerText}
+                    alt={title}
+                  />
+                )}
+              </div>
 
-    {!!blurb && (
-      <section id="three" className="light">
-        <div className="wide">
-          <SectionTitle
-            title="More than just a pretty face"
-            subtitle="Our story"
-          />
-          <div className="flex half">
-            <div>
-              <Image src={blurb.image} alt={title} className="cover" />
-            </div>
-            <Content src={blurb.content} />
+              {!!icons && (
+                <div className="section">
+                  <Icons icons={icons} />
+                </div>
+              )}
+
+              {!!blurb && (
+                <div className="section dark">
+                  <div className="wide">
+                    <SectionTitle
+                      title="More than just a pretty face"
+                      subtitle="Our story"
+                    />
+                    <div className="flex half">
+                      <div>
+                        <Image
+                          src={blurb.image}
+                          alt={title}
+                          className="cover"
+                        />
+                      </div>
+                      <Content src={blurb.content} />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {!!clients && (
+                <div className="section light">
+                  <div className="wide">
+                    <SectionTitle
+                      title="Who we work with"
+                      subtitle="Our clients"
+                    />
+                    <ClientsSection clients={clients} />
+                  </div>
+                </div>
+              )}
+
+              {!!testimonials && (
+                <div className="section">
+                  <div className="thin">
+                    <SectionTitle
+                      title="Don't take our word for it"
+                      subtitle="Testimonials"
+                    />
+                    <Testimonials testimonials={testimonials} />
+                  </div>
+                </div>
+              )}
+            </ReactFullpage.Wrapper>
           </div>
-        </div>
-      </section>
-    )}
+        )
+      }}
+    />
+  )
+}
 
-    {!!clients && (
-      <section id="four">
-        <div className="wide">
-          <SectionTitle title="Who we work with" subtitle="Our clients" />
-          <ClientsSection clients={clients} />
-        </div>
-      </section>
-    )}
-
-    {!isPreview &&
-      !!testimonials && (
-        <section id="five" className="dark">
-          <div className="thin">
-            <SectionTitle
-              title="Don't take our word for it"
-              subtitle="Testimonials"
-            />
-            <Testimonials testimonials={testimonials} />
-          </div>
-        </section>
-      )}
-  </div>
-)
-
-const AboutPage = ({ data: { page, clients } }) => (
+const AboutPage = ({ data: { page, clients, testimonials } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -84,6 +129,10 @@ const AboutPage = ({ data: { page, clients } }) => (
       {...page.frontmatter}
       body={page.html}
       clients={clients.edges.map(item => ({
+        ...item.node,
+        ...item.node.frontmatter
+      }))}
+      testimonials={testimonials.edges.map(item => ({
         ...item.node,
         ...item.node.frontmatter
       }))}
@@ -100,6 +149,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        openerText
         openerVideo
         openerImage
         icons {
@@ -110,11 +160,6 @@ export const pageQuery = graphql`
         blurb {
           image
           content
-        }
-        testimonials {
-          content
-          name
-          company
         }
       }
     }
@@ -128,6 +173,20 @@ export const pageQuery = graphql`
             title
             logo
             link
+          }
+        }
+      }
+    }
+
+    testimonials: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/testimonials/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            company
+            content
           }
         }
       }

@@ -10,27 +10,6 @@ intro:
   buttonText: About Us
   description: >-
     We are a film production, photography and drone aerial company based in Mermaid Beach on the Gold Coast of Australia specialising in the creation of film, motion graphics, explainer videos, aerial photography and cinematography.
-testimonials:
-  - company: Company name
-    content: >-
-      Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis
-      condimentum id ut dolor. Integer nec eros consectetur ante aliquet
-      consectetur a sit amet ex. Integer placerat tincidunt mollis.
-    name: John doe
-  - company: Company name2
-    content: >-
-      Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis
-      condimentum id ut dolor. Integer nec eros consectetur ante aliquet
-      consectetur a sit amet ex. Integer placerat tincidunt mollis.Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis
-      condimentum id ut dolor. Integer nec eros consectetur ante aliquet
-      consectetur a sit amet ex. Integer placerat tincidunt mollis.
-    name: John doe
-  - company: Company name3
-    content: >-
-      Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis
-      condimentum id ut dolor. Integer nec eros consectetur ante aliquet
-      consectetur a sit amet ex. Integer placerat tincidunt mollis.
-    name: John doe
 meta:
   description: >-
     The Edit Suite is a Gold Coast video production and photography company that

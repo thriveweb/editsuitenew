@@ -42,25 +42,27 @@ export const HomePageTemplate = ({
                 <div
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
-                />
+                >
+                  {''}
+                </div>
                 {!!openerVideo && (
-                  <OpenerVideo src={openerVideo} title={openerText} />
+                  <OpenerVideo
+                    src={openerVideo}
+                    title={openerText}
+                    alt={title}
+                  />
                 )}
                 {!!openerImage && (
-                  <OpenerImage src={openerImage} title={openerText} />
+                  <OpenerImage
+                    src={openerImage}
+                    title={openerText}
+                    alt={title}
+                  />
                 )}
               </div>
 
               {!!intro && (
                 <div className="section">
-                  <div
-                    className="arrow-up"
-                    onClick={() => fullpageApi.moveSectionUp()}
-                  />
-                  <div
-                    className="arrow-down"
-                    onClick={() => fullpageApi.moveSectionDown()}
-                  />
                   <div className="thin flex">
                     <SectionTitle
                       title="We are creators"
@@ -78,14 +80,6 @@ export const HomePageTemplate = ({
 
               {!!projectCategories && (
                 <div className="section dark">
-                  <div
-                    className="arrow-up"
-                    onClick={() => fullpageApi.moveSectionUp()}
-                  />
-                  <div
-                    className="arrow-down"
-                    onClick={() => fullpageApi.moveSectionDown()}
-                  />
                   <div className="wide">
                     <SectionTitle
                       title="What we can offer"
@@ -98,14 +92,6 @@ export const HomePageTemplate = ({
 
               {!!clients && (
                 <div className="section light">
-                  <div
-                    className="arrow-up"
-                    onClick={() => fullpageApi.moveSectionUp()}
-                  />
-                  <div
-                    className="arrow-down"
-                    onClick={() => fullpageApi.moveSectionDown()}
-                  />
                   <div className="wide">
                     <SectionTitle
                       title="Who we work with"
@@ -116,33 +102,20 @@ export const HomePageTemplate = ({
                 </div>
               )}
 
-              {!!isPreview &&
-                !!testimonials && (
-                  <div className="section">
-                    <div
-                      className="arrow-up"
-                      onClick={() => fullpageApi.moveSectionUp()}
+              {!!testimonials && (
+                <div className="section">
+                  <div className="thin">
+                    <SectionTitle
+                      title="Don't take our word for it"
+                      subtitle="Testimonials"
                     />
-                    <div
-                      className="arrow-down"
-                      onClick={() => fullpageApi.moveSectionDown()}
-                    />
-                    <div className="thin">
-                      <SectionTitle
-                        title="Don't take our word for it"
-                        subtitle="Testimonials"
-                      />
-                      <Testimonials testimonials={testimonials} />
-                    </div>
+                    <Testimonials testimonials={testimonials} />
                   </div>
-                )}
+                </div>
+              )}
 
               {!!contact && (
                 <div className="section dark">
-                  <div
-                    className="arrow-up"
-                    onClick={() => fullpageApi.moveSectionUp()}
-                  />
                   <div className="wide">
                     <SectionTitle
                       title="Let's work together"
@@ -161,7 +134,7 @@ export const HomePageTemplate = ({
 }
 
 const HomePage = ({
-  data: { page, clients, projectCategories, globalSettings }
+  data: { page, clients, testimonials, projectCategories, globalSettings }
 }) => (
   <Layout meta={page.frontmatter.meta || false}>
     <HomePageTemplate
@@ -170,6 +143,10 @@ const HomePage = ({
       {...globalSettings}
       body={page.html}
       clients={clients.edges.map(item => ({
+        ...item.node,
+        ...item.node.frontmatter
+      }))}
+      testimonials={testimonials.edges.map(item => ({
         ...item.node,
         ...item.node.frontmatter
       }))}
@@ -199,11 +176,6 @@ export const pageQuery = graphql`
           buttonText
           buttonLink
         }
-        testimonials {
-          content
-          name
-          company
-        }
       }
     }
 
@@ -216,6 +188,20 @@ export const pageQuery = graphql`
             title
             logo
             link
+          }
+        }
+      }
+    }
+
+    testimonials: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/testimonials/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            company
+            content
           }
         }
       }

@@ -2,6 +2,7 @@
 template: BlogIndex
 slug: blog
 title: Blog
+openerText: Blog
 openerImage: 'https://ucarecdn.com/1bdc5ae4-a6c0-4322-8924-282ca35819d8/'
 openerVideo: ''
 meta:

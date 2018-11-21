@@ -42,7 +42,9 @@
 @media screen and (max-width: 900px) {
   .testimonials {
     text-align: center;
+    min-height: 10rem;
   }
+
   .testimonials .LazyImage {
     width: 4rem;
     opacity: 0.2;
@@ -52,7 +54,7 @@
   .testimonials .wrap {
     width: 90vw;
     display: block;
-    float: left;
+    float: none !important;
   }
 
   .swiper-slide {

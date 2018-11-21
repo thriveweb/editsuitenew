@@ -27,7 +27,7 @@
 }
 
 @media screen and (max-height: 1000px), screen (max-width: 900px) {
-  .project-single section {
+  .project-single .full {
     height: auto !important;
   }
 
