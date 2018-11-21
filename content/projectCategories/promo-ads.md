@@ -1,6 +1,6 @@
 ---
 template: ProjectCategoryPage
-title: 'Promos, TVC''s & Ads'
+title: Promos & TVC's
 order: '5'
 overview: >-
   Everyone knows how powerful video is these days. Thinking of a fun or edgy
@@ -16,6 +16,6 @@ meta:
     idea to make your video cut through can be hard but we can help with this
     creative process and bring your idea to life! We have A LOT of experience in
     doing so.
-  title: Promos and Ads
+  title: Promos & TVC's
 ---
 
