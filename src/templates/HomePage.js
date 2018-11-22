@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import ReactFullpage from '@fullpage/react-fullpage'
 
 import Layout from '../components/Layout'
-import Anchor from '../components/Anchor'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
@@ -13,6 +13,7 @@ import ContactInfo from '../components/ContactInfo'
 
 export const HomePageTemplate = ({
   title,
+  openerText,
   openerImage,
   openerVideo,
   intro,
@@ -21,75 +22,119 @@ export const HomePageTemplate = ({
   testimonials,
   contact,
   isPreview
-}) => (
-  <div className="scroll-jack">
-    <section id="one">
-      <Anchor down to="two" />
-      {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
-      {!!openerImage && <OpenerImage src={openerImage} title={title} />}
-    </section>
+}) => {
+  let options = {
+    licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
+    responsiveWidth: 900,
+    verticalAlign: true,
+    navigation: false
+  }
 
-    {!!intro && (
-      <section id="two">
-        <Anchor up to="one" /> <Anchor down to="three" />
-        <div className="thin flex">
-          <SectionTitle title="We are creators" subtitle="What we do" />
+  return (
+    <ReactFullpage
+      {...options}
+      render={({ state, fullpageApi }) => {
+        return (
           <div>
-            <p>{intro.description}</p>
-            <Link to={intro.buttonLink} className="button">
-              {intro.buttonText}
-            </Link>
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <div
+                  className="arrow-down"
+                  onClick={() => fullpageApi.moveSectionDown()}
+                >
+                  {''}
+                </div>
+                {!!openerVideo && (
+                  <OpenerVideo
+                    src={openerVideo}
+                    title={openerText}
+                    alt={title}
+                  />
+                )}
+                {!!openerImage && (
+                  <OpenerImage
+                    src={openerImage}
+                    title={openerText}
+                    alt={title}
+                  />
+                )}
+              </div>
+
+              {!!intro && (
+                <div className="section">
+                  <div className="thin flex">
+                    <SectionTitle
+                      title="We are creators"
+                      subtitle="What we do"
+                    />
+                    <div>
+                      <p>{intro.description}</p>
+                      <Link to={intro.buttonLink} className="button">
+                        {intro.buttonText}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {!!projectCategories && (
+                <div className="section dark">
+                  <div className="wide">
+                    <SectionTitle
+                      title="What we can offer"
+                      subtitle="Our specialities"
+                    />
+                    <ProjectCategories categories={projectCategories} />
+                  </div>
+                </div>
+              )}
+
+              {!!clients && (
+                <div className="section light">
+                  <div className="wide">
+                    <SectionTitle
+                      title="Who we work with"
+                      subtitle="Our clients"
+                    />
+                    <ClientsSection clients={clients} />
+                  </div>
+                </div>
+              )}
+
+              {!!testimonials && (
+                <div className="section">
+                  <div className="thin">
+                    <SectionTitle
+                      title="Don't take our word for it"
+                      subtitle="Testimonials"
+                    />
+                    <Testimonials testimonials={testimonials} />
+                  </div>
+                </div>
+              )}
+
+              {!!contact && (
+                <div className="section dark">
+                  <div className="wide">
+                    <SectionTitle
+                      title="Let's work together"
+                      subtitle="Get in touch"
+                    />
+                    <ContactInfo contact={contact} />
+                  </div>
+                </div>
+              )}
+            </ReactFullpage.Wrapper>
           </div>
-        </div>
-      </section>
-    )}
-
-    {!!projectCategories.length && (
-      <section id="three" className="light">
-        <Anchor up to="two" /> <Anchor down to="four" />
-        <div className="wide">
-          <SectionTitle title="What we can offer" subtitle="Our specialities" />
-          <ProjectCategories categories={projectCategories} />
-        </div>
-      </section>
-    )}
-
-    {!!clients && (
-      <section id="four" className="dark">
-        <Anchor up to="three" /> <Anchor down to="five" />
-        <div className="wide">
-          <SectionTitle title="Who we work with" subtitle="Our clients" />
-          <ClientsSection clients={clients} />
-        </div>
-      </section>
-    )}
-
-    {!isPreview &&
-      !!testimonials && (
-        <section id="five">
-          <Anchor up to="four" /> <Anchor down to="six" />
-          <div className="thin">
-            <SectionTitle
-              title="Don't take our word for it"
-              subtitle="Testimonials"
-            />
-            <Testimonials testimonials={testimonials} />
-          </div>
-        </section>
-      )}
-
-    <section id="six" className="dark">
-      <Anchor up to="five" />
-      <div className="wide">
-        <SectionTitle title="Let's work together" subtitle="Get in touch" />
-        <ContactInfo contact={contact} />
-      </div>
-    </section>
-  </div>
-)
+        )
+      }}
+    />
+  )
+}
 
 const HomePage = ({
-  data: { page, clients, projectCategories, globalSettings }
+  data: { page, clients, testimonials, projectCategories, globalSettings }
 }) => (
   <Layout meta={page.frontmatter.meta || false}>
     <HomePageTemplate
@@ -98,6 +143,10 @@ const HomePage = ({
       {...globalSettings}
       body={page.html}
       clients={clients.edges.map(item => ({
+        ...item.node,
+        ...item.node.frontmatter
+      }))}
+      testimonials={testimonials.edges.map(item => ({
         ...item.node,
         ...item.node.frontmatter
       }))}
@@ -119,17 +168,13 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        openerText
         openerVideo
         openerImage
         intro {
           description
           buttonText
           buttonLink
-        }
-        testimonials {
-          content
-          name
-          company
         }
       }
     }
@@ -143,6 +188,20 @@ export const pageQuery = graphql`
             title
             logo
             link
+          }
+        }
+      }
+    }
+
+    testimonials: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/testimonials/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            company
+            content
           }
         }
       }

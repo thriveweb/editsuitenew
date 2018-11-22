@@ -7,7 +7,8 @@
 }
 
 .opener h1 {
-  z-index: 10;
+  position: absolute;
+  z-index: 101;
 }
 
 .opener .BackgroundImage {
@@ -17,11 +18,11 @@
 
 .opener .gradient {
   width: 100%;
-  height: 50rem;
-  background: linear-gradient(transparent, var(--medium));
+  height: 100%;
+  background: linear-gradient(transparent -30%, var(--medium) 79%);
   position: absolute;
   bottom: 0;
-  z-index: 9;
+  z-index: 100;
 }
 
 .opener.video {
@@ -36,11 +37,12 @@
 }
 .opener.video iframe {
   width: 100vw;
-  height: 56.25vw;
-  min-height: 100vh;
+  height: 56vw;
+  min-height: 99vh;
   min-width: 177.77vh;
   position: absolute;
-  top: 50%;
+  z-index: -99;
+  top: calc(50% - 1vh);
   left: 50%;
   transform: translate(-50%, -50%);
 }

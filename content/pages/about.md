@@ -43,28 +43,7 @@ blurb:
     you are super proud to show the world!
   image: >-
     https://ucarecdn.com/71620626-07cf-47e8-a8e1-4d0ffccdeca3/-/preview/-/enhance/43/
-testimonials:
-  - company: Company name
-    content: >-
-      Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis
-      condimentum id ut dolor. Integer nec eros consectetur ante aliquet
-      consectetur a sit amet ex.Nam ac libero sed purus eleifend accumsan. In
-      non nibh at mi venenatis condimentum
-    name: John doe
-  - company: Company name2
-    content: >-
-      Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis
-      condimentum id ut dolor. Integer nec eros consectetur ante aliquet
-      consectetur a sit amet ex. Integer placerat tincidunt mollis.
-    name: John doe
-  - company: Company name3
-    content: >-
-      Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis
-      condimentum id ut dolor. Integer nec eros consectetur ante aliquet
-      consectetur a sit amet ex. Integer placerat tincidunt mollis.
-    name: John doe
 meta:
   description: Gold Coast Video Production and Photography Services
   title: We are creators
 ---
-

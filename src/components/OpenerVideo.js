@@ -2,8 +2,9 @@ import React from 'react'
 
 import './Opener.css'
 
-const OpenerVideo = ({ title, src }) => (
+const OpenerVideo = ({ title, openerImage, src }) => (
   <div className="opener video">
+    <h1>{title}</h1>
     <div className="gradient" />
     <iframe
       title={title}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import ReactFullpage from '@fullpage/react-fullpage'
 
 import Layout from '../components/Layout'
-import Anchor from '../components/Anchor'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
@@ -11,47 +11,84 @@ import Testimonials from '../components/Testimonials'
 
 export const ProjectPageTemplate = ({
   title,
+  openerText,
   openerVideo,
   openerImage,
   projectCategories = [],
   testimonials,
   contentType,
   isPreview
-}) => (
-  <div className="scroll-jack">
-    <section id="one">
-      <Anchor down to="two" />
-      {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
-      {!!openerImage && <OpenerImage src={openerImage} title={title} />}
-    </section>
+}) => {
+  let options = {
+    licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+    anchors: ['one', 'two', 'three', 'four', 'five'],
+    responsiveWidth: 900,
+    verticalAlign: true,
+    navigation: false
+  }
 
-    {!!projectCategories.length && (
-      <section id="two">
-        <Anchor up to="one" /> <Anchor down to="three" />
-        <div className="wide">
-          <SectionTitle title="What we can offer" subtitle="Our specialties" />
-          <ProjectCategories categories={projectCategories} />
-        </div>
-      </section>
-    )}
+  return (
+    <ReactFullpage
+      {...options}
+      render={({ state, fullpageApi }) => {
+        return (
+          <div>
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <div
+                  className="arrow-down"
+                  onClick={() => fullpageApi.moveSectionDown()}
+                >
+                  {''}
+                </div>
+                {!!openerVideo && (
+                  <OpenerVideo
+                    src={openerVideo}
+                    title={openerText}
+                    alt={title}
+                  />
+                )}
+                {!!openerImage && (
+                  <OpenerImage
+                    src={openerImage}
+                    title={openerText}
+                    alt={title}
+                  />
+                )}
+              </div>
 
-    {!isPreview &&
-      !!testimonials && (
-        <section id="three" className="dark">
-          <Anchor up to="two" />
-          <div className="thin">
-            <SectionTitle
-              title="Don't take our word for it"
-              subtitle="Testimonials"
-            />
-            <Testimonials testimonials={testimonials} />
+              {!!projectCategories && (
+                <div className="section">
+                  <div className="wide">
+                    <SectionTitle
+                      title="What we can offer"
+                      subtitle="Our specialties"
+                    />
+                    <ProjectCategories categories={projectCategories} />
+                  </div>
+                </div>
+              )}
+
+              {!!testimonials && (
+                <div className="section">
+                  <div className="thin">
+                    <SectionTitle
+                      title="Don't take our word for it"
+                      subtitle="Testimonials"
+                    />
+                    <Testimonials testimonials={testimonials} />
+                  </div>
+                </div>
+              )}
+            </ReactFullpage.Wrapper>
           </div>
-        </section>
-      )}
-  </div>
-)
+        )
+      }}
+    />
+  )
+}
 
-const ProjectPage = ({ data: { page, projectCategories } }) => (
+const ProjectPage = ({ data: { page, testimonials, projectCategories } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -64,6 +101,10 @@ const ProjectPage = ({ data: { page, projectCategories } }) => (
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
+      }))}
+      testimonials={testimonials.edges.map(item => ({
+        ...item.node,
+        ...item.node.frontmatter
       }))}
     />
   </Layout>
@@ -80,12 +121,22 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        openerText
         openerVideo
         openerImage
-        testimonials {
-          content
-          name
-          company
+      }
+    }
+
+    testimonials: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/testimonials/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            company
+            content
+          }
         }
       }
     }

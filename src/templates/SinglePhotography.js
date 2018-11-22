@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import './SinglePhotography.css'
 
-class SinglePhotographyTemplate extends React.Component {
+export class SinglePhotographyTemplate extends React.Component {
   render() {
     const { title, images } = this.props
     var defaults = {

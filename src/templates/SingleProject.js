@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import './SingleProject.css'
 
 export const SingleProjectTemplate = ({ title, excerpt, video, tags }) => (
-  <div className="project-single">
+  <div className="project-single full">
     <section>
       <div className="thin">
         <div className="taCenter">

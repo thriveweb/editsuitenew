@@ -2,13 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Anchor from '../components/Anchor'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import PostSection from '../components/PostSection'
 
 export const BlogIndexTemplate = ({
   title,
+  openerText,
   openerVideo,
   openerImage,
   overview,
@@ -17,11 +17,17 @@ export const BlogIndexTemplate = ({
   contentType
 }) => (
   <div>
-    <section>
-      <Anchor down to="two" />
-      {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
-      {!!openerImage && <OpenerImage src={openerImage} title={title} />}
-    </section>
+    <div className="full">
+      <a className="arrow-down" href="#two">
+        {''}
+      </a>
+      {!!openerVideo && (
+        <OpenerVideo src={openerVideo} title={openerText} alt={title} />
+      )}
+      {!!openerImage && (
+        <OpenerImage src={openerImage} title={openerText} alt={title} />
+      )}
+    </div>
 
     {!!posts.length && (
       <div id="two" className="wide thick">
@@ -60,6 +66,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        openerText
         openerVideo
         openerImage
         overview

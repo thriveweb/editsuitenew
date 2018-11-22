@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Anchor from '../components/Anchor'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import SectionTitle from '../components/SectionTitle'
@@ -11,6 +10,7 @@ import ProjectSection from '../components/ProjectSection'
 
 export const ProjectCategoryPageTemplate = ({
   title,
+  openerText,
   openerVideo,
   openerImage,
   overview,
@@ -22,12 +22,15 @@ export const ProjectCategoryPageTemplate = ({
   slug
 }) => {
   const isCategory = contentType === 'projectCategories'
+
   const byCategory = post =>
     post.categories &&
     post.categories.filter(cat => cat.category === title).length
+
   const filteredProjects = isCategory ? projects.filter(byCategory) : projects
 
   let categorySelector = []
+
   if ('/project-categories/photography/' === slug) {
     categorySelector = photography
   } else {
@@ -36,11 +39,17 @@ export const ProjectCategoryPageTemplate = ({
 
   return (
     <div className="project">
-      <section>
-        <Anchor down to="two" />
-        {!!openerVideo && <OpenerVideo src={openerVideo} title={title} />}
-        {!!openerImage && <OpenerImage src={openerImage} title={title} />}
-      </section>
+      <div className="full">
+        <a className="arrow-down" href="#two">
+          {''}
+        </a>
+        {!!openerVideo && (
+          <OpenerVideo src={openerVideo} title={openerText} alt={title} />
+        )}
+        {!!openerImage && (
+          <OpenerImage src={openerImage} title={openerText} alt={title} />
+        )}
+      </div>
 
       {!!overview && (
         <div id="two" className="thin thick flex">
@@ -69,7 +78,7 @@ export const ProjectCategoryPageTemplate = ({
 }
 
 const ProjectCategoryPage = ({
-  data: { page, projects, projectCategories, photography }
+  data: { page, testimonials, projects, projectCategories, photography }
 }) => (
   <Layout
     meta={page.frontmatter.meta || false}
@@ -79,6 +88,10 @@ const ProjectCategoryPage = ({
       {...page}
       {...page.fields}
       {...page.frontmatter}
+      testimonials={testimonials.edges.map(item => ({
+        ...item.node,
+        ...item.node.frontmatter
+      }))}
       projects={projects.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
@@ -110,13 +123,23 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        openerText
         openerVideo
         openerImage
         overview
-        testimonials {
-          content
-          name
-          company
+      }
+    }
+
+    testimonials: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/testimonials/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            company
+            content
+          }
         }
       }
     }
