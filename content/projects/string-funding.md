@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: String Funding
 excerpt: |-
   String Funding is a crowdfunding platform embedded with Distributed Ledger Technology (DLT) and ERC20 smart contracts that facilitates the process for innovative businesses to discover the value of blockchain technology. Innovatively DLT enabled utility tokens can assist businesses to pre-sale goods and services and connect with customers and potential customers around the world. With access globally and locally, our platform could have tremendous positive impact on Fintech industry.

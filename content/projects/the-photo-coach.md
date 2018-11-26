@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: The Photo Coach
 excerpt: This is a branding video we created for The Photo Coach which highlights and provides an insight into the business.
 video: '279036503'

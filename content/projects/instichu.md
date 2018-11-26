@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Institchu
 excerpt: |-
   InStitchu suits up with brand protection. This video highlights the importance in protecting the name InStitchu which was an early consideration for Founders, Robin McGowan and James Wakefield. In the video Robin McGowan discusses the value of the InStitchu brand and the importance of protecting it with a trade mark.

@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Impact of the Games – Local Business and Communities
 excerpt: |-
   Working with GOLDOC to create the video series ‘Impact of the Games’ – In this video Jess Skarratt explains the impact of GC2018 on Local Business and Communities.

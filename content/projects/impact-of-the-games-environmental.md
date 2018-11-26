@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Impact of the Games – Environment
 excerpt: |-
   Working with GOLDOC to create the video series ‘Impact of the Games’ – In this video Jess Skarratt explains Environmental Impact of the GC2018 Commonwealth Games.

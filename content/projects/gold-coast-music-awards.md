@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Gold Coast Music Awards
 excerpt: What a privilege to be part of Gold Coast Music Awards for the third year in a row! Check out this highlight video we created of the GC Music awards night.
 video: '273632970'

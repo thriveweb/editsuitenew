@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Lismore Cup 2018
 excerpt: Our second year capturing all of the glitz and glam at the Lismore Cup.
 video: '293496758'

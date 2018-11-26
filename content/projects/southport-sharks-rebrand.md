@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Southport Sharks Rebrand
 excerpt: |-
   In 2017 Gold Coast AFL football club, The Southport Sharks decided to rebrand their club, to modernise the brand but also retain some form of their heritage. The Edit Suite was engaged for video production and editing to capture and highlight the creative process in designing the new brand and identity. Speaking with the CEO of Southport Sharks Dean Bowtell this video discusses along with the designer Matt Vergotis the creative steps of the re-brand.

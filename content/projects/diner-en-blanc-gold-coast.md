@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Diner en Blanc Gold Coast 2017
 excerpt: A highlight video from the world famous Diner en Blanc.
 video: '233607302'

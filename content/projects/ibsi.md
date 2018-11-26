@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Intelligent Building Systems International
 excerpt: |-
   This project for IBSI was created over a few weeks from Brisbane down to Port Macquarie. IBSI creates smart building systems, all with immediate ‘connect and use’ methodology.

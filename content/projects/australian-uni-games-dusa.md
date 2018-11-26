@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Australian University Games 2017 – DUSA
 excerpt: |-
   Video wrap up was filmed and edited by the Edit Suite for DUSA (Deakin Uni Student Association) at the 2017 Australian University Games. This video production highlights first hand accounts of students participating at the 2017 Australian University Games – how DUSA and Deakin have helped many students create fantastic memories about their time competing, making new friends and experiencing the Aus Uni Games!

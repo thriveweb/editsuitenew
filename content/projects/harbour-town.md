@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Harbour Town
 excerpt: The first of many animated TVC’s we created for Harbour Town shopping centre.
 video: '171034237'

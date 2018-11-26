@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Pryde’s EasiFeed Warwick International
 excerpt: The 2016 Pryde’s EasiFeed Warwick International is one of the dozen’s of videos that we have worked on for Equestrian Queensland.
 video: '185794374'

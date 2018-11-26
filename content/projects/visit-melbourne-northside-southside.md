@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Visit Victoria Northside vs Southside
 excerpt: The Edit Suite teamed up with Visit Victoria to create this video all about Melbourne’s Northside v Southside dining styles. We followed Sofia Levin (Food Writer) as she explored why there is such a divide when it comes to food in Melbourne.
 video: '290620088'

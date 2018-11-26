@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Netfest 2016
 excerpt: |-
   This video captures NetFest four action-packed days! Netfest is an annual mass netball participation event for 18yrs+ that brings together local, interstate and international participants. The unique event mixes netball, nightlife, sun, sand, surf, plus food and entertainment of the Gold Coast!

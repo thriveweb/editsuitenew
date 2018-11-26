@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: At Home With Louie Luxe
 excerpt: A video we created for ‘At Home with Louie Luxe’ featuring owner Jesse Windle Designer/ Typogropher
 video: '157693345'

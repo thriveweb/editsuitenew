@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Lexen – OM Civil Aerial Drone
 excerpt: We created this aerial drone video for OM Civil to highlight and showcase their sites using our DJI Inspire 2 drone.
 video: '262159177'

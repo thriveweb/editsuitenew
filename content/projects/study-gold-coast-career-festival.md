@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Study Gold Coast Careers Festival
 excerpt: A video we created for Study Gold Coast of the 2017 Gold Coast Careers Festival.
 video: '217789949'

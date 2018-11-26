@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Staminade
 excerpt: A brand video created for the long time Aussie sports drink company Staminade.
 video: '202167719'

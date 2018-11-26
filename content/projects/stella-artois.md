@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Stella Artois Sensorium Dinner
 excerpt: A collaboration between the Regatta Hotel, Stella Artois and Adam D’Sylva of Melbourne’s Coda & Tonka restaurants, for an evening to ignite the senses with the Stella Artois Sensoirum Dinner on Wednesday 10 October 2018
 video: '295119017'

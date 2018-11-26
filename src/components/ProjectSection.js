@@ -35,6 +35,7 @@ class ProjectSection extends React.Component {
               className="item flex"
               to={item.slug}
               key={`project-${item.title}`}
+              style={{ order: item.order }}
             >
               <Image className="cover" src={item.preview} alt={item.title} />
             </Link>

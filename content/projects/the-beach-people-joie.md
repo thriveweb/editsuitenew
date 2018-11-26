@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: The Beach People - Joie
 excerpt: A video we created for the The Beach People and Joie to Promos and Adste Joie’s new A La Plage summer capsule collection. Beautiful detailed shots, up close and personal look at the stunning capsule collection.
 video: '212748552'

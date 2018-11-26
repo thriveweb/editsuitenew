@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Impact of the Games – Future And Legacy
 excerpt: |-
   In this video series – Impact of the Games’ Jess Skarratt explores the Future and Legacy of GC2018.

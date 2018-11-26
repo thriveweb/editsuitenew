@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Diploma of Graphic Design
 excerpt: |-
   In this video production for Entrepreneur Education in Surfers Paradise – we get a first hand account from Belinda who is living and working on the Gold Coast. Belinda who is a freelance graphic designer talks about her entrepreneur approach to design projects including meeting face to face with clients and industry professionals. The Diploma of graphic design at Entrepreneur Education provides practical application which provides students with an competitive advantage when entering the workforce.

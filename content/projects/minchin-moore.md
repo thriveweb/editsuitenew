@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Minchin Moore
 excerpt: In this motion graphic styled video we explain Minchin Moore key message.
 video: '172364604'

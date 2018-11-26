@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Study Gold Coast 2017 Ambassador Showreel
 excerpt: A highlight video from our collection of shoots from working over the course of 2017 with Study Gold Coast on the Mayor’s Student Ambassador Program.
 video: '241435649'

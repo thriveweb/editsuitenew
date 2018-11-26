@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Brisbane’s Best Laneway Gems
 excerpt: A fun video created for The Urban List showcasing some hidden Brisbane gems.
 video: '224609163'

@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Uni Games – Gold Coast
 excerpt: A great video to highlight the Australian Uni Games – Gold Coast locations.
 video: '266807716'

@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: OMCivil – Park Ridge
 excerpt: We created this aerial drone video for OM Civil for their Browns Plains development using our DJI Inspire 2 drone.
 video: '244131668'

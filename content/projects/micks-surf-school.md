@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Mick Fanning Surf School
 excerpt: A video with legend Mick Fanning during the GC2018 Commonwealth Games where he showed a few athletes some surfing tips! Anna Meares and Chad Le Clos were ripping!
 video: '264184206'

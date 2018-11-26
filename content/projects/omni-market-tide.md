@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Omni Market Tide
 excerpt: The Omni Market Tide is a platform that puts your company’s agenda in the palm of your hand. This motion graphic styled video demonstrates the benefits of Omni Market Tide Mobile Voting App.
 video: '143962101'

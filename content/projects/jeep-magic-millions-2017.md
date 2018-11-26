@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Jeep Magic Millions 2017
 excerpt: A beautiful highlight video capturing fashion, horse racing, celebrities, royalty, punters and of the excitement of a show stopper event – the Magic Millions in 2017.
 video: '199483421'

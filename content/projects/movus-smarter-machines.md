@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Movus - Smarter Machines
 excerpt: Check out this video we created for Movus – Smarter Machines.
 video: '266831798'

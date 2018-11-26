@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Blue Ant Wireless – Pump Soul Campaign
 excerpt: We created this video for Blue Ant Headphones for their new product PUMP SOUL featuring Yandell Davis a professional dancer / Pilates instructor.
 video: '178425713'

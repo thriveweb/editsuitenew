@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Equestrian Queensland Awards Evening
 excerpt: This was The Edit Suite’s 2nd year in a row covering Equestrian Queensland’s night of nights.
 video: '201818092'

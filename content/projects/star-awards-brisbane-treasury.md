@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Treasury Brisbane – Star Awards 2018
 excerpt: It was a fantastic night filming for the second time in a row for Treasury Brisbane for their annual Star Awards Night.
 video: '286302070'

@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Burleigh BBQ 2016
 excerpt: |-
   Jess Skarratt takes on The Burleigh BBQ Championships! This wrap-up video captures smoke on the water, meat on the beach and some of Australia’s best BBQ teams together battling it out over two days for the 2nd Annual Burleigh BBQ Championships. With incredible picturesque views, a smokin vibe and true beachside community feel, this video truly highlights the best of competition.

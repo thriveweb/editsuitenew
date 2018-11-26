@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Study Gold Coast Video Highlight – Singapore
 excerpt: |-
   This video is about Singaporean student Joseph Toh who is studying a Diploma of Building Design at Tafe Queensland on the Gold Coast. This video showcases his education and training experience whilst being a student at Tafe.

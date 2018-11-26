@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Monster Jam Brisbane Hype Reel
 excerpt: |-
   The Monster Jam is the most intense LIVE motorsports entertainment experience on the planet! This hype reel video captures the world’s most larger than life sporting event with meticulously manicured dirt tracks created with the sole purpose of pushing perfectly engineered trucks to the limit.

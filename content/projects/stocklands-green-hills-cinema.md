@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Stockland Green Hills Cinema
 excerpt: |-
   A fun, family friendly video highlighting retail shops within Stocklands new Green Hill shopping centre. This video takes the viewer inside the family home showcasing how Green Hill shopping centre is the one stop place to find everything from kids toys, to homewares, men’s & women’s fashion plus fitness & beauty needs.

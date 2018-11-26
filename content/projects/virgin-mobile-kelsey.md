@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Virgin Mobile, Kelsey
 excerpt: |-
   Virgin Mobile’s new brand platform and ‘Now that’s Virgin Mobile’ tagline. The campaign takes the stories of five real Virgin Mobile customers, who deliver ‘turned up testimonials’ about why they choose Virgin Mobile.

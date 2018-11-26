@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: 'Hoegaarden #TheGaardenIsOpen'
 excerpt: |-
   'Hoegaarden’s created a perfect place for making magical summer memories, by transforming South Bank Beer Garden into lush pop-up beer oasis The Gaarden.

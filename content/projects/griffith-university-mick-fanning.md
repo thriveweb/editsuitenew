@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Griffith University – Mick Fanning
 excerpt: |-
   In this video production for Griffith University – Mick Fanning (WCT Champion) helps communicates how important the Institute of Glyomics is at Griffith University. He talks about how the scientists and researchers are the real heroes – waking up everyday to help find a cure for cancer.

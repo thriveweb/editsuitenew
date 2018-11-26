@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: The Team Behind Shape
 excerpt: |-
   In this video production we discover the brilliant team behind SHAPE – Australia’s leading commercial fitout and refurbishment specialist.  Shape promises to deliver high quality, flexible and safe fitouts project outcomes, balanced with a focus on minimising disruption, timely delivery and value for money all Perfect Delivery.

@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Burleigh BBQ 2018
 excerpt: |-
   The Edit Suite takes on The Burleigh BBQ Championships for the 3rd year! This highlight video captures it all – from smoke on the water, meat on the beach and some of Australia’s best BBQ teams together battling it out over two days for the 3rd Annual Burleigh BBQ Championships. With incredible picturesque views, a smokin vibe and true beachside community feel, this video truly highlights the best of competition.

@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Visit Victoria Late Nights Eats
 excerpt: Part of a video series we created for Visit Victoria.
 video: '291636317'

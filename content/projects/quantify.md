@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Quantify
 excerpt: In this video production for Quantify – truly intelligent buildings. This video takes you on a journey highlighting the features of Quantify in your home – demonstrating how proactive not reactive Quantify buildings are .
 video: '155115360'

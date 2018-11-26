@@ -1,5 +1,6 @@
 ---
 template: SingleProject
+order: '99'
 title: Fardell Mini Doco
 excerpt: A mini documentary on professional skateboarder Jack Fardell.
 video: '234991777'
