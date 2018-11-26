@@ -4,32 +4,46 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import './SingleProject.css'
 
-export const SingleProjectTemplate = ({ title, excerpt, video, tags }) => (
-  <div className="project-single full">
-    <section>
-      <div className="thin">
-        <div className="taCenter">
-          <h1>{title}</h1>
-          <p>{excerpt}</p>
-        </div>
+export const SingleProjectTemplate = ({
+  title,
+  excerpt,
+  video,
+  tags,
+  projects = [],
+  projectCategories = [],
+  isCategory
+}) => {
+  console.log(projectCategories[0].slug)
 
-        {!!video && (
-          <div className="video">
-            <iframe
-              title={title}
-              src={`https://player.vimeo.com/video/${video}`}
-              frameBorder="0"
-            />
+  return (
+    <div className="project-single full">
+      <section>
+        <div className="thin">
+          <div className="taCenter">
+            <h1>{title}</h1>
+            <p>{excerpt}</p>
           </div>
-        )}
 
-        {!!tags && <h5>tags: {tags}</h5>}
-      </div>
-    </section>
-  </div>
-)
+          {!!video && (
+            <div className="video">
+              <iframe
+                title={title}
+                src={`https://player.vimeo.com/video/${video}`}
+                frameBorder="0"
+              />
+            </div>
+          )}
 
-const SingleProject = ({ data: { project, allProjects } }) => {
+          {!!tags && <h5>tags: {tags}</h5>}
+        </div>
+      </section>
+    </div>
+  )
+}
+
+const SingleProject = ({
+  data: { project, allProjects, projectCategories }
+}) => {
   return (
     <Layout
       meta={project.frontmatter.meta || false}
@@ -39,6 +53,11 @@ const SingleProject = ({ data: { project, allProjects } }) => {
         {...project}
         {...project.frontmatter}
         body={project.html}
+        projectCategories={projectCategories.edges.map(post => ({
+          ...post.node,
+          ...post.node.frontmatter,
+          ...post.node.fields
+        }))}
       />
     </Layout>
   )
@@ -59,6 +78,22 @@ export const pageQuery = graphql`
         tags
         categories {
           category
+        }
+      }
+    }
+
+    projectCategories: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "projectCategories" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            slug
+          }
         }
       }
     }

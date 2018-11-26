@@ -6,6 +6,15 @@
   margin-bottom: 6rem;
 }
 
+.photography-single .wide .item {
+  height: auto;
+}
+
+.photography-single .wide .item img {
+  height: 18rem;
+  margin-bottom: 0.5rem;
+}
+
 .fancybox-bg {
   background: black !important;
 }

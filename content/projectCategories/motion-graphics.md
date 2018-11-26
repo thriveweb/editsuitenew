@@ -1,6 +1,7 @@
 ---
 template: ProjectCategoryPage
 title: Motion Graphics
+slug: 'myslugo'
 order: '2'
 overview: >-
   Using motion graphics and explainer videos are a very powerful way to convey a
@@ -16,4 +17,3 @@ meta:
     right. We have made a lot of them.
   title: Motion Graphics
 ---
-

@@ -25,10 +25,15 @@ export class SinglePhotographyTemplate extends React.Component {
                 className="item flex"
                 data-fancybox="gallery"
                 key={title + index}
-                href={item}
+                href={item.image}
                 data-options={defaults}
               >
-                <img className="cover" src={item} alt={title + '-' + index} />
+                <img
+                  className="cover"
+                  src={item.image}
+                  alt={title + '-' + index}
+                />
+                {!!item.blurb && <p>{item.blurb}</p>}
               </div>
             ))}
           </div>
@@ -62,7 +67,10 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
-        images
+        images {
+          image
+          blurb
+        }
       }
     }
   }
