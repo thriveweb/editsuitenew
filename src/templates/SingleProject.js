@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import './SingleProject.css'
@@ -57,6 +57,9 @@ export const pageQuery = graphql`
         excerpt
         video
         tags
+        categories {
+          category
+        }
       }
     }
 

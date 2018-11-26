@@ -42,9 +42,7 @@ export const HomePageTemplate = ({
                 <div
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
-                >
-                  {''}
-                </div>
+                />
                 {!!openerVideo && (
                   <OpenerVideo
                     src={openerVideo}
@@ -63,6 +61,14 @@ export const HomePageTemplate = ({
 
               {!!intro && (
                 <div className="section">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="thin flex">
                     <SectionTitle
                       title="We are creators"
@@ -80,6 +86,14 @@ export const HomePageTemplate = ({
 
               {!!projectCategories && (
                 <div className="section dark">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="wide">
                     <SectionTitle
                       title="What we can offer"
@@ -92,6 +106,14 @@ export const HomePageTemplate = ({
 
               {!!clients && (
                 <div className="section light">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="wide">
                     <SectionTitle
                       title="Who we work with"
@@ -104,6 +126,14 @@ export const HomePageTemplate = ({
 
               {!!testimonials && (
                 <div className="section">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="thin">
                     <SectionTitle
                       title="Don't take our word for it"
@@ -116,6 +146,10 @@ export const HomePageTemplate = ({
 
               {!!contact && (
                 <div className="section dark">
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="wide">
                     <SectionTitle
                       title="Let's work together"

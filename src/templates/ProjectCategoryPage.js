@@ -37,6 +37,8 @@ export const ProjectCategoryPageTemplate = ({
     categorySelector = filteredProjects
   }
 
+  console.log((projectCategories = slug))
+
   return (
     <div className="project">
       <div className="full">
@@ -155,6 +157,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            order
             title
             preview
             categories {

@@ -42,9 +42,7 @@ export const AboutPageTemplate = ({
                 <div
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
-                >
-                  {''}
-                </div>
+                />
                 {!!openerVideo && (
                   <OpenerVideo
                     src={openerVideo}
@@ -63,12 +61,28 @@ export const AboutPageTemplate = ({
 
               {!!icons && (
                 <div className="section">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <Icons icons={icons} />
                 </div>
               )}
 
               {!!blurb && (
                 <div className="section dark">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="wide">
                     <SectionTitle
                       title="More than just a pretty face"
@@ -90,6 +104,14 @@ export const AboutPageTemplate = ({
 
               {!!clients && (
                 <div className="section light">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="wide">
                     <SectionTitle
                       title="Who we work with"
@@ -102,6 +124,10 @@ export const AboutPageTemplate = ({
 
               {!!testimonials && (
                 <div className="section">
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="thin">
                     <SectionTitle
                       title="Don't take our word for it"

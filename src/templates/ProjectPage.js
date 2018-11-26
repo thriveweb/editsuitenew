@@ -38,9 +38,7 @@ export const ProjectPageTemplate = ({
                 <div
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
-                >
-                  {''}
-                </div>
+                />
                 {!!openerVideo && (
                   <OpenerVideo
                     src={openerVideo}
@@ -59,6 +57,14 @@ export const ProjectPageTemplate = ({
 
               {!!projectCategories && (
                 <div className="section">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="wide">
                     <SectionTitle
                       title="What we can offer"
@@ -71,6 +77,10 @@ export const ProjectPageTemplate = ({
 
               {!!testimonials && (
                 <div className="section">
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
                   <div className="thin">
                     <SectionTitle
                       title="Don't take our word for it"
