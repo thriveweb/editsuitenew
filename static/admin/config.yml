@@ -398,7 +398,16 @@ collections: # A list of collections the CMS should be able to edit
           - {
               label: Category,
               name: category,
-              widget: relation,
+              widget: select,
+              options:
+                [
+                  'Business Stories',
+                  'Drone Aerials',
+                  'Events',
+                  'Motion Graphics',
+                  'Photography',
+                  'Promos & TVCs',
+                ],
               collection: projectCategories,
               searchFields: ['title'],
               valueField: title,
@@ -443,10 +452,12 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Preview, name: preview, widget: image }
       - { label: Title, name: title, widget: string }
 
-      - label: 'Image List'
-        name: 'images'
-        widget: 'image'
-        options: { media_library: { config: { multiple: true } } }
+      - label: 'Images'
+        name: 'imageList'
+        widget: 'list'
+        fields:
+          - { label: Image, name: item, widget: image }
+          - { label: Blurb, name: blurb, widget: string }
 
       - label: 'Meta'
         required: false
