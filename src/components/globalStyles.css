@@ -405,6 +405,37 @@ h5,
   outline: none;
 }
 
+/* --- back --- */
+
+a.back {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+a.back:hover {
+  padding-left: 3rem !important;
+}
+
+a.back:before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: rotate(45deg);
+  display: block;
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+  transition: 0.5s all ease;
+}
+
 /* --- 404 --- */
 
 .four04 {
@@ -442,7 +473,7 @@ h5,
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   h1,
   h2 {
     font-size: 3rem;
@@ -472,16 +503,16 @@ h5,
     text-align: center;
   }
 
+  .thin {
+    width: 100%;
+  }
+
   .item {
     width: calc(50% - 1rem);
   }
 }
 
 @media screen and (max-width: 450px) {
-  .thin {
-    width: 100%;
-  }
-
   .item {
     width: 100%;
     margin: 0 0 2rem 0;

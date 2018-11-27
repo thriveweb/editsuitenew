@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
@@ -37,8 +37,6 @@ export const ProjectCategoryPageTemplate = ({
     categorySelector = filteredProjects
   }
 
-  console.log((projectCategories = slug))
-
   return (
     <div className="project">
       <div className="full">
@@ -65,6 +63,10 @@ export const ProjectCategoryPageTemplate = ({
       {!!projects.length && (
         <div className="dark thick">
           <div className="wide">
+            <Link className="back" to="work#two">
+              Back to all
+            </Link>
+
             {categorySelector === filteredProjects && (
               <ProjectSection projects={categorySelector} />
             )}

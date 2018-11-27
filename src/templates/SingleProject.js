@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import './SingleProject.css'
@@ -23,11 +23,9 @@ export const SingleProjectTemplate = ({
     }
   }
 
-  console.log(slug)
-
   return (
-    <div className="project-single full">
-      <section>
+    <div className="project-single">
+      <section className="full">
         <div className="thin">
           <div className="taCenter">
             <h1>{title}</h1>
@@ -45,6 +43,10 @@ export const SingleProjectTemplate = ({
           )}
 
           {!!tags && <h5>tags: {tags}</h5>}
+
+          <Link className="back" to={slug}>
+            Back to all
+          </Link>
         </div>
       </section>
     </div>
