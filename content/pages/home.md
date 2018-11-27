@@ -4,6 +4,7 @@ slug: ''
 title: The Edit Suite
 openerImage: ''
 openerVideo: '147984619'
+openerText: ''
 intro:
   buttonLink: /about
   buttonText: About Us
@@ -19,4 +20,3 @@ meta:
     internationally.
   title: ''
 ---
-

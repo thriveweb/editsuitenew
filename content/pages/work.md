@@ -2,7 +2,6 @@
 template: ProjectPage
 slug: work
 title: Our Work
-openerText: Our Work
 openerImage: ''
 openerVideo: '291636317'
 meta:

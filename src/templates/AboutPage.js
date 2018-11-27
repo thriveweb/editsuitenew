@@ -14,9 +14,9 @@ import Testimonials from '../components/Testimonials'
 
 export const AboutPageTemplate = ({
   title,
-  openerText,
   openerImage,
   openerVideo,
+  mobileImage,
   icons = [],
   blurb,
   clients,
@@ -44,18 +44,10 @@ export const AboutPageTemplate = ({
                   onClick={() => fullpageApi.moveSectionDown()}
                 />
                 {!!openerVideo && (
-                  <OpenerVideo
-                    src={openerVideo}
-                    title={openerText}
-                    alt={title}
-                  />
+                  <OpenerVideo src={openerVideo} title={title} alt={title} />
                 )}
                 {!!openerImage && (
-                  <OpenerImage
-                    src={openerImage}
-                    title={openerText}
-                    alt={title}
-                  />
+                  <OpenerImage src={openerImage} title={title} alt={title} />
                 )}
               </div>
 
@@ -175,7 +167,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        openerText
         openerVideo
         openerImage
         icons {
