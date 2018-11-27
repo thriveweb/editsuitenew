@@ -11,9 +11,19 @@ export const SingleProjectTemplate = ({
   tags,
   projects = [],
   projectCategories = [],
-  isCategory
+  isCategory,
+  categories
 }) => {
-  console.log(projectCategories[0].slug)
+  const currentCategory = categories[0].category
+  let slug = ''
+
+  for (let cat in projectCategories) {
+    if (projectCategories[cat].frontmatter.title === currentCategory) {
+      slug = projectCategories[cat].fields.slug
+    }
+  }
+
+  console.log(slug)
 
   return (
     <div className="project-single full">
@@ -93,6 +103,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             slug
+            title
           }
         }
       }

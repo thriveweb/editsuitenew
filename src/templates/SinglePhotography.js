@@ -6,7 +6,7 @@ import './SinglePhotography.css'
 
 export class SinglePhotographyTemplate extends React.Component {
   render() {
-    const { title, images } = this.props
+    const { title, imageList } = this.props
     var defaults = {
       buttons: ['close'],
       arrows: false
@@ -20,12 +20,12 @@ export class SinglePhotographyTemplate extends React.Component {
           </div>
 
           <div className="items-expand flex">
-            {images.map((item, index) => (
+            {imageList.map((item, index) => (
               <div
                 className="item flex"
                 data-fancybox="gallery"
                 key={title + index}
-                href={item.image}
+                href={item.item}
                 data-options={defaults}
               >
                 <img
@@ -67,8 +67,8 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
-        images {
-          image
+        imageList {
+          item
           blurb
         }
       }
