@@ -7,7 +7,7 @@ video: '190429067'
 preview: 'https://ucarecdn.com/25386e07-aa00-48b2-b579-015b0a9f49ba/'
 tags: promotion, ad, drone, aerial, video, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
   - category: Drone Aerials
 meta:
   title: The Urban List

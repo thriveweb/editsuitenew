@@ -8,7 +8,7 @@ video: '247411848'
 preview: 'https://ucarecdn.com/b0951063-9d5a-4774-a033-ddd650c50ffd/'
 tags: promotion, ad, drone, aerial, video, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
   - category: Drone Aerials
 meta:
   title: The Urban List – Ambassador Hayley O’Connor

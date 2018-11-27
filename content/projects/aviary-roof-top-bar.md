@@ -7,7 +7,7 @@ video: '268785064'
 preview: 'https://ucarecdn.com/a64f2bed-b4de-4ab6-bde9-b37c278ea447/'
 tags: promo, ad, video, event, corporate, filming, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
   - category: Events
 meta:
   title: Southport Sharks Aviary – Roof Top Bar

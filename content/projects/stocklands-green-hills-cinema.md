@@ -8,7 +8,7 @@ video: '240782239'
 preview: 'https://ucarecdn.com/fb1af2d7-ec95-4479-b2a3-8347f4b2a06c/'
 tags: promo, ad, video, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
 meta:
   title: Stockland Green Hills Cinema
   description: |-

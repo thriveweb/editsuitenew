@@ -8,7 +8,7 @@ video: '180486609'
 preview: 'https://ucarecdn.com/08778eb9-9285-47a8-8170-efc22aa57e98/'
 tags: promo, ad, video, event, filming, corporate, drone, aerial, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
   - category: Drone Aerials
   - category: Events
 meta:

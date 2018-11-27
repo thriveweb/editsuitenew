@@ -8,7 +8,7 @@ video: '250366306'
 preview: 'https://ucarecdn.com/985be919-a543-4464-bb0b-8a10538bee2f/'
 tags: promotion, ad, drone, aerial, video, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
   - category: Drone Aerials
 meta:
   title: The Urban List & Destination Gold Coast

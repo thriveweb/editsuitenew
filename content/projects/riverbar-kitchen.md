@@ -8,7 +8,7 @@ video: '236369915'
 preview: 'https://ucarecdn.com/3e8cd630-2aab-494e-b5f0-a6dfb1d84d4d/'
 tags: promo, ad, video, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
 meta:
   title: Riverbar & Kitchen Hype Reel
   description: |-

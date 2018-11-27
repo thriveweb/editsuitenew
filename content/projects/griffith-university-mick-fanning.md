@@ -8,7 +8,7 @@ video: '205502994'
 preview: 'https://ucarecdn.com/4aec3377-ec14-4dbd-abdf-818771ed7e9a/'
 tags: promo, ad, drone, aerial, video, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
   - category: Drone Aerials
 meta:
   title: Griffith University – Mick Fanning

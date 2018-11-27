@@ -8,7 +8,7 @@ video: '186080468'
 preview: 'https://ucarecdn.com/c00acdfe-8a19-44a1-96f7-fa17cf60401d/'
 tags: promo, ad, event, filming, corporate, video, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
   - category: Events
 meta:
   description: |-

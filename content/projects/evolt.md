@@ -9,7 +9,7 @@ preview: 'https://ucarecdn.com/40be5123-5f0a-4c2d-9834-b13ae5786944/'
 tags: promo, ad, video, motion graphics, branding, animation, videography
 categories:
   - category: Motion Graphics
-  - category: Promos and Ads
+  - category: Promos and TVCs
 meta:
   title: Evolt 360
   description: |-

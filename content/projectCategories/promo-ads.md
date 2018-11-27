@@ -1,6 +1,6 @@
 ---
 template: ProjectCategoryPage
-title: Promos & TVC's
+title: Promos and TVCs
 order: '5'
 overview: >-
   Everyone knows how powerful video is these days. Thinking of a fun or edgy
@@ -18,4 +18,3 @@ meta:
     doing so.
   title: Promos & TVC's
 ---
-

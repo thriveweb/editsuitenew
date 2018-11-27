@@ -8,7 +8,7 @@ preview: 'https://ucarecdn.com/ba7ff9ed-2558-4548-bd44-fb9848df9099/'
 tags: promotion, ad, motion graphics, animation, video, videography
 categories:
   - category: Motion Graphics
-  - category: Promos and Ads
+  - category: Promos and TVCs
 meta:
   description: A simple explainer video we created for the Villa World homes Facebook page as a header.
   title: Villa World

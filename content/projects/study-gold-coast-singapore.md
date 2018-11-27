@@ -10,7 +10,7 @@ video: '238530422'
 preview: 'https://ucarecdn.com/af70eb80-80c0-4a5d-b5a0-bf67050480ed/'
 tags: promo, ad, drone, aerial, video, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
   - category: Drone Aerials
 meta:
   title: Study Gold Coast Video Highlight – Singapore

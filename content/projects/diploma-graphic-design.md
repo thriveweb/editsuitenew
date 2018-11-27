@@ -8,7 +8,7 @@ video: '199924122'
 preview: 'https://ucarecdn.com/9b45e713-7afd-4fb9-98ba-336028e24159/'
 tags: promo, ad, video, videography
 categories:
-  - category: Promos and Ads
+  - category: Promos and TVCs
 meta:
   title: Diploma of Graphic Design
   description: |-
