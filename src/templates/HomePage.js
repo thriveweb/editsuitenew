@@ -5,6 +5,7 @@ import ReactFullpage from '@fullpage/react-fullpage'
 import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
+import OpenerMobile from '../components/OpenerMobile'
 import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import ClientsSection from '../components/ClientsSection'
@@ -16,7 +17,9 @@ export const HomePageTemplate = ({
   openerText,
   openerImage,
   openerVideo,
-  intro,
+  openerMobile,
+  sectionIntro,
+  sectionProjects,
   projectCategories = [],
   clients,
   testimonials,
@@ -50,6 +53,13 @@ export const HomePageTemplate = ({
                     alt={title}
                   />
                 )}
+                {!!openerMobile && (
+                  <OpenerMobile
+                    src={openerMobile}
+                    title={openerText}
+                    alt={title}
+                  />
+                )}
                 {!!openerImage && (
                   <OpenerImage
                     src={openerImage}
@@ -59,7 +69,7 @@ export const HomePageTemplate = ({
                 )}
               </div>
 
-              {!!intro && (
+              {!!sectionIntro && (
                 <div className="section">
                   <div
                     className="arrow-down"
@@ -71,13 +81,13 @@ export const HomePageTemplate = ({
                   />
                   <div className="thin flex">
                     <SectionTitle
-                      title="We are creators"
-                      subtitle="What we do"
+                      title={sectionIntro.title}
+                      subtitle={sectionIntro.subtitle}
                     />
                     <div>
-                      <p>{intro.description}</p>
-                      <Link to={intro.buttonLink} className="button">
-                        {intro.buttonText}
+                      <p>{sectionIntro.description}</p>
+                      <Link to={sectionIntro.buttonLink} className="button">
+                        {sectionIntro.buttonText}
                       </Link>
                     </div>
                   </div>
@@ -96,8 +106,8 @@ export const HomePageTemplate = ({
                   />
                   <div className="wide">
                     <SectionTitle
-                      title="What we can offer"
-                      subtitle="Our specialities"
+                      title={sectionProjects.title}
+                      subtitle={sectionProjects.subtitle}
                     />
                     <ProjectCategories categories={projectCategories} />
                   </div>
@@ -205,10 +215,17 @@ export const pageQuery = graphql`
         openerText
         openerVideo
         openerImage
-        intro {
+        openerMobile
+        sectionIntro {
+          title
+          subtitle
           description
           buttonText
           buttonLink
+        }
+        sectionProjects {
+          title
+          subtitle
         }
       }
     }

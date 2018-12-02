@@ -47,21 +47,22 @@ collections: # A list of collections the CMS should be able to edit
               required: false,
             }
 
-          - label: 'Intro Section'
-            name: 'intro'
+          - label: 'Section: Intro'
+            name: 'sectionIntro'
             widget: 'object'
             fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
               - { label: Description, name: description, widget: markdown }
               - { label: Button Text, name: buttonText, widget: string }
               - { label: Button Link, name: buttonLink, widget: string }
 
-          - label: 'Testimonials Section'
-            name: 'testimonials'
-            widget: 'list'
+          - label: 'Section: Projects'
+            name: 'sectionProjects'
+            widget: 'object'
             fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Company, name: company, widget: string }
-              - { label: Content, name: content, widget: text }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
 
           - label: 'Meta'
             required: false
