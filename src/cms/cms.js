@@ -33,7 +33,7 @@ CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
-  <HomePageTemplate {...entry.toJS().data} isPreview />
+  <HomePageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('projectCategories', ({ entry }) => (
   <ProjectCategoryPageTemplate {...entry.toJS().data} />
