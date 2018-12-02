@@ -20,6 +20,9 @@ export const HomePageTemplate = ({
   openerMobile,
   sectionIntro,
   sectionProjects,
+  sectionClients,
+  sectionTestimonials,
+  sectionContact,
   projectCategories = [],
   clients,
   testimonials,
@@ -126,8 +129,8 @@ export const HomePageTemplate = ({
                   />
                   <div className="wide">
                     <SectionTitle
-                      title="Who we work with"
-                      subtitle="Our clients"
+                      title={sectionClients.title}
+                      subtitle={sectionClients.subtitle}
                     />
                     <ClientsSection clients={clients} />
                   </div>
@@ -146,8 +149,8 @@ export const HomePageTemplate = ({
                   />
                   <div className="thin">
                     <SectionTitle
-                      title="Don't take our word for it"
-                      subtitle="Testimonials"
+                      title={sectionTestimonials.title}
+                      subtitle={sectionTestimonials.subtitle}
                     />
                     <Testimonials testimonials={testimonials} />
                   </div>
@@ -162,8 +165,8 @@ export const HomePageTemplate = ({
                   />
                   <div className="wide">
                     <SectionTitle
-                      title="Let's work together"
-                      subtitle="Get in touch"
+                      title={sectionContact.title}
+                      subtitle={sectionContact.subtitle}
                     />
                     <ContactInfo contact={contact} />
                   </div>
@@ -224,6 +227,18 @@ export const pageQuery = graphql`
           buttonLink
         }
         sectionProjects {
+          title
+          subtitle
+        }
+        sectionClients {
+          title
+          subtitle
+        }
+        sectionTestimonials {
+          title
+          subtitle
+        }
+        sectionContact {
           title
           subtitle
         }

@@ -64,6 +64,27 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: string }
 
+          - label: 'Section: Clients'
+            name: 'sectionClients'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+
+          - label: 'Section: Testimonials'
+            name: 'sectionTestimonials'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+
+          - label: 'Section: Contact'
+            name: 'sectionContact'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+
           - label: 'Meta'
             required: false
             name: 'meta'

@@ -9,7 +9,7 @@ openerMobile: 'https://ucarecdn.com/19cf5cbe-b78b-47f3-bbce-6f8893891016/'
 openerText: ''
 sectionIntro:
   title: We are creators
-  subtitle: who we are
+  subtitle: Who we are
   buttonLink: /about
   buttonText: About Us
   description: >-
@@ -20,7 +20,19 @@ sectionIntro:
 
 sectionProjects:
   title: What we can offer
-  subtitle: our specialities
+  subtitle: Our specialities
+
+sectionClients:
+  title: Who we work with
+  subtitle: Our Clients
+
+sectionTestimonials:
+  title: Don't take our word for it
+  subtitle: Testimonials
+
+sectionContact:
+  title: Let's work together
+  subtitle: Get in touch
 
 meta:
   description: >-
