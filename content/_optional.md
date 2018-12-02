@@ -2,6 +2,7 @@
 openerText: ''
 openerVideo: ''
 openerImage: ''
+openerMobile: ''
 meta:
   canonicalLink: ''
   description: ''

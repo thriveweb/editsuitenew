@@ -35,6 +35,7 @@
   pointer-events: none;
   overflow: hidden;
 }
+
 .opener.video iframe {
   width: 100vw;
   height: 56vw;
@@ -45,4 +46,18 @@
   top: calc(50% - 1vh);
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.opener.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .opener {
+    display: none;
+  }
+
+  .mobile.opener {
+    display: block !important;
+  }
 }
