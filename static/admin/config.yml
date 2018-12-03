@@ -201,26 +201,22 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'work' }
           - { label: Title, name: title, widget: string }
-          - {
-              label: Opener Image,
-              name: openerImage,
-              widget: image,
-              required: false,
-            }
-          - {
-              label: Opener Video,
-              name: openerVideo,
-              widget: string,
-              required: false,
-            }
 
-          - label: 'Testimonials Section'
-            name: 'testimonials'
-            widget: 'list'
+          - label: 'Section: Opener'
+            name: 'sectionOpener'
+            widget: 'object'
             fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Company, name: company, widget: string }
-              - { label: Content, name: content, widget: text }
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Video, name: video, widget: string, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: Mobile, name: mobile, widget: image }
+
+          - label: 'Section: Testimonials'
+            name: 'sectionTestimonials'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
 
           - label: 'Meta'
             required: false

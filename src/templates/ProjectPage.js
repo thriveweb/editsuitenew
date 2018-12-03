@@ -5,18 +5,18 @@ import ReactFullpage from '@fullpage/react-fullpage'
 import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
+import OpenerMobile from '../components/OpenerMobile'
 import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import Testimonials from '../components/Testimonials'
 
 export const ProjectPageTemplate = ({
   title,
-  openerVideo,
-  openerImage,
+  sectionOpener,
   projectCategories = [],
+  sectionTestimonials,
   testimonials,
-  contentType,
-  isPreview
+  contentType
 }) => {
   let options = {
     licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -38,11 +38,26 @@ export const ProjectPageTemplate = ({
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
                 />
-                {!!openerVideo && (
-                  <OpenerVideo src={openerVideo} title={title} alt={title} />
+                {!!sectionOpener.video && (
+                  <OpenerVideo
+                    src={sectionOpener.video}
+                    title={sectionOpener.title}
+                    alt={title}
+                  />
                 )}
-                {!!openerImage && (
-                  <OpenerImage src={openerImage} title={title} alt={title} />
+                {!!sectionOpener.image && (
+                  <OpenerImage
+                    src={sectionOpener.image}
+                    title={sectionOpener.title}
+                    alt={title}
+                  />
+                )}
+                {!!sectionOpener.mobile && (
+                  <OpenerMobile
+                    src={sectionOpener.mobile}
+                    title={sectionOpener.title}
+                    alt={title}
+                  />
                 )}
               </div>
 
@@ -66,18 +81,24 @@ export const ProjectPageTemplate = ({
                 </div>
               )}
 
-              {!!testimonials && (
+              {!!sectionTestimonials && (
                 <div className="section">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
+                  />
                   <div
                     className="arrow-up"
                     onClick={() => fullpageApi.moveSectionUp()}
                   />
                   <div className="thin">
                     <SectionTitle
-                      title="Don't take our word for it"
-                      subtitle="Testimonials"
+                      title={sectionTestimonials.title}
+                      subtitle={sectionTestimonials.subtitle}
                     />
-                    <Testimonials testimonials={testimonials} />
+                    {!!testimonials && (
+                      <Testimonials testimonials={testimonials} />
+                    )}
                   </div>
                 </div>
               )}
@@ -122,8 +143,16 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        openerVideo
-        openerImage
+        sectionOpener {
+          title
+          video
+          image
+          mobile
+        }
+        sectionTestimonials {
+          title
+          subtitle
+        }
       }
     }
 
