@@ -34,18 +34,15 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
-          - {
-              label: Opener Image,
-              name: openerImage,
-              widget: image,
-              required: false,
-            }
-          - {
-              label: Opener Video,
-              name: openerVideo,
-              widget: string,
-              required: false,
-            }
+
+          - label: 'Section: Opener'
+            name: 'sectionOpener'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Video, name: video, widget: string, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: Mobile, name: mobile, widget: image }
 
           - label: 'Section: Intro'
             name: 'sectionIntro'

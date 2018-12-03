@@ -2,11 +2,13 @@
 template: HomePage
 slug: ''
 title: The Edit Suite
-openerImage: ''
-openerVideo: '147984619'
-openerMobile: 'https://ucarecdn.com/19cf5cbe-b78b-47f3-bbce-6f8893891016/'
 
-openerText: ''
+sectionOpener:
+  title: ''
+  image: ''
+  video: '147984619'
+  mobile: 'https://ucarecdn.com/19cf5cbe-b78b-47f3-bbce-6f8893891016/'
+
 sectionIntro:
   title: We are creators
   subtitle: Who we are

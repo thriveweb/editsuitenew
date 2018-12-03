@@ -14,10 +14,7 @@ import ContactInfo from '../components/ContactInfo'
 
 export const HomePageTemplate = ({
   title,
-  openerText,
-  openerImage,
-  openerVideo,
-  openerMobile,
+  sectionOpener,
   sectionIntro,
   sectionProjects,
   sectionClients,
@@ -48,24 +45,24 @@ export const HomePageTemplate = ({
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
                 />
-                {!!openerVideo && (
+                {!!sectionOpener.video && (
                   <OpenerVideo
-                    src={openerVideo}
-                    title={openerText}
+                    src={sectionOpener.video}
+                    title={sectionOpener.title}
                     alt={title}
                   />
                 )}
-                {!!openerMobile && (
-                  <OpenerMobile
-                    src={openerMobile}
-                    title={openerText}
-                    alt={title}
-                  />
-                )}
-                {!!openerImage && (
+                {!!sectionOpener.image && (
                   <OpenerImage
-                    src={openerImage}
-                    title={openerText}
+                    src={sectionOpener.image}
+                    title={sectionOpener.title}
+                    alt={title}
+                  />
+                )}
+                {!!sectionOpener.mobile && (
+                  <OpenerMobile
+                    src={sectionOpener.mobile}
+                    title={sectionOpener.title}
                     alt={title}
                   />
                 )}
@@ -208,10 +205,12 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        openerText
-        openerVideo
-        openerImage
-        openerMobile
+        sectionOpener {
+          title
+          video
+          image
+          mobile
+        }
         sectionIntro {
           title
           subtitle
