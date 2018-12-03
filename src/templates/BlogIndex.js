@@ -84,7 +84,9 @@ export const pageQuery = graphql`
           image
           mobile
         }
-        overview
+        sectionOverview {
+          content
+        }
       }
     }
 

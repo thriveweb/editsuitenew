@@ -4,15 +4,15 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
+import OpenerMobile from '../components/OpenerMobile'
 import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import ProjectSection from '../components/ProjectSection'
 
 export const ProjectCategoryPageTemplate = ({
   title,
-  openerVideo,
-  openerImage,
-  overview,
+  sectionOpener,
+  sectionOverview,
   projects = [],
   projectCategories = [],
   photography = [],
@@ -42,19 +42,25 @@ export const ProjectCategoryPageTemplate = ({
         <a className="arrow-down" href="#two">
           {''}
         </a>
-        {!!openerVideo && (
-          <OpenerVideo src={openerVideo} title={title} alt={title} />
+        {!!sectionOpener.video && (
+          <OpenerVideo src={sectionOpener.video} title={title} alt={title} />
         )}
-        {!!openerImage && (
-          <OpenerImage src={openerImage} title={title} alt={title} />
+        {!!sectionOpener.image && (
+          <OpenerImage src={sectionOpener.image} title={title} alt={title} />
+        )}
+        {!!sectionOpener.mobile && (
+          <OpenerMobile src={sectionOpener.mobile} title={title} alt={title} />
         )}
       </div>
 
-      {!!overview && (
+      {!!sectionOverview && (
         <div id="two" className="thin thick flex">
-          <SectionTitle title={title} subtitle="Our work" />
+          <SectionTitle
+            title={sectionOverview.title}
+            subtitle={sectionOverview.subtitle}
+          />
           <div>
-            <p>{overview}</p>
+            <p>{sectionOverview.content}</p>
           </div>
         </div>
       )}
@@ -126,9 +132,17 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        openerVideo
-        openerImage
-        overview
+        sectionOpener {
+          title
+          video
+          image
+          mobile
+        }
+        sectionOverview {
+          title
+          subtitle
+          content
+        }
       }
     }
 

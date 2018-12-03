@@ -1,8 +1,10 @@
 ---
-openerText: ''
-openerVideo: ''
-openerImage: ''
-openerMobile: ''
+sectionOpener:
+  title: ''
+  image: ''
+  video: ''
+  mobile: ''
+
 meta:
   canonicalLink: ''
   description: ''
