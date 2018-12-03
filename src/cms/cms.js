@@ -24,7 +24,7 @@ if (
 }
 
 CMS.registerPreviewTemplate('about-page', ({ entry }) => (
-  <AboutPageTemplate {...entry.toJS().data} isPreview />
+  <AboutPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
   <BlogIndexTemplate {...entry.toJS().data} />
@@ -39,7 +39,7 @@ CMS.registerPreviewTemplate('projectCategories', ({ entry }) => (
   <ProjectCategoryPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('work-page', ({ entry }) => (
-  <ProjectPageTemplate {...entry.toJS().data} isPreview />
+  <ProjectPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('photography', ({ entry }) => (
   <SinglePhotographyTemplate {...entry.toJS().data} />
