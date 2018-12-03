@@ -68,98 +68,110 @@ export const HomePageTemplate = ({
                 )}
               </div>
 
-              <div className="section">
-                <div
-                  className="arrow-down"
-                  onClick={() => fullpageApi.moveSectionDown()}
-                />
-                <div
-                  className="arrow-up"
-                  onClick={() => fullpageApi.moveSectionUp()}
-                />
-                <div className="thin flex">
-                  <SectionTitle
-                    title={sectionIntro.title}
-                    subtitle={sectionIntro.subtitle}
+              {!!sectionIntro && (
+                <div className="section">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
                   />
-                  <div>
-                    <p>{sectionIntro.description}</p>
-                    <Link to={sectionIntro.buttonLink} className="button">
-                      {sectionIntro.buttonText}
-                    </Link>
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
+                  <div className="thin flex">
+                    <SectionTitle
+                      title={sectionIntro.title}
+                      subtitle={sectionIntro.subtitle}
+                    />
+                    <div>
+                      <p>{sectionIntro.description}</p>
+                      <Link to={sectionIntro.buttonLink} className="button">
+                        {sectionIntro.buttonText}
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
 
-              <div className="section dark">
-                <div
-                  className="arrow-down"
-                  onClick={() => fullpageApi.moveSectionDown()}
-                />
-                <div
-                  className="arrow-up"
-                  onClick={() => fullpageApi.moveSectionUp()}
-                />
-                <div className="wide">
-                  <SectionTitle
-                    title={sectionProjects.title}
-                    subtitle={sectionProjects.subtitle}
+              {!!sectionProjects && (
+                <div className="section dark">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
                   />
-                  <ProjectCategories categories={projectCategories} />
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
+                  <div className="wide">
+                    <SectionTitle
+                      title={sectionProjects.title}
+                      subtitle={sectionProjects.subtitle}
+                    />
+                    {!!projectCategories && (
+                      <ProjectCategories categories={projectCategories} />
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
 
-              <div className="section light">
-                <div
-                  className="arrow-down"
-                  onClick={() => fullpageApi.moveSectionDown()}
-                />
-                <div
-                  className="arrow-up"
-                  onClick={() => fullpageApi.moveSectionUp()}
-                />
-                <div className="wide">
-                  <SectionTitle
-                    title={sectionClients.title}
-                    subtitle={sectionClients.subtitle}
+              {!!sectionClients && (
+                <div className="section light">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
                   />
-                  {!!clients && <ClientsSection clients={clients} />}
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
+                  <div className="wide">
+                    <SectionTitle
+                      title={sectionClients.title}
+                      subtitle={sectionClients.subtitle}
+                    />
+                    {!!clients && <ClientsSection clients={clients} />}
+                  </div>
                 </div>
-              </div>
+              )}
 
-              <div className="section">
-                <div
-                  className="arrow-down"
-                  onClick={() => fullpageApi.moveSectionDown()}
-                />
-                <div
-                  className="arrow-up"
-                  onClick={() => fullpageApi.moveSectionUp()}
-                />
-                <div className="thin">
-                  <SectionTitle
-                    title={sectionTestimonials.title}
-                    subtitle={sectionTestimonials.subtitle}
+              {!!sectionTestimonials && (
+                <div className="section">
+                  <div
+                    className="arrow-down"
+                    onClick={() => fullpageApi.moveSectionDown()}
                   />
-                  {!!testimonials && (
-                    <Testimonials testimonials={testimonials} />
-                  )}
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
+                  />
+                  <div className="thin">
+                    <SectionTitle
+                      title={sectionTestimonials.title}
+                      subtitle={sectionTestimonials.subtitle}
+                    />
+                    {!!testimonials && (
+                      <Testimonials testimonials={testimonials} />
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
 
-              <div className="section dark">
-                <div
-                  className="arrow-up"
-                  onClick={() => fullpageApi.moveSectionUp()}
-                />
-                <div className="wide">
-                  <SectionTitle
-                    title={sectionContact.title}
-                    subtitle={sectionContact.subtitle}
+              {!!sectionContact && (
+                <div className="section dark">
+                  <div
+                    className="arrow-up"
+                    onClick={() => fullpageApi.moveSectionUp()}
                   />
-                  <ContactInfo contact={contact} />
+                  <div className="wide">
+                    <SectionTitle
+                      title={sectionContact.title}
+                      subtitle={sectionContact.subtitle}
+                    />
+                    {!!contact && <ContactInfo contact={contact} />}
+                  </div>
                 </div>
-              </div>
+              )}
             </ReactFullpage.Wrapper>
           </div>
         )

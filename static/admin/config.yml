@@ -121,41 +121,46 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: 'about' }
           - { label: Title, name: title, widget: string }
-          - {
-              label: Opener Image,
-              name: openerImage,
-              widget: image,
-              required: false,
-            }
-          - {
-              label: Opener Video,
-              name: openerVideo,
-              widget: string,
-              required: false,
-            }
 
-          - label: 'Icon Section'
+          - label: 'Section: Opener'
+            name: 'sectionOpener'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Video, name: video, widget: string, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: Mobile, name: mobile, widget: image }
+
+          - label: 'Section: Icons'
             name: 'icons'
             widget: 'list'
             fields:
               - { label: Icon, name: icon, widget: image }
               - { label: Title, name: title, widget: string }
-              - { label: Description, name: description, widget: string }
+              - { label: Description, name: description, widget: markdown }
 
-          - label: 'About Section'
-            name: 'blurb'
+          - label: 'Section: Blurb'
+            name: 'sectionBlurb'
             widget: 'object'
             fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+              - { label: Content, name: content, widget: markdown }
               - { label: Image, name: image, widget: image }
-              - { label: Content, name: content, widget: markdown }
 
-          - label: 'Testimonials Section'
-            name: 'testimonials'
-            widget: 'list'
+          - label: 'Section: Clients'
+            name: 'sectionClients'
+            widget: 'object'
             fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Company, name: company, widget: string }
-              - { label: Content, name: content, widget: markdown }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+
+          - label: 'Section: Testimonials'
+            name: 'sectionTestimonials'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
 
           - label: 'Meta'
             required: false

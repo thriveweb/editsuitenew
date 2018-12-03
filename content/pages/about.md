@@ -1,9 +1,14 @@
 ---
 template: AboutPage
 slug: about
-title: We are creators
-openerImage: 'https://ucarecdn.com/ae580428-bd9f-4388-a0d0-824f54dff10a/'
-openerVideo: ''
+title: About Us
+
+sectionOpener:
+  title: 'We are creators'
+  image: 'https://ucarecdn.com/ae580428-bd9f-4388-a0d0-824f54dff10a/'
+  video: ''
+  mobile: 'https://ucarecdn.com/ae580428-bd9f-4388-a0d0-824f54dff10a/'
+
 icons:
   - description: We are experts in all aspects of video production.
     icon: 'https://theeditsuite.netlify.com/images/icon1.svg'
@@ -14,7 +19,10 @@ icons:
   - description: We have over 50 combined years in the industry.
     icon: 'https://theeditsuite.netlify.com/images/icon3.svg'
     title: Dedication
-blurb:
+
+sectionBlurb:
+  title: More than just a pretty face
+  subtitle: Who we are
   content: >-
     The Edit Suite are a team of videographers, photographers, licensed drone
     operators and motion graphics designers. We take a new school approach to
@@ -43,6 +51,15 @@ blurb:
     you are super proud to show the world!
   image: >-
     https://ucarecdn.com/71620626-07cf-47e8-a8e1-4d0ffccdeca3/-/preview/-/enhance/43/
+
+sectionClients:
+  title: Who we work with
+  subtitle: Our Clients
+
+sectionTestimonials:
+  title: Don't take our word for it
+  subtitle: Testimonials
+
 meta:
   description: Gold Coast Video Production and Photography Services
   title: We are creators

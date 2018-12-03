@@ -7,6 +7,7 @@ import Image from '../components/Image'
 import Content from '../components/Content'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
+import OpenerMobile from '../components/OpenerMobile'
 import SectionTitle from '../components/SectionTitle'
 import Icons from '../components/Icons'
 import ClientsSection from '../components/ClientsSection'
@@ -14,14 +15,13 @@ import Testimonials from '../components/Testimonials'
 
 export const AboutPageTemplate = ({
   title,
-  openerImage,
-  openerVideo,
-  mobileImage,
+  sectionOpener,
+  sectionBlurb,
+  sectionClients,
+  sectionTestimonials,
   icons = [],
-  blurb,
   clients,
-  testimonials,
-  isPreview
+  testimonials
 }) => {
   let options = {
     licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -43,11 +43,26 @@ export const AboutPageTemplate = ({
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
                 />
-                {!!openerVideo && (
-                  <OpenerVideo src={openerVideo} title={title} alt={title} />
+                {!!sectionOpener.video && (
+                  <OpenerVideo
+                    src={sectionOpener.video}
+                    title={sectionOpener.title}
+                    alt={title}
+                  />
                 )}
-                {!!openerImage && (
-                  <OpenerImage src={openerImage} title={title} alt={title} />
+                {!!sectionOpener.image && (
+                  <OpenerImage
+                    src={sectionOpener.image}
+                    title={sectionOpener.title}
+                    alt={title}
+                  />
+                )}
+                {!!sectionOpener.mobile && (
+                  <OpenerMobile
+                    src={sectionOpener.mobile}
+                    title={sectionOpener.title}
+                    alt={title}
+                  />
                 )}
               </div>
 
@@ -65,7 +80,7 @@ export const AboutPageTemplate = ({
                 </div>
               )}
 
-              {!!blurb && (
+              {!!sectionBlurb && (
                 <div className="section dark">
                   <div
                     className="arrow-down"
@@ -77,24 +92,24 @@ export const AboutPageTemplate = ({
                   />
                   <div className="wide">
                     <SectionTitle
-                      title="More than just a pretty face"
-                      subtitle="Our story"
+                      title={sectionBlurb.title}
+                      subtitle={sectionBlurb.subtitle}
                     />
                     <div className="flex half">
                       <div>
                         <Image
-                          src={blurb.image}
+                          src={sectionBlurb.image}
                           alt={title}
                           className="cover"
                         />
                       </div>
-                      <Content src={blurb.content} />
+                      <Content src={sectionBlurb.content} />
                     </div>
                   </div>
                 </div>
               )}
 
-              {!!clients && (
+              {!!sectionClients && (
                 <div className="section light">
                   <div
                     className="arrow-down"
@@ -106,15 +121,15 @@ export const AboutPageTemplate = ({
                   />
                   <div className="wide">
                     <SectionTitle
-                      title="Who we work with"
-                      subtitle="Our clients"
+                      title={sectionClients.title}
+                      subtitle={sectionClients.subtitle}
                     />
                     <ClientsSection clients={clients} />
                   </div>
                 </div>
               )}
 
-              {!!testimonials && (
+              {!!sectionTestimonials && (
                 <div className="section">
                   <div
                     className="arrow-up"
@@ -122,8 +137,8 @@ export const AboutPageTemplate = ({
                   />
                   <div className="thin">
                     <SectionTitle
-                      title="Don't take our word for it"
-                      subtitle="Testimonials"
+                      title={sectionTestimonials.title}
+                      subtitle={sectionTestimonials.subtitle}
                     />
                     <Testimonials testimonials={testimonials} />
                   </div>
@@ -167,16 +182,30 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        openerVideo
-        openerImage
+        sectionOpener {
+          title
+          video
+          image
+          mobile
+        }
         icons {
           title
           icon
           description
         }
-        blurb {
+        sectionBlurb {
+          title
+          subtitle
           image
           content
+        }
+        sectionClients {
+          title
+          subtitle
+        }
+        sectionTestimonials {
+          title
+          subtitle
         }
       }
     }

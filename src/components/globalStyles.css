@@ -173,6 +173,8 @@ h5,
 
 .section {
   position: relative;
+  min-height: 40rem;
+  display: flex;
 }
 
 .wide,
@@ -524,8 +526,9 @@ a.back:before {
     padding-bottom: 5rem;
   }
 
-  .scroll-jack {
-    overflow-y: scroll !important;
+  .arrow-down,
+  .arrow-up {
+    display: none !important;
   }
 
   .section.fp-section.fp-table:first-of-type,
