@@ -4,14 +4,12 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
+import OpenerMobile from '../components/OpenerMobile'
 import PostSection from '../components/PostSection'
 
 export const BlogIndexTemplate = ({
   title,
-  openerVideo,
-  openerImage,
-  overview,
-  featuredImage,
+  sectionOpener,
   posts = [],
   contentType
 }) => (
@@ -20,11 +18,26 @@ export const BlogIndexTemplate = ({
       <a className="arrow-down" href="#two">
         {''}
       </a>
-      {!!openerVideo && (
-        <OpenerVideo src={openerVideo} title={title} alt={title} />
+      {!!sectionOpener.video && (
+        <OpenerVideo
+          src={sectionOpener.video}
+          title={sectionOpener.title}
+          alt={title}
+        />
       )}
-      {!!openerImage && (
-        <OpenerImage src={openerImage} title={title} alt={title} />
+      {!!sectionOpener.image && (
+        <OpenerImage
+          src={sectionOpener.image}
+          title={sectionOpener.title}
+          alt={title}
+        />
+      )}
+      {!!sectionOpener.mobile && (
+        <OpenerMobile
+          src={sectionOpener.mobile}
+          title={sectionOpener.title}
+          alt={title}
+        />
       )}
     </div>
 
@@ -65,8 +78,12 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        openerVideo
-        openerImage
+        sectionOpener {
+          title
+          video
+          image
+          mobile
+        }
         overview
       }
     }
