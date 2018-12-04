@@ -557,6 +557,7 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: clients
     label: Clients
+    delete: false
     editor:
       preview: false
     folder: content/clients
@@ -574,9 +575,9 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: false
     folder: content/testimonials
-    slug: '{{slug}}'
     create: true
     fields:
+      - { label: Title, name: title, widget: hidden }
       - { label: Name, name: name, widget: string }
       - { label: Company, name: company, widget: string }
       - { label: Content, name: content, widget: markdown }
