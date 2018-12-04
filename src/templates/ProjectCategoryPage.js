@@ -133,7 +133,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         sectionOpener {
-          title
           video
           image
           mobile
