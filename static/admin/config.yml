@@ -574,6 +574,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: false
     folder: content/testimonials
+    slug: '{{slug}}'
     create: true
     fields:
       - { label: Name, name: name, widget: string }
