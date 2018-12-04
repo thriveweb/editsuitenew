@@ -567,6 +567,19 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Logo, name: logo, widget: image }
       - { label: Link, name: link, widget: string }
 
+  # Testimonials
+
+  - name: testimonials
+    label: Testimonials
+    editor:
+      preview: false
+    folder: content/testimonials
+    create: true
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Company, name: company, widget: string }
+      - { label: Content, name: content, widget: markdown }
+
   # Settings
 
   - name: settings
