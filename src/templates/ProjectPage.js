@@ -84,10 +84,6 @@ export const ProjectPageTemplate = ({
               {!!sectionTestimonials && (
                 <div className="section">
                   <div
-                    className="arrow-down"
-                    onClick={() => fullpageApi.moveSectionDown()}
-                  />
-                  <div
                     className="arrow-up"
                     onClick={() => fullpageApi.moveSectionUp()}
                   />

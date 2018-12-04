@@ -350,20 +350,24 @@ collections: # A list of collections the CMS should be able to edit
 
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
-      - { label: Overview, name: overview, widget: text }
       - { label: Preview, name: preview, widget: image }
-      - {
-          label: Opener Image,
-          name: openerImage,
-          widget: image,
-          required: false,
-        }
-      - {
-          label: Opener Video,
-          name: openerVideo,
-          widget: string,
-          required: false,
-        }
+
+      - label: 'Section: Opener'
+        name: 'sectionOpener'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Video, name: video, widget: string, required: false }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Mobile, name: mobile, widget: image }
+
+      - label: 'Section: Overview'
+        name: 'sectionOverview'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - { label: Content, name: content, widget: markdown }
 
       - label: 'Meta'
         required: false
@@ -401,12 +405,9 @@ collections: # A list of collections the CMS should be able to edit
         widget: 'hidden'
         default: 'SingleProject'
 
-      - { label: Preview, name: preview, widget: image }
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
-      - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Video, name: video, widget: string }
-      - { label: Tags, name: tags, widget: string }
+      - { label: Preview, name: preview, widget: image }
 
       - label: 'Categories'
         name: 'categories'
@@ -430,6 +431,10 @@ collections: # A list of collections the CMS should be able to edit
               searchFields: ['title'],
               valueField: title,
             }
+
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Video, name: video, widget: string }
+      - { label: Tags, name: tags, widget: string }
 
       - label: 'Meta'
         required: false
