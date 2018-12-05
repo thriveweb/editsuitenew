@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Opener.css'
 
-const OpenerVideo = ({ title, openerImage, src }) => (
+const OpenerVideo = ({ title, src }) => (
   <div className="opener video">
     <h1>{title}</h1>
     <div className="gradient" />
