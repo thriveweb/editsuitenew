@@ -1,10 +1,9 @@
 ---
-name: Sample
-company: Company name
+name: Nico Scott
+company: Visit Victoria
 content: >-
-  Nam ac libero sed purus eleifend accumsan. In non nibh at mi venenatis
-  condimentum id ut dolor. Integer nec eros consectetur ante aliquet consectetur
-  a sit amet ex.Nam ac libero sed purus eleifend accumsan. In non nibh at mi
-  venenatis condimentum
+  The team at The Edit Suite are brilliant at what they do, so good in fact that
+  I've used them multiple times despite being based in Melbourne. We'll
+  definitely be working with them again soon.
 ---
 
