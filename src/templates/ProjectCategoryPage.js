@@ -152,7 +152,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            name
+            title
             company
             content
           }
