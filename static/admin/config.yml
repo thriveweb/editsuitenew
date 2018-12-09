@@ -574,7 +574,8 @@ collections: # A list of collections the CMS should be able to edit
     label: Testimonials
     editor:
       preview: false
-    folder: content/testimonials
+    folder: 'content/testimonials'
+    slug: '{{slug}}'
     create: true
     fields:
       - { label: Title, name: title, widget: hidden }
