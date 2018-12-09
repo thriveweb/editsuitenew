@@ -578,7 +578,6 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{slug}}'
     create: true
     fields:
-      - { label: Title, name: title, widget: hidden }
       - { label: Name, name: name, widget: string }
       - { label: Company, name: company, widget: string }
       - { label: Content, name: content, widget: markdown }
