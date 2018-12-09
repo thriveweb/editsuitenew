@@ -557,7 +557,6 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: clients
     label: Clients
-    delete: false
     editor:
       preview: false
     folder: content/clients
