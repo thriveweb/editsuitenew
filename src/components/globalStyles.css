@@ -390,7 +390,6 @@ h5,
 .button {
   border: 0;
   padding-bottom: 1rem;
-  border-bottom: 3px solid white !important;
   background: none;
   color: white;
   margin-top: 3rem;
@@ -398,9 +397,28 @@ h5,
   transition: 0.2s ease all;
 }
 
-.button:hover {
-  cursor: pointer;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+.button:after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  margin-top: 1rem;
+  background: white;
+  display: block;
+}
+
+.button:hover:after {
+  width: 100%;
+  animation: hover 0.8s ease-in-out;
+}
+
+@keyframes hover {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
 }
 
 .button:focus {

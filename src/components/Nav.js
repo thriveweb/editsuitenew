@@ -66,11 +66,11 @@ export default class Nav extends Component {
                 <i className="fab fa-instagram" />
               </a>
               <a
-                href={social.youtube}
+                href={social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-youtube" />
+                <i className="fab fa-linkedin-in" />
               </a>
             </div>
           )}

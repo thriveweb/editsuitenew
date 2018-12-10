@@ -647,8 +647,8 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
               - {
-                  label: Youtube,
-                  name: youtube,
+                  label: Linkedin,
+                  name: linkedin,
                   widget: string,
                   required: false,
                 }
