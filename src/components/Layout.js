@@ -25,7 +25,7 @@ export default ({ children, meta, title }) => {
               facebook
               instagram
               vimeo
-              youtube
+              linkedin
             }
           }
         }
