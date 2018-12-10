@@ -29,10 +29,10 @@ class Testimonials extends React.Component {
         <div className="wrap relative">
           <Swiper {...params}>
             {testimonials.map((item, index) => (
-              <div key={`${item.name} + ${index}`}>
+              <div key={`${item.title} + ${index}`}>
                 <p>{item.content}</p>
                 <h5>
-                  {item.name}, {item.company}
+                  {item.title}, {item.company}
                 </h5>
               </div>
             ))}
