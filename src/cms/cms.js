@@ -47,6 +47,6 @@ CMS.registerPreviewTemplate('photography', ({ entry }) => (
 CMS.registerPreviewTemplate('posts', ({ entry }) => (
   <SinglePostTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('projects', ({ entry }) => (
+CMS.registerPreviewTemplate('project', ({ entry }) => (
   <SingleProjectTemplate {...entry.toJS().data} />
 ))
