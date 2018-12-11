@@ -1,16 +1,18 @@
 siteTitle: The Edit Suite
 siteUrl: 'https://theeditsuite.netlify.com'
 siteDescription: >-
-  The Edit Suite is a Gold Coast video production and photography company that produces high quality and engaging digital content nationally and internationally.
+  The Edit Suite is a Gold Coast video production and photography company that
+  produces high quality and engaging digital content nationally and
+  internationally.
 socialMediaCard:
   image: 'https://ucarecdn.com/fcc8d148-a9a8-42ee-a793-0f12b1437f61/'
-headerScripts: <!-- Add your analytics scripts / verification meta here -->
+headerScripts: ''
 contact:
-  phone: '(07) 5575 2185'
-  email: 'info@theeditsuite.com.au'
   address: 'Shop 2, 2436 Gold Coast Hwy, Mermaid Beach QLD 4218, Australia'
+  email: info@theeditsuite.com.au
+  phone: (07) 5575 2185
 social:
-  instagram: 'https://www.instagram.com/theeditsuite/'
   facebook: 'https://www.facebook.com/theeditsuite.com.au'
-  vimeo: 'https://vimeo.com/theeditsuite'
+  instagram: 'https://www.instagram.com/theeditsuite/'
   linkedin: 'https://au.linkedin.com/company/theeditsuite'
+  vimeo: 'https://vimeo.com/theeditsuite'
