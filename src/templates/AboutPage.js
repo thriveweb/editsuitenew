@@ -21,7 +21,8 @@ export const AboutPageTemplate = ({
   sectionTestimonials,
   icons = [],
   clients,
-  testimonials
+  testimonials,
+  isPreview
 }) => {
   let options = {
     licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -129,7 +130,7 @@ export const AboutPageTemplate = ({
                 </div>
               )}
 
-              {!!sectionTestimonials && (
+              {isPreview && sectionTestimonials && (
                 <div className="section">
                   <div
                     className="arrow-up"

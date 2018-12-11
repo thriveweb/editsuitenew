@@ -24,7 +24,7 @@ if (
 }
 
 CMS.registerPreviewTemplate('about-page', ({ entry }) => (
-  <AboutPageTemplate {...entry.toJS().data} />
+  <AboutPageTemplate {...entry.toJS().data} isPreview />
 ))
 CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
   <BlogIndexTemplate {...entry.toJS().data} />
