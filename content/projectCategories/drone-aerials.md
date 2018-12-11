@@ -4,9 +4,9 @@ title: Drone Aerials
 order: '4'
 preview: 'https://ucarecdn.com/7f9de8db-33bd-4d01-9eb8-a14989bb5bec/'
 sectionOpener:
-  image: 'https://ucarecdn.com/7f9de8db-33bd-4d01-9eb8-a14989bb5bec/'
+  image: ''
   mobile: 'https://ucarecdn.com/7f9de8db-33bd-4d01-9eb8-a14989bb5bec/'
-  video: ''
+  video: '305726257'
 sectionOverview:
   content: >-
     Adding drone aerial footage to your video adds a lot of wow factor and
