@@ -8,13 +8,17 @@ sectionOpener:
   title: ''
   video: ''
 icons:
-  - description: We are experts in all aspects of video production.
+  - description: We are experts in photo and video because our hobby became our livelihood.
     icon: 'https://theeditsuite.netlify.com/images/icon1.svg'
     title: Expertise
-  - description: We are passionate about making our craft the best as possible.
+  - description: >-
+      We are passionate about making all of our projects the best they possibly
+      can be.
     icon: 'https://theeditsuite.netlify.com/images/icon2.svg'
     title: Passion
-  - description: We have over 50 combined years in the industry.
+  - description: >-
+      We are dedicated to providing an outstanding product for all of our
+      clients.
     icon: 'https://theeditsuite.netlify.com/images/icon3.svg'
     title: Dedication
 sectionBlurb:
