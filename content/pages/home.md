@@ -4,7 +4,7 @@ slug: ''
 title: The Edit Suite
 sectionOpener:
   image: ''
-  mobile: 'https://ucarecdn.com/19cf5cbe-b78b-47f3-bbce-6f8893891016/'
+  mobile: 'https://ucarecdn.com/2c1b9f47-69bc-4dd2-9e7b-7d2cea0f6a73/'
   title: ''
   video: '147984619'
 sectionIntro:
