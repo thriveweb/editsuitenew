@@ -2,16 +2,12 @@
 template: HomePage
 slug: ''
 title: The Edit Suite
-
 sectionOpener:
-  title: ''
   image: ''
-  video: '147984619'
   mobile: 'https://ucarecdn.com/19cf5cbe-b78b-47f3-bbce-6f8893891016/'
-
+  title: so sick man
+  video: '147984619'
 sectionIntro:
-  title: We are creators
-  subtitle: Who we are
   buttonLink: /about
   buttonText: About Us
   description: >-
@@ -19,23 +15,20 @@ sectionIntro:
     Mermaid Beach on the Gold Coast of Australia. We specialise in creating high
     quality engaging content that your viewers will watch. Find out more in our
     about us section.
-
+  subtitle: Who we are
+  title: We are creators
 sectionProjects:
-  title: What we can offer
   subtitle: Our specialities
-
+  title: What we can offer
 sectionClients:
-  title: Who we work with
   subtitle: Our Clients
-
+  title: Who we work with
 sectionTestimonials:
-  title: Don't take our word for it
   subtitle: Testimonials
-
+  title: Don't take our word for it
 sectionContact:
-  title: Let's work together
   subtitle: Get in touch
-
+  title: Let's work together
 meta:
   description: >-
     The Edit Suite is a Gold Coast video production and photography company that
@@ -43,3 +36,4 @@ meta:
     internationally.
   title: ''
 ---
+
