@@ -52,7 +52,7 @@ sectionBlurb:
   subtitle: Who we are
   title: More than just a pretty face
 sectionClients:
-  subtitle: Our Clients
+  subtitle: 'Our Clients '
   title: Who we work with
 sectionTestimonials:
   subtitle: Testimonials
