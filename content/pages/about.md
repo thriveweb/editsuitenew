@@ -44,8 +44,7 @@ sectionBlurb:
 
     Let us show you how your next video or photography project can be something
     you are super proud to show the world!
-  image: >-
-    https://ucarecdn.com/71620626-07cf-47e8-a8e1-4d0ffccdeca3/-/preview/-/enhance/43/
+  image: ''
   subtitle: Who we are
   title: More than just a pretty face
 sectionClients:
