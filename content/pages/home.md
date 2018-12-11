@@ -5,7 +5,7 @@ title: The Edit Suite
 sectionOpener:
   image: ''
   mobile: 'https://ucarecdn.com/19cf5cbe-b78b-47f3-bbce-6f8893891016/'
-  title: so sick man
+  title: ''
   video: '147984619'
 sectionIntro:
   buttonLink: /about
