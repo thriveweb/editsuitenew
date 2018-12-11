@@ -1,22 +1,23 @@
-footer {
+.footer {
   width: 80%;
   margin: auto;
   padding: 2rem;
+  margin-top: 5rem;
 }
 
-footer p,
-footer a {
+.footer p,
+.footer a {
   font-size: 1.2rem;
   margin: 0;
 }
 
 @media screen and (max-width: 750px) {
-  footer {
+  .footer {
     width: 90%;
     flex-direction: column;
   }
 
-  footer p {
+  .footer p {
     width: 100%;
     display: block;
     text-align: center;

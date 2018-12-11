@@ -7,13 +7,36 @@ import FormSimpleAjax from '../components/FormSimpleAjax'
 import ContactInfo from '../components/ContactInfo'
 
 import './ContactPage.css'
+import '../components/Footer.css'
 
 export const ContactPageTemplate = ({ title, contact }) => (
-  <div className="contact full">
-    <div className="wide">
-      <SectionTitle title="Let's work together" subtitle="Get in touch" />
-      <FormSimpleAjax />
-      <ContactInfo contact={contact} />
+  <div>
+    <div className="contact full">
+      <div className="wide">
+        <SectionTitle title="Let's work together" subtitle="Get in touch" />
+        <FormSimpleAjax />
+        <ContactInfo contact={contact} />
+      </div>
+    </div>
+
+    <div className="footer">
+      <div className="flex">
+        <p>
+          © Copyright {new Date().getFullYear()} The Edit Suite. All Rights
+          Reserved.
+        </p>
+
+        <p>
+          Crafted by{' '}
+          <a
+            href="https://thriveweb.com.au"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Thrive Digital
+          </a>
+        </p>
+      </div>
     </div>
   </div>
 )

@@ -338,7 +338,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: projectCategories
     label: Project Category
     editor:
-      preview: false
+      preview: true
     folder: 'content/projectCategories'
     slug: '{{slug}}'
     create: true
@@ -395,7 +395,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: projects
     label: Single Project
     editor:
-      preview: false
+      preview: true
     folder: 'content/projects'
     slug: '{{slug}}'
     create: true
@@ -462,7 +462,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: photography
     label: Photography
     editor:
-      preview: false
+      preview: true
     folder: 'content/photography'
     slug: '{{slug}}'
     create: true
@@ -508,7 +508,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: posts
     label: Single Post
     editor:
-      preview: false
+      preview: true
     folder: 'content/posts'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true
