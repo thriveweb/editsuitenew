@@ -329,8 +329,8 @@ h5,
 .arrow-down,
 .arrow-up {
   cursor: pointer;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   position: absolute;
   left: 50%;
   right: 50%;
