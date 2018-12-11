@@ -39,7 +39,7 @@ export const AboutPageTemplate = ({
         return (
           <div>
             <ReactFullpage.Wrapper>
-              {/* <div className="section">
+              <div className="section">
                 <div
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
@@ -65,9 +65,9 @@ export const AboutPageTemplate = ({
                     alt={title}
                   />
                 )}
-              </div> */}
+              </div>
 
-              {/* {!!icons && (
+              {!!icons && (
                 <div className="section">
                   <div
                     className="arrow-down"
@@ -79,9 +79,9 @@ export const AboutPageTemplate = ({
                   />
                   <Icons icons={icons} />
                 </div>
-              )} */}
+              )}
 
-              {/* {!!sectionBlurb && (
+              {!!sectionBlurb && (
                 <div className="section dark">
                   <div
                     className="arrow-down"
@@ -108,9 +108,9 @@ export const AboutPageTemplate = ({
                     </div>
                   </div>
                 </div>
-              )} */}
+              )}
 
-              {/* {!isPreview && sectionClients && (
+              {!isPreview && sectionClients && (
                 <div className="section light">
                   <div
                     className="arrow-down"
@@ -128,9 +128,9 @@ export const AboutPageTemplate = ({
                     <ClientsSection clients={clients} />
                   </div>
                 </div>
-              )} */}
+              )}
 
-              {/* {!isPreview && sectionTestimonials && (
+              {!isPreview && sectionTestimonials && (
                 <div className="section">
                   <div
                     className="arrow-up"
@@ -144,7 +144,7 @@ export const AboutPageTemplate = ({
                     <Testimonials testimonials={testimonials} />
                   </div>
                 </div>
-              )} */}
+              )}
             </ReactFullpage.Wrapper>
           </div>
         )
