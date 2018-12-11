@@ -394,6 +394,7 @@ h5,
   color: white;
   margin-top: 3rem;
   display: inline-block;
+  cursor: pointer;
   transition: 0.2s ease all;
 }
 

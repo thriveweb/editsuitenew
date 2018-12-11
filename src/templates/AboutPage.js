@@ -20,7 +20,7 @@ export const AboutPageTemplate = ({
   sectionClients,
   sectionTestimonials,
   icons = [],
-  clients,
+  clients = [],
   testimonials,
   isPreview
 }) => {
@@ -110,7 +110,7 @@ export const AboutPageTemplate = ({
                 </div>
               )}
 
-              {!!sectionClients && (
+              {!isPreview && sectionClients && (
                 <div className="section light">
                   <div
                     className="arrow-down"
@@ -130,7 +130,7 @@ export const AboutPageTemplate = ({
                 </div>
               )}
 
-              {isPreview && sectionTestimonials && (
+              {!isPreview && sectionTestimonials && (
                 <div className="section">
                   <div
                     className="arrow-up"
