@@ -5,7 +5,7 @@ title: About Us
 sectionOpener:
   image: 'https://ucarecdn.com/6005c637-5a6d-44f8-a1b9-a8a6f8de2f17/'
   mobile: 'https://ucarecdn.com/fd69b9a2-c1c2-4974-9089-9dae1155d295/'
-  title: ''
+  title: Just Create.
   video: ''
 icons:
   - description: We are experts in photo and video because our hobby became our livelihood.
@@ -24,10 +24,10 @@ icons:
 sectionBlurb:
   content: >-
     The Edit Suite are a team of videographers, photographers, licensed drone
-    operators and motion graphics designers. We take a new school approach to
-    all of the videos we create and are constantly coming up with new and
-    creative ideas in order to create something special for our clients and of
-    course, yours.
+    operators and motion graphics designers based on the Gold Coast in
+    Queensland Australia. We take a new school approach to all of the videos we
+    create and are constantly coming up with new and creative ideas in order to
+    create something special for our clients and of course, yours.
 
 
     We are always adding to our vast array of professional film production and
@@ -48,7 +48,8 @@ sectionBlurb:
 
     Let us show you how your next video or photography project can be something
     you are super proud to show the world!
-  image: 'https://ucarecdn.com/9ddb06fe-9dea-46c7-b2b3-840fd7ffb315/'
+  image: >-
+    https://ucarecdn.com/1bc32926-9470-4045-accf-ec8a3ac65b1c/-/crop/1500x1441/0,28/-/preview/
   subtitle: Who we are
   title: More than just a pretty face
 sectionClients:
