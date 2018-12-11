@@ -329,32 +329,51 @@ h5,
 .arrow-down,
 .arrow-up {
   cursor: pointer;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 4rem;
+  height: 4rem;
   position: absolute;
-  left: 50%;
-  right: 50%;
+  /* border: 1px solid; */
+  left: calc(50% - 2rem);
+  right: calc(50% - 2rem);
   z-index: 1000;
 }
 
 .arrow-down {
   bottom: 5rem;
-  transform: rotate(45deg);
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
   animation-name: down;
   animation-duration: 1.3s;
   animation-iteration-count: infinite;
 }
 
+.arrow-down:after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: rotate(45deg);
+  margin-left: 1.2rem;
+  margin-top: 0.8rem;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+
 .arrow-up {
   top: 14rem;
-  transform: rotate(45deg);
-  border-top: 2px solid white;
-  border-left: 2px solid white;
   animation-name: up;
   animation-duration: 1.3s;
   animation-iteration-count: infinite;
+}
+
+.arrow-up:after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: rotate(45deg);
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  margin-left: 1.2rem;
+  margin-top: 1.4rem;
 }
 
 @keyframes down {
