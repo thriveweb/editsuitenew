@@ -32,15 +32,13 @@ export const SingleMotionGraphicsTemplate = ({
             <p>{excerpt}</p>
           </div>
 
-          {!video && (
-            <div className="video">
-              <iframe
-                title={title}
-                src={`https://player.vimeo.com/video/${video}`}
-                frameBorder="0"
-              />
-            </div>
-          )}
+          <div className="video">
+            <iframe
+              title={title}
+              src={`https://player.vimeo.com/video/${video}`}
+              frameBorder="0"
+            />
+          </div>
 
           {!!tags && <h5>tags: {tags}</h5>}
 

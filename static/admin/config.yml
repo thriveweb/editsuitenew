@@ -398,7 +398,7 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{slug}}'
     editor:
       preview: true
-    create: false
+    create: true
     fields:
       - label: 'Template'
         name: 'template'
@@ -406,7 +406,7 @@ collections: # A list of collections the CMS should be able to edit
         default: 'SingleMotionGraphics'
 
       - { label: Title, name: title, widget: string }
-      - { label: Order, name: order, widget: number }
+      - { label: Order, name: order, widget: number, default: '99' }
       - { label: Preview, name: preview, widget: image }
 
       - label: 'Categories'

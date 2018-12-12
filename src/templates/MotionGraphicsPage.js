@@ -47,7 +47,7 @@ export const MotionGraphicsPageTemplate = ({
         </div>
       )}
 
-      {!!projects.length && (
+      {!!projects && (
         <div className="dark thick">
           <div className="wide">
             <Link className="back" to="/work#two/">
@@ -144,7 +144,10 @@ export const pageQuery = graphql`
           frontmatter {
             order
             title
+            excerpt
+            video
             preview
+            tags
             categories {
               category
             }
