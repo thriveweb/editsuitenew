@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/minchin-moore.md
 <<<<<<< HEAD:content/motionGraphics/minchin-moore.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/minchin-moore.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/minchin-moore.md

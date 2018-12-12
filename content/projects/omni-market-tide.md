@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/omni-market-tide.md
 <<<<<<< HEAD:content/motionGraphics/omni-market-tide.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/omni-market-tide.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/omni-market-tide.md

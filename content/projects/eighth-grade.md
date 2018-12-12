@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/eighth-grade.md
 <<<<<<< HEAD:content/motionGraphics/eighth-grade.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/eighth-grade.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/eighth-grade.md

@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/board-room.md
 <<<<<<< HEAD:content/motionGraphics/board-room.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/board-room.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/board-room.md

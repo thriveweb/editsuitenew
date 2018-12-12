@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/pepsico-metrics.md
 <<<<<<< HEAD:content/motionGraphics/pepsico-metrics.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/pepsico-metrics.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/pepsico-metrics.md

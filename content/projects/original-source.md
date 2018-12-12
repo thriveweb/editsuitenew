@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/original-source.md
 <<<<<<< HEAD:content/motionGraphics/original-source.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/original-source.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/original-source.md

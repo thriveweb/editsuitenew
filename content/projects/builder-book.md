@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/builder-book.md
 <<<<<<< HEAD:content/motionGraphics/builder-book.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/builder-book.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/builder-book.md

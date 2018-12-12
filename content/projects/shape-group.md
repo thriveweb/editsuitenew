@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/shape-group.md
 <<<<<<< HEAD:content/motionGraphics/shape-group.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/shape-group.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/shape-group.md

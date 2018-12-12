@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/uber-nappy-drive.md
 <<<<<<< HEAD:content/motionGraphics/uber-nappy-drive.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/uber-nappy-drive.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/uber-nappy-drive.md

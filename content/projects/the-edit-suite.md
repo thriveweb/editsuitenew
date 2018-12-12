@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/the-edit-suite.md
 <<<<<<< HEAD:content/motionGraphics/the-edit-suite.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/the-edit-suite.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/the-edit-suite.md

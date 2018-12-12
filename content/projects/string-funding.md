@@ -1,6 +1,10 @@
 ---
+<<<<<<< HEAD:content/projects/string-funding.md
 <<<<<<< HEAD:content/motionGraphics/string-funding.md
 template: SingleMotionGraphics
+=======
+template: SingleProject
+>>>>>>> parent of b6c56bb... Update projects:content/projects/string-funding.md
 =======
 template: SingleProject
 >>>>>>> parent of b6c56bb... Update projects:content/projects/string-funding.md
