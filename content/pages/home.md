@@ -34,6 +34,5 @@ meta:
     The Edit Suite is a Gold Coast video production and photography company that
     produces high quality and engaging digital content nationally and
     internationally.
-  title: The Edit Suite | Video Production Gold Coast and Photography
+  title: Video Production Gold Coast and Photography
 ---
-

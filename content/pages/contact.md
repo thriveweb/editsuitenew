@@ -8,6 +8,5 @@ meta:
     take a new school approach to all of the videos we create and are constantly
     adding to our vast array of professional film production gear to make all of
     our videos stand out.
-  title: Contact | The Edit Suite
+  title: Contact
 ---
-
