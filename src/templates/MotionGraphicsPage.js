@@ -19,54 +19,48 @@ export const MotionGraphicsPageTemplate = ({
   testimonials,
   contentType,
   slug
-}) => {
-  const isCategory = contentType === 'projectCategories'
-
-  const byCategory = post =>
-    post.categories &&
-    post.categories.filter(cat => cat.category === title).length
-
-  const filteredProjects = isCategory ? projects.filter(byCategory) : projects
-
-  let categorySelector = []
-
-  if ('/project-categories/photography/' === slug) {
-    categorySelector = photography
-  } else {
-    categorySelector = filteredProjects
-  }
-
-  return (
-    <div className="project">
-      <div className="full">
-        <a className="arrow-down" href="#two">
-          {''}
-        </a>
-        {!!sectionOpener.video && (
-          <OpenerVideo src={sectionOpener.video} title={title} alt={title} />
-        )}
-        {!!sectionOpener.image && (
-          <OpenerImage src={sectionOpener.image} title={title} alt={title} />
-        )}
-        {!!sectionOpener.mobile && (
-          <OpenerMobile src={sectionOpener.mobile} title={title} alt={title} />
-        )}
-      </div>
-
-      {!!sectionOverview && (
-        <div id="two" className="thin thick flex">
-          <SectionTitle
-            title={sectionOverview.title}
-            subtitle={sectionOverview.subtitle}
-          />
-          <div>
-            <p>{sectionOverview.content}</p>
-          </div>
-        </div>
+}) => (
+  <div className="project">
+    <div className="full">
+      <a className="arrow-down" href="#two">
+        {''}
+      </a>
+      {!!sectionOpener.video && (
+        <OpenerVideo src={sectionOpener.video} title={title} alt={title} />
+      )}
+      {!!sectionOpener.image && (
+        <OpenerImage src={sectionOpener.image} title={title} alt={title} />
+      )}
+      {!!sectionOpener.mobile && (
+        <OpenerMobile src={sectionOpener.mobile} title={title} alt={title} />
       )}
     </div>
-  )
-}
+
+    {!!sectionOverview && (
+      <div id="two" className="thin thick flex">
+        <SectionTitle
+          title={sectionOverview.title}
+          subtitle={sectionOverview.subtitle}
+        />
+        <div>
+          <p>{sectionOverview.content}</p>
+        </div>
+      </div>
+    )}
+
+    {!!projects && (
+      <div className="dark thick">
+        <div className="wide">
+          <Link className="back" to="/work#two/">
+            Back to all
+          </Link>
+
+          <ProjectSection projects={projects} />
+        </div>
+      </div>
+    )}
+  </div>
+)
 
 const MotionGraphicsPage = ({
   data: { page, testimonials, projects, projectCategories, photography }
