@@ -1,14 +1,29 @@
 ---
+<<<<<<< HEAD:content/projects/arts-centre.md~parent of b6c56bb... Update projects
 template: SingleProject
 order: '99'
+=======
+template: SingleMotionGraphics
+>>>>>>> c262f3f7d10d63ecbb22b6db1cda3869cb293cbd:content/motionGraphics/arts-centre.md
 title: The Arts Centre Cultural Precinct
-excerpt: A fantastic insight into The Arts Centre Cultural Precinct across Australia especially the new Arts Centre on the Gold Coast.
-video: '218014302'
+order: '99'
 preview: 'https://ucarecdn.com/e92082e6-8cba-4a77-b114-0857f78c44b3/'
+<<<<<<< HEAD:content/projects/arts-centre.md~parent of b6c56bb... Update projects
 tags: motion graphics, branding, animation, video, videography
 categories:
   - category: Motion Graphics
+=======
+category: Motion Graphics
+excerpt: >-
+  A fantastic insight into The Arts Centre Cultural Precinct across Australia
+  especially the new Arts Centre on the Gold Coast.
+video: '218014302'
+tags: 'motion graphics, branding, animation, video, videography'
+>>>>>>> c262f3f7d10d63ecbb22b6db1cda3869cb293cbd:content/motionGraphics/arts-centre.md
 meta:
+  description: >-
+    A fantastic insight into The Arts Centre Cultural Precinct across Australia
+    especially the new Arts Centre on the Gold Coast.
   title: The Arts Centre Cultural Precinct
-  description: A fantastic insight into The Arts Centre Cultural Precinct across Australia especially the new Arts Centre on the Gold Coast.
 ---
+
