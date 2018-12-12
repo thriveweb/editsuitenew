@@ -26,6 +26,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.frame-content .section:nth-child(n + 2) {
+  border: 1px solid pink;
+  padding: 5rem 0;
+}
+
+.frame-content .title {
+  margin-bottom: 0;
+}
+
+.frame-content .full {
+  height: 60rem;
+}
+
 /* --- typography --- */
 
 a {

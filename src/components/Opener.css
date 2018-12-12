@@ -17,12 +17,12 @@
   opacity: 0.5;
 }
 
-.opener .gradient {
+.gradient {
   width: 100%;
   height: 100%;
   background: linear-gradient(transparent, var(--medium));
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   z-index: 100;
 }
 
@@ -59,6 +59,6 @@
   }
 
   .mobile.opener {
-    display: block !important;
+    display: flex !important;
   }
 }

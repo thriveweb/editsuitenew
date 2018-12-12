@@ -3,6 +3,10 @@
   z-index: -9;
 }
 
+.single-post .opener h1 {
+  position: relative;
+}
+
 .single-post .opener .BackgroundImage {
   opacity: 0.3;
 }
@@ -34,6 +38,17 @@
 
 .single-post .Content p {
   margin-bottom: 2.4rem;
+}
+
+@media screen and (max-width: 850px) {
+  .single-post .opener {
+    display: flex;
+  }
+
+  .single-post .opener .taCenter {
+    width: 90%;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 750px) {

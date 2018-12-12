@@ -1,6 +1,7 @@
 .icon {
   width: 28%;
   text-align: center;
+  margin: 2rem auto;
 }
 
 .icon .LazyImage,

@@ -45,6 +45,7 @@ export const HomePageTemplate = ({
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
                 />
+                <div className="gradient" />
                 {!!sectionOpener.video && (
                   <OpenerVideo
                     src={sectionOpener.video}
