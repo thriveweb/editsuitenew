@@ -13,7 +13,6 @@ export const ProjectCategoryPageTemplate = ({
   title,
   sectionOpener,
   sectionOverview,
-  projects = [],
   projectCategories = [],
   photography = [],
   motionGraphics = [],
@@ -109,7 +108,6 @@ const ProjectCategoryPage = ({
   data: {
     page,
     testimonials,
-    projects,
     projectCategories,
     motionGraphics,
     businessStories,
@@ -130,11 +128,6 @@ const ProjectCategoryPage = ({
       testimonials={testimonials.edges.map(item => ({
         ...item.node,
         ...item.node.frontmatter
-      }))}
-      projects={projects.edges.map(post => ({
-        ...post.node,
-        ...post.node.frontmatter,
-        ...post.node.fields
       }))}
       motionGraphics={motionGraphics.edges.map(post => ({
         ...post.node,
@@ -210,26 +203,6 @@ export const pageQuery = graphql`
             title
             company
             content
-          }
-        }
-      }
-    }
-
-    projects: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "projects" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            order
-            title
-            preview
-            featuredImage
           }
         }
       }
