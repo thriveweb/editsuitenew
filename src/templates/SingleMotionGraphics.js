@@ -12,9 +12,9 @@ export const SingleMotionGraphicsTemplate = ({
   projects = [],
   projectCategories = [],
   isCategory,
-  categories
+  category
 }) => {
-  const currentCategory = categories[0].category
+  const currentCategory = category
   let slug = ''
 
   for (let cat in projectCategories) {
@@ -86,9 +86,7 @@ export const pageQuery = graphql`
         excerpt
         video
         tags
-        categories {
-          category
-        }
+        category
       }
     }
 

@@ -346,7 +346,6 @@ collections: # A list of collections the CMS should be able to edit
       - label: 'Template'
         name: 'template'
         widget: 'hidden'
-        default: 'ProjectCategoryPage'
 
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
@@ -356,7 +355,6 @@ collections: # A list of collections the CMS should be able to edit
         name: 'sectionOpener'
         widget: 'object'
         fields:
-          - { label: Title, name: title, widget: string, required: false }
           - { label: Video, name: video, widget: string, required: false }
           - { label: Image, name: image, widget: image, required: false }
           - { label: Mobile, name: mobile, widget: image }
@@ -409,28 +407,21 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Order, name: order, widget: number, default: '99' }
       - { label: Preview, name: preview, widget: image }
 
-      - label: 'Categories'
-        name: 'categories'
-        widget: 'list'
-        required: false
-        fields:
-          - {
-              label: Category,
-              name: category,
-              widget: select,
-              options:
-                [
-                  'Business Stories',
-                  'Drone Aerials',
-                  'Events',
-                  'Motion Graphics',
-                  'Photography',
-                  'Promos & TVCs',
-                ],
-              collection: projectCategories,
-              searchFields: ['title'],
-              valueField: title,
-            }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          [
+            'Business Stories',
+            'Drone Aerials',
+            'Events',
+            'Motion Graphics',
+            'Photography',
+            'Promos & TVCs',
+          ]
+        collection: projectCategories
+        searchFields: ['title']
+        valueField: title
 
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: Video, name: video, widget: string }

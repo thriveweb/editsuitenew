@@ -6,6 +6,7 @@ import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import OpenerMobile from '../components/OpenerMobile'
 import SectionTitle from '../components/SectionTitle'
+import ProjectCategories from '../components/ProjectCategories'
 import ProjectSection from '../components/ProjectSection'
 
 export const MotionGraphicsPageTemplate = ({
@@ -14,10 +15,27 @@ export const MotionGraphicsPageTemplate = ({
   sectionOverview,
   projects = [],
   projectCategories = [],
+  photography = [],
   testimonials,
   contentType,
   slug
 }) => {
+  const isCategory = contentType === 'projectCategories'
+
+  const byCategory = post =>
+    post.categories &&
+    post.categories.filter(cat => cat.category === title).length
+
+  const filteredProjects = isCategory ? projects.filter(byCategory) : projects
+
+  let categorySelector = []
+
+  if ('/project-categories/photography/' === slug) {
+    categorySelector = photography
+  } else {
+    categorySelector = filteredProjects
+  }
+
   return (
     <div className="project">
       <div className="full">
@@ -47,14 +65,20 @@ export const MotionGraphicsPageTemplate = ({
         </div>
       )}
 
-      {!!projects && (
+      {!!projects.length && (
         <div className="dark thick">
           <div className="wide">
             <Link className="back" to="/work#two/">
               Back to all
             </Link>
 
-            <ProjectSection projects={projects} />
+            {categorySelector === filteredProjects && (
+              <ProjectSection projects={categorySelector} />
+            )}
+
+            {categorySelector === photography && (
+              <ProjectCategories categories={photography} />
+            )}
           </div>
         </div>
       )}
@@ -63,7 +87,7 @@ export const MotionGraphicsPageTemplate = ({
 }
 
 const MotionGraphicsPage = ({
-  data: { page, testimonials, projects, projectCategories }
+  data: { page, testimonials, projects, projectCategories, photography }
 }) => (
   <Layout
     meta={page.frontmatter.meta || false}
@@ -83,6 +107,11 @@ const MotionGraphicsPage = ({
         ...post.node.fields
       }))}
       projectCategories={projectCategories.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+      photography={photography.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -144,13 +173,9 @@ export const pageQuery = graphql`
           frontmatter {
             order
             title
-            excerpt
             video
             preview
-            tags
-            categories {
-              category
-            }
+            category
             featuredImage
           }
         }
@@ -168,6 +193,24 @@ export const pageQuery = graphql`
           }
           frontmatter {
             slug
+          }
+        }
+      }
+    }
+
+    photography: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "photography" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            preview
           }
         }
       }
