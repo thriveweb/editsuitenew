@@ -11,6 +11,7 @@ import { ProjectPageTemplate } from '../templates/ProjectPage'
 import { SinglePhotographyTemplate } from '../templates/SinglePhotography'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { SingleProjectTemplate } from '../templates/SingleProject'
+import { SingleMotionGraphicsTemplate } from '../templates/SingleMotionGraphics'
 
 if (
   window.location.hostname === 'localhost' &&
@@ -49,4 +50,7 @@ CMS.registerPreviewTemplate('posts', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('projects', ({ entry }) => (
   <SingleProjectTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('motion-graphics', ({ entry }) => (
+  <SingleMotionGraphicsTemplate {...entry.toJS().data} />
 ))

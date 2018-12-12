@@ -16,24 +16,17 @@ export const ProjectCategoryPageTemplate = ({
   projects = [],
   projectCategories = [],
   photography = [],
+  motionGraphics = [],
   testimonials,
   contentType,
   slug
 }) => {
-  const isCategory = contentType === 'projectCategories'
-
-  const byCategory = post =>
-    post.categories &&
-    post.categories.filter(cat => cat.category === title).length
-
-  const filteredProjects = isCategory ? projects.filter(byCategory) : projects
-
   let categorySelector = []
 
   if ('/project-categories/photography/' === slug) {
     categorySelector = photography
-  } else {
-    categorySelector = filteredProjects
+  } else if ('/project-categories/motion-graphics/' === slug) {
+    categorySelector = motionGraphics
   }
 
   return (
@@ -72,8 +65,8 @@ export const ProjectCategoryPageTemplate = ({
               Back to all
             </Link>
 
-            {categorySelector === filteredProjects && (
-              <ProjectSection projects={categorySelector} />
+            {categorySelector === motionGraphics && (
+              <ProjectSection projects={motionGraphics} />
             )}
 
             {categorySelector === photography && (
@@ -87,7 +80,14 @@ export const ProjectCategoryPageTemplate = ({
 }
 
 const ProjectCategoryPage = ({
-  data: { page, testimonials, projects, projectCategories, photography }
+  data: {
+    page,
+    testimonials,
+    projects,
+    projectCategories,
+    motionGraphics,
+    photography
+  }
 }) => (
   <Layout
     meta={page.frontmatter.meta || false}
@@ -102,6 +102,11 @@ const ProjectCategoryPage = ({
         ...item.node.frontmatter
       }))}
       projects={projects.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+      motionGraphics={motionGraphics.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -174,9 +179,7 @@ export const pageQuery = graphql`
             order
             title
             preview
-            categories {
-              category
-            }
+            category
             featuredImage
           }
         }
@@ -194,6 +197,29 @@ export const pageQuery = graphql`
           }
           frontmatter {
             slug
+          }
+        }
+      }
+    }
+
+    motionGraphics: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "motionGraphics" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            order
+            title
+            preview
+            categories {
+              category
+            }
+            featuredImage
           }
         }
       }
