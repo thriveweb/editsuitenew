@@ -64,24 +64,6 @@ export const MotionGraphicsPageTemplate = ({
           </div>
         </div>
       )}
-
-      {!!projects.length && (
-        <div className="dark thick">
-          <div className="wide">
-            <Link className="back" to="/work#two/">
-              Back to all
-            </Link>
-
-            {categorySelector === filteredProjects && (
-              <ProjectSection projects={categorySelector} />
-            )}
-
-            {categorySelector === photography && (
-              <ProjectCategories categories={photography} />
-            )}
-          </div>
-        </div>
-      )}
     </div>
   )
 }
