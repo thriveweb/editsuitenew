@@ -1,3 +1,7 @@
+.frame-content .project-single .full {
+  height: 100vh;
+}
+
 .project-single .taCenter p {
   max-width: 70rem;
   margin: auto;
