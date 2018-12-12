@@ -15,6 +15,7 @@ import { SingleProjectTemplate } from '../templates/SingleProject'
 import { SingleMotionGraphicsTemplate } from '../templates/SingleMotionGraphics'
 import { SingleBusinessStoriesTemplate } from '../templates/SingleBusinessStories'
 import { SingleDroneAerialsTemplate } from '../templates/SingleDroneAerials'
+import { SingleEventsTemplate } from '../templates/SingleEvents'
 
 if (
   window.location.hostname === 'localhost' &&
@@ -63,4 +64,7 @@ CMS.registerPreviewTemplate('business-stories', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('drone-aerials', ({ entry }) => (
   <SingleDroneAerialsTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('events', ({ entry }) => (
+  <SingleEventsTemplate {...entry.toJS().data} />
 ))

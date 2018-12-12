@@ -545,8 +545,8 @@ collections: # A list of collections the CMS should be able to edit
 
   # Drone Aerials
 
-  - name: business-stories
-    label: Business Stories
+  - name: drone-aerials
+    label: Drone Aerials
     editor:
       preview: true
     folder: 'content/droneAerials'
@@ -585,6 +585,50 @@ collections: # A list of collections the CMS should be able to edit
               required: false,
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+  # Events
+
+  - name: events
+    label: Events
+    editor:
+      preview: true
+    folder: 'content/events'
+    slug: '{{slug}}'
+    create: true
+    fields:
+      - label: 'Template'
+        name: 'template'
+        widget: 'hidden'
+        default: 'SingleEvents'
+
+      - { label: Title, name: title, widget: string }
+      - { label: Order, name: order, widget: number }
+      - { label: Preview, name: preview, widget: image }
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Video, name: video, widget: string }
+      - { label: Tags, name: tags, widget: string }
+
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+              pattern: ['.{,300}', 'Must not exceed 300 characters'],
+            }
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+
   # Single Photography
 
   - name: photography

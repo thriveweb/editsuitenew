@@ -19,6 +19,7 @@ export const ProjectCategoryPageTemplate = ({
   motionGraphics = [],
   businessStories = [],
   droneAerials = [],
+  events = [],
   testimonials,
   contentType,
   slug
@@ -33,6 +34,8 @@ export const ProjectCategoryPageTemplate = ({
     categorySelector = businessStories
   } else if ('/project-categories/drone-aerials/' === slug) {
     categorySelector = droneAerials
+  } else if ('/project-categories/events/' === slug) {
+    categorySelector = events
   }
 
   return (
@@ -83,6 +86,10 @@ export const ProjectCategoryPageTemplate = ({
               <ProjectSection projects={droneAerials} />
             )}
 
+            {categorySelector === events && (
+              <ProjectSection projects={events} />
+            )}
+
             {categorySelector === photography && (
               <ProjectCategories categories={photography} />
             )}
@@ -102,6 +109,7 @@ const ProjectCategoryPage = ({
     motionGraphics,
     businessStories,
     droneAerials,
+    events,
     photography
   }
 }) => (
@@ -133,6 +141,11 @@ const ProjectCategoryPage = ({
         ...post.node.fields
       }))}
       droneAerials={droneAerials.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+      events={events.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -269,6 +282,26 @@ export const pageQuery = graphql`
 
     droneAerials: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "droneAerials" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            order
+            title
+            preview
+            featuredImage
+          }
+        }
+      }
+    }
+
+    events: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "events" } } }
       sort: { order: ASC, fields: [frontmatter___title] }
     ) {
       edges {
