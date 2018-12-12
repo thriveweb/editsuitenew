@@ -1,5 +1,5 @@
 ---
-template: SingleProject
+template: MotionGraphicsPage
 order: '99'
 title: Minchin Moore
 excerpt: In this motion graphic styled video we explain Minchin Moore key message.

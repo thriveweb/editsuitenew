@@ -6,7 +6,7 @@ import { AboutPageTemplate } from '../templates/AboutPage'
 import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { HomePageTemplate } from '../templates/HomePage'
-import { ProjectCategoryPageTemplate } from '../templates/ProjectCategoryPage'
+import { MotionGraphicsPageTemplate } from '../templates/MotionGraphicsPage'
 import { ProjectPageTemplate } from '../templates/ProjectPage'
 import { SinglePhotographyTemplate } from '../templates/SinglePhotography'
 import { SinglePostTemplate } from '../templates/SinglePost'
@@ -35,8 +35,8 @@ CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <HomePageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('projectCategories', ({ entry }) => (
-  <ProjectCategoryPageTemplate {...entry.toJS().data} />
+CMS.registerPreviewTemplate('motionGraphics', ({ entry }) => (
+  <MotionGraphicsPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('work-page', ({ entry }) => (
   <ProjectPageTemplate {...entry.toJS().data} />

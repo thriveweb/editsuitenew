@@ -1,5 +1,5 @@
 ---
-template: SingleProject
+template: MotionGraphicsPage
 order: '99'
 title: Original Source Social Media Advert
 excerpt: We created this motion graphic styled ad for Original Source social media channels.

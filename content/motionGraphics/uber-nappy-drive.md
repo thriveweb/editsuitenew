@@ -1,5 +1,5 @@
 ---
-template: SingleProject
+template: MotionGraphicsPage
 order: '99'
 title: Uber Nappy Drive
 excerpt: An animation we created with existing artwork in a one day turn around for a last minute project for Uber NZ.

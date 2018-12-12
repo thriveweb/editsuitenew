@@ -1,5 +1,5 @@
 ---
-template: SingleProject
+template: MotionGraphicsPage
 order: '99'
 title: Board Room
 excerpt: |-

@@ -1,5 +1,5 @@
 ---
-template: SingleProject
+template: MotionGraphicsPage
 order: '99'
 title: PepsiCo Metrics
 excerpt: We created this motion graphic styled video for PepsiCo who provide consumers with a broad range of high quality food and beverage products that deliver great taste, convenience and affordability, from simple treats to healthier offerings.

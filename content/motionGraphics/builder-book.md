@@ -1,5 +1,5 @@
 ---
-template: SingleProject
+template: MotionGraphicsPage
 order: '99'
 title: Builder Book
 excerpt: We love motion graphic videos! Watch this video we created for BuilderBook.com.au using only motion graphics.
