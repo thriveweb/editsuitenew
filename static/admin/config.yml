@@ -457,7 +457,7 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  # Single Motion Graphics
+  # Motion Graphics
 
   - name: motion-graphics
     label: Motion Graphics
@@ -471,6 +471,66 @@ collections: # A list of collections the CMS should be able to edit
         name: 'template'
         widget: 'hidden'
         default: 'SingleMotionGraphics'
+
+      - { label: Title, name: title, widget: string }
+      - { label: Order, name: order, widget: number }
+      - { label: Preview, name: preview, widget: image }
+
+      - label: Category
+        name: category
+        widget: select
+        options:
+          [
+            'Business Stories',
+            'Drone Aerials',
+            'Events',
+            'Motion Graphics',
+            'Photography',
+            'Promos & TVCs',
+          ]
+        collection: projectCategories
+        searchFields: ['title']
+        valueField: title
+
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Video, name: video, widget: string }
+      - { label: Tags, name: tags, widget: string }
+
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+              pattern: ['.{,300}', 'Must not exceed 300 characters'],
+            }
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+  # Business Stories
+
+  - name: business-stories
+    label: Business Stories
+    editor:
+      preview: true
+    folder: 'content/businessStories'
+    slug: '{{slug}}'
+    create: true
+    fields:
+      - label: 'Template'
+        name: 'template'
+        widget: 'hidden'
+        default: 'SingleBusinessStories'
 
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }

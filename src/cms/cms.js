@@ -12,6 +12,7 @@ import { SinglePhotographyTemplate } from '../templates/SinglePhotography'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { SingleProjectTemplate } from '../templates/SingleProject'
 import { SingleMotionGraphicsTemplate } from '../templates/SingleMotionGraphics'
+import { SingleBusinessStoriesTemplate } from '../templates/SingleBusinessStories'
 
 if (
   window.location.hostname === 'localhost' &&
@@ -53,4 +54,7 @@ CMS.registerPreviewTemplate('projects', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('motion-graphics', ({ entry }) => (
   <SingleMotionGraphicsTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('business-stories', ({ entry }) => (
+  <SingleBusinessStoriesTemplate {...entry.toJS().data} />
 ))

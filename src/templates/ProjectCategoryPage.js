@@ -17,6 +17,7 @@ export const ProjectCategoryPageTemplate = ({
   projectCategories = [],
   photography = [],
   motionGraphics = [],
+  businessStories = [],
   testimonials,
   contentType,
   slug
@@ -27,6 +28,8 @@ export const ProjectCategoryPageTemplate = ({
     categorySelector = photography
   } else if ('/project-categories/motion-graphics/' === slug) {
     categorySelector = motionGraphics
+  } else if ('/project-categories/business-stories/' === slug) {
+    categorySelector = businessStories
   }
 
   return (
@@ -69,6 +72,10 @@ export const ProjectCategoryPageTemplate = ({
               <ProjectSection projects={motionGraphics} />
             )}
 
+            {categorySelector === businessStories && (
+              <ProjectSection projects={businessStories} />
+            )}
+
             {categorySelector === photography && (
               <ProjectCategories categories={photography} />
             )}
@@ -86,6 +93,7 @@ const ProjectCategoryPage = ({
     projects,
     projectCategories,
     motionGraphics,
+    businessStories,
     photography
   }
 }) => (
@@ -107,6 +115,11 @@ const ProjectCategoryPage = ({
         ...post.node.fields
       }))}
       motionGraphics={motionGraphics.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+      businessStories={businessStories.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -204,6 +217,29 @@ export const pageQuery = graphql`
 
     motionGraphics: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "motionGraphics" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            order
+            title
+            preview
+            categories {
+              category
+            }
+            featuredImage
+          }
+        }
+      }
+    }
+
+    businessStories: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "businessStories" } } }
       sort: { order: ASC, fields: [frontmatter___title] }
     ) {
       edges {
