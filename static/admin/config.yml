@@ -388,11 +388,19 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  # Motion Graphics
+  # Single Project
 
+<<<<<<< HEAD
   - name: motion-graphics
     label: Motion Graphics
     folder: 'content/motionGraphics'
+=======
+  - name: projects
+    label: Single Project
+    editor:
+      preview: true
+    folder: 'content/projects'
+>>>>>>> parent of b6c56bb... Update projects
     slug: '{{slug}}'
     editor:
       preview: true
@@ -401,10 +409,18 @@ collections: # A list of collections the CMS should be able to edit
       - label: 'Template'
         name: 'template'
         widget: 'hidden'
+<<<<<<< HEAD
         default: 'SingleMotionGraphics'
 
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number, default: '99' }
+=======
+        default: 'SingleProject'
+
+      - { label: Title, name: title, widget: string }
+      - { label: Order, name: order, widget: number }
+      - { label: Preview, name: preview, widget: image }
+>>>>>>> parent of b6c56bb... Update projects
 
       - label: Category
         name: category

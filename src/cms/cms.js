@@ -7,10 +7,13 @@ import { BlogIndexTemplate } from '../templates/BlogIndex'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { HomePageTemplate } from '../templates/HomePage'
 import { ProjectCategoryPageTemplate } from '../templates/ProjectCategoryPage'
+<<<<<<< HEAD
 
 import { MotionGraphicsPageTemplate } from '../templates/MotionGraphicsPage'
 import { SingleMotionGraphicsTemplate } from '../templates/SingleMotionGraphics'
 
+=======
+>>>>>>> parent of b6c56bb... Update projects
 import { ProjectPageTemplate } from '../templates/ProjectPage'
 import { SinglePhotographyTemplate } from '../templates/SinglePhotography'
 import { SinglePostTemplate } from '../templates/SinglePost'
@@ -41,10 +44,13 @@ CMS.registerPreviewTemplate('home-page', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('projectCategories', ({ entry }) => (
   <ProjectCategoryPageTemplate {...entry.toJS().data} />
+<<<<<<< HEAD
 ))
 
 CMS.registerPreviewTemplate('motion-graphics', ({ entry }) => (
   <MotionGraphicsPageTemplate {...entry.toJS().data} />
+=======
+>>>>>>> parent of b6c56bb... Update projects
 ))
 CMS.registerPreviewTemplate('single-motion-graphics', ({ entry }) => (
   <SingleMotionGraphicsTemplate {...entry.toJS().data} />
