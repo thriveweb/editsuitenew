@@ -69,7 +69,7 @@ export const ProjectCategoryPageTemplate = ({
         </div>
       )}
 
-      {!!projects.length && (
+      {!!categorySelector && (
         <div className="dark thick">
           <div className="wide">
             <Link className="back" to="work#two">
