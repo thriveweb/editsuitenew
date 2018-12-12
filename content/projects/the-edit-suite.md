@@ -1,5 +1,5 @@
 ---
-template: MotionGraphicsPage
+template: SingleProject
 order: '99'
 title: The Edit Suite
 excerpt: Here is a compilation video showcasing some of the animated logos we have created for our AMAZING clients!

@@ -1,5 +1,5 @@
 ---
-template: MotionGraphicsPage
+template: SingleProject
 order: '99'
 title: The Arts Centre Cultural Precinct
 excerpt: A fantastic insight into The Arts Centre Cultural Precinct across Australia especially the new Arts Centre on the Gold Coast.

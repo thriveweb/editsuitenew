@@ -1,5 +1,5 @@
 ---
-template: MotionGraphicsPage
+template: SingleProject
 order: '99'
 title: Eighth Gate Capital Management
 excerpt: We created this motion graphic styled video for Eighth Gate Capital Management to showcase their vision ‘to be the choice provider of affordable residential and tourist park accommodation in Australia’.

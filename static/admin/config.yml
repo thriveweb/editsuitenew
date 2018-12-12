@@ -390,23 +390,23 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  # Motion Graphics
+  # Single Project
 
-  - name: motionGraphics
-    label: Motion Graphics
+  - name: projects
+    label: Single Project
     editor:
       preview: true
-    folder: 'content/motionGraphics'
+    folder: 'content/projects'
     slug: '{{slug}}'
     create: true
     fields:
       - label: 'Template'
         name: 'template'
         widget: 'hidden'
-        default: 'MotionGraphicsPage'
+        default: 'SingleProject'
 
       - { label: Title, name: title, widget: string }
-      - { label: Order, name: order, widget: number, default: '99' }
+      - { label: Order, name: order, widget: number }
       - { label: Preview, name: preview, widget: image }
 
       - label: 'Categories'
