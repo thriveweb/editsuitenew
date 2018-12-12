@@ -390,73 +390,6 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  # Single Project
-
-  - name: projects
-    label: Single Project
-    editor:
-      preview: true
-    folder: 'content/projects'
-    slug: '{{slug}}'
-    create: true
-    fields:
-      - label: 'Template'
-        name: 'template'
-        widget: 'hidden'
-        default: 'SingleProject'
-
-      - { label: Title, name: title, widget: string }
-      - { label: Order, name: order, widget: number }
-      - { label: Preview, name: preview, widget: image }
-
-      - label: 'Categories'
-        name: 'categories'
-        widget: 'list'
-        required: false
-        fields:
-          - {
-              label: Category,
-              name: category,
-              widget: select,
-              options:
-                [
-                  'Business Stories',
-                  'Drone Aerials',
-                  'Events',
-                  'Motion Graphics',
-                  'Photography',
-                  'Promos & TVCs',
-                ],
-              collection: projectCategories,
-              searchFields: ['title'],
-              valueField: title,
-            }
-
-      - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Video, name: video, widget: string }
-      - { label: Tags, name: tags, widget: string }
-
-      - label: 'Meta'
-        required: false
-        name: 'meta'
-        widget: 'object'
-        fields:
-          - { label: Title, name: title, widget: string, required: false }
-          - {
-              label: Description,
-              name: description,
-              widget: text,
-              required: false,
-              pattern: ['.{,300}', 'Must not exceed 300 characters'],
-            }
-          - {
-              label: Canonical Link,
-              name: canonicalLink,
-              widget: string,
-              required: false,
-            }
-          - { label: Noindex, name: noindex, widget: boolean, required: false }
-
   # Motion Graphics
 
   - name: motion-graphics
@@ -672,7 +605,7 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  # Single Photography
+  # Photography
 
   - name: photography
     label: Photography
@@ -721,7 +654,7 @@ collections: # A list of collections the CMS should be able to edit
   # Single Post
 
   - name: posts
-    label: Single Post
+    label: Blog Posts
     editor:
       preview: true
     folder: 'content/posts'
