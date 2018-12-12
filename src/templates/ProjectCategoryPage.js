@@ -20,6 +20,7 @@ export const ProjectCategoryPageTemplate = ({
   businessStories = [],
   droneAerials = [],
   events = [],
+  promo = [],
   testimonials,
   contentType,
   slug
@@ -36,6 +37,8 @@ export const ProjectCategoryPageTemplate = ({
     categorySelector = droneAerials
   } else if ('/project-categories/events/' === slug) {
     categorySelector = events
+  } else if ('/project-categories/promos-and-tv-cs/' === slug) {
+    categorySelector = promo
   }
 
   return (
@@ -90,6 +93,8 @@ export const ProjectCategoryPageTemplate = ({
               <ProjectSection projects={events} />
             )}
 
+            {categorySelector === promo && <ProjectSection projects={promo} />}
+
             {categorySelector === photography && (
               <ProjectCategories categories={photography} />
             )}
@@ -110,6 +115,7 @@ const ProjectCategoryPage = ({
     businessStories,
     droneAerials,
     events,
+    promo,
     photography
   }
 }) => (
@@ -146,6 +152,11 @@ const ProjectCategoryPage = ({
         ...post.node.fields
       }))}
       events={events.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+      promo={events.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -302,6 +313,26 @@ export const pageQuery = graphql`
 
     events: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "events" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            order
+            title
+            preview
+            featuredImage
+          }
+        }
+      }
+    }
+
+    promo: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "promo" } } }
       sort: { order: ASC, fields: [frontmatter___title] }
     ) {
       edges {
