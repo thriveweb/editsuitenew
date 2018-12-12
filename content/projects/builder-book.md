@@ -1,20 +1,13 @@
 ---
-<<<<<<< HEAD:content/projects/builder-book.md
-<<<<<<< HEAD:content/motionGraphics/builder-book.md
-template: SingleMotionGraphics
-=======
 template: SingleProject
->>>>>>> parent of b6c56bb... Update projects:content/projects/builder-book.md
-=======
-template: SingleProject
->>>>>>> parent of b6c56bb... Update projects:content/projects/builder-book.md
 order: '99'
 title: Builder Book
 excerpt: We love motion graphic videos! Watch this video we created for BuilderBook.com.au using only motion graphics.
 video: '180135488'
 preview: 'https://ucarecdn.com/6f3d18f2-1909-4bdb-8c11-d784eb63d4ef/'
 tags: motion graphics, branding, animation, video, videography
-category: Motion Graphics
+categories:
+  - category: Motion Graphics
 meta:
   title: Builder Book
   description: We love motion graphic videos! Watch this video we created for BuilderBook.com.au using only motion graphics.

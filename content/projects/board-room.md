@@ -1,13 +1,5 @@
 ---
-<<<<<<< HEAD:content/projects/board-room.md
-<<<<<<< HEAD:content/motionGraphics/board-room.md
-template: SingleMotionGraphics
-=======
 template: SingleProject
->>>>>>> parent of b6c56bb... Update projects:content/projects/board-room.md
-=======
-template: SingleProject
->>>>>>> parent of b6c56bb... Update projects:content/projects/board-room.md
 order: '99'
 title: Board Room
 excerpt: |-
@@ -15,7 +7,8 @@ excerpt: |-
 video: '158788196'
 preview: 'https://ucarecdn.com/446da93f-4237-4364-8cc6-238520733e8c/'
 tags: motion graphics, branding, animation, video, videography
-category: Motion Graphics
+categories:
+  - category: Motion Graphics
 meta:
   title: Board Room
   description: |-

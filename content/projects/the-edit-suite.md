@@ -1,20 +1,13 @@
 ---
-<<<<<<< HEAD:content/projects/the-edit-suite.md
-<<<<<<< HEAD:content/motionGraphics/the-edit-suite.md
-template: SingleMotionGraphics
-=======
 template: SingleProject
->>>>>>> parent of b6c56bb... Update projects:content/projects/the-edit-suite.md
-=======
-template: SingleProject
->>>>>>> parent of b6c56bb... Update projects:content/projects/the-edit-suite.md
 order: '99'
 title: The Edit Suite
 excerpt: Here is a compilation video showcasing some of the animated logos we have created for our AMAZING clients!
 video: '266978356'
 preview: 'https://ucarecdn.com/fbe52a79-4bd9-43bc-beae-e0013f5141aa/'
 tags: motion graphics, animation, reel, video, videography
-category: Motion Graphics
+categories:
+  - category: Motion Graphics
 meta:
   description: Here is a compilation video showcasing some of the animated logos we have created for our AMAZING clients!
   title: The Edit Suite

@@ -1,5 +1,5 @@
 ---
-template: MotionGraphicsPage
+template: ProjectCategoryPage
 title: Motion Graphics
 
 order: '2'

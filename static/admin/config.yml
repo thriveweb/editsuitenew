@@ -346,6 +346,7 @@ collections: # A list of collections the CMS should be able to edit
       - label: 'Template'
         name: 'template'
         widget: 'hidden'
+        default: 'ProjectCategoryPage'
 
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
@@ -355,6 +356,7 @@ collections: # A list of collections the CMS should be able to edit
         name: 'sectionOpener'
         widget: 'object'
         fields:
+          - { label: Title, name: title, widget: string, required: false }
           - { label: Video, name: video, widget: string, required: false }
           - { label: Image, name: image, widget: image, required: false }
           - { label: Mobile, name: mobile, widget: image }
@@ -390,69 +392,46 @@ collections: # A list of collections the CMS should be able to edit
 
   # Single Project
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - name: motion-graphics
-    label: Motion Graphics
-    folder: 'content/motionGraphics'
-=======
-=======
->>>>>>> parent of b6c56bb... Update projects
   - name: projects
     label: Single Project
     editor:
       preview: true
     folder: 'content/projects'
-<<<<<<< HEAD
->>>>>>> parent of b6c56bb... Update projects
-=======
->>>>>>> parent of b6c56bb... Update projects
     slug: '{{slug}}'
-    editor:
-      preview: true
     create: true
     fields:
       - label: 'Template'
         name: 'template'
         widget: 'hidden'
-<<<<<<< HEAD
-<<<<<<< HEAD
-        default: 'SingleMotionGraphics'
-
-      - { label: Title, name: title, widget: string }
-      - { label: Order, name: order, widget: number, default: '99' }
-=======
-        default: 'SingleProject'
-=======
         default: 'SingleProject'
 
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
       - { label: Preview, name: preview, widget: image }
->>>>>>> parent of b6c56bb... Update projects
 
-      - { label: Title, name: title, widget: string }
-      - { label: Order, name: order, widget: number }
-      - { label: Preview, name: preview, widget: image }
->>>>>>> parent of b6c56bb... Update projects
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'list'
+        required: false
+        fields:
+          - {
+              label: Category,
+              name: category,
+              widget: select,
+              options:
+                [
+                  'Business Stories',
+                  'Drone Aerials',
+                  'Events',
+                  'Motion Graphics',
+                  'Photography',
+                  'Promos & TVCs',
+                ],
+              collection: projectCategories,
+              searchFields: ['title'],
+              valueField: title,
+            }
 
-      - label: Category
-        name: category
-        widget: select
-        options:
-          [
-            'Business Stories',
-            'Drone Aerials',
-            'Events',
-            'Motion Graphics',
-            'Photography',
-            'Promos & TVCs',
-          ]
-        collection: projectCategories
-        searchFields: ['title']
-        valueField: title
-
-      - { label: Preview, name: preview, widget: image }
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: Video, name: video, widget: string }
       - { label: Tags, name: tags, widget: string }

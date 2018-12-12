@@ -68,7 +68,7 @@ export const ProjectCategoryPageTemplate = ({
       {!!projects.length && (
         <div className="dark thick">
           <div className="wide">
-            <Link className="back" to="/work#two/">
+            <Link className="back" to="work#two">
               Back to all
             </Link>
 

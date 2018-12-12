@@ -5,10 +5,10 @@ title: The Edit Suite
 sectionOpener:
   image: ''
   mobile: 'https://ucarecdn.com/2c1b9f47-69bc-4dd2-9e7b-7d2cea0f6a73/'
-  title: content creatives.
+  title: ''
   video: '305710852'
 sectionIntro:
-  buttonLink: /about/
+  buttonLink: /about
   buttonText: About Us
   description: >-
     The Edit Suite a film, video production and photography company based in
@@ -36,4 +36,3 @@ meta:
     internationally.
   title: Video Production Gold Coast and Photography
 ---
-
