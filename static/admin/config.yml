@@ -332,7 +332,7 @@ collections: # A list of collections the CMS should be able to edit
                   widget: boolean,
                   required: false,
                 }
-
+  #
   # Project Categories
 
   - name: projectCategories
@@ -392,18 +392,16 @@ collections: # A list of collections the CMS should be able to edit
 
   # Single Project
 
-  - name: projects
-    label: Single Project
-    editor:
-      preview: true
-    folder: 'content/projects'
+  - name: motionGraphics
+    label: Motion Graphics
+    folder: 'content/motionGraphics'
     slug: '{{slug}}'
-    create: true
+    create: false
     fields:
       - label: 'Template'
         name: 'template'
         widget: 'hidden'
-        default: 'SingleProject'
+        default: 'SingleMotionGraphics'
 
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
