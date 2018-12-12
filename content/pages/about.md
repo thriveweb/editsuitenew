@@ -60,6 +60,6 @@ sectionTestimonials:
   title: Don't take our word for it
 meta:
   description: Gold Coast Video Production and Photography Services
-  title: We are creators
+  title: Video Production and Photography Gold Coast | The Edit Suite
 ---
 
