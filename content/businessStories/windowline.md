@@ -13,8 +13,7 @@ video: '298924204'
 tags: >-
   shot on Red, video production australia, Gold Coast video company, drone,
   aerial footage, corporate video, videographer
-categories:
-  - category: Business Stories
+category: Business Stories
 meta:
   description: >-
     This video was created for Windowline who are specialists in strata & large

@@ -534,7 +534,6 @@ collections: # A list of collections the CMS should be able to edit
 
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
-      - { label: Preview, name: preview, widget: image }
 
       - label: Category
         name: category
@@ -551,7 +550,9 @@ collections: # A list of collections the CMS should be able to edit
         collection: projectCategories
         searchFields: ['title']
         valueField: title
+        default: 'Business Stories'
 
+      - { label: Preview, name: preview, widget: image }
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: Video, name: video, widget: string }
       - { label: Tags, name: tags, widget: string }

@@ -9,9 +9,7 @@ excerpt: |-
 video: '263696344'
 preview: 'https://ucarecdn.com/e67767e8-8c00-4cd3-8dfe-ba6cd3992cf0/'
 tags: business, story, interview, drone, aerial, video, videography
-categories:
-  - category: Business Stories
-  - category: Drone Aerials
+category: Business Stories
 meta:
   description: |-
     In this video series – Impact of the Games’ Jess Skarratt explores the Future and Legacy of GC2018.
