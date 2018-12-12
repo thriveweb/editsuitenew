@@ -1,9 +1,19 @@
 @media screen and (max-height: 1000px), screen (max-width: 900px) {
-  .contact .full {
+  .contact.full {
     height: auto !important;
   }
 
   .contact {
     padding: 12rem 0 5rem;
+  }
+
+  .footer {
+    margin: 0 auto !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact {
+    padding: 12rem 0 0;
   }
 }
