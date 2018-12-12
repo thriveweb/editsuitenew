@@ -7,7 +7,6 @@ excerpt: |-
 video: '158788196'
 preview: 'https://ucarecdn.com/446da93f-4237-4364-8cc6-238520733e8c/'
 tags: motion graphics, branding, animation, video, videography
-category: Motion Graphics
 meta:
   title: Board Room
   description: |-

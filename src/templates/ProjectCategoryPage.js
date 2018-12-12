@@ -18,6 +18,7 @@ export const ProjectCategoryPageTemplate = ({
   photography = [],
   motionGraphics = [],
   businessStories = [],
+  droneAerials = [],
   testimonials,
   contentType,
   slug
@@ -30,6 +31,8 @@ export const ProjectCategoryPageTemplate = ({
     categorySelector = motionGraphics
   } else if ('/project-categories/business-stories/' === slug) {
     categorySelector = businessStories
+  } else if ('/project-categories/drone-aerials/' === slug) {
+    categorySelector = droneAerials
   }
 
   return (
@@ -76,6 +79,10 @@ export const ProjectCategoryPageTemplate = ({
               <ProjectSection projects={businessStories} />
             )}
 
+            {categorySelector === droneAerials && (
+              <ProjectSection projects={droneAerials} />
+            )}
+
             {categorySelector === photography && (
               <ProjectCategories categories={photography} />
             )}
@@ -94,6 +101,7 @@ const ProjectCategoryPage = ({
     projectCategories,
     motionGraphics,
     businessStories,
+    droneAerials,
     photography
   }
 }) => (
@@ -120,6 +128,11 @@ const ProjectCategoryPage = ({
         ...post.node.fields
       }))}
       businessStories={businessStories.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}
+      droneAerials={droneAerials.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -192,7 +205,6 @@ export const pageQuery = graphql`
             order
             title
             preview
-            category
             featuredImage
           }
         }
@@ -229,9 +241,6 @@ export const pageQuery = graphql`
             order
             title
             preview
-            categories {
-              category
-            }
             featuredImage
           }
         }
@@ -252,9 +261,26 @@ export const pageQuery = graphql`
             order
             title
             preview
-            categories {
-              category
-            }
+            featuredImage
+          }
+        }
+      }
+    }
+
+    droneAerials: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "droneAerials" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            order
+            title
+            preview
             featuredImage
           }
         }

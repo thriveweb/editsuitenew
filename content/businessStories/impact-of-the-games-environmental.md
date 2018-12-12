@@ -11,7 +11,6 @@ excerpt: |-
 video: '263124615'
 preview: 'https://ucarecdn.com/905fb4e2-2f9f-4235-b147-a128d81e378a/'
 tags: business, story, interview, drone, aerial, video, videography
-category: Business Stories
 meta:
   description: |-
     Working with GOLDOC to create the video series ‘Impact of the Games’ – In this video Jess Skarratt explains Environmental Impact of the GC2018 Commonwealth Games.

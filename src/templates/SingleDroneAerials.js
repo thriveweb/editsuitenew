@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import './SingleProject.css'
 
-export const SingleBusinessStoriesTemplate = ({
+export const SingleDroneAerialsTemplate = ({
   title,
   excerpt,
   video,
@@ -53,7 +53,7 @@ export const SingleBusinessStoriesTemplate = ({
   )
 }
 
-const SingleBusinessStories = ({
+const SingleDroneAerials = ({
   data: { project, allProjects, projectCategories }
 }) => {
   return (
@@ -61,7 +61,7 @@ const SingleBusinessStories = ({
       meta={project.frontmatter.meta || false}
       title={project.frontmatter.title || false}
     >
-      <SingleBusinessStoriesTemplate
+      <SingleDroneAerialsTemplate
         {...project}
         {...project.frontmatter}
         body={project.html}
@@ -75,10 +75,10 @@ const SingleBusinessStories = ({
   )
 }
 
-export default SingleBusinessStories
+export default SingleDroneAerials
 
 export const pageQuery = graphql`
-  query SingleBusinessStories($id: String!) {
+  query SingleDroneAerials($id: String!) {
     project: markdownRemark(id: { eq: $id }) {
       ...Meta
       html
@@ -109,7 +109,7 @@ export const pageQuery = graphql`
     }
 
     allProjects: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "businessStories" } } }
+      filter: { fields: { contentType: { eq: "droneAerials" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

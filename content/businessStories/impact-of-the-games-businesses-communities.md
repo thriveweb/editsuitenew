@@ -13,7 +13,6 @@ excerpt: |-
 video: '264008154'
 preview: 'https://ucarecdn.com/7389fa63-00e5-416c-9ad0-57bf81f936cd/'
 tags: business, story, interview, drone, aerial, video, videography
-category: Business Stories
 meta:
   description: |-
     Working with GOLDOC to create the video series ‘Impact of the Games’ – In this video Jess Skarratt explains the impact of GC2018 on Local Business and Communities.

@@ -88,7 +88,6 @@ export const pageQuery = graphql`
         excerpt
         video
         tags
-        category
       }
     }
 

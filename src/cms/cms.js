@@ -11,8 +11,10 @@ import { ProjectPageTemplate } from '../templates/ProjectPage'
 import { SinglePhotographyTemplate } from '../templates/SinglePhotography'
 import { SinglePostTemplate } from '../templates/SinglePost'
 import { SingleProjectTemplate } from '../templates/SingleProject'
+
 import { SingleMotionGraphicsTemplate } from '../templates/SingleMotionGraphics'
 import { SingleBusinessStoriesTemplate } from '../templates/SingleBusinessStories'
+import { SingleDroneAerialsTemplate } from '../templates/SingleDroneAerials'
 
 if (
   window.location.hostname === 'localhost' &&
@@ -49,6 +51,7 @@ CMS.registerPreviewTemplate('photography', ({ entry }) => (
 CMS.registerPreviewTemplate('posts', ({ entry }) => (
   <SinglePostTemplate {...entry.toJS().data} />
 ))
+
 CMS.registerPreviewTemplate('projects', ({ entry }) => (
   <SingleProjectTemplate {...entry.toJS().data} />
 ))
@@ -57,4 +60,7 @@ CMS.registerPreviewTemplate('motion-graphics', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('business-stories', ({ entry }) => (
   <SingleBusinessStoriesTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('drone-aerials', ({ entry }) => (
+  <SingleDroneAerialsTemplate {...entry.toJS().data} />
 ))
