@@ -8,7 +8,7 @@ sectionOpener:
   title: ''
   video: '305710852'
 sectionIntro:
-  buttonLink: /about
+  buttonLink: /about/
   buttonText: About Us
   description: >-
     The Edit Suite a film, video production and photography company based in

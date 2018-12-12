@@ -34,7 +34,7 @@ const Meta = props => {
 
   return (
     <Helmet>
-      {title && <title>{title} | The Edit Suite</title>}
+      {title && <title>{title}</title>}
       {title && <meta property="og:title" content={title} />}
       {description && <meta name="description" content={description} />}
       {description && <meta property="og:description" content={description} />}
