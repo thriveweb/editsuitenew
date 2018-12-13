@@ -21,8 +21,8 @@ sectionProjects:
   subtitle: Our specialities
   title: what we can offer.
 sectionClients:
-  subtitle: Our Clients
-  title: who we work with.
+  subtitle: Collaborations
+  title: who we've worked with.
 sectionTestimonials:
   subtitle: Testimonials
   title: don't take our word for it.
