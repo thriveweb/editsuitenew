@@ -1,6 +1,6 @@
 ---
 template: ProjectCategoryPage
-title: Drone Aerials
+title: drone aerials.
 order: '4'
 preview: 'https://ucarecdn.com/7f9de8db-33bd-4d01-9eb8-a14989bb5bec/'
 sectionOpener:
