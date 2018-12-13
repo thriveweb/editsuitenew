@@ -1,5 +1,6 @@
 ---
 title: Harbour Town
-logo: 'https://ucarecdn.com/314c405c-0b66-4129-aef5-f43faa6c16eb/'
-link: '/projects/harbour-town/'
+logo: 'https://ucarecdn.com/f0d0319a-08f6-4ce2-ac46-44b192a6ff1e/'
+link: /projects/harbour-town/
 ---
+
