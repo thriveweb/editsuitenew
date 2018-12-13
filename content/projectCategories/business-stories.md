@@ -1,6 +1,6 @@
 ---
 template: ProjectCategoryPage
-title: Business Stories
+title: business stories.
 order: '1'
 preview: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
 sectionOpener:
