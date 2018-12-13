@@ -10,7 +10,6 @@ import { ProjectCategoryPageTemplate } from '../templates/ProjectCategoryPage'
 import { ProjectPageTemplate } from '../templates/ProjectPage'
 import { SinglePhotographyTemplate } from '../templates/SinglePhotography'
 import { SinglePostTemplate } from '../templates/SinglePost'
-import { SingleProjectTemplate } from '../templates/SingleProject'
 
 import { SingleMotionGraphicsTemplate } from '../templates/SingleMotionGraphics'
 import { SingleBusinessStoriesTemplate } from '../templates/SingleBusinessStories'
@@ -54,9 +53,6 @@ CMS.registerPreviewTemplate('posts', ({ entry }) => (
   <SinglePostTemplate {...entry.toJS().data} />
 ))
 
-CMS.registerPreviewTemplate('projects', ({ entry }) => (
-  <SingleProjectTemplate {...entry.toJS().data} />
-))
 CMS.registerPreviewTemplate('motion-graphics', ({ entry }) => (
   <SingleMotionGraphicsTemplate {...entry.toJS().data} />
 ))
