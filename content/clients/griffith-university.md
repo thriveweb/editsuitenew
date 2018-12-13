@@ -1,5 +1,6 @@
 ---
-title: Griffith University
-logo: 'https://ucarecdn.com/617340e7-37fb-42fe-bfae-e5a224957539/'
-link: '/projects/griffith-university-mick-fanning/'
+title: Bond University
+logo: 'https://ucarecdn.com/e7d3f697-b4cb-473a-bf2b-83b63c206586/'
+link: /business-stories/bond-university-high-performance-sport-equestrian/
 ---
+
