@@ -1,7 +1,7 @@
 ---
 template: SingleBusinessStories
 title: Southport Sharks Rebrand
-order: '996'
+order: '6'
 preview: 'https://ucarecdn.com/596fe991-3c79-4f44-9240-4f37566313c6/'
 excerpt: >-
   In 2017 Gold Coast AFL football club, The Southport Sharks decided to rebrand
