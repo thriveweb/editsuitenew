@@ -1,5 +1,6 @@
 ---
-title: Gold Coast City Council
-logo: 'https://ucarecdn.com/e16706bb-0b00-48cb-b13e-e26d92536aac/'
-link: '/projects/study-gold-coast-careers-festival/'
+title: Visit Victoria
+logo: 'https://ucarecdn.com/7ceec4b3-355b-4a57-af9f-2e2296b0d812/'
+link: /projects/study-gold-coast-careers-festival/
 ---
+
