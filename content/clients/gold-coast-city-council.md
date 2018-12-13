@@ -1,6 +1,6 @@
 ---
 title: Visit Victoria
-logo: 'https://ucarecdn.com/7ceec4b3-355b-4a57-af9f-2e2296b0d812/'
-link: /projects/study-gold-coast-careers-festival/
+logo: 'https://ucarecdn.com/a1812d2f-b85c-490c-98e9-a8a0eb7f1839/'
+link: /business-stories/your-happy-space-gippsland/
 ---
 
