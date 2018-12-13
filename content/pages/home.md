@@ -16,16 +16,16 @@ sectionIntro:
     quality engaging content that your viewers will watch. Find out more in our
     about us section.
   subtitle: Who we are
-  title: we are creators
+  title: we are creators.
 sectionProjects:
   subtitle: Our specialities
-  title: what we can offer
+  title: what we can offer.
 sectionClients:
   subtitle: Our Clients
-  title: who we work with
+  title: who we work with.
 sectionTestimonials:
   subtitle: Testimonials
-  title: don't take our word for it
+  title: don't take our word for it.
 sectionContact:
   subtitle: Get in touch
   title: let's collaborate!
