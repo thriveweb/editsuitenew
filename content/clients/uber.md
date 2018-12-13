@@ -1,5 +1,6 @@
 ---
 title: Uber
-logo: 'https://ucarecdn.com/179db132-6707-480f-8e3d-ef4403c1897d/'
-link: '/projects/i-choose-uber-qld/'
+logo: 'https://ucarecdn.com/f2fcf4c0-d830-40ff-8162-d290fa7cbb57/'
+link: /projects/i-choose-uber-qld/
 ---
+
