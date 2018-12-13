@@ -16,5 +16,6 @@ meta:
     The Edit Suite has create many videos for Bond University Sport. They
     programs they have are second to none and they wanted to use videos as a
     tool to show people this visually.
+  title: Bond University High Performance Sport - Equestrian
 ---
 
