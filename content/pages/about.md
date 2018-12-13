@@ -8,19 +8,19 @@ sectionOpener:
   title: visual storytellers.
   video: ''
 icons:
-  - description: We are experts in photo and video because our hobby became our livelihood.
+  - description: We're experts in photo and video because our hobby became our livelihood.
     icon: 'https://theeditsuite.netlify.com/images/icon1.svg'
     title: Expertise
   - description: >-
-      We are passionate about making all of our projects the best they possibly
-      can be.
+      We're very passionate and are always looking at new ways to make our work
+      standout.
     icon: 'https://theeditsuite.netlify.com/images/icon2.svg'
     title: Passion
   - description: >-
-      We are dedicated to providing an outstanding product for all of our
+      We have a drive to create fresh and engaging content for every one of our
       clients.
     icon: 'https://theeditsuite.netlify.com/images/icon3.svg'
-    title: Dedication
+    title: Creativity
 sectionBlurb:
   content: >-
     The Edit Suite are a team of videographers, photographers, licensed drone
