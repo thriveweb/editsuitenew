@@ -5,7 +5,7 @@ title: The Edit Suite
 sectionOpener:
   image: ''
   mobile: 'https://ucarecdn.com/2c1b9f47-69bc-4dd2-9e7b-7d2cea0f6a73/'
-  title: ''
+  title: content creatives.
   video: '305710852'
 sectionIntro:
   buttonLink: /about
@@ -36,3 +36,4 @@ meta:
     internationally.
   title: Video Production Gold Coast and Photography
 ---
+
