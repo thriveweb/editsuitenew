@@ -5,7 +5,7 @@ title: About Us
 sectionOpener:
   image: 'https://ucarecdn.com/6005c637-5a6d-44f8-a1b9-a8a6f8de2f17/'
   mobile: 'https://ucarecdn.com/fd69b9a2-c1c2-4974-9089-9dae1155d295/'
-  title: Just Create.
+  title: just create.
   video: ''
 icons:
   - description: We are experts in photo and video because our hobby became our livelihood.
@@ -62,3 +62,4 @@ meta:
   description: Gold Coast Video Production and Photography Services
   title: Video Production and Photography Gold Coast
 ---
+
