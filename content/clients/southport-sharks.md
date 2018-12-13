@@ -1,5 +1,6 @@
 ---
 title: Southport Sharks
-logo: 'https://ucarecdn.com/d21e98b6-8cb7-4d0c-a0eb-f81c36aca1d9/'
-link: '/projects/southport-sharks-rebrand/'
+logo: 'https://ucarecdn.com/5b4380a2-d8ae-48de-8c92-b8267e4432ce/'
+link: /projects/southport-sharks-rebrand/
 ---
+
