@@ -4,10 +4,13 @@ title: business stories.
 order: '1'
 preview: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
 sectionOpener:
-  byline: ''
-  image: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
+  image: ''
   mobile: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
-  video: ''
+  video: business stories.
+sectionOverview:
+  content: what is this
+  subtitle: what is this
+  title: what is this
 meta:
   description: >-
     Using narrative in video is very powerful. You can show that your business
@@ -15,3 +18,4 @@ meta:
     you want your viewer to know. We love telling your stories.
   title: Business Stories
 ---
+
