@@ -9,7 +9,7 @@ import ContactInfo from '../components/ContactInfo'
 import './ContactPage.css'
 import '../components/Footer.css'
 
-export const ContactPageTemplate = ({ title, contact }) => (
+export const ContactPageTemplate = ({ title, sectionContact, contact }) => (
   <div>
     <div className="contact full">
       <div className="wide">

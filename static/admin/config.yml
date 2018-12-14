@@ -258,6 +258,13 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Slug, name: slug, widget: hidden, default: 'contact' }
           - { label: Title, name: title, widget: string }
 
+          - label: 'Section: Contact'
+            name: 'sectionContact'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+
           - label: 'Meta'
             required: false
             name: 'meta'
