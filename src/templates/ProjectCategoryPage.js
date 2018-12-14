@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import OpenerMobile from '../components/OpenerMobile'
-import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import ProjectSection from '../components/ProjectSection'
 
@@ -18,7 +17,7 @@ export const ProjectCategoryPageTemplate = ({
   businessStories = [],
   droneAerials = [],
   events = [],
-  promo = [],
+  promos = [],
   testimonials,
   contentType,
   slug
@@ -36,7 +35,9 @@ export const ProjectCategoryPageTemplate = ({
   } else if ('/project-categories/events/' === slug) {
     categorySelector = events
   } else if ('/project-categories/promos-and-tvcs/' === slug) {
-    categorySelector = promo
+    categorySelector = promos
+  } else {
+    categorySelector = ''
   }
 
   return (
@@ -100,7 +101,9 @@ export const ProjectCategoryPageTemplate = ({
               <ProjectSection projects={events} />
             )}
 
-            {categorySelector === promo && <ProjectSection projects={promo} />}
+            {categorySelector === promos && (
+              <ProjectSection projects={promos} />
+            )}
 
             {categorySelector === photography && (
               <ProjectCategories categories={photography} />
@@ -307,8 +310,8 @@ export const pageQuery = graphql`
       }
     }
 
-    promo: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "promo" } } }
+    promos: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "promos" } } }
       sort: { order: ASC, fields: [frontmatter___title] }
     ) {
       edges {

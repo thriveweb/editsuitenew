@@ -107,7 +107,7 @@ export const pageQuery = graphql`
     }
 
     allProjects: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "droneAerials" } } }
+      filter: { fields: { contentType: { eq: "promos" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
