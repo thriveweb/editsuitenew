@@ -27,7 +27,7 @@ body {
 }
 
 .fp-tableCell {
-  height: 100vh;
+  height: 100vh !important;
 }
 
 .frame-content .section:nth-child(n + 2) {
@@ -190,6 +190,7 @@ h5,
 .section {
   position: relative;
   min-height: 40rem;
+  height: 100vh;
   display: flex;
 }
 
