@@ -46,18 +46,27 @@ export const ProjectCategoryPageTemplate = ({
         <a className="arrow-down" href="#two">
           {''}
         </a>
+        {!!title && (
+          <div className="full open">
+            <div className="taCenter">
+              <h1>{title}</h1>
+              {!!sectionOpener.byline && <h3>{sectionOpener.byline}</h3>}
+            </div>
+          </div>
+        )}
+        <div className="gradient" />
         {!!sectionOpener.video && (
-          <OpenerVideo src={sectionOpener.video} title={title} alt={title} />
+          <OpenerVideo src={sectionOpener.video} alt={title} />
         )}
         {!!sectionOpener.image && (
-          <OpenerImage src={sectionOpener.image} title={title} alt={title} />
+          <OpenerImage src={sectionOpener.image} alt={title} />
         )}
         {!!sectionOpener.mobile && (
-          <OpenerMobile src={sectionOpener.mobile} title={title} alt={title} />
+          <OpenerMobile src={sectionOpener.mobile} alt={title} />
         )}
       </div>
 
-      {!!sectionOverview && (
+      {/* {!!sectionOverview && (
         <div id="two" className="thin thick flex">
           <SectionTitle
             title={sectionOverview.title}
@@ -67,10 +76,10 @@ export const ProjectCategoryPageTemplate = ({
             <p>{sectionOverview.content}</p>
           </div>
         </div>
-      )}
+      )} */}
 
       {!!categorySelector && (
-        <div className="dark thick">
+        <div id="two" className="thick">
           <div className="wide">
             <Link className="back" to="work#two">
               Back to all
@@ -181,7 +190,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         sectionOpener {
-          title
+          byline
           video
           image
           mobile

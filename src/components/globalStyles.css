@@ -348,7 +348,7 @@ h5,
   /* border: 1px solid; */
   left: calc(50% - 2rem);
   right: calc(50% - 2rem);
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .arrow-down {

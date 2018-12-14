@@ -6,6 +6,7 @@ sectionOpener:
   image: 'https://ucarecdn.com/02ae24fd-0d84-4775-9281-c71ff9b50656/'
   mobile: 'https://ucarecdn.com/fb97ba5b-c7a1-49af-803f-f90206bdb880/'
   title: blog.
+  byline: ''
   video: ''
 meta:
   description: >-
@@ -14,4 +15,3 @@ meta:
     and sports photography
   title: Blog Archive
 ---
-

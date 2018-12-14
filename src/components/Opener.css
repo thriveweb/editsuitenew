@@ -7,9 +7,13 @@
   justify-content: center;
 }
 
-.opener h1 {
+.open {
   position: absolute;
-  z-index: 101;
+  z-index: 1000;
+}
+
+.open h3 {
+  font-weight: 400;
 }
 
 .opener .BackgroundImage {
@@ -19,7 +23,7 @@
 
 .gradient {
   width: 100%;
-  height: 100%;
+  height: 80%;
   background: linear-gradient(transparent, var(--medium));
   position: absolute;
   bottom: -5px;

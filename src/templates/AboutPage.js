@@ -44,26 +44,25 @@ export const AboutPageTemplate = ({
                   className="arrow-down"
                   onClick={() => fullpageApi.moveSectionDown()}
                 />
+                {!!sectionOpener.title && (
+                  <div className="full open">
+                    <div className="taCenter">
+                      <h1>{sectionOpener.title}</h1>
+                      {!!sectionOpener.byline && (
+                        <h3>{sectionOpener.byline}</h3>
+                      )}
+                    </div>
+                  </div>
+                )}
+                <div className="gradient" />
                 {!!sectionOpener.video && (
-                  <OpenerVideo
-                    src={sectionOpener.video}
-                    title={sectionOpener.title}
-                    alt={title}
-                  />
+                  <OpenerVideo src={sectionOpener.video} alt={title} />
                 )}
                 {!!sectionOpener.image && (
-                  <OpenerImage
-                    src={sectionOpener.image}
-                    title={sectionOpener.title}
-                    alt={title}
-                  />
+                  <OpenerImage src={sectionOpener.image} alt={title} />
                 )}
                 {!!sectionOpener.mobile && (
-                  <OpenerMobile
-                    src={sectionOpener.mobile}
-                    title={sectionOpener.title}
-                    alt={title}
-                  />
+                  <OpenerMobile src={sectionOpener.mobile} alt={title} />
                 )}
               </div>
 
@@ -185,6 +184,7 @@ export const pageQuery = graphql`
         title
         sectionOpener {
           title
+          byline
           video
           image
           mobile
