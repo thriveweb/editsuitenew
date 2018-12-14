@@ -12,7 +12,6 @@ import ProjectSection from '../components/ProjectSection'
 export const ProjectCategoryPageTemplate = ({
   title,
   sectionOpener,
-  sectionOverview,
   projectCategories = [],
   photography = [],
   motionGraphics = [],
@@ -194,11 +193,6 @@ export const pageQuery = graphql`
           video
           image
           mobile
-        }
-        sectionOverview {
-          title
-          subtitle
-          content
         }
       }
     }
