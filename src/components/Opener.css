@@ -41,7 +41,8 @@
   overflow: hidden;
 }
 
-.opener.video iframe {
+.opener.video iframe,
+.opener.video video {
   width: 100vw;
   height: 56vw;
   min-height: 99vh;
