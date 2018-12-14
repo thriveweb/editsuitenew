@@ -110,7 +110,7 @@ export const pageQuery = graphql`
 
     allProjects: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "businessStories" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___title] }
     ) {
       edges {
         node {

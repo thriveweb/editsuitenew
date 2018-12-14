@@ -13,5 +13,5 @@ meta:
     Using narrative in video is very powerful. You can show that your business
     is genuine, explain your product and get straight to the point of what it is
     you want your viewer to know. We love telling your stories.
-  title: Business Stories | The Edit Suite
+  title: Business Stories
 ---

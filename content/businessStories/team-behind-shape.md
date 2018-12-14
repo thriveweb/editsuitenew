@@ -20,4 +20,3 @@ meta:
     and value for money all Perfect Delivery.
   title: The Team Behind Shape
 ---
-

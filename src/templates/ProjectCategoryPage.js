@@ -66,18 +66,6 @@ export const ProjectCategoryPageTemplate = ({
         )}
       </div>
 
-      {/* {!!sectionOverview && (
-        <div id="two" className="thin thick flex">
-          <SectionTitle
-            title={sectionOverview.title}
-            subtitle={sectionOverview.subtitle}
-          />
-          <div>
-            <p>{sectionOverview.content}</p>
-          </div>
-        </div>
-      )} */}
-
       {!!categorySelector && (
         <div id="two" className="thick">
           <div className="wide">
@@ -124,7 +112,7 @@ const ProjectCategoryPage = ({
     businessStories,
     droneAerials,
     events,
-    promo,
+    promos,
     photography
   }
 }) => (
@@ -160,7 +148,7 @@ const ProjectCategoryPage = ({
         ...post.node.frontmatter,
         ...post.node.fields
       }))}
-      promo={events.edges.map(post => ({
+      promos={promos.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -232,7 +220,7 @@ export const pageQuery = graphql`
 
     motionGraphics: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "motionGraphics" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {
@@ -241,7 +229,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            order
             title
             preview
             featuredImage
@@ -252,7 +239,7 @@ export const pageQuery = graphql`
 
     businessStories: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "businessStories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {
@@ -261,7 +248,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            order
             title
             preview
             featuredImage
@@ -272,7 +258,7 @@ export const pageQuery = graphql`
 
     droneAerials: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "droneAerials" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {
@@ -281,7 +267,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            order
             title
             preview
             featuredImage
@@ -292,7 +277,7 @@ export const pageQuery = graphql`
 
     events: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "events" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {
@@ -301,7 +286,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            order
             title
             preview
             featuredImage
@@ -312,7 +296,7 @@ export const pageQuery = graphql`
 
     promos: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "promos" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {
@@ -321,7 +305,6 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            order
             title
             preview
             featuredImage
@@ -332,7 +315,7 @@ export const pageQuery = graphql`
 
     photography: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "photography" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {

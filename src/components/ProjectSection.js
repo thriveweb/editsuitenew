@@ -6,10 +6,10 @@ import Image from '../components/Image'
 class ProjectSection extends React.Component {
   static defaultProps = {
     projects: [],
-    limit: 12,
+    limit: 9,
     showLoadMore: true,
     loadMoreTitle: 'Load More',
-    perPageLimit: 12
+    perPageLimit: 9
   }
 
   state = {
@@ -35,21 +35,19 @@ class ProjectSection extends React.Component {
               className="item flex"
               to={item.slug}
               key={`project-${item.title}`}
-              style={{ order: item.order }}
             >
               <Image className="cover" src={item.preview} alt={item.title} />
             </Link>
           ))}
         </div>
 
-        {showLoadMore &&
-          visibleProject.length < projects.length && (
-            <div className="taCenter">
-              <div className="button" onClick={this.increaseLimit}>
-                {loadMoreTitle}
-              </div>
+        {showLoadMore && visibleProject.length < projects.length && (
+          <div className="taCenter">
+            <div className="button" onClick={this.increaseLimit}>
+              {loadMoreTitle}
             </div>
-          )}
+          </div>
+        )}
       </div>
     )
   }

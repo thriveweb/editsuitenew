@@ -56,7 +56,6 @@ export default ({ children, meta, title }) => {
               />
               <script src="//code.jquery.com/jquery-3.3.1.min.js" />
               <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js" />
-              <link rel="preload" href="https://player.vimeo.com/" as="embed" />
             </Helmet>
 
             <Meta
