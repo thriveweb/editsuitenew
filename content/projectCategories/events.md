@@ -4,10 +4,14 @@ title: events.
 order: '6'
 preview: 'https://ucarecdn.com/c4ce2e57-e7e8-4db8-858b-ee74ba6ad3bb/'
 sectionOpener:
-  byline: ''
-  image: 'https://ucarecdn.com/c4ce2e57-e7e8-4db8-858b-ee74ba6ad3bb/'
-  mobile: 'https://ucarecdn.com/c4ce2e57-e7e8-4db8-858b-ee74ba6ad3bb/'
-  video: ''
+  image: ''
+  mobile: >-
+    https://ucarecdn.com/c4ce2e57-e7e8-4db8-858b-ee74ba6ad3bb/-/crop/973x926/427,7/-/preview/
+  video: '306306513'
+sectionOverview:
+  content: '????'
+  subtitle: '?????'
+  title: '????'
 meta:
   description: >-
     We have filmed at so many events we have lost count! We love doing them
@@ -15,3 +19,4 @@ meta:
     we get to go to a lot of parties.
   title: Events
 ---
+
