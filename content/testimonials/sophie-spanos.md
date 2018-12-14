@@ -1,5 +1,5 @@
 ---
-order: ''
+order: '99'
 title: Sophie Spanos
 company: Bluestone Lending
 content: >-

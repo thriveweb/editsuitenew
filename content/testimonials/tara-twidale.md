@@ -1,9 +1,9 @@
 ---
-order: ''
+order: '99'
 title: Tara Twidale
 company: Construction Worx
 content: >-
-  The Edit Suite team had me at 'hello'. 
+  The Edit Suite team had me at 'hello'.
 
 
   Kara's friendly "can do" attitude from the first phone call, prompt responses

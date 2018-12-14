@@ -1,5 +1,5 @@
 ---
-order: ''
+order: '99'
 title: Ryan Donaldson
 company: Omen Screen Printing
 content: >-
