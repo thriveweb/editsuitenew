@@ -27,7 +27,6 @@ body {
 }
 
 .frame-content .section:nth-child(n + 2) {
-  border: 1px solid pink;
   padding: 5rem 0;
 }
 

@@ -13,7 +13,13 @@ export const ContactPageTemplate = ({ title, contact }) => (
   <div>
     <div className="contact full">
       <div className="wide">
-        <SectionTitle title="Let's work together" subtitle="Get in touch" />
+        {!!sectionContact && (
+          <SectionTitle
+            title={sectionContact.title}
+            subtitle={sectionContact.subtitle}
+          />
+        )}
+
         <FormSimpleAjax />
         <ContactInfo contact={contact} />
       </div>
@@ -63,6 +69,10 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        sectionContact {
+          title
+          subtitle
+        }
       }
     }
 
