@@ -6,7 +6,7 @@ preview: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
 sectionOpener:
   image: ''
   mobile: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
-  video: business stories.
+  video: '306315065'
 sectionOverview:
   content: what is this
   subtitle: what is this
