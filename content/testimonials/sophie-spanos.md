@@ -1,4 +1,5 @@
 ---
+order: ''
 title: Sophie Spanos
 company: Bluestone Lending
 content: >-
@@ -7,4 +8,3 @@ content: >-
   mind. We really enjoyed working them on the day of filming, as they friendly
   and intuitive. Would highly recommend them to anyone!
 ---
-

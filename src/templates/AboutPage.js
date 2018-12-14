@@ -227,10 +227,12 @@ export const pageQuery = graphql`
 
     testimonials: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/testimonials/" } }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {
           frontmatter {
+            order
             title
             company
             content

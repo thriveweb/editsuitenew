@@ -1,4 +1,5 @@
 ---
+order: ''
 title: Ryan Donaldson
 company: Omen Screen Printing
 content: >-
@@ -7,4 +8,3 @@ content: >-
   transition from the conceptual stage to the final product. A really enjoyable
   process for our business to be part of.
 ---
-

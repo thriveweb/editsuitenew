@@ -1,4 +1,5 @@
 ---
+order: ''
 title: Patrice Simpson
 company: SHAPE Australia
 content: >-
@@ -6,4 +7,3 @@ content: >-
   work for SHAPE Australia. The team's creativity, efficiency and good value
   makes it easy to recommend The Edit Suite.
 ---
-

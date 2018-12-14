@@ -1,4 +1,5 @@
 ---
+order: ''
 title: Glen King
 company: Creswick Creative
 content: >-
@@ -8,4 +9,3 @@ content: >-
   always deliver above and beyond our expectations. Beautiful creative pictures
   every time!
 ---
-

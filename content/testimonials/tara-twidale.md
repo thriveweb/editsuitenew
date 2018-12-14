@@ -1,4 +1,5 @@
 ---
+order: ''
 title: Tara Twidale
 company: Construction Worx
 content: >-
@@ -19,4 +20,3 @@ content: >-
   Watch this space -these guys are raising the bar in video production on the
   Gold Coast!
 ---
-
