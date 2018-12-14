@@ -1,7 +1,7 @@
 ---
 template: SingleBusinessStories
 title: Your Happy Space - Gippsland
-order: '1'
+order: '0'
 preview: 'https://ucarecdn.com/03075a9b-a6ac-48c5-b799-98e1cf484cfc/'
 excerpt: >-
   An amazing place to make a video! We loved shooting down in Gippsland for
