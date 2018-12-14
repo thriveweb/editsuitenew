@@ -7,7 +7,7 @@ sectionOpener:
   mobile: 'https://ucarecdn.com/2c1b9f47-69bc-4dd2-9e7b-7d2cea0f6a73/'
   title: content creatives.
   byline: ''
-  video: 'images/opening.mp4'
+  video: '305710852'
 sectionIntro:
   buttonLink: /about
   buttonText: About Us
