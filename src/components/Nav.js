@@ -44,10 +44,43 @@ export default class Nav extends Component {
             <NavLink to="/work/">Work</NavLink>
             <NavLink to="/blog/">Blog</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
+
+            {!!social && (
+              <div className="social hide">
+                <a
+                  href={social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-facebook-f" />
+                </a>
+                <a
+                  href={social.vimeo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-vimeo-v" />
+                </a>
+                <a
+                  href={social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-instagram" />
+                </a>
+                <a
+                  href={social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-linkedin-in" />
+                </a>
+              </div>
+            )}
           </div>
 
           {!!social && (
-            <div className="social">
+            <div className="social show">
               <a
                 href={social.facebook}
                 target="_blank"

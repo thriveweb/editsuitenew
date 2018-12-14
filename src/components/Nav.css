@@ -1,3 +1,11 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .nav {
   background: rgba(0, 0, 0, 0.6);
   position: fixed;
@@ -27,6 +35,15 @@
 .nav .social,
 .menu-button {
   width: 12rem;
+}
+
+.nav .nav-links .social {
+  width: auto;
+}
+
+.nav .nav-links .social .fab {
+  font-size: 1.8rem;
+  margin: 2rem 1rem;
 }
 
 .nav .social .fab {
@@ -163,6 +180,22 @@
 }
 
 @media screen and (max-width: 750px) {
+  .hide {
+    display: block;
+  }
+
+  .show {
+    display: none;
+  }
+
+  .nav .menu-button {
+    width: auto;
+  }
+
+  .nav .Logo {
+    margin-left: -2rem;
+  }
+
   .nav .wrap {
     max-width: 90% !important;
   }
