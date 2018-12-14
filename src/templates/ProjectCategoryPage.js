@@ -35,7 +35,7 @@ export const ProjectCategoryPageTemplate = ({
     categorySelector = droneAerials
   } else if ('/project-categories/events/' === slug) {
     categorySelector = events
-  } else if ('/project-categories/promos-and-tv-cs/' === slug) {
+  } else if ('/project-categories/promos-and-tvcs/' === slug) {
     categorySelector = promo
   }
 
