@@ -16,6 +16,10 @@
   align-self: flex-start;
 }
 
+.fancybox-container {
+  z-index: 200000000 !important;
+}
+
 .fancybox-bg {
   background: black !important;
 }

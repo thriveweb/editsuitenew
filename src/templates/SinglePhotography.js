@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import './SinglePhotography.css'
@@ -18,6 +18,10 @@ export class SinglePhotographyTemplate extends React.Component {
           <div className="taCenter">
             <h1>{title}</h1>
           </div>
+
+          <Link className="back" to="/project-categories/photography/#two">
+            Back to all
+          </Link>
 
           <div className="items-expand flex">
             {imageList.map((item, index) => (

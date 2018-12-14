@@ -29,6 +29,7 @@ export const HomePageTemplate = ({
     licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
     responsiveWidth: 900,
+    responsiveHeight: 900,
     verticalAlign: true,
     navigation: false
   }
