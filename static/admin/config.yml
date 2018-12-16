@@ -575,7 +575,7 @@ collections: # A list of collections the CMS should be able to edit
     label: Promos & TVCs
     editor:
       preview: true
-    folder: 'content/promo'
+    folder: 'content/promos'
     slug: '{{slug}}'
     create: true
     fields:
