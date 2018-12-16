@@ -27,9 +27,8 @@ export const HomePageTemplate = ({
 }) => {
   let options = {
     licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    anchors: ['one', 'two', 'three', 'four', 'five', 'six'],
+    anchors: ['one', 'two', 'three', 'four', 'five'],
     responsiveWidth: 900,
-    responsiveHeight: 900,
     verticalAlign: true,
     navigation: false
   }
@@ -168,7 +167,7 @@ export const HomePageTemplate = ({
                       title={sectionContact.title}
                       subtitle={sectionContact.subtitle}
                     />
-                    {!!contact && <ContactInfo contact={contact} />}
+                    <ContactInfo contact={contact} />
                   </div>
                 </div>
               )}

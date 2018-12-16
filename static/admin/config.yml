@@ -373,14 +373,6 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Image, name: image, widget: image, required: false }
           - { label: Mobile, name: mobile, widget: image }
 
-      - label: 'Section: Overview'
-        name: 'sectionOverview'
-        widget: 'object'
-        fields:
-          - { label: Title, name: title, widget: string, required: false }
-          - { label: Subtitle, name: subtitle, widget: string, required: false }
-          - { label: Content, name: content, widget: markdown }
-
       - label: 'Meta'
         required: false
         name: 'meta'
