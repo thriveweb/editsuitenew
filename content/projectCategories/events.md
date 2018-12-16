@@ -9,10 +9,6 @@ sectionOpener:
   mobile: >-
     https://ucarecdn.com/c4ce2e57-e7e8-4db8-858b-ee74ba6ad3bb/-/crop/973x926/427,7/-/preview/
   video: '306306513'
-sectionOverview:
-  content: '????'
-  subtitle: '?????'
-  title: '????'
 meta:
   description: >-
     We have filmed at so many events we have lost count! We love doing them

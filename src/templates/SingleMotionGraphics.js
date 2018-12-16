@@ -38,6 +38,7 @@ export const SingleMotionGraphicsTemplate = ({
                 title={title}
                 src={`https://player.vimeo.com/video/${video}`}
                 frameBorder="0"
+                allowFullScreen
               />
             </div>
           )}

@@ -8,10 +8,6 @@ sectionOpener:
   byline: ''
   mobile: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
   video: '306315065'
-sectionOverview:
-  content: what is this
-  subtitle: what is this
-  title: what is this
 meta:
   description: >-
     Using narrative in video is very powerful. You can show that your business
