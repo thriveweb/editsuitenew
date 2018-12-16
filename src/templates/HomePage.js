@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import ReactFullpage from '@fullpage/react-fullpage'
 
 import Layout from '../components/Layout'
-import OpenerVideo from '../components/OpenerVideo'
+import HomePageVideo from '../components/HomePageVideo'
 import OpenerImage from '../components/OpenerImage'
 import OpenerMobile from '../components/OpenerMobile'
 import SectionTitle from '../components/SectionTitle'
@@ -57,7 +57,7 @@ export const HomePageTemplate = ({
                 )}
                 <div className="gradient" />
                 {!!sectionOpener.video && (
-                  <OpenerVideo src={sectionOpener.video} alt={title} />
+                  <HomePageVideo src={sectionOpener.video} alt={title} />
                 )}
                 {!!sectionOpener.image && (
                   <OpenerImage src={sectionOpener.image} alt={title} />
