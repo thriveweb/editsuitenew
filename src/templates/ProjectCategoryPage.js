@@ -12,7 +12,6 @@ export const ProjectCategoryPageTemplate = ({
   title,
   sectionOpener,
   projectCategories = [],
-  photography = [],
   motionGraphics = [],
   businessStories = [],
   droneAerials = [],
@@ -24,9 +23,7 @@ export const ProjectCategoryPageTemplate = ({
 }) => {
   let categorySelector = []
 
-  if ('/project-categories/photography/' === slug) {
-    categorySelector = photography
-  } else if ('/project-categories/motion-graphics/' === slug) {
+  if ('/project-categories/motion-graphics/' === slug) {
     categorySelector = motionGraphics
   } else if ('/project-categories/business-stories/' === slug) {
     categorySelector = businessStories
@@ -92,10 +89,6 @@ export const ProjectCategoryPageTemplate = ({
             {categorySelector === promos && (
               <ProjectSection projects={promos} />
             )}
-
-            {categorySelector === photography && (
-              <ProjectCategories categories={photography} />
-            )}
           </div>
         </div>
       )}
@@ -112,8 +105,7 @@ const ProjectCategoryPage = ({
     businessStories,
     droneAerials,
     events,
-    promos,
-    photography
+    promos
   }
 }) => (
   <Layout
@@ -154,11 +146,6 @@ const ProjectCategoryPage = ({
         ...post.node.fields
       }))}
       projectCategories={projectCategories.edges.map(post => ({
-        ...post.node,
-        ...post.node.frontmatter,
-        ...post.node.fields
-      }))}
-      photography={photography.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -310,24 +297,6 @@ export const pageQuery = graphql`
             title
             preview
             featuredImage
-          }
-        }
-      }
-    }
-
-    photography: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "photography" } } }
-      sort: { order: ASC, fields: [frontmatter___order] }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            preview
           }
         }
       }

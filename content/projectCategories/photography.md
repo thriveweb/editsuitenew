@@ -1,5 +1,5 @@
 ---
-template: ProjectCategoryPage
+template: PhotographyPage
 title: photography.
 order: '3'
 preview: 'https://ucarecdn.com/fa7211e1-cbf9-4cb6-b606-93b1aa1556c6/'
