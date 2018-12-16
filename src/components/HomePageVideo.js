@@ -4,7 +4,7 @@ import './Opener.css'
 
 const HomePageVideo = ({ src, title }) => (
   <div className="opener video">
-    <video autoPlay preload="auto">
+    <video autoPlay loop preload="auto">
       <source src={src} type="video/mp4" />
     </video>
   </div>
