@@ -5,6 +5,7 @@ order: '1'
 preview: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
 sectionOpener:
   image: ''
+  byline: ''
   mobile: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
   video: '306315065'
 sectionOverview:
@@ -18,4 +19,3 @@ meta:
     you want your viewer to know. We love telling your stories.
   title: Business Stories
 ---
-

@@ -4,6 +4,7 @@ title: events.
 order: '6'
 preview: 'https://ucarecdn.com/c4ce2e57-e7e8-4db8-858b-ee74ba6ad3bb/'
 sectionOpener:
+  byline: ''
   image: ''
   mobile: >-
     https://ucarecdn.com/c4ce2e57-e7e8-4db8-858b-ee74ba6ad3bb/-/crop/973x926/427,7/-/preview/
@@ -19,4 +20,3 @@ meta:
     we get to go to a lot of parties.
   title: Events
 ---
-

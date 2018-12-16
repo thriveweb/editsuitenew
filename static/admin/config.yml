@@ -40,6 +40,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: 'object'
             fields:
               - { label: Title, name: title, widget: string, required: false }
+              - { label: Byline, name: byline, widget: string, required: false }
               - { label: Video, name: video, widget: string, required: false }
               - { label: Image, name: image, widget: image, required: false }
               - { label: Mobile, name: mobile, widget: image }
@@ -127,6 +128,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: 'object'
             fields:
               - { label: Title, name: title, widget: string, required: false }
+              - { label: Byline, name: byline, widget: string, required: false }
               - { label: Video, name: video, widget: string, required: false }
               - { label: Image, name: image, widget: image, required: false }
               - { label: Mobile, name: mobile, widget: image }
@@ -207,6 +209,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: 'object'
             fields:
               - { label: Title, name: title, widget: string, required: false }
+              - { label: Byline, name: byline, widget: string, required: false }
               - { label: Video, name: video, widget: string, required: false }
               - { label: Image, name: image, widget: image, required: false }
               - { label: Mobile, name: mobile, widget: image }
@@ -310,6 +313,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: 'object'
             fields:
               - { label: Title, name: title, widget: string, required: false }
+              - { label: Byline, name: byline, widget: string, required: false }
               - { label: Video, name: video, widget: string, required: false }
               - { label: Image, name: image, widget: image, required: false }
               - { label: Mobile, name: mobile, widget: image }
@@ -364,6 +368,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: 'object'
         fields:
           - { label: Title, name: title, widget: string, required: false }
+          - { label: Byline, name: byline, widget: string, required: false }
           - { label: Video, name: video, widget: string, required: false }
           - { label: Image, name: image, widget: image, required: false }
           - { label: Mobile, name: mobile, widget: image }
