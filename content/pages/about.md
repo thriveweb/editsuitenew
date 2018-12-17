@@ -3,18 +3,22 @@ template: AboutPage
 slug: about
 title: About Us
 sectionOpener:
+  byline: Your brand. Your story.
   image: 'https://ucarecdn.com/6005c637-5a6d-44f8-a1b9-a8a6f8de2f17/'
   mobile: 'https://ucarecdn.com/fd69b9a2-c1c2-4974-9089-9dae1155d295/'
   title: visual storytellers.
-  byline: ''
   video: ''
 icons:
-  oneTitle: Expertise
   oneDescription: We're experts in photo and video because our hobby became our livelihood.
-  twoTitle: Passion
-  twoDescription: We're very passionate and are always looking at new ways to make our work standout.
+  oneTitle: Expertise
+  threeDescription: >-
+    We have a drive to create fresh and engaging content for every one of our
+    clients.
   threeTitle: Creativity
-  threeDescription: We have a drive to create fresh and engaging content for every one of our clients.
+  twoDescription: >-
+    We're very passionate and are always looking at new ways to make our work
+    standout.
+  twoTitle: Passion
 sectionBlurb:
   content: >-
     The Edit Suite are a team of videographers, photographers, licensed drone
@@ -56,3 +60,4 @@ meta:
   description: Gold Coast Video Production and Photography Services
   title: Video Production and Photography Gold Coast
 ---
+
