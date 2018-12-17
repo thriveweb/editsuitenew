@@ -5,7 +5,7 @@ import './Icons.css'
 
 const Icons = ({ icons }) => (
   <div className="thin flex">
-    <div class="icon">
+    <div className="icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
         <path class="outer" d="M30,49L50,59L70,49" />
         <path
