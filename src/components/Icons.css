@@ -4,13 +4,44 @@
   margin: 2rem auto;
 }
 
-.icon .LazyImage,
 .icon h5 {
   margin-bottom: 2.5rem;
 }
 
 .icon p {
   opacity: 0.6;
+}
+
+.icon svg {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+  fill: none;
+  stroke: white;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 2; /* changeable */
+  stroke-miterlimit: 4;
+
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: icon;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes icon {
+  0% {
+    stroke-dashoffset: 200;
+  }
+
+  50% {
+    stroke-dashoffset: 0%;
+  }
+
+  100% {
+    stroke-dashoffset: 200;
+  }
 }
 
 @media screen and (max-width: 750px) {

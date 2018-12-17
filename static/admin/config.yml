@@ -135,11 +135,26 @@ collections: # A list of collections the CMS should be able to edit
 
           - label: 'Section: Icons'
             name: 'icons'
-            widget: 'list'
+            widget: 'object'
             fields:
-              - { label: Icon, name: icon, widget: image }
-              - { label: Title, name: title, widget: string }
-              - { label: Description, name: description, widget: markdown }
+              - { label: Icon 1 Title, name: oneTitle, widget: string }
+              - {
+                  label: Icon 1 Description,
+                  name: oneDescription,
+                  widget: markdown,
+                }
+              - { label: Icon 2 Title, name: twoTitle, widget: string }
+              - {
+                  label: Icon 2 Description,
+                  name: twoDescription,
+                  widget: markdown,
+                }
+              - { label: Icon 3 Title, name: threeTitle, widget: string }
+              - {
+                  label: Icon 3 Description,
+                  name: threeDescription,
+                  widget: markdown,
+                }
 
           - label: 'Section: Blurb'
             name: 'sectionBlurb'

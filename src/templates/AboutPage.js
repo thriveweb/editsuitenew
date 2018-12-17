@@ -66,19 +66,17 @@ export const AboutPageTemplate = ({
                 )}
               </div>
 
-              {!!icons && (
-                <div className="section">
-                  <div
-                    className="arrow-down"
-                    onClick={() => fullpageApi.moveSectionDown()}
-                  />
-                  <div
-                    className="arrow-up"
-                    onClick={() => fullpageApi.moveSectionUp()}
-                  />
-                  <Icons icons={icons} />
-                </div>
-              )}
+              <div className="section">
+                <div
+                  className="arrow-down"
+                  onClick={() => fullpageApi.moveSectionDown()}
+                />
+                <div
+                  className="arrow-up"
+                  onClick={() => fullpageApi.moveSectionUp()}
+                />
+                <Icons icons={icons} />
+              </div>
 
               {!!sectionBlurb && (
                 <div className="section dark">
@@ -190,9 +188,12 @@ export const pageQuery = graphql`
           mobile
         }
         icons {
-          title
-          icon
-          description
+          oneTitle
+          oneDescription
+          twoTitle
+          twoDescription
+          threeTitle
+          threeDescription
         }
         sectionBlurb {
           title
