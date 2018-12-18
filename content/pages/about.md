@@ -28,14 +28,16 @@ sectionBlurb:
     create something special for our clients and of course, yours.
 
 
-    We are always adding to our vast array of professional film production and
-    photography gear to stay on top of the game and to ensure you are getting
-    the quality you deserve...plus we really love new toys ;)
+    From our studio in Mermaid Beach, we are always adding to our vast array of
+    professional film production and photography gear to stay on top of the best
+    tech and to ensure you are getting the quality you deserve...plus we really
+    love new toys ;)
 
 
-    Our professional video and photography equipment includes a RED digital
-    cinema camera, Canon 1DX mkII, as well as a DJI Inspire 2 Drone capable of
-    shooting 5.2K raw footage!
+    Our professional video and photography equipment includes a RED Gemini 5K
+    digital cinema camera a Canon 1DX mkII - the flagship stills camera, as well
+    as a DJI Inspire 2 Drone capable of shooting 5.2K raw footage as well as
+    producing stunning high res photos!
 
 
     We have a large variety of professional lenses, professional gimbals for
@@ -47,7 +49,7 @@ sectionBlurb:
     Let us show you how your next video or photography project can be something
     you are super proud to show the world!
   image: >-
-    https://ucarecdn.com/1bc32926-9470-4045-accf-ec8a3ac65b1c/-/crop/1500x1441/0,28/-/preview/
+    https://ucarecdn.com/1bc32926-9470-4045-accf-ec8a3ac65b1c/-/crop/1480x992/20,268/-/preview/
   subtitle: Who we are
   title: more than just a pretty face
 sectionClients:
