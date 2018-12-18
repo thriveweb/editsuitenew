@@ -3,24 +3,24 @@ template: HomePage
 slug: ''
 title: The Edit Suite
 sectionOpener:
+  byline: producing what's good for you
   image: ''
-  mobile: 'https://ucarecdn.com/2c1b9f47-69bc-4dd2-9e7b-7d2cea0f6a73/'
+  mobile: >-
+    https://ucarecdn.com/2c1b9f47-69bc-4dd2-9e7b-7d2cea0f6a73/-/crop/2058x1452/446,0/-/preview/
   title: content creatives.
-  byline: ''
-  video: 'images/opening.mp4'
+  video: images/opening.mp4
 sectionIntro:
   buttonLink: /about
   buttonText: About Us
   description: >-
-    The Edit Suite is a video production and photography company based in
-    Mermaid Beach on the Gold Coast of Australia. We specialise in creating high
-    quality engaging content that your viewers will watch. Find out more in our
-    about us section.
+    The Edit Suite is an award winning video production and photography company
+    based in Mermaid Beach on the Gold Coast of Australia. We specialise in
+    creating high quality engaging content that your viewers will watch.
   subtitle: Who we are
   title: we are creators.
 sectionProjects:
   subtitle: Our specialities
-  title: what we can offer.
+  title: things we are good at.
 sectionClients:
   subtitle: Collaborations
   title: who we've worked with.
@@ -29,7 +29,7 @@ sectionTestimonials:
   title: don't take our word for it.
 sectionContact:
   subtitle: Get in touch
-  title: let's collaborate!
+  title: let's make great stuff!
 meta:
   description: >-
     The Edit Suite is a Gold Coast video production and photography company that
@@ -37,3 +37,4 @@ meta:
     internationally.
   title: Video Production Gold Coast and Photography
 ---
+
