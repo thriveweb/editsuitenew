@@ -10,6 +10,9 @@ sectionOpener:
     https://ucarecdn.com/8fc187b1-1ed3-429d-a05d-6ceaa9c8a59c/-/crop/933x1097/0,0/-/preview/
   title: our work.
   video: ''
+sectionProjects:
+  title: things we're good at.
+  subtitle: Our specialties
 sectionTestimonials:
   subtitle: Testimonials
   title: don't take our word for it
@@ -20,4 +23,3 @@ meta:
     and sports photography
   title: Our Work
 ---
-

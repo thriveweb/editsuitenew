@@ -13,6 +13,7 @@ import Testimonials from '../components/Testimonials'
 export const ProjectPageTemplate = ({
   title,
   sectionOpener,
+  sectionProjects,
   projectCategories = [],
   sectionTestimonials,
   testimonials,
@@ -72,8 +73,8 @@ export const ProjectPageTemplate = ({
                   />
                   <div className="wide">
                     <SectionTitle
-                      title="What we can offer"
-                      subtitle="Our specialties"
+                      title={sectionProjects.title}
+                      subtitle={sectionProjects.subtitle}
                     />
                     <ProjectCategories categories={projectCategories} />
                   </div>
@@ -144,6 +145,10 @@ export const pageQuery = graphql`
           video
           image
           mobile
+        }
+        sectionProjects {
+          title
+          subtitle
         }
         sectionTestimonials {
           title

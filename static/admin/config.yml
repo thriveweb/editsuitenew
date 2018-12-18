@@ -229,6 +229,13 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Image, name: image, widget: image, required: false }
               - { label: Mobile, name: mobile, widget: image }
 
+          - label: 'Section: Projects'
+            name: 'sectionProjects'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+
           - label: 'Section: Testimonials'
             name: 'sectionTestimonials'
             widget: 'object'
