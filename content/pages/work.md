@@ -1,9 +1,9 @@
 ---
 template: ProjectPage
 slug: work
-title: Our Work
+title: our work
 sectionOpener:
-  byline: Video production. Photography.
+  byline: 'creative, engaging digital content. '
   image: >-
     https://ucarecdn.com/2a0fec70-7e70-41a9-87f3-dccb92fb3434/-/crop/1210x751/189,0/-/preview/
   mobile: >-
@@ -12,7 +12,7 @@ sectionOpener:
   video: ''
 sectionTestimonials:
   subtitle: Testimonials
-  title: Don't take our word for it
+  title: don't take our word for it
 meta:
   description: >-
     The Edit Suite specialises in the creation of film, motion graphics,
