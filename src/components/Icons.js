@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Image from './Image.js'
 import './Icons.css'
 
 const Icons = ({ icons }) => (

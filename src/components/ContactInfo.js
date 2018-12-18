@@ -8,6 +8,7 @@ const ContactInfo = ({ contact }) => (
       <a
         href="https://www.google.com/maps/place/The+Edit+Suite/@-28.0464532,153.4328513,17z/data=!3m1!4b1!4m5!3m4!1s0x6b910390b2975c77:0xeda10e8c33766cf7!8m2!3d-28.046458!4d153.43504?hl=en-GB"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <Image className="cover" src="/images/map.jpg" />
       </a>

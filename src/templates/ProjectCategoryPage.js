@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import OpenerMobile from '../components/OpenerMobile'
-import ProjectCategories from '../components/ProjectCategories'
 import ProjectSection from '../components/ProjectSection'
 
 export const ProjectCategoryPageTemplate = ({
