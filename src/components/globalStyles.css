@@ -38,7 +38,8 @@ body {
   margin-bottom: 0;
 }
 
-.frame-content .full {
+.frame-content .full,
+.frame-content .section {
   height: 60rem;
 }
 
