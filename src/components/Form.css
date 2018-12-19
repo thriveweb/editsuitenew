@@ -29,10 +29,9 @@
 .input,
 .select,
 .textarea {
-  appearance: none;
+  appearance: none !important;
   background: none;
   line-height: 0 !important;
-  line-height: 100%;
   display: block;
   flex-grow: 1;
   box-sizing: border-box;
