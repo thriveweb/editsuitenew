@@ -200,11 +200,17 @@
     max-width: 90% !important;
   }
 
-  .nav .social {
-    margin-right: -1rem;
+  .nav-active .nav-links {
+    padding-top: 10rem;
+    display: block;
   }
 
   .NavLink {
-    font-size: 4rem;
+    font-size: 2.8rem;
+    margin: 1rem 0 !important;
+  }
+
+  .NavLink:hover:after {
+    background: transparent;
   }
 }
