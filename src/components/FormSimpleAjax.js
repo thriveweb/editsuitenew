@@ -71,7 +71,7 @@ class Form extends React.Component {
             <input
               className="input"
               type="text"
-              value="What's your name?"
+              placeholder="What's your name?"
               name="name"
               required
             />
@@ -80,7 +80,7 @@ class Form extends React.Component {
             <input
               className="input"
               type="email"
-              value="What's your email address?"
+              placeholder="What's your email address?"
               name="email"
               required
             />
@@ -89,7 +89,7 @@ class Form extends React.Component {
             <input
               className="input"
               type="text"
-              value="Give this email a subject"
+              placeholder="Give this email a subject"
               name="subject"
               required
             />
@@ -97,7 +97,7 @@ class Form extends React.Component {
           <label className="label">
             <input
               className="input textarea"
-              value="How can we help?"
+              placeholder="How can we help?"
               name="message"
               required
             />
@@ -107,7 +107,7 @@ class Form extends React.Component {
           type="text"
           name={honeypot}
           className="input-honey"
-          value="Leave blank if you are a human"
+          placeholder="Leave blank if you are a human"
         />
         {!!subject && <input type="hidden" name="subject" value={subject} />}
         <input type="hidden" name="form-name" value={name} />
