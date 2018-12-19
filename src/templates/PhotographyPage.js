@@ -22,7 +22,8 @@ export const PhotographyPageTemplate = ({
     anchors: ['one', 'two', 'three', 'four', 'five'],
     responsiveWidth: 900,
     verticalAlign: true,
-    navigation: false
+    navigation: false,
+    lockAnchors: true
   }
 
   return (

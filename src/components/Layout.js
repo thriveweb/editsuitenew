@@ -54,6 +54,37 @@ export default ({ children, meta, title }) => {
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css"
               />
+              <link
+                rel="preload"
+                href="https://theeditsuite.netlify.com/images/home_video.mp4"
+                as="video"
+              />
+              <link
+                rel="preload"
+                href="https://theeditsuite.netlify.com/images/motion_video.mp4"
+                as="video"
+              />
+              <link
+                rel="preload"
+                href="https://theeditsuite.netlify.com/images/business_video.mp4"
+                as="video"
+              />
+              <link
+                rel="preload"
+                href="https://theeditsuite.netlify.com/images/promos_video.mp4"
+                as="video"
+              />
+
+              <link
+                rel="preload"
+                href="https://theeditsuite.netlify.com/images/events_video.mp4"
+                as="video"
+              />
+              <link
+                rel="preload"
+                href="https://theeditsuite.netlify.com/images/drone_video.mp4"
+                as="video"
+              />
               <script src="//code.jquery.com/jquery-3.3.1.min.js" />
               <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js" />
             </Helmet>
