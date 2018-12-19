@@ -31,7 +31,6 @@
 .textarea {
   appearance: none !important;
   background: none;
-  line-height: 0 !important;
   display: block;
   flex-grow: 1;
   box-sizing: border-box;
