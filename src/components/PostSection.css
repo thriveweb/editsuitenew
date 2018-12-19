@@ -4,6 +4,7 @@
 
 .posts .item {
   height: auto !important;
+  display: block;
 }
 
 .posts .item .post-card.flex {

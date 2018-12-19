@@ -4,9 +4,9 @@
     flex-wrap: wrap;
   }
   .clients .item {
-    width: 50% !important;
+    width: calc(50% - 0.5rem) !important;
     display: flex;
-    height: auto;
-    margin: 0;
+    height: 9rem;
+    margin: 0 0 1rem;
   }
 }
