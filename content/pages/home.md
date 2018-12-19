@@ -8,7 +8,7 @@ sectionOpener:
   mobile: >-
     https://ucarecdn.com/2c1b9f47-69bc-4dd2-9e7b-7d2cea0f6a73/-/crop/2058x1452/446,0/-/preview/
   title: content creatives.
-  video: https://theeditsuite.netlify.com/images/home_video.mp4
+  video: 'https://theeditsuite.netlify.com/images/home_video.mp4'
 sectionIntro:
   buttonLink: /about
   buttonText: About Us
@@ -38,3 +38,4 @@ meta:
     internationally.
   title: Video Production Gold Coast and Photography
 ---
+
