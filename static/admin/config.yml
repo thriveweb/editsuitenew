@@ -654,6 +654,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: 'list'
         fields:
           - { label: Image, name: img, widget: image }
+          - { label: Thumbnail, name: thumb, widget: image }
           - { label: Blurb, name: blurb, widget: string }
 
       - label: 'Meta'

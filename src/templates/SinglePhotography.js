@@ -35,7 +35,7 @@ export class SinglePhotographyTemplate extends React.Component {
               >
                 <img
                   className="cover"
-                  src={item.img}
+                  src={item.thumb}
                   alt={title + '-' + index}
                 />
                 {!!item.blurb && <p>{item.blurb}</p>}
@@ -75,6 +75,7 @@ export const pageQuery = graphql`
         excerpt
         imageList {
           img
+          thumb
           blurb
         }
       }
