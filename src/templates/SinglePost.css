@@ -43,6 +43,7 @@
 @media screen and (max-width: 850px) {
   .single-post .opener {
     display: flex;
+    align-items: center;
   }
 
   .single-post .opener .taCenter {
