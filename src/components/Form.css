@@ -35,13 +35,13 @@
   display: block;
   flex-grow: 1;
   box-sizing: border-box;
-  height: 0;
   padding: 2.5rem 2rem !important;
   margin-bottom: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
   border: 0;
   resize: none;
   transition: border-color 0.2s;
+  user-select: text;
 }
 
 .input,
