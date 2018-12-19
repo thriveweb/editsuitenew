@@ -3,7 +3,7 @@ template: ProjectPage
 slug: work
 title: our work
 sectionOpener:
-  byline: 'creative, engaging digital content. '
+  byline: 'creative, engaging digital imagery. '
   image: >-
     https://ucarecdn.com/2a0fec70-7e70-41a9-87f3-dccb92fb3434/-/crop/1210x751/189,0/-/preview/
   mobile: >-
@@ -11,8 +11,8 @@ sectionOpener:
   title: our work.
   video: ''
 sectionProjects:
-  title: things we're good at.
   subtitle: Our specialties
+  title: things we're good at.
 sectionTestimonials:
   subtitle: Testimonials
   title: don't take our word for it
@@ -23,3 +23,4 @@ meta:
     and sports photography
   title: Our Work
 ---
+
