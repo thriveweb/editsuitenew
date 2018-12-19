@@ -2,7 +2,7 @@
 template: SinglePost
 featuredImage: 'https://ucarecdn.com/5b30c371-3d9d-4051-8b60-c12569f5e8e2/'
 title: This is a test post
-date: 2018-12-19T21:21:28.266Z
+date: Dec 20th 18
 status: Published
 ---
 This is a test post.
