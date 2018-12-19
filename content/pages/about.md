@@ -21,29 +21,34 @@ icons:
   twoTitle: Passion
 sectionBlurb:
   content: >-
-    The Edit Suite are a team of videographers, photographers, licensed drone
-    operators and motion graphics designers based on the Gold Coast in
-    Queensland Australia. We take a new school approach to all of the videos we
-    create and are constantly coming up with new and creative ideas in order to
-    create something special for our clients and of course, yours.
+    The Edit Suite are a team of highly inspired videographers, photographers,
+    licensed drone operators and motion graphics designers based on the Gold
+    Coast in Queensland, Australia. We take a new school approach to all of the
+    videos we create and are constantly thinking of new and creative ideas in
+    order to create something special for our clients which of obviously means
+    yours too.
 
 
-    From our studio in Mermaid Beach, we are always adding to our vast array of
-    professional film production and photography gear to stay on top of the best
-    tech and to ensure you are getting the quality you deserve...plus we really
-    love new toys ;)
+    From our studio in [Mermaid
+    Beach](https://www.google.com/maps/place/The+Edit+Suite/@-28.046458,153.43504,15z/data=!4m5!3m4!1s0x0:0xeda10e8c33766cf7!8m2!3d-28.046458!4d153.43504),
+    we are always adding to our vast array of professional film production and
+    photography gear to stay on top of the best tech and to ensure you are
+    getting the quality you deserve...plus we really love new toys ;)
 
 
-    Our professional video and photography equipment includes a RED Gemini 5K
-    digital cinema camera a Canon 1DX mkII - the flagship stills camera, as well
-    as a DJI Inspire 2 Drone capable of shooting 5.2K raw footage as well as
-    producing stunning high res photos!
+    Our professional video and photography equipment includes the all new [RED
+    Gemini 5K digital cinema
+    camera](https://www.red.com/news/red-introduces-the-new-5k-s35-gemini-sensor-for-red-epic-w)
+    a [Canon 1DX mkII - the flagship stills
+    camera](https://www.canon.com.au/cameras/eos-1d-x-mark-ii), as well as a
+    [DJI Inspire 2 Drone](https://www.dji.com/inspire-2) capable of shooting
+    5.2K raw footage as well as producing stunning high res photos!
 
 
     We have a large variety of professional lenses, professional gimbals for
-    silky smooth movement, motion control timelapse equipment, professional
-    audio and lighting equipment, battery powered outdoor studio flashes and
-    much more.
+    silky smooth movement, motion control time-lapse equipment, professional
+    audio and lighting equipment, battery high powered outdoor studio flashes
+    and of course, really talented humans to make the amazing content!
 
 
     Let us show you how your next video or photography project can be something
