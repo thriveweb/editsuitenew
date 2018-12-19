@@ -684,7 +684,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: true
     folder: 'content/posts'
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     create: true
     fields:
       - label: 'Template'
@@ -694,7 +694,7 @@ collections: # A list of collections the CMS should be able to edit
 
       - { label: Featured Image, name: featuredImage, widget: image }
       - { label: Title, name: title, widget: string }
-      - { label: Date / Order, name: date, widget: date }
+      - { label: Date, name: date, widget: date, format: MMM Do YY }
 
       - {
           label: Status,
