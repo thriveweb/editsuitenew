@@ -2,6 +2,7 @@
 template: SinglePhotography
 preview: 'https://ucarecdn.com/9d6ae12c-bdb4-44b8-bbd1-c8b792280ef3~11/nth/0/'
 title: Products
+excerpt: ''
 imageList:
   - img: 'https://ucarecdn.com/9d6ae12c-bdb4-44b8-bbd1-c8b792280ef3~11/nth/0/'
     blurb: ''

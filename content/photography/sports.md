@@ -2,6 +2,7 @@
 template: SinglePhotography
 preview: 'https://ucarecdn.com/1ca77a76-0669-49ce-9083-c96c3aa7f54f/'
 title: Sports
+excerpt: ''
 imageList:
   - img: 'https://ucarecdn.com/b7e08b5f-3a77-4077-bd70-8a6915834779~18/nth/6/'
     blurb: ''

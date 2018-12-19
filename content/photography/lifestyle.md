@@ -2,6 +2,7 @@
 template: SinglePhotography
 preview: 'https://ucarecdn.com/826dcd29-5aa4-4e3b-b1dd-e9f4d5bb32a6/'
 title: Portrait & Lifestyle
+excerpt: ''
 imageList:
   - blurb: A shoot used for print media at Pacific Fair.
     img: 'https://ucarecdn.com/826dcd29-5aa4-4e3b-b1dd-e9f4d5bb32a6/'
@@ -53,4 +54,3 @@ meta:
     perfect natural light to shoot our portrait and lifestyle shots.
   title: Portrait & Lifestyle
 ---
-

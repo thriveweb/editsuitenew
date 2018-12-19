@@ -6,7 +6,7 @@ import './SinglePhotography.css'
 
 export class SinglePhotographyTemplate extends React.Component {
   render() {
-    const { title, imageList } = this.props
+    const { title, excerpt, imageList } = this.props
     var defaults = {
       buttons: ['close'],
       arrows: false
@@ -17,6 +17,7 @@ export class SinglePhotographyTemplate extends React.Component {
         <div className="wide">
           <div className="taCenter">
             <h1>{title}</h1>
+            <h3>{excerpt}</h3>
           </div>
 
           <Link className="back" to="/project-categories/photography">
@@ -71,6 +72,7 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
+        excerpt
         imageList {
           img
           blurb
