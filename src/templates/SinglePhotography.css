@@ -11,11 +11,11 @@
 }
 
 .photography-single .wide .item {
-  height: 21rem;
+  height: 35rem;
 }
 
 .photography-single .wide .item img {
-  height: 18rem;
+  height: 30rem;
   margin-bottom: 0.5rem;
   align-self: flex-start;
 }
