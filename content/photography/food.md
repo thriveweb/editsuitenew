@@ -1,7 +1,7 @@
 ---
 template: SinglePhotography
 preview: 'https://ucarecdn.com/2201d328-a036-4c50-93e3-395b21156af1~10/nth/6/'
-title: Food Porn
+title: Food
 imageList:
   - blurb: A dish from Aria on Eagle St Pier in Brisbane.
     img: 'https://ucarecdn.com/2201d328-a036-4c50-93e3-395b21156af1~10/nth/0/'
