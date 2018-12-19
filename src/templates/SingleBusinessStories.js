@@ -14,15 +14,6 @@ export const SingleBusinessStoriesTemplate = ({
   isCategory,
   category
 }) => {
-  const currentCategory = category
-  let slug = ''
-
-  for (let cat in projectCategories) {
-    if (projectCategories[cat].frontmatter.title === currentCategory) {
-      slug = projectCategories[cat].fields.slug
-    }
-  }
-
   return (
     <div className="project-single">
       <section className="full">
