@@ -7,7 +7,7 @@ sectionOpener:
   byline: technical wizardry
   image: ''
   mobile: 'https://ucarecdn.com/7e939f4a-2445-4ec6-9dff-660bcb8814e4/'
-  video: https://theeditsuite.netlify.com/images/motion_video.mp4'
+  video: https://theeditsuite.netlify.com/images/motion_video.mp4
 meta:
   description: >-
     Using motion graphics and explainer videos are a very powerful way to convey
