@@ -7,17 +7,6 @@
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 750px) {
-  .form .flex {
-    display: block;
-  }
-
-  .form .flex,
-  .label {
-    width: 100% !important;
-  }
-}
-
 .form > * + * {
   margin-top: 2rem;
 }
@@ -48,7 +37,7 @@
   flex-grow: 1;
   box-sizing: border-box;
   height: 0;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 2rem !important;
   margin-bottom: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
   border: 0;
@@ -93,4 +82,15 @@
 
 .input-honey {
   display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .form .flex {
+    display: block;
+  }
+
+  .form .flex,
+  .label {
+    width: 100% !important;
+  }
 }

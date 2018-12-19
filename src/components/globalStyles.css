@@ -575,6 +575,10 @@ a.back:before {
     width: 100%;
     margin: 0 0 2rem 0;
   }
+
+  .Content {
+    text-align: center;
+  }
 }
 
 @media screen and (max-height: 670px), screen and (max-width: 900px) {

@@ -3,10 +3,15 @@
     display: flex;
     flex-wrap: wrap;
   }
+
   .clients .item {
     width: calc(50% - 0.5rem) !important;
     display: flex;
-    height: 9rem;
+    height: 25vw;
     margin: 0 0 1rem;
+  }
+
+  .clients .item:nth-child(8n) {
+    display: none;
   }
 }
