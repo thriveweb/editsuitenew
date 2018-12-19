@@ -54,7 +54,7 @@ sectionBlurb:
   title: more than just a pretty face
 sectionClients:
   subtitle: 'Our Clients '
-  title: Who we work with
+  title: who we've worked with.
 sectionTestimonials:
   subtitle: Testimonials
   title: Don't take our word for it
