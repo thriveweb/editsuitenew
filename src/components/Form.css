@@ -42,7 +42,7 @@
 .textarea {
   background: none;
   line-height: 0 !important;
-  line-height: 1.25em;
+  line-height: 100%;
   display: block;
   flex-grow: 1;
   box-sizing: border-box;
