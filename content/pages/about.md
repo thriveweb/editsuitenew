@@ -57,7 +57,7 @@ sectionClients:
   title: who we've worked with.
 sectionTestimonials:
   subtitle: Testimonials
-  title: Don't take our word for it
+  title: don't take our word for it
 meta:
   description: Gold Coast Video Production and Photography Services
   title: Video Production and Photography Gold Coast
