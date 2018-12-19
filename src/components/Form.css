@@ -40,6 +40,7 @@
 .input,
 .select,
 .textarea {
+  appearance: none;
   background: none;
   line-height: 0 !important;
   line-height: 100%;
@@ -62,7 +63,6 @@
   color: white;
   font-weight: 100;
   text-transform: none;
-  margin: 0;
 }
 
 :focus {
