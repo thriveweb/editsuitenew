@@ -22,12 +22,27 @@
   stroke-linejoin: miter;
   stroke-width: 2; /* changeable */
   stroke-miterlimit: 4;
-
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
+}
+
+.section.active .icon svg {
   animation: icon;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.section.active .icon.one svg {
+  animation-delay: 0.5s;
+}
+
+.section.active .icon.two svg {
+  animation-delay: 1.5s;
+}
+
+.section.active .icon.three svg {
+  animation-delay: 2.5s;
 }
 
 @keyframes icon {
@@ -35,12 +50,8 @@
     stroke-dashoffset: 200;
   }
 
-  50% {
-    stroke-dashoffset: 0%;
-  }
-
   100% {
-    stroke-dashoffset: 200;
+    stroke-dashoffset: 0;
   }
 }
 
