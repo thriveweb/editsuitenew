@@ -27,26 +27,24 @@ export const SinglePostTemplate = ({
       </div>
     )}
 
-    {!!body && (
-      <div className="thin thick">
-        <Content src={body} />
+    <div className="thin thick">
+      <Content src={body} />
 
-        <div className="pagination">
-          {prevPostURL && (
-            <Link className="button prev" to={prevPostURL}>
-              Previous
-            </Link>
-          )}
-          {nextPostURL && (
-            <Link className="button next" to={nextPostURL}>
-              Next
-            </Link>
-          )}
+      <div className="pagination">
+        {prevPostURL && (
+          <Link className="button prev" to={prevPostURL}>
+            Previous
+          </Link>
+        )}
+        {nextPostURL && (
+          <Link className="button next" to={nextPostURL}>
+            Next
+          </Link>
+        )}
 
-          <div className="clear" />
-        </div>
+        <div className="clear" />
       </div>
-    )}
+    </div>
   </div>
 )
 
