@@ -45,7 +45,7 @@ export const SingleMotionGraphicsTemplate = ({
 
           {!!tags && <h5>tags: {tags}</h5>}
 
-          <Link className="back" to={slug}>
+          <Link className="back" to="/project-categories/motion-graphics">
             Back to all
           </Link>
         </div>

@@ -19,7 +19,7 @@ export class SinglePhotographyTemplate extends React.Component {
             <h1>{title}</h1>
           </div>
 
-          <Link className="back" to="/project-categories/photography/#two">
+          <Link className="back" to="/project-categories/photography">
             Back to all
           </Link>
 

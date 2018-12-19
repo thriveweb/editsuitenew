@@ -45,7 +45,7 @@ export const SingleEventsTemplate = ({
 
           {!!tags && <h5>tags: {tags}</h5>}
 
-          <Link className="back" to={slug}>
+          <Link className="back" to="/project-categories/events">
             Back to all
           </Link>
         </div>
