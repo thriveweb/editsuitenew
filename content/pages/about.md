@@ -23,10 +23,14 @@ sectionBlurb:
   content: >-
     The Edit Suite are a team of highly inspired videographers, photographers,
     licensed drone operators and motion graphics designers based on the Gold
-    Coast in Queensland, Australia. We take a new school approach to all of the
-    videos we create and are constantly thinking of new and creative ideas in
-    order to create something special for our clients which of obviously means
-    yours too.
+    Coast in Queensland, Australia. We have a new school approach to all of our
+    projects and always discover contemporary creative ideas in order to produce
+    something special for our clients, which means yours too. We know coming up
+    with a video marketing or digital strategy can be a very exciting experience
+    but it can also be daunting. That's why we get as much detail about your
+    project as we can, we research your brand and we get to know it. After all,
+    we want you to get a maximum return on investment because it makes everyone
+    look good!!!
 
 
     From our studio in [Mermaid
