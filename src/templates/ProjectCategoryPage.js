@@ -38,7 +38,7 @@ export const ProjectCategoryPageTemplate = ({
 
   return (
     <div className="project">
-      <div className="full">
+      <div className="section">
         <a className="arrow-down" href="#two">
           {''}
         </a>

@@ -588,9 +588,11 @@ a.back:before {
   }
 
   .section.fp-section.fp-table:first-of-type,
-  .section.fp-section.fp-table:first-of-type .fp-tableCell {
+  .section.fp-section.fp-table:first-of-type .fp-tableCell,
+  .full {
     height: 100vh !important;
     padding: 0;
+    overflow: hidden !important;
   }
 
   .section.fp-section.fp-table,
