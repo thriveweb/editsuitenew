@@ -63,6 +63,10 @@
     display: none;
   }
 
+  .gradient {
+    height: 100%;
+  }
+
   .mobile.opener {
     display: flex !important;
   }
