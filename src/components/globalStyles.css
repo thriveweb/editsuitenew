@@ -579,7 +579,7 @@ a.back:before {
 
 @media screen and (max-height: 670px), screen and (max-width: 900px) {
   .opener {
-    padding-bottom: 5rem;
+    /* padding-bottom: 5rem; */
   }
 
   .arrow-down,
