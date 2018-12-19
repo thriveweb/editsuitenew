@@ -10,7 +10,11 @@ const ContactInfo = ({ contact }) => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image className="cover" src="/images/map.jpg" />
+        <Image
+          className="cover"
+          src="/images/map.jpg"
+          alt="Find The Edit Suite"
+        />
       </a>
     </div>
     {!!contact && (

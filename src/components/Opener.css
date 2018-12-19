@@ -9,7 +9,7 @@
 
 .open {
   position: absolute;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .open h3 {
@@ -24,10 +24,10 @@
 .gradient {
   width: 100%;
   height: 80%;
-  background: linear-gradient(transparent, var(--medium));
+  background: linear-gradient(transparent 60%, var(--medium));
   position: absolute;
   bottom: -5px;
-  z-index: 100;
+  z-index: 0;
 }
 
 .opener.video {
@@ -36,7 +36,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
   pointer-events: none;
   overflow: hidden;
 }
@@ -45,12 +44,13 @@
 .opener.video video {
   width: 100vw;
   height: 56vw;
-  min-height: 99vh;
+  min-height: 100vh;
   min-width: 177.77vh;
   position: absolute;
   z-index: -99;
-  top: calc(50% - 1vh);
+  top: 50%;
   left: 50%;
+  opacity: 0.8;
   transform: translate(-50%, -50%);
 }
 

@@ -14,7 +14,7 @@ export const BlogIndexTemplate = ({
   contentType
 }) => (
   <div>
-    <div className="full">
+    <div className="section">
       <a className="arrow-down" href="#two">
         {''}
       </a>

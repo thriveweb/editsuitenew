@@ -578,18 +578,13 @@ a.back:before {
 }
 
 @media screen and (max-height: 670px), screen and (max-width: 900px) {
-  .opener {
-    /* padding-bottom: 5rem; */
-  }
-
   .arrow-down,
   .arrow-up {
     display: none !important;
   }
 
   .section.fp-section.fp-table:first-of-type,
-  .section.fp-section.fp-table:first-of-type .fp-tableCell,
-  .full {
+  .section.fp-section.fp-table:first-of-type .fp-tableCell {
     height: 100vh !important;
     padding: 0;
     overflow: hidden !important;
