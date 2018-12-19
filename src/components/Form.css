@@ -62,6 +62,7 @@
   color: white;
   font-weight: 100;
   text-transform: none;
+  margin: 0;
 }
 
 :focus {
