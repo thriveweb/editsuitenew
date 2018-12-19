@@ -7,7 +7,7 @@ sectionOpener:
   byline: inspiring people
   image: ''
   mobile: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
-  video: '306315065'
+  video: https://theeditsuite.netlify.com/images/business_video.mp4
 meta:
   description: >-
     Using narrative in video is very powerful. You can show that your business
@@ -15,4 +15,3 @@ meta:
     you want your viewer to know. We love telling your stories.
   title: Business Stories
 ---
-
