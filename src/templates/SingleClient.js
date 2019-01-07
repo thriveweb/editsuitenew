@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
+import ProjectSection from '../components/ProjectSection'
 import './SingleProject.css'
 
 export const SingleClientTemplate = ({
@@ -9,10 +10,7 @@ export const SingleClientTemplate = ({
   excerpt,
   video,
   tags,
-  projects = [],
-  projectCategories = [],
-  isCategory,
-  category
+  items
 }) => {
   return (
     <div className="project-single">
@@ -23,20 +21,13 @@ export const SingleClientTemplate = ({
             <p>{excerpt}</p>
           </div>
 
-          {!!video && (
-            <div className="video">
-              <iframe
-                title={title}
-                src={`https://player.vimeo.com/video/${video}`}
-                frameBorder="0"
-                allowFullScreen
-              />
+          <div id="two" className="thick">
+            <div className="wide">
+              {!!items && <ProjectSection projects={items} />}
             </div>
-          )}
+          </div>
 
-          {!!tags && <h5>tags: {tags}</h5>}
-
-          <Link className="back" to="/project-categories/drone-aerials">
+          <Link className="back" to="/">
             Back to all
           </Link>
         </div>
@@ -45,16 +36,40 @@ export const SingleClientTemplate = ({
   )
 }
 
+const fiterData = (filterArr, data) => {
+  let items = [],
+    filters = []
+
+  if (filterArr.length) {
+    for (let i in filterArr) {
+      filters.push(filterArr[i].link)
+    }
+
+    for (let i in data) {
+      if (filters.includes(data[i].node.fields.slug)) {
+        items.push({
+          ...data[i].node.fields,
+          ...data[i].node.frontmatter
+        })
+      }
+    }
+  }
+
+  return items
+}
+
 const SingleClient = ({ data: { client, data } }) => {
+  console.log(client)
+  const items = fiterData(client.frontmatter.items, data.edges)
   return (
     <Layout
       meta={client.frontmatter.meta || false}
       title={client.frontmatter.title || false}
     >
-      {console.log(data)}
       <SingleClientTemplate
         {...client}
         {...client.frontmatter}
+        items={items}
         body={client.html}
       />
     </Layout>
