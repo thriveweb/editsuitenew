@@ -361,6 +361,7 @@ h5,
   animation-name: down;
   animation-duration: 1.3s;
   animation-iteration-count: infinite;
+  z-index: 10001;
 }
 
 .arrow-down:after {
