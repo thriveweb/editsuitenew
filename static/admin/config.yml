@@ -742,6 +742,49 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Logo, name: logo, widget: image }
       - { label: Link, name: link, widget: string }
 
+  - name: clients
+    label: Clients
+    editor:
+      preview: true
+    folder: content/clients
+    slug: '{{slug}}'
+    create: true
+    fields:
+      - label: 'Template'
+        name: 'template'
+        widget: 'hidden'
+        default: 'SingleClient'
+
+      - { label: Title, name: title, widget: string }
+      - { label: Logo, name: logo, widget: image }
+      - { label: Excerpt, name: excerpt, widget: text }
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - { label: Link, name: link, widget: string }
+
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+              pattern: ['.{,300}', 'Must not exceed 300 characters'],
+            }
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+
   # Testimonials
 
   - name: testimonials
