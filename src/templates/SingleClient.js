@@ -45,23 +45,17 @@ export const SingleClientTemplate = ({
   )
 }
 
-const SingleClient = ({
-  data: { project, allProjects, projectCategories }
-}) => {
+const SingleClient = ({ data: { client, data } }) => {
   return (
     <Layout
-      meta={project.frontmatter.meta || false}
-      title={project.frontmatter.title || false}
+      meta={client.frontmatter.meta || false}
+      title={client.frontmatter.title || false}
     >
+      {console.log(data)}
       <SingleClientTemplate
-        {...project}
-        {...project.frontmatter}
-        body={project.html}
-        projectCategories={projectCategories.edges.map(post => ({
-          ...post.node,
-          ...post.node.frontmatter,
-          ...post.node.fields
-        }))}
+        {...client}
+        {...client.frontmatter}
+        body={client.html}
       />
     </Layout>
   )
@@ -71,31 +65,45 @@ export default SingleClient
 
 export const pageQuery = graphql`
   query SingleClient($id: String!) {
-    project: markdownRemark(id: { eq: $id }) {
+    client: markdownRemark(id: { eq: $id }) {
       ...Meta
       html
       id
       frontmatter {
         title
         excerpt
-        links {
+        items {
           link
         }
       }
     }
 
-    projectCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "projectCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
+    data: allMarkdownRemark(
+      filter: {
+        fields: {
+          contentType: {
+            in: [
+              "events"
+              "droneAerials"
+              "motionGraphics"
+              "businessStories"
+              "promos"
+              "photography"
+              "posts"
+            ]
+          }
+        }
+      }
     ) {
       edges {
         node {
           fields {
             slug
+            contentType
           }
           frontmatter {
-            slug
-            title
+            preview
+            featuredImage
           }
         }
       }
