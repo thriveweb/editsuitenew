@@ -4,7 +4,7 @@ import './Opener.css'
 
 const OpenerVideo = ({ src, title }) => (
   <div className="opener video">
-    <video data-keepplaying autoplay loop playsinline muted>
+    <video autoplay loop muted playsinline>
       <source src={src} type="video/mp4" />
     </video>
   </div>
