@@ -59,15 +59,15 @@
 }
 
 @media screen and (max-width: 850px) {
-  .opener {
+  /* .opener {
     display: none;
-  }
+  } */
 
   .gradient {
     height: 100%;
   }
 
-  .mobile.opener {
+  /* .mobile.opener {
     display: flex !important;
-  }
+  } */
 }
