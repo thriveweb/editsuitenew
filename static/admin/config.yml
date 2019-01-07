@@ -733,18 +733,6 @@ collections: # A list of collections the CMS should be able to edit
   - name: clients
     label: Clients
     editor:
-      preview: false
-    folder: content/clients
-    slug: '{{slug}}'
-    create: true
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Logo, name: logo, widget: image }
-      - { label: Link, name: link, widget: string }
-
-  - name: clients
-    label: Clients
-    editor:
       preview: true
     folder: content/clients
     slug: '{{slug}}'
