@@ -10,7 +10,7 @@ const OpenerVideo = ({ src, title }) => (
       loop
       muted
       playsInline
-      poster="/images/test-poster.png"
+      poster="images/test-porter.png"
     >
       <source src="/images/test.mp4" type="video/mp4" />
     </video>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import ReactFullpage from '@fullpage/react-fullpage'
 
 import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
@@ -17,69 +16,43 @@ export const PhotographyPageTemplate = ({
   contentType,
   slug
 }) => {
-  let options = {
-    licenceKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    anchors: ['one', 'two', 'three', 'four', 'five'],
-    responsiveWidth: 900,
-    verticalAlign: true,
-    navigation: false,
-    lockAnchors: true
-  }
-
   return (
-    <ReactFullpage
-      {...options}
-      render={({ state, fullpageApi }) => {
-        return (
-          <div>
-            <ReactFullpage.Wrapper>
-              <div className="section">
-                <div
-                  className="arrow-down"
-                  onClick={() => fullpageApi.moveSectionDown()}
-                />
-                {!!title && (
-                  <div className="full open">
-                    <div className="taCenter">
-                      <h1>{title}</h1>
-                      {!!sectionOpener.byline && (
-                        <h3>{sectionOpener.byline}</h3>
-                      )}
-                    </div>
-                  </div>
-                )}
-                <div className="gradient" />
-                {!!sectionOpener.video && (
-                  <OpenerVideo src={sectionOpener.video} alt={title} />
-                )}
-                {!!sectionOpener.image && (
-                  <OpenerImage src={sectionOpener.image} alt={title} />
-                )}
-                {!!sectionOpener.mobile && (
-                  <OpenerMobile src={sectionOpener.mobile} alt={title} />
-                )}
-              </div>
-
-              {!!photography && (
-                <div className="section">
-                  <div
-                    className="arrow-up"
-                    onClick={() => fullpageApi.moveSectionUp()}
-                  />
-                  <div className="wide">
-                    <Link className="back" to="/work#two/">
-                      Back to all
-                    </Link>
-
-                    <ProjectCategories categories={photography} />
-                  </div>
-                </div>
-              )}
-            </ReactFullpage.Wrapper>
+    <div>
+      <div className="section">
+        <div className="arrow-down" />
+        {!!title && (
+          <div className="full open">
+            <div className="taCenter">
+              <h1>{title}</h1>
+              {!!sectionOpener.byline && <h3>{sectionOpener.byline}</h3>}
+            </div>
           </div>
-        )
-      }}
-    />
+        )}
+        <div className="gradient" />
+        {!!sectionOpener.video && (
+          <OpenerVideo src={sectionOpener.video} alt={title} />
+        )}
+        {!!sectionOpener.image && (
+          <OpenerImage src={sectionOpener.image} alt={title} />
+        )}
+        {!!sectionOpener.mobile && (
+          <OpenerMobile src={sectionOpener.mobile} alt={title} />
+        )}
+      </div>
+
+      {!!photography && (
+        <div className="section">
+          <div className="arrow-up" />
+          <div className="wide">
+            <Link className="back" to="/work#two/">
+              Back to all
+            </Link>
+
+            <ProjectCategories categories={photography} />
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 

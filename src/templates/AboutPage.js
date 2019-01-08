@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import ReactFullpage from '@fullpage/react-fullpage'
 
 import Layout from '../components/Layout'
 import Image from '../components/Image'
@@ -24,130 +23,81 @@ export const AboutPageTemplate = ({
   testimonials,
   isPreview
 }) => {
-  let options = {
-    licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    anchors: ['one', 'two', 'three', 'four', 'five'],
-    responsiveWidth: 900,
-    verticalAlign: true,
-    navigation: false,
-    lockAnchors: true
-  }
-
   return (
-    <ReactFullpage
-      {...options}
-      render={({ state, fullpageApi }) => {
-        return (
-          <div>
-            <ReactFullpage.Wrapper>
-              <div className="section">
-                <div
-                  className="arrow-down"
-                  onClick={() => fullpageApi.moveSectionDown()}
-                />
-                {!!sectionOpener.title && (
-                  <div className="full open">
-                    <div className="taCenter">
-                      <h1>{sectionOpener.title}</h1>
-                      {!!sectionOpener.byline && (
-                        <h3>{sectionOpener.byline}</h3>
-                      )}
-                    </div>
-                  </div>
-                )}
-                <div className="gradient" />
-                {!!sectionOpener.video && (
-                  <OpenerVideo src={sectionOpener.video} alt={title} />
-                )}
-                {!!sectionOpener.image && (
-                  <OpenerImage src={sectionOpener.image} alt={title} />
-                )}
-                {!!sectionOpener.mobile && (
-                  <OpenerMobile src={sectionOpener.mobile} alt={title} />
-                )}
-              </div>
-
-              <div className="section">
-                <div
-                  className="arrow-down"
-                  onClick={() => fullpageApi.moveSectionDown()}
-                />
-                <div
-                  className="arrow-up"
-                  onClick={() => fullpageApi.moveSectionUp()}
-                />
-                <Icons icons={icons} />
-              </div>
-
-              {!!sectionBlurb && (
-                <div className="section dark">
-                  <div
-                    className="arrow-down"
-                    onClick={() => fullpageApi.moveSectionDown()}
-                  />
-                  <div
-                    className="arrow-up"
-                    onClick={() => fullpageApi.moveSectionUp()}
-                  />
-                  <div className="wide">
-                    <SectionTitle
-                      title={sectionBlurb.title}
-                      subtitle={sectionBlurb.subtitle}
-                    />
-                    <div className="flex half">
-                      <div>
-                        <Image
-                          src={sectionBlurb.image}
-                          alt={title}
-                          className="cover"
-                        />
-                      </div>
-                      <Content src={sectionBlurb.content} />
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {!isPreview && sectionClients && (
-                <div className="section light">
-                  <div
-                    className="arrow-down"
-                    onClick={() => fullpageApi.moveSectionDown()}
-                  />
-                  <div
-                    className="arrow-up"
-                    onClick={() => fullpageApi.moveSectionUp()}
-                  />
-                  <div className="wide">
-                    <SectionTitle
-                      title={sectionClients.title}
-                      subtitle={sectionClients.subtitle}
-                    />
-                    <ClientsSection clients={clients} />
-                  </div>
-                </div>
-              )}
-
-              {!isPreview && sectionTestimonials && (
-                <div className="section">
-                  <div
-                    className="arrow-up"
-                    onClick={() => fullpageApi.moveSectionUp()}
-                  />
-                  <div className="thin">
-                    <SectionTitle
-                      title={sectionTestimonials.title}
-                      subtitle={sectionTestimonials.subtitle}
-                    />
-                    <Testimonials testimonials={testimonials} />
-                  </div>
-                </div>
-              )}
-            </ReactFullpage.Wrapper>
+    <div>
+      <div className="section">
+        <div className="arrow-down" />
+        {!!sectionOpener.title && (
+          <div className="full open">
+            <div className="taCenter">
+              <h1>{sectionOpener.title}</h1>
+              {!!sectionOpener.byline && <h3>{sectionOpener.byline}</h3>}
+            </div>
           </div>
-        )
-      }}
-    />
+        )}
+        <div className="gradient" />
+        {!!sectionOpener.video && (
+          <OpenerVideo src={sectionOpener.video} alt={title} />
+        )}
+        {!!sectionOpener.image && (
+          <OpenerImage src={sectionOpener.image} alt={title} />
+        )}
+        {!!sectionOpener.mobile && (
+          <OpenerMobile src={sectionOpener.mobile} alt={title} />
+        )}
+      </div>
+
+      <div className="section">
+        <div className="arrow-down" />
+        <Icons icons={icons} />
+      </div>
+
+      {!!sectionBlurb && (
+        <div className="section dark">
+          <div className="arrow-down" />
+          <div className="arrow-up" />
+          <div className="wide">
+            <SectionTitle
+              title={sectionBlurb.title}
+              subtitle={sectionBlurb.subtitle}
+            />
+            <div className="flex half">
+              <div>
+                <Image src={sectionBlurb.image} alt={title} className="cover" />
+              </div>
+              <Content src={sectionBlurb.content} />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {!isPreview && sectionClients && (
+        <div className="section light">
+          <div className="arrow-down" />
+          <div className="arrow-up" />
+          <div className="wide">
+            <SectionTitle
+              title={sectionClients.title}
+              subtitle={sectionClients.subtitle}
+            />
+            <ClientsSection clients={clients} />
+          </div>
+        </div>
+      )}
+
+      {!isPreview && sectionTestimonials && (
+        <div className="section">
+          <div className="arrow-up" />
+          <div className="thin">
+            <SectionTitle
+              title={sectionTestimonials.title}
+              subtitle={sectionTestimonials.subtitle}
+            />
+            <Testimonials testimonials={testimonials} />
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 
