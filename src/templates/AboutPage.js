@@ -25,8 +25,10 @@ export const AboutPageTemplate = ({
 }) => {
   return (
     <div>
-      <div className="section">
-        <div className="arrow-down" />
+      <div className="section" id="promo">
+        <a href="#us" className="arrow-down">
+          {''}
+        </a>
         {!!sectionOpener.title && (
           <div className="full open">
             <div className="taCenter">
@@ -47,15 +49,24 @@ export const AboutPageTemplate = ({
         )}
       </div>
 
-      <div className="section">
-        <div className="arrow-down" />
+      <div className="section" id="us">
+        <a href="#about" className="arrow-down">
+          {''}
+        </a>
+        <a href="#promo" className="arrow-up">
+          {''}
+        </a>
         <Icons icons={icons} />
       </div>
 
       {!!sectionBlurb && (
-        <div className="section dark">
-          <div className="arrow-down" />
-          <div className="arrow-up" />
+        <div className="section dark" id="about">
+          <a href="#clients" className="arrow-down">
+            {''}
+          </a>
+          <a href="#us" className="arrow-up">
+            {''}
+          </a>
           <div className="wide">
             <SectionTitle
               title={sectionBlurb.title}
@@ -72,9 +83,13 @@ export const AboutPageTemplate = ({
       )}
 
       {!isPreview && sectionClients && (
-        <div className="section light">
-          <div className="arrow-down" />
-          <div className="arrow-up" />
+        <div className="section light" id="clients">
+          <a href="#testimonials" className="arrow-down">
+            {''}
+          </a>
+          <a href="#about" className="arrow-up">
+            {''}
+          </a>
           <div className="wide">
             <SectionTitle
               title={sectionClients.title}
@@ -86,8 +101,10 @@ export const AboutPageTemplate = ({
       )}
 
       {!isPreview && sectionTestimonials && (
-        <div className="section">
-          <div className="arrow-up" />
+        <div className="section" id="testimonials">
+          <a href="#clients" className="arrow-up">
+            {''}
+          </a>
           <div className="thin">
             <SectionTitle
               title={sectionTestimonials.title}

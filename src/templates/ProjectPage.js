@@ -20,8 +20,10 @@ export const ProjectPageTemplate = ({
 }) => {
   return (
     <div>
-      <div className="section">
-        <div className="arrow-down" />
+      <div className="section" id="promo">
+        <a href="#specialities" className="arrow-down">
+          {''}
+        </a>
         {!!sectionOpener.title && (
           <div className="full open">
             <div className="taCenter">
@@ -43,9 +45,13 @@ export const ProjectPageTemplate = ({
       </div>
 
       {!!projectCategories && (
-        <div className="section">
-          <div className="arrow-down" />
-          <div className="arrow-up" />
+        <div className="section" id="specialities">
+          <a href="#testimonials" className="arrow-down">
+            {''}
+          </a>
+          <a href="#promo" className="arrow-up">
+            {''}
+          </a>
           <div className="wide">
             <SectionTitle
               title={sectionProjects.title}
@@ -57,8 +63,10 @@ export const ProjectPageTemplate = ({
       )}
 
       {!!sectionTestimonials && (
-        <div className="section">
-          <div className="arrow-up" />
+        <div className="section" id="testimonials">
+          <a href="#specialities" className="arrow-up">
+            {''}
+          </a>
           <div className="thin">
             <SectionTitle
               title={sectionTestimonials.title}

@@ -26,8 +26,10 @@ export const HomePageTemplate = ({
 }) => {
   return (
     <div>
-      <div className="section">
-        <div className="arrow-down" />
+      <div className="section" id="promo">
+        <a href="#about" className="arrow-down">
+          {''}
+        </a>
         {!!sectionOpener.title && (
           <div className="full open">
             <div className="taCenter">
@@ -49,9 +51,13 @@ export const HomePageTemplate = ({
       </div>
 
       {!!sectionIntro && (
-        <div className="section">
-          <div className="arrow-down" />
-          <div className="arrow-up" />
+        <div className="section" id="about">
+          <a href="#specialities" className="arrow-down">
+            {''}
+          </a>
+          <a href="#promo" className="arrow-up">
+            {''}
+          </a>
           <div className="thin flex">
             <SectionTitle
               title={sectionIntro.title}
@@ -68,9 +74,13 @@ export const HomePageTemplate = ({
       )}
 
       {!!sectionProjects && (
-        <div className="section dark">
-          <div className="arrow-down" />
-          <div className="arrow-up" />
+        <div className="section dark" id="specialities">
+          <a href="#collaborations" className="arrow-down">
+            {''}
+          </a>
+          <a href="#about" className="arrow-up">
+            {''}
+          </a>
           <div className="wide">
             <SectionTitle
               title={sectionProjects.title}
@@ -84,9 +94,13 @@ export const HomePageTemplate = ({
       )}
 
       {!!sectionClients && (
-        <div className="section light">
-          <div className="arrow-down" />
-          <div className="arrow-up" />
+        <div className="section light" id="collaborations">
+          <a href="#testimonials" className="arrow-down">
+            {''}
+          </a>
+          <a href="#specialities" className="arrow-up">
+            {''}
+          </a>
           <div className="wide">
             <SectionTitle
               title={sectionClients.title}
@@ -98,9 +112,13 @@ export const HomePageTemplate = ({
       )}
 
       {!!sectionTestimonials && (
-        <div className="section">
-          <div className="arrow-down" />
-          <div className="arrow-up" />
+        <div className="section" id="testimonials">
+          <a href="#contact" className="arrow-down">
+            {''}
+          </a>
+          <a href="#collaborations" className="arrow-up">
+            {''}
+          </a>
           <div className="thin">
             <SectionTitle
               title={sectionTestimonials.title}
@@ -112,8 +130,10 @@ export const HomePageTemplate = ({
       )}
 
       {!!sectionContact && (
-        <div className="section dark">
-          <div className="arrow-up" />
+        <div className="section dark" id="contact">
+          <a href="#testimonials" className="arrow-up">
+            {''}
+          </a>
           <div className="wide">
             <SectionTitle
               title={sectionContact.title}
