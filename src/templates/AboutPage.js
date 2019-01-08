@@ -129,7 +129,8 @@ const AboutPage = ({ data: { page, clients, testimonials } }) => (
       body={page.html}
       clients={clients.edges.map(item => ({
         ...item.node,
-        ...item.node.frontmatter
+        ...item.node.frontmatter,
+        ...item.node.fields
       }))}
       testimonials={testimonials.edges.map(item => ({
         ...item.node,
