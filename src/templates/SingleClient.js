@@ -3,21 +3,17 @@ import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import ProjectSection from '../components/ProjectSection'
+import Image from '../components/Image'
 import './SingleProject.css'
 
-export const SingleClientTemplate = ({
-  title,
-  excerpt,
-  video,
-  tags,
-  items
-}) => {
+export const SingleClientTemplate = ({ title, excerpt, logo, items }) => {
   return (
     <div className="project-single">
       <section className="full">
         <div className="thin">
           <div className="taCenter">
             <h1>{title}</h1>
+            <Image className="cover" src={logo} alt={title} />
             <p>{excerpt}</p>
           </div>
 
@@ -87,6 +83,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         excerpt
+        logo
         items {
           link
         }
