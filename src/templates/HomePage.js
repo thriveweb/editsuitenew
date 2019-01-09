@@ -24,6 +24,7 @@ export class HomePageTemplate extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('wheel', this.handleScroll)
+    window.onwheel = window.onmousewheel = document.onmousewheel = null
   }
 
   preventDefault = e => {
