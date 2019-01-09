@@ -30,7 +30,7 @@ export const ProjectCategoryPageTemplate = ({
     categorySelector = droneAerials
   } else if ('/project-categories/events/' === slug) {
     categorySelector = events
-  } else if ('/project-categories/promos-and-tvcs/' === slug) {
+  } else if ('/project-categories/promos-and-commercials/' === slug) {
     categorySelector = promos
   } else {
     categorySelector = ''
@@ -39,7 +39,7 @@ export const ProjectCategoryPageTemplate = ({
   return (
     <div className="project">
       <div className="section">
-        <a className="arrow-down" href="#two">
+        <a className="arrow-down" href="#stories">
           {''}
         </a>
         {!!title && (
@@ -63,9 +63,9 @@ export const ProjectCategoryPageTemplate = ({
       </div>
 
       {!!categorySelector && (
-        <div id="two" className="thick">
+        <div id="stories" className="thick">
           <div className="wide">
-            <Link className="back" to="/work#two/">
+            <Link className="back" to="/work#specialities">
               Back to all
             </Link>
 

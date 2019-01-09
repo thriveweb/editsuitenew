@@ -36,7 +36,10 @@ export const SinglePromoTemplate = ({
 
           {!!tags && <h5>tags: {tags}</h5>}
 
-          <Link className="back" to="/project-categories/promos-and-tvcs">
+          <Link
+            className="back"
+            to="/project-categories/promos-and-commercials"
+          >
             Back to all
           </Link>
         </div>

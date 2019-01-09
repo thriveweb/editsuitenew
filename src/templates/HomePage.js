@@ -11,140 +11,194 @@ import ClientsSection from '../components/ClientsSection'
 import Testimonials from '../components/Testimonials'
 import ContactInfo from '../components/ContactInfo'
 
-export const HomePageTemplate = ({
-  title,
-  sectionOpener,
-  sectionIntro,
-  sectionProjects,
-  sectionClients,
-  sectionTestimonials,
-  sectionContact,
-  projectCategories = [],
-  clients,
-  testimonials,
-  contact
-}) => {
-  return (
-    <div>
-      <div className="section" id="promo">
-        <a href="#about" className="arrow-down">
-          {''}
-        </a>
-        {!!sectionOpener.title && (
-          <div className="full open">
-            <div className="taCenter">
-              <h1>{sectionOpener.title}</h1>
-              {!!sectionOpener.byline && <h3>{sectionOpener.byline}</h3>}
+export class HomePageTemplate extends React.Component {
+  state = {
+    scrolling: false,
+    visibleSection: 0
+  }
+
+  componentWillMount() {
+    window.scrollTo(0, 0)
+    window.addEventListener('wheel', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('wheel', this.handleScroll)
+  }
+
+  preventDefault = e => {
+    e = e || window.event
+    if (e.preventDefault) e.preventDefault()
+    e.returnValue = false
+
+    if (!this.state.scrolling) {
+      this.setState({ scrolling: true })
+
+      if (e.wheelDelta > 0 && this.state.visibleSection > 0) {
+        this.setState({ visibleSection: this.state.visibleSection - 1 })
+      } else if (e.wheelDelta < 0 && this.state.visibleSection < 5) {
+        this.setState({ visibleSection: this.state.visibleSection + 1 })
+      }
+
+      window.scrollTo(0, window.innerHeight * this.state.visibleSection)
+
+      setTimeout(() => {
+        this.setState({ scrolling: false })
+      }, 1000)
+    }
+  }
+
+  handleScroll = event => {
+    if (window.innerWidth >= 900) {
+      window.onwheel = this.preventDefault
+      window.onmousewheel = document.onmousewheel = this.preventDefault
+    } else {
+      window.onwheel = window.onmousewheel = document.onmousewheel = null
+    }
+  }
+
+  render() {
+    const {
+      title,
+      sectionOpener,
+      sectionIntro,
+      sectionProjects,
+      sectionClients,
+      sectionTestimonials,
+      sectionContact,
+      projectCategories = [],
+      clients,
+      testimonials,
+      contact
+    } = this.props
+
+    // let divStyle = {
+    //   transform: 'translateY(-' + this.state.visibleSection * 100 + 'vh)',
+    //   transition: 'ease all 0.3s'
+    // }
+
+    return (
+      <div>
+        <div className="section" id="promo">
+          <a href="#about" className="arrow-down">
+            {''}
+          </a>
+          {!!sectionOpener.title && (
+            <div className="full open">
+              <div className="taCenter">
+                <h1>{sectionOpener.title}</h1>
+                {!!sectionOpener.byline && <h3>{sectionOpener.byline}</h3>}
+              </div>
+            </div>
+          )}
+          <div className="gradient" />
+          {!!sectionOpener.video && (
+            <OpenerVideo src={sectionOpener.video} alt={title} />
+          )}
+          {!!sectionOpener.image && (
+            <OpenerImage src={sectionOpener.image} alt={title} />
+          )}
+          {!!sectionOpener.mobile && (
+            <OpenerMobile src={sectionOpener.mobile} alt={title} />
+          )}
+        </div>
+
+        {!!sectionIntro && (
+          <div className="section" id="about">
+            <a href="#specialities" className="arrow-down">
+              {''}
+            </a>
+            <a href="#promo" className="arrow-up">
+              {''}
+            </a>
+            <div className="thin flex">
+              <SectionTitle
+                title={sectionIntro.title}
+                subtitle={sectionIntro.subtitle}
+              />
+              <div>
+                <p>{sectionIntro.description}</p>
+                <Link to={sectionIntro.buttonLink} className="button">
+                  {sectionIntro.buttonText}
+                </Link>
+              </div>
             </div>
           </div>
         )}
-        <div className="gradient" />
-        {!!sectionOpener.video && (
-          <OpenerVideo src={sectionOpener.video} alt={title} />
+
+        {!!sectionProjects && (
+          <div className="section dark" id="specialities">
+            <a href="#collaborations" className="arrow-down">
+              {''}
+            </a>
+            <a href="#about" className="arrow-up">
+              {''}
+            </a>
+            <div className="wide">
+              <SectionTitle
+                title={sectionProjects.title}
+                subtitle={sectionProjects.subtitle}
+              />
+              {!!projectCategories && (
+                <ProjectCategories categories={projectCategories} />
+              )}
+            </div>
+          </div>
         )}
-        {!!sectionOpener.image && (
-          <OpenerImage src={sectionOpener.image} alt={title} />
+
+        {!!sectionClients && (
+          <div className="section light" id="collaborations">
+            <a href="#testimonials" className="arrow-down">
+              {''}
+            </a>
+            <a href="#specialities" className="arrow-up">
+              {''}
+            </a>
+            <div className="wide">
+              <SectionTitle
+                title={sectionClients.title}
+                subtitle={sectionClients.subtitle}
+              />
+              {!!clients && <ClientsSection clients={clients} />}
+            </div>
+          </div>
         )}
-        {!!sectionOpener.mobile && (
-          <OpenerMobile src={sectionOpener.mobile} alt={title} />
+
+        {!!sectionTestimonials && (
+          <div className="section" id="testimonials">
+            <a href="#contact" className="arrow-down">
+              {''}
+            </a>
+            <a href="#collaborations" className="arrow-up">
+              {''}
+            </a>
+            <div className="thin">
+              <SectionTitle
+                title={sectionTestimonials.title}
+                subtitle={sectionTestimonials.subtitle}
+              />
+              {!!testimonials && <Testimonials testimonials={testimonials} />}
+            </div>
+          </div>
+        )}
+
+        {!!sectionContact && (
+          <div className="section dark" id="contact">
+            <a href="#testimonials" className="arrow-up">
+              {''}
+            </a>
+            <div className="wide">
+              <SectionTitle
+                title={sectionContact.title}
+                subtitle={sectionContact.subtitle}
+              />
+              <ContactInfo contact={contact} />
+            </div>
+          </div>
         )}
       </div>
-
-      {!!sectionIntro && (
-        <div className="section" id="about">
-          <a href="#specialities" className="arrow-down">
-            {''}
-          </a>
-          <a href="#promo" className="arrow-up">
-            {''}
-          </a>
-          <div className="thin flex">
-            <SectionTitle
-              title={sectionIntro.title}
-              subtitle={sectionIntro.subtitle}
-            />
-            <div>
-              <p>{sectionIntro.description}</p>
-              <Link to={sectionIntro.buttonLink} className="button">
-                {sectionIntro.buttonText}
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {!!sectionProjects && (
-        <div className="section dark" id="specialities">
-          <a href="#collaborations" className="arrow-down">
-            {''}
-          </a>
-          <a href="#about" className="arrow-up">
-            {''}
-          </a>
-          <div className="wide">
-            <SectionTitle
-              title={sectionProjects.title}
-              subtitle={sectionProjects.subtitle}
-            />
-            {!!projectCategories && (
-              <ProjectCategories categories={projectCategories} />
-            )}
-          </div>
-        </div>
-      )}
-
-      {!!sectionClients && (
-        <div className="section light" id="collaborations">
-          <a href="#testimonials" className="arrow-down">
-            {''}
-          </a>
-          <a href="#specialities" className="arrow-up">
-            {''}
-          </a>
-          <div className="wide">
-            <SectionTitle
-              title={sectionClients.title}
-              subtitle={sectionClients.subtitle}
-            />
-            {!!clients && <ClientsSection clients={clients} />}
-          </div>
-        </div>
-      )}
-
-      {!!sectionTestimonials && (
-        <div className="section" id="testimonials">
-          <a href="#contact" className="arrow-down">
-            {''}
-          </a>
-          <a href="#collaborations" className="arrow-up">
-            {''}
-          </a>
-          <div className="thin">
-            <SectionTitle
-              title={sectionTestimonials.title}
-              subtitle={sectionTestimonials.subtitle}
-            />
-            {!!testimonials && <Testimonials testimonials={testimonials} />}
-          </div>
-        </div>
-      )}
-
-      {!!sectionContact && (
-        <div className="section dark" id="contact">
-          <a href="#testimonials" className="arrow-up">
-            {''}
-          </a>
-          <div className="wide">
-            <SectionTitle
-              title={sectionContact.title}
-              subtitle={sectionContact.subtitle}
-            />
-            <ContactInfo contact={contact} />
-          </div>
-        </div>
-      )}
-    </div>
-  )
+    )
+  }
 }
 
 const HomePage = ({

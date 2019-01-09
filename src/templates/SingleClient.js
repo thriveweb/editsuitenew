@@ -23,7 +23,7 @@ export const SingleClientTemplate = ({ title, excerpt, logo, items }) => {
             </div>
           </div>
 
-          <Link className="back" to="/">
+          <Link className="back" to="/#collaborations">
             Back to all
           </Link>
         </div>
