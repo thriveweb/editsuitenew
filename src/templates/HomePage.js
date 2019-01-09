@@ -18,8 +18,15 @@ export class HomePageTemplate extends React.Component {
   }
 
   componentWillMount() {
-    window.scrollTo(0, 0)
     window.addEventListener('wheel', this.handleScroll)
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        visibleSection: Math.floor(window.scrollY / window.innerHeight)
+      })
+    }, 1000)
   }
 
   componentWillUnmount() {
@@ -27,7 +34,7 @@ export class HomePageTemplate extends React.Component {
     window.onwheel = window.onmousewheel = document.onmousewheel = null
   }
 
-  preventDefault = e => {
+  stickyScroll = e => {
     e = e || window.event
     if (e.preventDefault) e.preventDefault()
     e.returnValue = false
@@ -45,14 +52,15 @@ export class HomePageTemplate extends React.Component {
 
       setTimeout(() => {
         this.setState({ scrolling: false })
-      }, 1000)
+      }, 1250)
     }
   }
 
   handleScroll = event => {
     if (window.innerWidth >= 900) {
-      window.onwheel = this.preventDefault
-      window.onmousewheel = document.onmousewheel = this.preventDefault
+      console.log('ll')
+      window.onwheel = this.stickyScroll
+      window.onmousewheel = document.onmousewheel = this.stickyScroll
     } else {
       window.onwheel = window.onmousewheel = document.onmousewheel = null
     }
