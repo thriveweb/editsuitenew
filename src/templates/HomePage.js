@@ -17,12 +17,9 @@ export class HomePageTemplate extends React.Component {
     visibleSection: 0
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.scrollEvent()
     window.addEventListener('wheel', this.handleScroll)
-  }
-
-  componentDidMount() {
     setTimeout(() => {
       this.setState({
         visibleSection: Math.floor(window.scrollY / window.innerHeight)

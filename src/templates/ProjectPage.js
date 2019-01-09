@@ -15,12 +15,9 @@ export class ProjectPageTemplate extends React.Component {
     visibleSection: 0
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.scrollEvent()
     window.addEventListener('wheel', this.handleScroll)
-  }
-
-  componentDidMount() {
     setTimeout(() => {
       this.setState({
         visibleSection: Math.floor(window.scrollY / window.innerHeight)
@@ -75,8 +72,7 @@ export class ProjectPageTemplate extends React.Component {
       sectionProjects,
       projectCategories = [],
       sectionTestimonials,
-      testimonials,
-      contentType
+      testimonials
     } = this.props
 
     return (
