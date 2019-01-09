@@ -18,6 +18,7 @@ export class HomePageTemplate extends React.Component {
   }
 
   componentWillMount() {
+    this.scrollEvent()
     window.addEventListener('wheel', this.handleScroll)
   }
 
@@ -56,14 +57,17 @@ export class HomePageTemplate extends React.Component {
     }
   }
 
-  handleScroll = event => {
+  scrollEvent = () => {
     if (window.innerWidth >= 900) {
-      console.log('ll')
       window.onwheel = this.stickyScroll
       window.onmousewheel = document.onmousewheel = this.stickyScroll
     } else {
       window.onwheel = window.onmousewheel = document.onmousewheel = null
     }
+  }
+
+  handleScroll = () => {
+    this.scrollEvent()
   }
 
   render() {
@@ -80,11 +84,6 @@ export class HomePageTemplate extends React.Component {
       testimonials,
       contact
     } = this.props
-
-    // let divStyle = {
-    //   transform: 'translateY(-' + this.state.visibleSection * 100 + 'vh)',
-    //   transition: 'ease all 0.3s'
-    // }
 
     return (
       <div>
