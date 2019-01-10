@@ -107,7 +107,7 @@ export class AboutPageTemplate extends React.Component {
           )}
         </div>
 
-        <div className="section" id="us">
+        <div className="section active" id="us">
           <a href="#about" className="arrow-down">
             {''}
           </a>
