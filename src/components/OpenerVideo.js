@@ -14,7 +14,6 @@ class OpenerVideo extends Component {
   }
 
   componentDidMount() {
-    console.log(ReactDOM.findDOMNode(this.myRef.current))
     ReactDOM.findDOMNode(this.myRef.current).addEventListener(
       'progress',
       event => {
