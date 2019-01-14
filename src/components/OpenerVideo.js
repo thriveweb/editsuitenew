@@ -18,9 +18,6 @@ class OpenerVideo extends Component {
       let range = 0,
         bf = event.target.buffered,
         time = event.target.currentTime
-      console.log(range)
-      console.log(bf)
-      console.log(bf.start(range))
       while (!(bf.start(range) <= time && time <= bf.end(range))) {
         range += 1
       }
