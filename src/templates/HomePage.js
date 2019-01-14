@@ -39,7 +39,7 @@ export class HomePageTemplate extends Component {
         ]}
       >
         <div>
-          <div className="section" dataAnchor="promo">
+          <div className="section" dataanchor="promo">
             <ArrowDown />
             {!!sectionOpener.title && (
               <div className="full open">
@@ -66,7 +66,7 @@ export class HomePageTemplate extends Component {
           </div>
 
           {!!sectionIntro && (
-            <div className="section" dataAnchor="about">
+            <div className="section" dataanchor="about">
               <ArrowDown />
               <ArrowUp />
               <div className="thin flex">
@@ -85,7 +85,7 @@ export class HomePageTemplate extends Component {
           )}
 
           {!!sectionProjects && (
-            <div className="section dark" dataAnchor="specialities">
+            <div className="section dark" dataanchor="specialities">
               <ArrowDown />
               <ArrowUp />
               <div className="wide">
@@ -101,7 +101,7 @@ export class HomePageTemplate extends Component {
           )}
 
           {!!sectionClients && (
-            <div className="section light" dataAnchor="collaborations">
+            <div className="section light" dataanchor="collaborations">
               <ArrowDown />
               <ArrowUp />
               <div className="wide">
@@ -115,7 +115,7 @@ export class HomePageTemplate extends Component {
           )}
 
           {!!sectionTestimonials && (
-            <div className="section" dataAnchor="testimonials">
+            <div className="section" dataanchor="testimonials">
               <ArrowDown />
               <ArrowUp />
               <div className="thin">
@@ -129,7 +129,7 @@ export class HomePageTemplate extends Component {
           )}
 
           {!!sectionContact && (
-            <div className="section dark" dataAnchor="contact">
+            <div className="section dark" dataanchor="contact">
               <ArrowUp />
               <div className="wide">
                 <SectionTitle

@@ -24,7 +24,7 @@ export class ProjectPageTemplate extends React.Component {
     return (
       <FullPage anchors={['promo', 'specialities', 'testimonials']}>
         <div>
-          <div className="section" dataAnchor="promo">
+          <div className="section" dataanchor="promo">
             <ArrowDown />
             {!!sectionOpener.title && (
               <div className="full open">
@@ -47,7 +47,7 @@ export class ProjectPageTemplate extends React.Component {
           </div>
 
           {!!projectCategories && (
-            <div className="section" dataAnchor="specialities">
+            <div className="section" dataanchor="specialities">
               <ArrowDown />
               <ArrowUp />
               <div className="wide">
@@ -61,7 +61,7 @@ export class ProjectPageTemplate extends React.Component {
           )}
 
           {!!sectionTestimonials && (
-            <div className="section" dataAnchor="testimonials">
+            <div className="section" dataanchor="testimonials">
               <ArrowUp />
               <div className="thin">
                 <SectionTitle
