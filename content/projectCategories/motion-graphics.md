@@ -8,6 +8,7 @@ sectionOpener:
   image: ''
   mobile: 'https://ucarecdn.com/7e939f4a-2445-4ec6-9dff-660bcb8814e4/'
   video: 'https://ucarecdn.com/232de794-b0fb-4fac-89bc-648725ddcc76/motion_video.mp4'
+  videoPoster: 'https://ucarecdn.com/c2ba675f-8d49-4c36-9599-daa4925b8172/poster_motion.jpeg'
 meta:
   description: >-
     Using motion graphics and explainer videos are a very powerful way to convey

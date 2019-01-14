@@ -4,6 +4,7 @@ sectionOpener:
   image: ''
   video: ''
   mobile: ''
+  videoPoster: ''
 
 meta:
   canonicalLink: ''

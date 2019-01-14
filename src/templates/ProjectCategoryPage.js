@@ -52,7 +52,11 @@ export const ProjectCategoryPageTemplate = ({
         )}
         <div className="gradient" />
         {!!sectionOpener.video && (
-          <OpenerVideo src={sectionOpener.video} alt={title} />
+          <OpenerVideo
+            src={sectionOpener.video}
+            poste={sectionOpener.videoPoster}
+            alt={title}
+          />
         )}
         {!!sectionOpener.image && (
           <OpenerImage src={sectionOpener.image} alt={title} />
@@ -168,6 +172,7 @@ export const pageQuery = graphql`
         sectionOpener {
           byline
           video
+          videoPoster
           image
           mobile
         }

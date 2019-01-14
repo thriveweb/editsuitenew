@@ -98,7 +98,11 @@ export class HomePageTemplate extends React.Component {
           )}
           <div className="gradient" />
           {!!sectionOpener.video && (
-            <OpenerVideo src={sectionOpener.video} alt={title} />
+            <OpenerVideo
+              src={sectionOpener.video}
+              poster={sectionOpener.videoPoster}
+              alt={title}
+            />
           )}
           {!!sectionOpener.image && (
             <OpenerImage src={sectionOpener.image} alt={title} />
@@ -247,6 +251,7 @@ export const pageQuery = graphql`
           title
           byline
           video
+          videoPoster
           image
           mobile
         }

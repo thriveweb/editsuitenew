@@ -8,6 +8,7 @@ sectionOpener:
   image: ''
   mobile: 'https://ucarecdn.com/0da64c3d-acde-4779-a21d-afaa499d5f85/'
   video: 'https://ucarecdn.com/62120952-7dc3-4508-bf1a-aacd7d70311e/business_video.mp4'
+  videoPoster: 'https://ucarecdn.com/1dc84094-4d7b-45f3-9e5b-f1e366bcc7ee/poster_business.jpeg'
 meta:
   description: >-
     Using narrative in video is very powerful. You can show that your business
