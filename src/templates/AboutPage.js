@@ -28,7 +28,7 @@ export class AboutPageTemplate extends React.Component {
     } = this.props
 
     return (
-      <FullPage>
+      <FullPage anchors={['promo', 'us', 'about', 'clients', 'testimonials']}>
         <div>
           <div className="section" id="promo">
             <ArrowDown />

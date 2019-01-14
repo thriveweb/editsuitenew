@@ -6,7 +6,12 @@ export default class FullPage extends Component {
     const options = {
         licenseKey: 'DF3DC63D-DE084677-83C094FD-797D4531'
       },
-      { children } = this.props
+      { children, anchors } = this.props
+
+    if (typeof anchors !== 'undefined') {
+      options.anchors = anchors
+    }
+
     return (
       <ReactFullpage
         {...options}

@@ -27,11 +27,19 @@ export class HomePageTemplate extends Component {
       testimonials,
       contact
     } = this.props
-
     return (
-      <FullPage>
+      <FullPage
+        anchors={[
+          'promo',
+          'about',
+          'specialities',
+          'collaborations',
+          'testimonials',
+          'contact'
+        ]}
+      >
         <div>
-          <div className="section" id="promo">
+          <div className="section" dataAnchor="promo">
             <ArrowDown />
             {!!sectionOpener.title && (
               <div className="full open">
@@ -58,7 +66,7 @@ export class HomePageTemplate extends Component {
           </div>
 
           {!!sectionIntro && (
-            <div className="section" id="about">
+            <div className="section" dataAnchor="about">
               <ArrowDown />
               <ArrowUp />
               <div className="thin flex">
@@ -77,7 +85,7 @@ export class HomePageTemplate extends Component {
           )}
 
           {!!sectionProjects && (
-            <div className="section dark" id="specialities">
+            <div className="section dark" dataAnchor="specialities">
               <ArrowDown />
               <ArrowUp />
               <div className="wide">
@@ -93,7 +101,7 @@ export class HomePageTemplate extends Component {
           )}
 
           {!!sectionClients && (
-            <div className="section light" id="collaborations">
+            <div className="section light" dataAnchor="collaborations">
               <ArrowDown />
               <ArrowUp />
               <div className="wide">
@@ -107,7 +115,7 @@ export class HomePageTemplate extends Component {
           )}
 
           {!!sectionTestimonials && (
-            <div className="section" id="testimonials">
+            <div className="section" dataAnchor="testimonials">
               <ArrowDown />
               <ArrowUp />
               <div className="thin">
@@ -121,7 +129,7 @@ export class HomePageTemplate extends Component {
           )}
 
           {!!sectionContact && (
-            <div className="section dark" id="contact">
+            <div className="section dark" dataAnchor="contact">
               <ArrowUp />
               <div className="wide">
                 <SectionTitle
