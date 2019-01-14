@@ -6,7 +6,7 @@ import './Opener.css'
 class OpenerVideo extends Component {
   constructor(props) {
     super(props)
-    this.myRef = React.createRef()
+    this.ref = React.createRef()
   }
 
   state = {
@@ -14,20 +14,21 @@ class OpenerVideo extends Component {
   }
 
   componentDidMount() {
-    ReactDOM.findDOMNode(this.myRef.current).addEventListener(
+    ReactDOM.findDOMNode(this.ref.current).addEventListener(
       'progress',
       event => {
         if (event.target.readyState === 4) {
-          var range = 0
-          var bf = event.target.buffered
-          var time = event.target.currentTime
+          let range = 0,
+            bf = event.target.buffered,
+            time = event.target.currentTime
           while (!(bf.start(range) <= time && time <= bf.end(range))) {
             range += 1
           }
-          var loadStartPercentage = bf.start(range) / event.target.duration
-          var loadEndPercentage = bf.end(range) / event.target.duration
-          var loadPercentage = loadEndPercentage - loadStartPercentage
-          this.setState({ videoBuffer: loadPercentage })
+          let loadStartPercentage = bf.start(range) / event.target.duration,
+            loadEndPercentage = bf.end(range) / event.target.duration
+          this.setState({
+            videoBuffer: loadEndPercentage - loadStartPercentage
+          })
         }
       }
     )
@@ -41,7 +42,7 @@ class OpenerVideo extends Component {
     return (
       <div className="opener video background-image" style={style}>
         <video
-          ref={this.myRef}
+          ref={this.ref}
           data-keepplaying
           autoPlay
           loop
