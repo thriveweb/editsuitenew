@@ -13,24 +13,34 @@ class OpenerVideo extends Component {
     videoBuffer: 0
   }
 
-  componentDidMount() {
-    ReactDOM.findDOMNode(this.ref.current).addEventListener(
-      'progress',
-      event => {
-        if (event.target.readyState === 4) {
-          let range = 0,
-            bf = event.target.buffered,
-            time = event.target.currentTime
-          while (!(bf.start(range) <= time && time <= bf.end(range))) {
-            range += 1
-          }
-          let loadStartPercentage = bf.start(range) / event.target.duration,
-            loadEndPercentage = bf.end(range) / event.target.duration
-          this.setState({
-            videoBuffer: loadEndPercentage - loadStartPercentage
-          })
-        }
+  videoBufferBar(event) {
+    if (event.target.readyState === 4) {
+      let range = 0,
+        bf = event.target.buffered,
+        time = event.target.currentTime
+      console.log(range)
+      console.log(bf)
+      console.log(bf.start(range))
+      while (!(bf.start(range) <= time && time <= bf.end(range))) {
+        range += 1
       }
+      let loadStartPercentage = bf.start(range) / event.target.duration,
+        loadEndPercentage = bf.end(range) / event.target.duration
+      this.setState({
+        videoBuffer: loadEndPercentage - loadStartPercentage
+      })
+      if (loadEndPercentage - loadStartPercentage === 1) {
+        ReactDOM.findDOMNode(this.ref.current).removeEventListener(
+          'progress',
+          this.videoBufferBar
+        )
+      }
+    }
+  }
+
+  componentDidMount() {
+    ReactDOM.findDOMNode(this.ref.current).addEventListener('progress', e =>
+      this.videoBufferBar(e)
     )
   }
 
