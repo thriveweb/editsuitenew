@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
@@ -7,53 +7,69 @@ import OpenerImage from '../components/OpenerImage'
 import OpenerMobile from '../components/OpenerMobile'
 import ProjectCategories from '../components/ProjectCategories'
 
-export const PhotographyPageTemplate = ({
-  title,
-  sectionOpener,
-  projectCategories = [],
-  photography = [],
-  testimonials,
-  contentType,
-  slug
-}) => {
-  return (
-    <div>
-      <div className="section">
-        <div className="arrow-down" />
-        {!!title && (
-          <div className="full open">
-            <div className="taCenter">
-              <h1>{title}</h1>
-              {!!sectionOpener.byline && <h3>{sectionOpener.byline}</h3>}
+export class PhotographyPageTemplate extends Component {
+  state = {
+    display: 'none'
+  }
+
+  UNSAFE_componentWillMount() {
+    setTimeout(() => {
+      console.log('WAIT')
+      this.setState({ display: 'block' })
+    }, 1000)
+  }
+
+  render() {
+    const {
+        title,
+        sectionOpener,
+        projectCategories = [],
+        photography = [],
+        testimonials,
+        contentType,
+        slug
+      } = this.props,
+      style = { display: this.state.display }
+
+    return (
+      <div style={style}>
+        <div className="section">
+          <div className="arrow-down" />
+          {!!title && (
+            <div className="full open">
+              <div className="taCenter">
+                <h1>{title}</h1>
+                {!!sectionOpener.byline && <h3>{sectionOpener.byline}</h3>}
+              </div>
+            </div>
+          )}
+          <div className="gradient" />
+          {!!sectionOpener.video && (
+            <OpenerVideo src={sectionOpener.video} alt={title} />
+          )}
+          {!!sectionOpener.image && (
+            <OpenerImage src={sectionOpener.image} alt={title} />
+          )}
+          {!!sectionOpener.mobile && (
+            <OpenerMobile src={sectionOpener.mobile} alt={title} />
+          )}
+        </div>
+
+        {!!photography && (
+          <div className="section">
+            <div className="arrow-up" />
+            <div className="wide">
+              <Link className="back" to="/work#two/">
+                Back to all
+              </Link>
+
+              <ProjectCategories categories={photography} />
             </div>
           </div>
         )}
-        <div className="gradient" />
-        {!!sectionOpener.video && (
-          <OpenerVideo src={sectionOpener.video} alt={title} />
-        )}
-        {!!sectionOpener.image && (
-          <OpenerImage src={sectionOpener.image} alt={title} />
-        )}
-        {!!sectionOpener.mobile && (
-          <OpenerMobile src={sectionOpener.mobile} alt={title} />
-        )}
       </div>
-
-      {!!photography && (
-        <div className="section">
-          <div className="arrow-up" />
-          <div className="wide">
-            <Link className="back" to="/work#two/">
-              Back to all
-            </Link>
-
-            <ProjectCategories categories={photography} />
-          </div>
-        </div>
-      )}
-    </div>
-  )
+    )
+  }
 }
 
 const PhotographyPage = ({
