@@ -12,7 +12,7 @@ const ContactInfo = ({ contact }) => (
       >
         <Image
           className="cover"
-          src="/images/map.jpg"
+          src="https://ucarecdn.com/e0af54bf-9947-495d-b1ee-e2d60c00aa6c/"
           alt="Find The Edit Suite"
         />
       </a>
