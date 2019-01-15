@@ -19,7 +19,10 @@ class OpenerVideo extends Component {
       let range = 0,
         bf = event.target.buffered,
         time = event.target.currentTime
-      while (!(bf.start(range) <= time && time <= bf.end(range))) {
+      while (
+        typeof bf.start(range) === 'number' &&
+        !(bf.start(range) <= time && time <= bf.end(range))
+      ) {
         range += 1
       }
       let loadStartPercentage = bf.start(range) / event.target.duration,
@@ -43,7 +46,6 @@ class OpenerVideo extends Component {
     ReactDOM.findDOMNode(this.ref.current).addEventListener(
       'timeupdate',
       event => {
-        console.log(event)
         if (!isNaN(event.target.duration)) {
           this.setState({
             videoCurrentTime: event.target.currentTime / event.target.duration
