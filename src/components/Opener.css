@@ -48,7 +48,7 @@
   background-color: rgba(23, 23, 23, 0.2);
   height: 100%;
   width: 100%;
-  top: 0;
+  top: -0.5rem;
   left: 0;
 }
 
@@ -71,7 +71,32 @@
   bottom: 0;
   height: 0.5rem;
   display: block;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.opener.video .progressBarContainer.preload {
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
 }
 
 .opener.video .progressBarContainer .progressBar {
@@ -81,11 +106,11 @@
 }
 
 .opener.video .progressBarContainer.buffer .progressBar {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .opener.video .progressBarContainer.time .progressBar {
-  background-color: #f54344;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .opener.video progress.currentTime {

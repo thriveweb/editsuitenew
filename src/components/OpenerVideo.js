@@ -10,6 +10,7 @@ class OpenerVideo extends Component {
   }
 
   state = {
+    videoLoaded: false,
     videoBuffer: 0,
     videoCurrentTime: 0
   }
@@ -19,22 +20,25 @@ class OpenerVideo extends Component {
       let range = 0,
         bf = event.target.buffered,
         time = event.target.currentTime
-      while (
-        typeof bf.start(range) === 'number' &&
-        !(bf.start(range) <= time && time <= bf.end(range))
-      ) {
-        range += 1
-      }
-      let loadStartPercentage = bf.start(range) / event.target.duration,
-        loadEndPercentage = bf.end(range) / event.target.duration
-      this.setState({
-        videoBuffer: loadEndPercentage - loadStartPercentage
-      })
-      if (loadEndPercentage - loadStartPercentage === 1) {
-        ReactDOM.findDOMNode(this.ref.current).removeEventListener(
-          'progress',
-          this.videoBufferBar
-        )
+
+      try {
+        while (!(bf.start(range) <= time && time <= bf.end(range))) {
+          range += 1
+        }
+        let loadStartPercentage = bf.start(range) / event.target.duration,
+          loadEndPercentage = bf.end(range) / event.target.duration
+        this.setState({
+          videoBuffer: loadEndPercentage - loadStartPercentage
+        })
+        if (loadEndPercentage - loadStartPercentage === 1) {
+          this.setState({ videoLoaded: true })
+          ReactDOM.findDOMNode(this.ref.current).removeEventListener(
+            'progress',
+            this.videoBufferBar
+          )
+        }
+      } catch (error) {
+        return false
       }
     }
   }
@@ -73,6 +77,17 @@ class OpenerVideo extends Component {
         >
           <source src={src} type="video/mp4" />
         </video>
+        <div
+          className="progressBarContainer preload"
+          style={{
+            display:
+              this.state.videoBuffer === 0 &&
+              this.state.videoCurrentTime === 0 &&
+              !this.state.videoLoaded
+                ? 'block'
+                : 'none'
+          }}
+        />
         <div className="progressBarContainer buffer">
           <div
             className="progressBar"
