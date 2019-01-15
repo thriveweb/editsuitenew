@@ -4,7 +4,8 @@ import ReactFullpage from '@fullpage/react-fullpage'
 export default class FullPage extends Component {
   render() {
     const options = {
-        licenseKey: 'DF3DC63D-DE084677-83C094FD-797D4531'
+        licenseKey: 'DF3DC63D-DE084677-83C094FD-797D4531',
+        responsiveWidth: 900
       },
       { children, anchors } = this.props
 
