@@ -21,15 +21,7 @@ export class PhotographyPageTemplate extends Component {
   }
 
   render() {
-    const {
-        title,
-        sectionOpener,
-        projectCategories = [],
-        photography = [],
-        testimonials,
-        contentType,
-        slug
-      } = this.props,
+    const { title, sectionOpener, photography = [] } = this.props,
       style = { display: this.state.display }
 
     return (
@@ -75,9 +67,7 @@ export class PhotographyPageTemplate extends Component {
   }
 }
 
-const PhotographyPage = ({
-  data: { page, testimonials, projectCategories, photography }
-}) => (
+const PhotographyPage = ({ data: { page, photography } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -86,15 +76,6 @@ const PhotographyPage = ({
       {...page}
       {...page.fields}
       {...page.frontmatter}
-      testimonials={testimonials.edges.map(item => ({
-        ...item.node,
-        ...item.node.frontmatter
-      }))}
-      projectCategories={projectCategories.edges.map(post => ({
-        ...post.node,
-        ...post.node.frontmatter,
-        ...post.node.fields
-      }))}
       photography={photography.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
@@ -121,38 +102,6 @@ export const pageQuery = graphql`
           video
           image
           mobile
-        }
-      }
-    }
-
-    testimonials: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/testimonials/" } }
-      sort: { order: ASC, fields: [frontmatter___order] }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            order
-            title
-            company
-            content
-          }
-        }
-      }
-    }
-
-    projectCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "projectCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            slug
-          }
         }
       }
     }
