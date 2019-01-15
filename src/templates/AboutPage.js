@@ -30,7 +30,7 @@ export class AboutPageTemplate extends React.Component {
     return (
       <FullPage anchors={['promo', 'us', 'about', 'clients', 'testimonials']}>
         <div>
-          <div className="section" id="promo">
+          <div className="section" dataanchor="promo">
             <ArrowDown />
             {!!sectionOpener.title && (
               <div className="full open">
@@ -52,14 +52,14 @@ export class AboutPageTemplate extends React.Component {
             )}
           </div>
 
-          <div className="section" id="us">
+          <div className="section" dataanchor="us">
             <ArrowDown />
             <ArrowUp />
             <Icons icons={icons} />
           </div>
 
           {!!sectionBlurb && (
-            <div className="section dark" id="about">
+            <div className="section dark" dataanchor="about">
               <ArrowDown />
               <ArrowUp />
               <div className="wide">
@@ -82,7 +82,7 @@ export class AboutPageTemplate extends React.Component {
           )}
 
           {!isPreview && sectionClients && (
-            <div className="section light" id="clients">
+            <div className="section light" dataanchor="clients">
               <ArrowDown />
               <ArrowUp />
               <div className="wide">
@@ -96,7 +96,7 @@ export class AboutPageTemplate extends React.Component {
           )}
 
           {!isPreview && sectionTestimonials && (
-            <div className="section" id="testimonials">
+            <div className="section" dataanchor="testimonials">
               <ArrowUp />
               <div className="thin">
                 <SectionTitle
