@@ -72,7 +72,6 @@ class OpenerVideo extends Component {
           autoPlay
           loop
           muted
-          playsInline
           poster={poster}
         >
           <source src={src} type="video/mp4" />
