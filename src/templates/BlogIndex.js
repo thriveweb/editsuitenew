@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
@@ -6,6 +6,7 @@ import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import OpenerMobile from '../components/OpenerMobile'
 import PostSection from '../components/PostSection'
+import Footer from '../components/Footer'
 
 export const BlogIndexTemplate = ({
   title,
@@ -13,7 +14,7 @@ export const BlogIndexTemplate = ({
   posts = [],
   contentType
 }) => (
-  <div>
+  <Fragment>
     <div className="section">
       <a className="arrow-down" href="#two">
         {''}
@@ -43,7 +44,9 @@ export const BlogIndexTemplate = ({
         <PostSection posts={posts} />
       </div>
     )}
-  </div>
+
+    <Footer />
+  </Fragment>
 )
 
 const BlogIndex = ({ data: { page, posts } }) => (

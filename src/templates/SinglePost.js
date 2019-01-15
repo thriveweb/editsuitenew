@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
 
 import Content from '../components/Content'
 import Image from '../components/Image'
 import Layout from '../components/Layout'
+import Footer from '../components/Footer'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
@@ -15,37 +16,45 @@ export const SinglePostTemplate = ({
   nextPostURL,
   prevPostURL
 }) => (
-  <div className="single-post">
-    {!!featuredImage && (
-      <div className="opener relative">
-        <div className="taCenter">
-          <h1>{title}</h1>
-          <h5>{date}</h5>
+  <Fragment>
+    <div className="single-post">
+      {!!featuredImage && (
+        <div className="opener relative">
+          <div className="taCenter">
+            <h1>{title}</h1>
+            <h5>{date}</h5>
+          </div>
+          <div className="gradient" />
+          <Image
+            background
+            resolutions="large"
+            src={featuredImage}
+            alt={title}
+          />
         </div>
-        <div className="gradient" />
-        <Image background resolutions="large" src={featuredImage} alt={title} />
-      </div>
-    )}
+      )}
 
-    <div className="thin thick">
-      <Content src={body} />
+      <div className="thin thick">
+        <Content src={body} />
 
-      <div className="pagination">
-        {prevPostURL && (
-          <Link className="button prev" to={prevPostURL}>
-            Previous
-          </Link>
-        )}
-        {nextPostURL && (
-          <Link className="button next" to={nextPostURL}>
-            Next
-          </Link>
-        )}
+        <div className="pagination">
+          {prevPostURL && (
+            <Link className="button prev" to={prevPostURL}>
+              Previous
+            </Link>
+          )}
+          {nextPostURL && (
+            <Link className="button next" to={nextPostURL}>
+              Next
+            </Link>
+          )}
 
-        <div className="clear" />
+          <div className="clear" />
+        </div>
       </div>
     </div>
-  </div>
+    <Footer />
+  </Fragment>
 )
 
 const SinglePost = ({ data: { post, allPosts } }) => {

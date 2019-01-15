@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SectionTitle from '../components/SectionTitle'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import ContactInfo from '../components/ContactInfo'
+import Footer from '../components/Footer'
 
 import './ContactPage.css'
 import '../components/Footer.css'
 
 export const ContactPageTemplate = ({ title, sectionContact, contact }) => (
-  <div>
+  <Fragment>
     <div className="contact full">
       <div className="wide">
         {!!sectionContact && (
@@ -25,26 +26,8 @@ export const ContactPageTemplate = ({ title, sectionContact, contact }) => (
       </div>
     </div>
 
-    <div className="footer">
-      <div className="flex">
-        <p>
-          © Copyright {new Date().getFullYear()} The Edit Suite. All Rights
-          Reserved.
-        </p>
-
-        <p>
-          Crafted by{' '}
-          <a
-            href="https://thriveweb.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Thrive Digital
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
+    <Footer />
+  </Fragment>
 )
 
 const ContactPage = ({ data: { page, globalSettings } }) => (

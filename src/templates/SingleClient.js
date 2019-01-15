@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { graphql, Link } from 'gatsby'
 import _kebabCase from 'lodash/kebabCase'
 
 import Layout from '../components/Layout'
 import ProjectSection from '../components/ProjectSection'
 import Image from '../components/Image'
+import Footer from '../components/Footer'
 import './SingleProject.css'
 
 export class SingleClientTemplate extends Component {
@@ -22,27 +23,30 @@ export class SingleClientTemplate extends Component {
     const { title, excerpt, logo, items } = this.props,
       style = { display: this.state.display }
     return (
-      <div className="project-single" style={style}>
-        <div className="section">
-          <div className="thin">
-            <div className="taCenter">
-              <h1>{title}</h1>
-              <Image className="cover" src={logo} alt={_kebabCase(title)} />
-              <p>{excerpt}</p>
-            </div>
-
-            <div className="thick">
-              <div className="wide">
-                {!!items && <ProjectSection projects={items} />}
+      <Fragment>
+        <div className="project-single" style={style}>
+          <div className="section">
+            <div className="thin">
+              <div className="taCenter">
+                <h1>{title}</h1>
+                <Image className="cover" src={logo} alt={_kebabCase(title)} />
+                <p>{excerpt}</p>
               </div>
-            </div>
 
-            <Link className="back" to="/#collaborations">
-              Back to all
-            </Link>
+              <div className="thick">
+                <div className="wide">
+                  {!!items && <ProjectSection projects={items} />}
+                </div>
+              </div>
+
+              <Link className="back" to="/#collaborations">
+                Back to all
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+        <Footer />
+      </Fragment>
     )
   }
 }

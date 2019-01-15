@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
+import Footer from '../components/Footer'
 import './SingleProject.css'
 
 export const SingleEventsTemplate = ({
@@ -15,33 +16,36 @@ export const SingleEventsTemplate = ({
   category
 }) => {
   return (
-    <div className="project-single">
-      <section className="full">
-        <div className="thin">
-          <div className="taCenter">
-            <h1>{title}</h1>
-            <p>{excerpt}</p>
-          </div>
-
-          {!!video && (
-            <div className="video">
-              <iframe
-                title={title}
-                src={`https://player.vimeo.com/video/${video}`}
-                frameBorder="0"
-                allowFullScreen
-              />
+    <Fragment>
+      <div className="project-single">
+        <section className="full">
+          <div className="thin">
+            <div className="taCenter">
+              <h1>{title}</h1>
+              <p>{excerpt}</p>
             </div>
-          )}
 
-          {!!tags && <h5>tags: {tags}</h5>}
+            {!!video && (
+              <div className="video">
+                <iframe
+                  title={title}
+                  src={`https://player.vimeo.com/video/${video}`}
+                  frameBorder="0"
+                  allowFullScreen
+                />
+              </div>
+            )}
 
-          <Link className="back" to="/project-categories/events">
-            Back to all
-          </Link>
-        </div>
-      </section>
-    </div>
+            {!!tags && <h5>tags: {tags}</h5>}
+
+            <Link className="back" to="/project-categories/events">
+              Back to all
+            </Link>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </Fragment>
   )
 }
 

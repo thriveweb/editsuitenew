@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
+import Footer from '../components/Footer'
 import './SinglePhotography.css'
 
 export class SinglePhotographyTemplate extends React.Component {
@@ -13,37 +14,40 @@ export class SinglePhotographyTemplate extends React.Component {
     }
 
     return (
-      <div className="photography-single dark">
-        <div className="wide">
-          <div className="taCenter">
-            <h1>{title}</h1>
-            <h3>{excerpt}</h3>
-          </div>
+      <Fragment>
+        <div className="photography-single dark">
+          <div className="wide">
+            <div className="taCenter">
+              <h1>{title}</h1>
+              <h3>{excerpt}</h3>
+            </div>
 
-          <Link className="back" to="/project-categories/photography">
-            Back to all
-          </Link>
+            <Link className="back" to="/project-categories/photography">
+              Back to all
+            </Link>
 
-          <div className="items-expand flex">
-            {imageList.map((item, index) => (
-              <div
-                className="item flex"
-                data-fancybox="gallery"
-                key={title + index}
-                href={item.img}
-                data-options={defaults}
-              >
-                <img
-                  className="cover"
-                  src={item.thumb}
-                  alt={title + '-' + index}
-                />
-                {!!item.blurb && <p>{item.blurb}</p>}
-              </div>
-            ))}
+            <div className="items-expand flex">
+              {imageList.map((item, index) => (
+                <div
+                  className="item flex"
+                  data-fancybox="gallery"
+                  key={title + index}
+                  href={item.img}
+                  data-options={defaults}
+                >
+                  <img
+                    className="cover"
+                    src={item.thumb}
+                    alt={title + '-' + index}
+                  />
+                  {!!item.blurb && <p>{item.blurb}</p>}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+        <Footer />
+      </Fragment>
     )
   }
 }

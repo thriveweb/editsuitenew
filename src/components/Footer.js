@@ -2,25 +2,26 @@ import React from 'react'
 
 import './Footer.css'
 
-export default ({ globalSettings, socialSettings, navLinks }) => (
+export default () => (
   <footer className="flex">
-    <div className="taLeft">
-      <p>
-        © Copyright {new Date().getFullYear()} The Edit Suite. All rights
-        reserved.
-      </p>
-    </div>
-    <div className="taRight">
-      <p>
-        Site by{' '}
-        <a
-          href="https://thriveweb.com.au/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Thrive
-        </a>
-      </p>
+    <div className="footer">
+      <div className="flex">
+        <p>
+          © Copyright {new Date().getFullYear()} The Edit Suite. All Rights
+          Reserved.
+        </p>
+
+        <p>
+          Crafted by{' '}
+          <a
+            href="https://thriveweb.com.au"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Thrive Digital
+          </a>
+        </p>
+      </div>
     </div>
   </footer>
 )

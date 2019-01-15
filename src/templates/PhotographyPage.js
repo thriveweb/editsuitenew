@@ -6,6 +6,7 @@ import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
 import OpenerMobile from '../components/OpenerMobile'
 import ProjectCategories from '../components/ProjectCategories'
+import Footer from '../components/Footer'
 
 export class PhotographyPageTemplate extends Component {
   state = {
@@ -67,6 +68,8 @@ export class PhotographyPageTemplate extends Component {
             </div>
           </div>
         )}
+
+        <Footer />
       </div>
     )
   }
