@@ -1,35 +1,50 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
+import _kebabCase from 'lodash/kebabCase'
 
 import Layout from '../components/Layout'
 import ProjectSection from '../components/ProjectSection'
 import Image from '../components/Image'
 import './SingleProject.css'
 
-export const SingleClientTemplate = ({ title, excerpt, logo, items }) => {
-  return (
-    <div className="project-single">
-      <section className="full">
-        <div className="thin">
-          <div className="taCenter">
-            <h1>{title}</h1>
-            <Image className="cover" src={logo} alt={title} />
-            <p>{excerpt}</p>
-          </div>
+export class SingleClientTemplate extends Component {
+  state = {
+    display: 'none'
+  }
+  UNSAFE_componentWillMount() {
+    setTimeout(() => {
+      console.log('WAIT')
+      this.setState({ display: 'block' })
+    }, 1000)
+  }
 
-          <div id="two" className="thick">
-            <div className="wide">
-              {!!items && <ProjectSection projects={items} />}
+  render() {
+    const { title, excerpt, logo, items } = this.props,
+      style = { display: this.state.display }
+    return (
+      <div className="project-single" style={style}>
+        <div className="section">
+          <div className="thin">
+            <div className="taCenter">
+              <h1>{title}</h1>
+              <Image className="cover" src={logo} alt={_kebabCase(title)} />
+              <p>{excerpt}</p>
             </div>
-          </div>
 
-          <Link className="back" to="/#collaborations">
-            Back to all
-          </Link>
+            <div className="thick">
+              <div className="wide">
+                {!!items && <ProjectSection projects={items} />}
+              </div>
+            </div>
+
+            <Link className="back" to="/#collaborations">
+              Back to all
+            </Link>
+          </div>
         </div>
-      </section>
-    </div>
-  )
+      </div>
+    )
+  }
 }
 
 const fiterData = (filterArr, data) => {
@@ -55,7 +70,6 @@ const fiterData = (filterArr, data) => {
 }
 
 const SingleClient = ({ data: { client, data } }) => {
-  console.log(client)
   const items = fiterData(client.frontmatter.items, data.edges)
   return (
     <Layout
@@ -116,6 +130,7 @@ export const pageQuery = graphql`
           frontmatter {
             preview
             featuredImage
+            title
           }
         }
       }

@@ -42,7 +42,7 @@ class OpenerVideo extends Component {
   }
 
   render() {
-    const { src, poster, title } = this.props
+    const { src, poster } = this.props
     const style = {
       backgroundImage: 'url(' + poster + ')'
     }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import _kebabCase from 'lodash/kebabCase'
 
 import Image from '../components/Image'
 
@@ -34,9 +35,13 @@ class ProjectSection extends React.Component {
             <Link
               className="item flex"
               to={item.slug}
-              key={`project-${item.title}`}
+              key={`project-${_kebabCase(item.title)}`}
             >
-              <Image className="cover" src={item.preview} alt={item.title} />
+              <Image
+                className="cover"
+                src={item.preview}
+                alt={_kebabCase(item.title)}
+              />
             </Link>
           ))}
         </div>
