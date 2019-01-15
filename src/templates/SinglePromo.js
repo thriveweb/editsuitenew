@@ -5,16 +5,7 @@ import Layout from '../components/Layout'
 import Footer from '../components/Footer'
 import './SingleProject.css'
 
-export const SinglePromoTemplate = ({
-  title,
-  excerpt,
-  video,
-  tags,
-  projects = [],
-  projectCategories = [],
-  isCategory,
-  category
-}) => {
+export const SinglePromoTemplate = ({ title, excerpt, video, tags }) => {
   return (
     <Fragment>
       <div className="project-single">
@@ -52,7 +43,7 @@ export const SinglePromoTemplate = ({
   )
 }
 
-const SinglePromo = ({ data: { project, allProjects, projectCategories } }) => {
+const SinglePromo = ({ data: { project } }) => {
   return (
     <Layout
       meta={project.frontmatter.meta || false}
@@ -62,11 +53,6 @@ const SinglePromo = ({ data: { project, allProjects, projectCategories } }) => {
         {...project}
         {...project.frontmatter}
         body={project.html}
-        projectCategories={projectCategories.edges.map(post => ({
-          ...post.node,
-          ...post.node.frontmatter,
-          ...post.node.fields
-        }))}
       />
     </Layout>
   )
@@ -85,34 +71,6 @@ export const pageQuery = graphql`
         excerpt
         video
         tags
-      }
-    }
-
-    projectCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "projectCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            slug
-            title
-          }
-        }
-      }
-    }
-
-    allProjects: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "promos" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          id
-        }
       }
     }
   }

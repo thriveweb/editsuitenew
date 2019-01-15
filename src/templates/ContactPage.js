@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
 import './ContactPage.css'
 import '../components/Footer.css'
 
-export const ContactPageTemplate = ({ title, sectionContact, contact }) => (
+export const ContactPageTemplate = ({ sectionContact, contact }) => (
   <Fragment>
     <div className="contact full">
       <div className="wide">

@@ -8,12 +8,7 @@ import OpenerMobile from '../components/OpenerMobile'
 import PostSection from '../components/PostSection'
 import Footer from '../components/Footer'
 
-export const BlogIndexTemplate = ({
-  title,
-  sectionOpener,
-  posts = [],
-  contentType
-}) => (
+export const BlogIndexTemplate = ({ title, sectionOpener, posts = [] }) => (
   <Fragment>
     <div className="section">
       <a className="arrow-down" href="#two">
@@ -73,9 +68,6 @@ export const pageQuery = graphql`
   query BlogIndex($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
-      fields {
-        contentType
-      }
       frontmatter {
         title
         sectionOpener {

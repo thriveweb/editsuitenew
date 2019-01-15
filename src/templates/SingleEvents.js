@@ -5,16 +5,7 @@ import Layout from '../components/Layout'
 import Footer from '../components/Footer'
 import './SingleProject.css'
 
-export const SingleEventsTemplate = ({
-  title,
-  excerpt,
-  video,
-  tags,
-  projects = [],
-  projectCategories = [],
-  isCategory,
-  category
-}) => {
+export const SingleEventsTemplate = ({ title, excerpt, video, tags }) => {
   return (
     <Fragment>
       <div className="project-single">
@@ -49,9 +40,7 @@ export const SingleEventsTemplate = ({
   )
 }
 
-const SingleEvents = ({
-  data: { project, allProjects, projectCategories }
-}) => {
+const SingleEvents = ({ data: { project } }) => {
   return (
     <Layout
       meta={project.frontmatter.meta || false}
@@ -61,11 +50,6 @@ const SingleEvents = ({
         {...project}
         {...project.frontmatter}
         body={project.html}
-        projectCategories={projectCategories.edges.map(post => ({
-          ...post.node,
-          ...post.node.frontmatter,
-          ...post.node.fields
-        }))}
       />
     </Layout>
   )
@@ -84,34 +68,6 @@ export const pageQuery = graphql`
         excerpt
         video
         tags
-      }
-    }
-
-    projectCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "projectCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            slug
-            title
-          }
-        }
-      }
-    }
-
-    allProjects: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "events" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          id
-        }
       }
     }
   }

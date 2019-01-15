@@ -9,11 +9,7 @@ export const SingleMotionGraphicsTemplate = ({
   title,
   excerpt,
   video,
-  tags,
-  projects = [],
-  projectCategories = [],
-  isCategory,
-  category
+  tags
 }) => {
   return (
     <Fragment>
@@ -49,9 +45,7 @@ export const SingleMotionGraphicsTemplate = ({
   )
 }
 
-const SingleMotionGraphics = ({
-  data: { project, allProjects, projectCategories }
-}) => {
+const SingleMotionGraphics = ({ data: { project } }) => {
   return (
     <Layout
       meta={project.frontmatter.meta || false}
@@ -61,11 +55,6 @@ const SingleMotionGraphics = ({
         {...project}
         {...project.frontmatter}
         body={project.html}
-        projectCategories={projectCategories.edges.map(post => ({
-          ...post.node,
-          ...post.node.frontmatter,
-          ...post.node.fields
-        }))}
       />
     </Layout>
   )
@@ -84,34 +73,6 @@ export const pageQuery = graphql`
         excerpt
         video
         tags
-      }
-    }
-
-    projectCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "projectCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            slug
-            title
-          }
-        }
-      }
-    }
-
-    allProjects: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "motionGraphics" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          id
-        }
       }
     }
   }

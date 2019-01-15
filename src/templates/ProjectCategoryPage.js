@@ -11,14 +11,11 @@ import Footer from '../components/Footer'
 export const ProjectCategoryPageTemplate = ({
   title,
   sectionOpener,
-  projectCategories = [],
   motionGraphics = [],
   businessStories = [],
   droneAerials = [],
   events = [],
   promos = [],
-  testimonials,
-  contentType,
   slug
 }) => {
   let categorySelector = []
@@ -104,16 +101,7 @@ export const ProjectCategoryPageTemplate = ({
 }
 
 const ProjectCategoryPage = ({
-  data: {
-    page,
-    testimonials,
-    projectCategories,
-    motionGraphics,
-    businessStories,
-    droneAerials,
-    events,
-    promos
-  }
+  data: { page, motionGraphics, businessStories, droneAerials, events, promos }
 }) => (
   <Layout
     meta={page.frontmatter.meta || false}
@@ -123,10 +111,6 @@ const ProjectCategoryPage = ({
       {...page}
       {...page.fields}
       {...page.frontmatter}
-      testimonials={testimonials.edges.map(item => ({
-        ...item.node,
-        ...item.node.frontmatter
-      }))}
       motionGraphics={motionGraphics.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
@@ -148,11 +132,6 @@ const ProjectCategoryPage = ({
         ...post.node.fields
       }))}
       promos={promos.edges.map(post => ({
-        ...post.node,
-        ...post.node.frontmatter,
-        ...post.node.fields
-      }))}
-      projectCategories={projectCategories.edges.map(post => ({
         ...post.node,
         ...post.node.frontmatter,
         ...post.node.fields
@@ -179,38 +158,6 @@ export const pageQuery = graphql`
           videoPoster
           image
           mobile
-        }
-      }
-    }
-
-    testimonials: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/testimonials/" } }
-      sort: { order: ASC, fields: [frontmatter___order] }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            order
-            title
-            company
-            content
-          }
-        }
-      }
-    }
-
-    projectCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "projectCategories" } } }
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            slug
-          }
         }
       }
     }
