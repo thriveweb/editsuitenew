@@ -12,7 +12,7 @@ export default () => (
         </p>
 
         <p>
-          Crafted by{' '}
+          Website by{' '}
           <a
             href="https://thriveweb.com.au"
             target="_blank"
