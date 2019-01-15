@@ -26,8 +26,10 @@ export class PhotographyPageTemplate extends Component {
 
     return (
       <div style={style}>
-        <div className="section">
-          <div className="arrow-down" />
+        <div className="section" id="promo">
+          <a className="arrow-down" href="#photography">
+            {''}
+          </a>
           {!!title && (
             <div className="full open">
               <div className="taCenter">
@@ -49,8 +51,7 @@ export class PhotographyPageTemplate extends Component {
         </div>
 
         {!!photography && (
-          <div className="section">
-            <div className="arrow-up" />
+          <div className="section" id="photography">
             <div className="wide">
               <Link className="back" to="/work#two/">
                 Back to all
