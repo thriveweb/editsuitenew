@@ -10,7 +10,8 @@ class OpenerVideo extends Component {
   }
 
   state = {
-    videoBuffer: 0
+    videoBuffer: 0,
+    videoCurrentTime: 0
   }
 
   videoBufferBar(event) {
@@ -39,6 +40,17 @@ class OpenerVideo extends Component {
     ReactDOM.findDOMNode(this.ref.current).addEventListener('progress', e =>
       this.videoBufferBar(e)
     )
+    ReactDOM.findDOMNode(this.ref.current).addEventListener(
+      'timeupdate',
+      event => {
+        console.log(event)
+        if (!isNaN(event.target.duration)) {
+          this.setState({
+            videoCurrentTime: event.target.currentTime / event.target.duration
+          })
+        }
+      }
+    )
   }
 
   render() {
@@ -59,7 +71,18 @@ class OpenerVideo extends Component {
         >
           <source src={src} type="video/mp4" />
         </video>
-        <progress value={this.state.videoBuffer} max="1" />
+        <div className="progressBarContainer buffer">
+          <div
+            className="progressBar"
+            style={{ width: this.state.videoBuffer * 100 + '%' }}
+          />
+        </div>
+        <div className="progressBarContainer time">
+          <div
+            className="progressBar"
+            style={{ width: this.state.videoCurrentTime * 100 + '%' }}
+          />
+        </div>
       </div>
     )
   }

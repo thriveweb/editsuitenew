@@ -65,19 +65,30 @@
   transform: translate(-50%, -50%);
 }
 
-.opener.video progress {
+.opener.video .progressBarContainer {
   position: absolute;
   width: 100%;
   bottom: 0;
-  margin: 0;
-  padding: 0;
   height: 0.5rem;
   display: block;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.opener.video .progressBarContainer .progressBar {
+  position: relative;
+  height: 100%;
+  transition: ease all 0.3s;
+}
+
+.opener.video .progressBarContainer.buffer .progressBar {
   background-color: #fff;
-  color: #fff;
-  border-radius: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-  transition: 0.3s ease all;
+}
+
+.opener.video .progressBarContainer.time .progressBar {
+  background-color: #f54344;
+}
+
+.opener.video progress.currentTime {
 }
 
 .opener.video progress::-webkit-progress-value {
