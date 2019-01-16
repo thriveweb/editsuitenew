@@ -11,15 +11,21 @@ import Nav from './Nav'
 export default class Layout extends React.Component {
   state = {
     display: 'none',
-    progress: 0
+    progress: 0,
+    hideProgress: false
   }
   UNSAFE_componentWillMount() {
     const p = setInterval(() => {
       this.setState({ progress: this.state.progress + 1 })
+      if (this.state.progress === 10) {
+        clearInterval(p)
+        setTimeout(() => {
+          this.setState({ hideProgress: true })
+        }, 100)
+      }
     }, 100)
     setTimeout(() => {
       this.setState({ display: 'block' })
-      clearInterval(p)
     }, 1000)
   }
 
@@ -91,10 +97,7 @@ export default class Layout extends React.Component {
                 value={this.state.progress}
                 max="10"
                 style={{
-                  display:
-                    this.state.progress >= 10 && this.state.display === 'block'
-                      ? 'none'
-                      : 'block'
+                  display: this.state.hideProgress ? 'none' : 'block'
                 }}
               />
 
