@@ -16,10 +16,17 @@ export default class Layout extends React.Component {
   }
 
   UNSAFE_componentWillMount() {
-    const p = setInterval(() => {
+    let p = setInterval(() => {
       this.setState({ progress: this.state.progress + 1 })
       if (this.state.progress >= 10) {
         clearInterval(p)
+      }
+    }, 100)
+
+    let t = setTimeout(() => {
+      if (this.state.progress >= 10) {
+        this.setState({ hideProgress: 'none' })
+        clearInterval(t)
       }
     }, 100)
 
