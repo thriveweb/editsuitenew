@@ -77,7 +77,7 @@ export class AboutPageTemplate extends React.Component {
             </div>
           )}
 
-          {!isPreview && sectionClients && (
+          {sectionClients && (
             <div className="section light" dataanchor="clients">
               <ArrowDown />
               <ArrowUp />
@@ -86,12 +86,12 @@ export class AboutPageTemplate extends React.Component {
                   title={sectionClients.title}
                   subtitle={sectionClients.subtitle}
                 />
-                <ClientsSection clients={clients} />
+                {!isPreview && clients && <ClientsSection clients={clients} />}
               </div>
             </div>
           )}
 
-          {!isPreview && sectionTestimonials && (
+          {sectionTestimonials && (
             <div className="section" dataanchor="testimonials">
               <ArrowUp />
               <div className="thin">
@@ -99,7 +99,9 @@ export class AboutPageTemplate extends React.Component {
                   title={sectionTestimonials.title}
                   subtitle={sectionTestimonials.subtitle}
                 />
-                <Testimonials testimonials={testimonials} />
+                {!isPreview && testimonials && (
+                  <Testimonials testimonials={testimonials} />
+                )}
               </div>
             </div>
           )}

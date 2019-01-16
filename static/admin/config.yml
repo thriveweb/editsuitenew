@@ -41,7 +41,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - { label: Byline, name: byline, widget: string, required: false }
-              - { label: Video, name: video, widget: file }
+              - { label: Video, name: video, widget: file, required: false }
               - { label: Image, name: image, widget: image, required: false }
 
           - label: 'Section: Intro'
@@ -128,9 +128,8 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - { label: Byline, name: byline, widget: string, required: false }
-              - { label: Video, name: video, widget: string, required: false }
               - { label: Image, name: image, widget: image, required: false }
-              - { label: Mobile, name: mobile, widget: image }
+              - { label: Video, name: video, widget: file, required: false }
 
           - label: 'Section: Icons'
             name: 'icons'
@@ -140,19 +139,19 @@ collections: # A list of collections the CMS should be able to edit
               - {
                   label: Icon 1 Description,
                   name: oneDescription,
-                  widget: markdown,
+                  widget: text,
                 }
               - { label: Icon 2 Title, name: twoTitle, widget: string }
               - {
                   label: Icon 2 Description,
                   name: twoDescription,
-                  widget: markdown,
+                  widget: text,
                 }
               - { label: Icon 3 Title, name: threeTitle, widget: string }
               - {
                   label: Icon 3 Description,
                   name: threeDescription,
-                  widget: markdown,
+                  widget: text,
                 }
 
           - label: 'Section: Blurb'
@@ -161,8 +160,8 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: string }
-              - { label: Content, name: content, widget: markdown }
               - { label: Image, name: image, widget: image }
+              - { label: Content, name: content, widget: markdown }
 
           - label: 'Section: Clients'
             name: 'sectionClients'
