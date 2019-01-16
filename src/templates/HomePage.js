@@ -5,7 +5,6 @@ import FullPage, { ArrowDown, ArrowUp } from '../components/FullPage'
 import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
-import OpenerMobile from '../components/OpenerMobile'
 import SectionTitle from '../components/SectionTitle'
 import ProjectCategories from '../components/ProjectCategories'
 import ClientsSection from '../components/ClientsSection'
@@ -59,9 +58,6 @@ export class HomePageTemplate extends Component {
             )}
             {!!sectionOpener.image && (
               <OpenerImage src={sectionOpener.image} alt={title} />
-            )}
-            {!!sectionOpener.mobile && (
-              <OpenerMobile src={sectionOpener.mobile} alt={title} />
             )}
           </div>
 

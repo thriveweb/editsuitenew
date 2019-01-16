@@ -37,6 +37,7 @@ class PostSection extends React.Component {
               <div className="post-card flex">
                 <Image
                   className="cover"
+                  resolutions="small"
                   src={item.featuredImage}
                   alt={item.title}
                 />
@@ -49,14 +50,13 @@ class PostSection extends React.Component {
           ))}
         </div>
 
-        {showLoadMore &&
-          visiblePost.length < posts.length && (
-            <div className="taCenter">
-              <div className="button" onClick={this.increaseLimit}>
-                {loadMoreTitle}
-              </div>
+        {showLoadMore && visiblePost.length < posts.length && (
+          <div className="taCenter">
+            <div className="button" onClick={this.increaseLimit}>
+              {loadMoreTitle}
             </div>
-          )}
+          </div>
+        )}
       </div>
     )
   }

@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
-import OpenerMobile from '../components/OpenerMobile'
 import PostSection from '../components/PostSection'
 import Footer from '../components/Footer'
 
@@ -28,9 +27,6 @@ export const BlogIndexTemplate = ({ title, sectionOpener, posts = [] }) => (
       )}
       {!!sectionOpener.image && (
         <OpenerImage src={sectionOpener.image} alt={title} />
-      )}
-      {!!sectionOpener.mobile && (
-        <OpenerMobile src={sectionOpener.mobile} alt={title} />
       )}
     </div>
 

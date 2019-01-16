@@ -7,7 +7,6 @@ import Image from '../components/Image'
 import Content from '../components/Content'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
-import OpenerMobile from '../components/OpenerMobile'
 import SectionTitle from '../components/SectionTitle'
 import Icons from '../components/Icons'
 import ClientsSection from '../components/ClientsSection'
@@ -46,9 +45,6 @@ export class AboutPageTemplate extends React.Component {
             )}
             {!!sectionOpener.image && (
               <OpenerImage src={sectionOpener.image} alt={title} />
-            )}
-            {!!sectionOpener.mobile && (
-              <OpenerMobile src={sectionOpener.mobile} alt={title} />
             )}
           </div>
 

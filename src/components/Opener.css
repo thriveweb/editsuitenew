@@ -52,6 +52,12 @@
   left: 0;
 }
 
+@media screen and (max-width: 900px) {
+  .opener.video::after {
+    top: 0;
+  }
+}
+
 .opener.video iframe,
 .opener.video video {
   width: 100vw;
@@ -130,7 +136,11 @@
   display: none;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
+  .opener.video .progressBarContainer {
+    display: none;
+    opacity: 0;
+  }
   /* .opener {
     display: none;
   } */
