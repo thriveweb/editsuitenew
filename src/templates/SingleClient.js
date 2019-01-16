@@ -9,22 +9,11 @@ import Footer from '../components/Footer'
 import './SingleProject.css'
 
 export class SingleClientTemplate extends Component {
-  state = {
-    display: 'none'
-  }
-  UNSAFE_componentWillMount() {
-    setTimeout(() => {
-      console.log('WAIT')
-      this.setState({ display: 'block' })
-    }, 1000)
-  }
-
   render() {
-    const { title, excerpt, logo, items } = this.props,
-      style = { display: this.state.display }
+    const { title, excerpt, logo, items } = this.props
     return (
       <Fragment>
-        <div className="project-single" style={style}>
+        <div className="project-single">
           <div className="section">
             <div className="thin">
               <div className="taCenter">

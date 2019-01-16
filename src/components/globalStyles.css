@@ -26,6 +26,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+progress.pageLoad {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 0.5rem;
+  display: block;
+  background-color: #fff;
+}
+
+progress.pageLoad::-webkit-progress-value {
+  background-color: #fff;
+  transition: 0.3s ease all;
+}
+
+progress.pageLoad::-moz-progress-bar {
+  background-color: #fff;
+  transition: 0.3s ease all;
+}
+
 .fp-tableCell {
   height: 100vh !important;
 }

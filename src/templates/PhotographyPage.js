@@ -9,23 +9,11 @@ import ProjectCategories from '../components/ProjectCategories'
 import Footer from '../components/Footer'
 
 export class PhotographyPageTemplate extends Component {
-  state = {
-    display: 'none'
-  }
-
-  UNSAFE_componentWillMount() {
-    setTimeout(() => {
-      console.log('WAIT')
-      this.setState({ display: 'block' })
-    }, 1000)
-  }
-
   render() {
-    const { title, sectionOpener, photography = [] } = this.props,
-      style = { display: this.state.display }
+    const { title, sectionOpener, photography = [] } = this.props
 
     return (
-      <div style={style}>
+      <div>
         <div className="section" id="promo">
           <a className="arrow-down" href="#photography">
             {''}
