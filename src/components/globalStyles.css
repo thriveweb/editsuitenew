@@ -37,12 +37,12 @@ progress.pageLoad {
 
 progress.pageLoad::-webkit-progress-value {
   background-color: #fff;
-  transition: 0.3s ease all;
+  transition: 0.1s ease all;
 }
 
 progress.pageLoad::-moz-progress-bar {
   background-color: #fff;
-  transition: 0.3s ease all;
+  transition: 0.1s ease all;
 }
 
 .fp-tableCell {
