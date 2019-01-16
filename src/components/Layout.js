@@ -3,39 +3,29 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import 'modern-normalize/modern-normalize.css'
-import './globalStyles.css'
 
+import './globalStyles.css'
 import Meta from './Meta'
 import Nav from './Nav'
 
 export default class Layout extends React.Component {
   state = {
     display: 'none',
-    progress: 0,
-    hideProgress: 'block'
+    progress: 0
   }
   UNSAFE_componentWillMount() {
     const p = setInterval(() => {
       this.setState({ progress: this.state.progress + 1 })
-      if (this.state.progress === 10) {
-        clearInterval(p)
-        setTimeout(() => {
-          this.setState({ hideProgress: 'none' })
-        }, 100)
-      }
     }, 100)
     setTimeout(() => {
       this.setState({ display: 'block' })
+      clearInterval(p)
     }, 1000)
   }
 
   render() {
     const { children, meta, title } = this.props,
-      style = { display: this.state.display },
-      style2 = {
-        display: this.state.hideProgress
-      }
-
+      style = { display: this.state.display }
     return (
       <StaticQuery
         query={graphql`
@@ -100,7 +90,12 @@ export default class Layout extends React.Component {
                 className="pageLoad"
                 value={this.state.progress}
                 max="10"
-                style={style2}
+                style={{
+                  display:
+                    this.state.progress >= 10 && this.state.display === 'block'
+                      ? 'none'
+                      : 'block'
+                }}
               />
 
               <div style={style}>{children}</div>
