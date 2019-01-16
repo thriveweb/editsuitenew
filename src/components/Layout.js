@@ -90,6 +90,12 @@ export default class Layout extends React.Component {
                 className="pageLoad"
                 value={this.state.progress}
                 max="10"
+                style={{
+                  display:
+                    this.state.progress >= 10 && this.state.display === 'block'
+                      ? 'none'
+                      : 'block'
+                }}
               />
 
               <div style={style}>{children}</div>
