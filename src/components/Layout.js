@@ -15,7 +15,7 @@ export default class Layout extends React.Component {
     hideProgress: 'block'
   }
 
-  UNSAFE_componentWillMount() {
+  componentDidMount() {
     let p = setInterval(() => {
       this.setState({ progress: this.state.progress + 1 })
       if (this.state.progress >= 10) {
