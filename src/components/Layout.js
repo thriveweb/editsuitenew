@@ -15,15 +15,16 @@ export default class Layout extends React.Component {
     hideProgress: 'block'
   }
   UNSAFE_componentWillMount() {
-    const p = setInterval(() => {
-      this.setState({ progress: this.state.progress + 1 })
-      if (this.state.progress >= 10) {
-        setTimeout(() => {
-          this.setState({ hideProgress: 'none' })
-        }, 100)
-        clearInterval(p)
-      }
-    }, 100)
+    // const p = setInterval(() => {
+    //   this.setState({ progress: this.state.progress + 1 })
+    //   if (this.state.progress >= 10) {
+    //     setTimeout(() => {
+    //       this.setState({ hideProgress: 'none' })
+    //     }, 100)
+    //     clearInterval(p)
+    //   }
+    // }, 100)
+
     setTimeout(() => {
       this.setState({ display: 'block' })
     }, 1000)
