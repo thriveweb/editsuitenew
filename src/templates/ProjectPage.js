@@ -153,8 +153,10 @@ export const pageQuery = graphql`
           frontmatter {
             title
             order
-            preview
             slug
+            sectionOpener {
+              image
+            }
           }
         }
       }
