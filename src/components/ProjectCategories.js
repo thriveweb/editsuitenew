@@ -13,7 +13,11 @@ const ProjectCategories = ({ categories }) => (
         key={`projectCategory-${index}`}
       >
         <h3>{item.title}</h3>
-        <Image className="cover" src={item.preview} alt={item.title} />
+        <Image
+          className="cover"
+          src={item.sectionOpener.image}
+          alt={item.title}
+        />
       </Link>
     ))}
   </div>
