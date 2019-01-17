@@ -333,9 +333,8 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - { label: Byline, name: byline, widget: string, required: false }
-              - { label: Video, name: video, widget: string, required: false }
+              - { label: Video, name: video, widget: file, required: false }
               - { label: Image, name: image, widget: image, required: false }
-              - { label: Mobile, name: mobile, widget: image }
 
           - label: 'Meta'
             required: false
@@ -380,16 +379,14 @@ collections: # A list of collections the CMS should be able to edit
 
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
-      - { label: Preview, name: preview, widget: image }
 
       - label: 'Section: Opener'
         name: 'sectionOpener'
         widget: 'object'
         fields:
           - { label: Byline, name: byline, widget: string, required: false }
-          - { label: Video, name: video, widget: hidden } # not editable in CMS but stays in markdown
+          - { label: Video, name: video, widget: file, required: false }
           - { label: Image, name: image, widget: image, required: false }
-          - { label: Mobile, name: mobile, widget: image }
 
       - label: 'Meta'
         required: false
