@@ -35,9 +35,13 @@ export class ProjectPageTemplate extends React.Component {
             )}
             <div className="gradient" />
             {!!sectionOpener.video && (
-              <OpenerVideo src={sectionOpener.video} alt={title} />
+              <OpenerVideo
+                src={sectionOpener.video}
+                poster={sectionOpener.image}
+                alt={title}
+              />
             )}
-            {!!sectionOpener.image && (
+            {!!sectionOpener.image && !sectionOpener.video && (
               <OpenerImage src={sectionOpener.image} alt={title} />
             )}
           </div>

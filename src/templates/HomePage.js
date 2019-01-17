@@ -52,11 +52,11 @@ export class HomePageTemplate extends Component {
             {!!sectionOpener.video && (
               <OpenerVideo
                 src={sectionOpener.video}
-                poster={sectionOpener.videoPoster}
+                poster={sectionOpener.image}
                 alt={title}
               />
             )}
-            {!!sectionOpener.image && (
+            {!!sectionOpener.image && !sectionOpener.video && (
               <OpenerImage src={sectionOpener.image} alt={title} />
             )}
           </div>
