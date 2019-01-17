@@ -4,6 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import OpenerVideo from '../components/OpenerVideo'
 import OpenerImage from '../components/OpenerImage'
+import OpenerMobile from '../components/OpenerMobile'
 import ProjectSection from '../components/ProjectSection'
 import Footer from '../components/Footer'
 
