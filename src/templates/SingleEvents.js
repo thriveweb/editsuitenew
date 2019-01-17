@@ -27,7 +27,7 @@ export const SingleEventsTemplate = ({ title, excerpt, video, tags }) => {
               </div>
             )}
 
-            {!!tags && <h5>tags: {tags}</h5>}
+            {!!tags && <h5>{tags}</h5>}
 
             <Link className="back" to="/project-categories/events">
               Back to all

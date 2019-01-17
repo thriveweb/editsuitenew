@@ -27,7 +27,7 @@ export const SingleDroneAerialsTemplate = ({ title, excerpt, video, tags }) => {
               </div>
             )}
 
-            {!!tags && <h5>tags: {tags}</h5>}
+            {!!tags && <h5>{tags}</h5>}
 
             <Link className="back" to="/project-categories/drone-aerials">
               Back to all
