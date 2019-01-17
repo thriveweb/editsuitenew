@@ -2,7 +2,7 @@
 template: SinglePhotography
 preview: 'https://ucarecdn.com/b0954e3c-d32a-4598-a04e-aa86b98ec724~17/nth/0/'
 title: Events
-excerpt: ''
+excerpt: ' '
 imageList:
   - blurb: J-Lo world tour taken in Kuala Lumpur.
     img: 'https://ucarecdn.com/30912304-636e-4ea4-a276-09f8ea630b18/'
@@ -53,3 +53,4 @@ meta:
   description: Events are fun. We have covered a lot!
   title: Events
 ---
+
