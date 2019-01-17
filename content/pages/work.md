@@ -1,7 +1,7 @@
 ---
 template: ProjectPage
 slug: work
-title: our work
+title: Our Work
 sectionOpener:
   byline: 'creative, engaging digital imagery. '
   image: >-
