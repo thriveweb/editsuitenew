@@ -47,7 +47,7 @@ export class AboutPageTemplate extends React.Component {
                 alt={title}
               />
             )}
-            {!!sectionOpener.image && !ectionOpener.video && (
+            {!!sectionOpener.image && !sectionOpener.video && (
               <OpenerImage src={sectionOpener.image} alt={title} />
             )}
           </div>

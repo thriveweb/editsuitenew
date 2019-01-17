@@ -9,7 +9,6 @@ sectionOpener:
   mobile: >-
     https://ucarecdn.com/c4ce2e57-e7e8-4db8-858b-ee74ba6ad3bb/-/crop/973x926/427,7/-/preview/
   video: 'https://ucarecdn.com/aeb31088-8441-48e0-9538-48d56ddcf853/events_video.mp4'
-  videoPoster: 'https://ucarecdn.com/7e1c171f-2101-4a9e-87f6-990e6ba39bb0/poster_events.jpeg'
 meta:
   description: >-
     We have filmed at so many events we have lost count! We love doing them

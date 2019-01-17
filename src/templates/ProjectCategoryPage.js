@@ -151,7 +151,6 @@ export const pageQuery = graphql`
         sectionOpener {
           byline
           video
-          videoPoster
           image
           mobile
         }

@@ -9,7 +9,6 @@ sectionOpener:
   mobile: >-
     https://ucarecdn.com/eae6391c-c056-4f30-b6d2-6d8dabfd33fc/-/crop/1440x1866/250,0/-/preview/
   video: 'https://ucarecdn.com/dc9eb79a-8a3e-440c-80fa-c5b56348faff/promos_video.mp4'
-  videoPoster: 'https://ucarecdn.com/e15393ac-5a2f-4d37-9e72-407ead071f91/poster_promos.jpeg'
 meta:
   description: >-
     Everyone knows how powerful video is these days. Thinking of a fun or edgy

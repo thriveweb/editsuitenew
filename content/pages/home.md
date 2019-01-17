@@ -4,12 +4,11 @@ slug: ''
 title: The Edit Suite
 sectionOpener:
   byline: magic in motion.
-  image: ''
+  image: 'https://ucarecdn.com/52a983db-c65f-4b6a-a467-8b3ca649de3f/poster_home.jpeg'
   mobile: >-
     https://ucarecdn.com/2c1b9f47-69bc-4dd2-9e7b-7d2cea0f6a73/-/crop/2058x1452/446,0/-/preview/
   title: content creatives.
   video: 'https://ucarecdn.com/86d1c910-fe65-4600-96d2-06a7146a37be/home_video.mp4'
-  videoPoster: 'https://ucarecdn.com/52a983db-c65f-4b6a-a467-8b3ca649de3f/poster_home.jpeg'
 sectionIntro:
   buttonLink: /about
   buttonText: About Us

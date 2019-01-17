@@ -183,7 +183,6 @@ export const pageQuery = graphql`
           title
           byline
           video
-          videoPoster
           image
           mobile
         }
