@@ -2,7 +2,6 @@
 template: ProjectCategoryPage
 title: promos and commercials.
 order: '5'
-preview: 'https://ucarecdn.com/75ad4960-9173-49f0-ba61-4772dd2e8fbb/'
 sectionOpener:
   byline: 'captivate, promote and sell.'
   image: 'https://ucarecdn.com/75ad4960-9173-49f0-ba61-4772dd2e8fbb/'
@@ -17,3 +16,4 @@ meta:
     doing so.
   title: Promos & TVC's
 ---
+
