@@ -59,6 +59,13 @@ class OpenerVideo extends Component {
     )
   }
 
+  componentWillUnmount() {
+    ReactDOM.findDOMNode(this.ref.current).removeEventListener(
+      'progress',
+      this.videoBufferBar
+    )
+  }
+
   render() {
     const { src, poster } = this.props
     const style = {
