@@ -428,7 +428,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Order, name: order, widget: number }
       - { label: Preview, name: preview, widget: image }
       - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Video, name: video, widget: string }
+      - { label: Video, name: video, widget: string, hint: 'Vimeo video ID' }
       - { label: Tags, name: tags, widget: string }
 
       - label: 'Meta'
@@ -471,7 +471,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Order, name: order, widget: number }
       - { label: Preview, name: preview, widget: image }
       - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Video, name: video, widget: string }
+      - { label: Video, name: video, widget: string, hint: 'Vimeo video ID' }
       - { label: Tags, name: tags, widget: string }
 
       - label: 'Meta'
@@ -514,7 +514,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Order, name: order, widget: number }
       - { label: Preview, name: preview, widget: image }
       - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Video, name: video, widget: string }
+      - { label: Video, name: video, widget: string, hint: 'Vimeo video ID' }
       - { label: Tags, name: tags, widget: string }
 
       - label: 'Meta'
@@ -557,7 +557,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Order, name: order, widget: number }
       - { label: Preview, name: preview, widget: image }
       - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Video, name: video, widget: string }
+      - { label: Video, name: video, widget: string, hint: 'Vimeo video ID' }
       - { label: Tags, name: tags, widget: string }
 
       - label: 'Meta'
@@ -600,7 +600,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Order, name: order, widget: number }
       - { label: Preview, name: preview, widget: image }
       - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Video, name: video, widget: string }
+      - { label: Video, name: video, widget: string, hint: 'Vimeo video ID' }
       - { label: Tags, name: tags, widget: string }
 
       - label: 'Meta'
