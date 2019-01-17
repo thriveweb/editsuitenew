@@ -2,7 +2,6 @@
 template: ProjectCategoryPage
 title: motion graphics.
 order: '2'
-preview: 'https://ucarecdn.com/cf6fd4a9-9e71-474a-89ac-99899b5ca4d9/'
 sectionOpener:
   byline: technical wizardry
   image: 'https://ucarecdn.com/cf6fd4a9-9e71-474a-89ac-99899b5ca4d9/'
@@ -15,3 +14,4 @@ meta:
     right. We have made a lot of them.
   title: Motion Graphics
 ---
+
