@@ -1,6 +1,6 @@
 ---
-order: '99'
 title: Andrew Zurcas
+order: '99'
 company: Southport Sharks
 content: >-
   Southport Sharks are proud to partner with The Edit Suite. A local business,
@@ -8,3 +8,4 @@ content: >-
   recent brand refresh video and event photography. The team is an absolute
   pleasure to work with and we highly recommend their services.
 ---
+
