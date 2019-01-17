@@ -50,6 +50,9 @@ export class AboutPageTemplate extends React.Component {
             {!!sectionOpener.image && !sectionOpener.video && (
               <OpenerImage src={sectionOpener.image} alt={title} />
             )}
+            {!!sectionOpener.mobileImage && (
+              <OpenerMobile src={sectionOpener.mobileImage} alt={title} />
+            )}
           </div>
 
           <div className="section" dataanchor="us">

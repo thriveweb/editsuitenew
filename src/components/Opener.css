@@ -141,15 +141,15 @@
     display: none;
     opacity: 0;
   }
-  /* .opener {
+  .opener {
     display: none;
-  } */
+  }
 
   .gradient {
     height: 100%;
   }
 
-  /* .mobile.opener {
+  .mobile.opener {
     display: flex !important;
-  } */
+  }
 }

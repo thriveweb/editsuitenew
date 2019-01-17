@@ -5,7 +5,7 @@ import './Opener.css'
 
 const OpenerImage = ({ title, src, alt }) => (
   <div className="opener mobile relative">
-    <Image background resolutions="large" src={src} alt={alt} />
+    <Image background resolutions="small" src={src} alt={alt} />
   </div>
 )
 

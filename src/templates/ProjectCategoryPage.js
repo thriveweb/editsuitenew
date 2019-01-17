@@ -59,6 +59,9 @@ export const ProjectCategoryPageTemplate = ({
           {!!sectionOpener.image && !sectionOpener.video && (
             <OpenerImage src={sectionOpener.image} alt={title} />
           )}
+          {!!sectionOpener.mobileImage && (
+            <OpenerMobile src={sectionOpener.mobileImage} alt={title} />
+          )}
         </div>
 
         {!!categorySelector && (
