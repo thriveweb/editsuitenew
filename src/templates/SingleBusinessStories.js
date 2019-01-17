@@ -32,7 +32,7 @@ export const SingleBusinessStoriesTemplate = ({
               </div>
             )}
 
-            {!!tags && <h5>tags: {tags}</h5>}
+            {!!tags && <h5>{tags}</h5>}
 
             <Link className="back" to="/project-categories/business-stories">
               Back to all
