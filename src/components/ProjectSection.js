@@ -39,6 +39,7 @@ class ProjectSection extends React.Component {
             >
               <Image
                 className="cover"
+                resolutions="small"
                 src={item.preview}
                 alt={_kebabCase(item.title)}
               />
