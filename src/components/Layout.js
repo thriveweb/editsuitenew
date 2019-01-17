@@ -10,31 +10,27 @@ import Nav from './Nav'
 
 export default class Layout extends React.Component {
   state = {
-    display: 'none',
+    showContent: false,
     progress: 0,
-    hideProgress: 'block'
+    hideProgress: false
   }
 
   componentDidMount() {
     let p = setInterval(() => {
       this.setState({ progress: this.state.progress + 1 })
       if (this.state.progress >= 10) {
-        this.setState({ hideProgress: 'none' })
+        this.setState({ hideProgress: true })
         clearInterval(p)
       }
     }, 100)
 
     setTimeout(() => {
-      this.setState({ display: 'block' })
+      this.setState({ showContent: true })
     }, 1000)
   }
 
   render() {
-    const { children, meta, title } = this.props,
-      style = { display: this.state.display },
-      style2 = {
-        display: this.state.hideProgress
-      }
+    const { children, meta, title } = this.props
 
     return (
       <StaticQuery
@@ -96,14 +92,15 @@ export default class Layout extends React.Component {
 
               <Nav social={social} />
 
-              <progress
-                className="pageLoad"
-                value={this.state.progress}
-                max="10"
-                style={style2}
-              />
+              {!this.state.hideProgress && (
+                <progress
+                  className="pageLoad"
+                  value={this.state.progress}
+                  max="10"
+                />
+              )}
 
-              <div style={style}>{children}</div>
+              {this.state.showContent && <div>{children}</div>}
 
               {/* <Footer /> */}
             </Fragment>
