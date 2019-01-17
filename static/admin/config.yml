@@ -43,6 +43,12 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Byline, name: byline, widget: string, required: false }
               - { label: Video, name: video, widget: file, required: false }
               - { label: Image, name: image, widget: image, required: false }
+              - {
+                  label: Mobile Image,
+                  name: mobileImage,
+                  widget: image,
+                  required: false,
+                }
 
           - label: 'Section: Intro'
             name: 'sectionIntro'
@@ -128,8 +134,14 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - { label: Byline, name: byline, widget: string, required: false }
-              - { label: Image, name: image, widget: image, required: false }
               - { label: Video, name: video, widget: file, required: false }
+              - { label: Image, name: image, widget: image, required: false }
+              - {
+                  label: Mobile Image,
+                  name: mobileImage,
+                  widget: image,
+                  required: false,
+                }
 
           - label: 'Section: Icons'
             name: 'icons'
@@ -225,6 +237,12 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Byline, name: byline, widget: string, required: false }
               - { label: Video, name: video, widget: file, required: false }
               - { label: Image, name: image, widget: image, required: false }
+              - {
+                  label: Mobile Image,
+                  name: mobileImage,
+                  widget: image,
+                  required: false,
+                }
 
           - label: 'Section: Projects'
             name: 'sectionProjects'
@@ -335,6 +353,12 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Byline, name: byline, widget: string, required: false }
               - { label: Video, name: video, widget: file, required: false }
               - { label: Image, name: image, widget: image, required: false }
+              - {
+                  label: Mobile Image,
+                  name: mobileImage,
+                  widget: image,
+                  required: false,
+                }
 
           - label: 'Meta'
             required: false
@@ -387,6 +411,12 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Byline, name: byline, widget: string, required: false }
           - { label: Video, name: video, widget: file, required: false }
           - { label: Image, name: image, widget: image, required: false }
+          - {
+              label: Mobile Image,
+              name: mobileImage,
+              widget: image,
+              required: false,
+            }
 
       - label: 'Meta'
         required: false

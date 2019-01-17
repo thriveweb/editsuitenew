@@ -6,7 +6,7 @@ preview: 'https://ucarecdn.com/fa7211e1-cbf9-4cb6-b606-93b1aa1556c6/'
 sectionOpener:
   byline: capture the moment
   image: 'https://ucarecdn.com/fa7211e1-cbf9-4cb6-b606-93b1aa1556c6/'
-  mobile: 'https://ucarecdn.com/fa7211e1-cbf9-4cb6-b606-93b1aa1556c6/'
+  mobileImage: 'https://ucarecdn.com/fa7211e1-cbf9-4cb6-b606-93b1aa1556c6/'
   video: ''
 meta:
   description: >-

@@ -3,7 +3,7 @@ sectionOpener:
   title: ''
   image: ''
   video: ''
-  mobile: ''
+  mobileImage: ''
 
 meta:
   canonicalLink: ''

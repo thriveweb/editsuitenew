@@ -116,7 +116,7 @@ export const pageQuery = graphql`
           byline
           video
           image
-          mobile
+          mobileImage
         }
         sectionProjects {
           title
@@ -160,6 +160,7 @@ export const pageQuery = graphql`
             slug
             sectionOpener {
               image
+              mobileImage
             }
           }
         }

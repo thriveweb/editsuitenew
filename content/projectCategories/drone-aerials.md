@@ -6,7 +6,7 @@ preview: 'https://ucarecdn.com/7f9de8db-33bd-4d01-9eb8-a14989bb5bec/'
 sectionOpener:
   byline: high fly'n awe inspiring
   image: 'https://ucarecdn.com/7f9de8db-33bd-4d01-9eb8-a14989bb5bec/'
-  mobile: 'https://ucarecdn.com/7f9de8db-33bd-4d01-9eb8-a14989bb5bec/'
+  mobileImage: 'https://ucarecdn.com/7f9de8db-33bd-4d01-9eb8-a14989bb5bec/'
   video: 'https://ucarecdn.com/a74e3619-7fb0-42d3-9f52-474d6eef47d8/drone_video.mp4'
 meta:
   description: >-

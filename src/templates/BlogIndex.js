@@ -75,7 +75,7 @@ export const pageQuery = graphql`
           byline
           video
           image
-          mobile
+          mobileImage
         }
       }
     }
