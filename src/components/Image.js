@@ -19,9 +19,9 @@ class Image extends React.Component {
     '2000'
   ] // image siezes used for image source sets
 
-  state = {
-    isIntersecting: true
-  }
+  // state = {
+  //   isIntersecting: true
+  // }
 
   // handleIntersection = e => {
   //   if (e.isIntersecting) this.setState({ isIntersecting: true })
@@ -67,9 +67,9 @@ class Image extends React.Component {
         ? ''
         : '-/progressive/yes/-/format/auto/-/resize/' + resolutions + '/'
     }`
-    smallSrc = `${src}${
-      isLocalImg ? '' : '-/progressive/yes/-/format/auto/-/resize/10x/'
-    }`
+    // smallSrc = `${src}${
+    //   isLocalImg ? '' : '-/progressive/yes/-/format/auto/-/resize/10x/'
+    // }`
 
     if (background) {
       return (
@@ -77,11 +77,15 @@ class Image extends React.Component {
         <div
           className={`BackgroundImage absolute ${className}`}
           style={{
-            backgroundImage: `url(${
-              this.state.isIntersecting ? fullSrc : smallSrc
-            })`,
+            backgroundImage: `url(${fullSrc})`,
             backgroundSize
           }}
+          // style={{
+          //   backgroundImage: `url(${
+          //     this.state.isIntersecting ? fullSrc : smallSrc
+          //   })`,
+          //   backgroundSize
+          // }}
         />
         // </Observer>
       )
@@ -91,8 +95,10 @@ class Image extends React.Component {
       // <Observer onChange={this.handleIntersection}>
       <img
         className={`LazyImage ${className}`}
-        src={this.state.isIntersecting ? fullSrc : smallSrc}
-        srcSet={this.state.isIntersecting ? secSet : ''}
+        src={fullSrc}
+        srcSet={secSet}
+        // src={this.state.isIntersecting ? fullSrc : smallSrc}
+        // srcSet={this.state.isIntersecting ? secSet : ''}
         sizes={'100vw'}
         onClick={onClick}
         alt={alt}
