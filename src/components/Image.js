@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Observer from '@researchgate/react-intersection-observer'
+// import Observer from '@researchgate/react-intersection-observer'
 
 import './Image.css'
 
@@ -20,12 +20,12 @@ class Image extends React.Component {
   ] // image siezes used for image source sets
 
   state = {
-    isIntersecting: false
+    isIntersecting: true
   }
 
-  handleIntersection = e => {
-    if (e.isIntersecting) this.setState({ isIntersecting: true })
-  }
+  // handleIntersection = e => {
+  //   if (e.isIntersecting) this.setState({ isIntersecting: true })
+  // }
 
   checkIfIsLocalSrc(src) {
     return typeof src === 'string' && src.includes('ucarecdn.com')
@@ -73,31 +73,31 @@ class Image extends React.Component {
 
     if (background) {
       return (
-        <Observer onChange={this.handleIntersection}>
-          <div
-            className={`BackgroundImage absolute ${className}`}
-            style={{
-              backgroundImage: `url(${
-                this.state.isIntersecting ? fullSrc : smallSrc
-              })`,
-              backgroundSize
-            }}
-          />
-        </Observer>
+        // <Observer onChange={this.handleIntersection}>
+        <div
+          className={`BackgroundImage absolute ${className}`}
+          style={{
+            backgroundImage: `url(${
+              this.state.isIntersecting ? fullSrc : smallSrc
+            })`,
+            backgroundSize
+          }}
+        />
+        // </Observer>
       )
     }
 
     return (
-      <Observer onChange={this.handleIntersection}>
-        <img
-          className={`LazyImage ${className}`}
-          src={this.state.isIntersecting ? fullSrc : smallSrc}
-          srcSet={this.state.isIntersecting ? secSet : ''}
-          sizes={'100vw'}
-          onClick={onClick}
-          alt={alt}
-        />
-      </Observer>
+      // <Observer onChange={this.handleIntersection}>
+      <img
+        className={`LazyImage ${className}`}
+        src={this.state.isIntersecting ? fullSrc : smallSrc}
+        srcSet={this.state.isIntersecting ? secSet : ''}
+        sizes={'100vw'}
+        onClick={onClick}
+        alt={alt}
+      />
+      // </Observer>
     )
   }
 }

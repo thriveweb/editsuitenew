@@ -26,6 +26,7 @@ export default class Layout extends React.Component {
 
     setTimeout(() => {
       this.setState({ showContent: true })
+      console.log(this.state)
     }, 1000)
   }
 
