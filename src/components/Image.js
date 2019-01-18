@@ -1,10 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import Observer from '@researchgate/react-intersection-observer'
+import Observer from './Observer'
 
 import './Image.css'
 
 class Image extends React.Component {
+  constructor(props) {
+    super(props)
+    this.ref = React.createRef()
+  }
+
   imageSizes = [
     '320',
     '450',
@@ -19,16 +24,18 @@ class Image extends React.Component {
     '2000'
   ] // image siezes used for image source sets
 
-  // state = {
-  //   isIntersecting: true
-  // }
+  state = {
+    isIntersecting: false
+  }
 
-  // handleIntersection = e => {
-  //   if (e.isIntersecting) this.setState({ isIntersecting: true })
-  // }
+  handleIntersection = e => {
+    if (e.isIntersecting) {
+      this.setState({ isIntersecting: true })
+    }
+  }
 
   checkIfIsLocalSrc(src) {
-    return typeof src === 'string' && src.includes('ucarecdn.com')
+    return !(typeof src === 'string' && src.includes('ucarecdn.com'))
   }
 
   render() {
@@ -46,6 +53,7 @@ class Image extends React.Component {
     } = this.props
 
     const isLocalImg = this.checkIfIsLocalSrc(src)
+
     /* create source set for images */
     if (!isLocalImg) {
       secSet = this.imageSizes.map(size => {
@@ -67,43 +75,45 @@ class Image extends React.Component {
         ? ''
         : '-/progressive/yes/-/format/auto/-/resize/' + resolutions + '/'
     }`
-    // smallSrc = `${src}${
-    //   isLocalImg ? '' : '-/progressive/yes/-/format/auto/-/resize/10x/'
-    // }`
+    smallSrc = `${src}${
+      isLocalImg ? '' : '-/progressive/yes/-/format/auto/-/resize/10x/'
+    }`
 
     if (background) {
       return (
-        // <Observer onChange={this.handleIntersection}>
-        <div
-          className={`BackgroundImage absolute ${className}`}
-          style={{
-            backgroundImage: `url(${fullSrc})`,
-            backgroundSize
-          }}
-          // style={{
-          //   backgroundImage: `url(${
-          //     this.state.isIntersecting ? fullSrc : smallSrc
-          //   })`,
-          //   backgroundSize
-          // }}
-        />
-        // </Observer>
+        <Observer onChange={this.handleIntersection}>
+          <div
+            ref={this.ref}
+            className={`BackgroundImage absolute ${className}`}
+            // style={{
+            //   backgroundImage: `url(${fullSrc})`,
+            //   backgroundSize
+            // }}
+            style={{
+              backgroundImage: `url(${
+                this.state.isIntersecting ? fullSrc : smallSrc
+              })`,
+              backgroundSize
+            }}
+          />
+        </Observer>
       )
     }
 
     return (
-      // <Observer onChange={this.handleIntersection}>
-      <img
-        className={`LazyImage ${className}`}
-        src={fullSrc}
-        srcSet={secSet}
-        // src={this.state.isIntersecting ? fullSrc : smallSrc}
-        // srcSet={this.state.isIntersecting ? secSet : ''}
-        sizes={'100vw'}
-        onClick={onClick}
-        alt={alt}
-      />
-      // </Observer>
+      <Observer onChange={this.handleIntersection}>
+        <img
+          className={`LazyImage ${className}`}
+          // src={fullSrc}
+          // srcSet={secSet}
+          src={this.state.isIntersecting ? fullSrc : smallSrc}
+          srcSet={this.state.isIntersecting ? secSet : ''}
+          sizes={'100vw'}
+          onClick={onClick}
+          alt={alt}
+          ref={this.ref}
+        />
+      </Observer>
     )
   }
 }
