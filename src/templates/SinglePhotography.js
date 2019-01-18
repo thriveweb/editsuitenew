@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Footer from '../components/Footer'
+import Image from '../components/Image'
 import './SinglePhotography.css'
 
 export class SinglePhotographyTemplate extends React.Component {
@@ -35,7 +36,7 @@ export class SinglePhotographyTemplate extends React.Component {
                   href={item.img}
                   data-options={defaults}
                 >
-                  <img
+                  <Image
                     className="cover"
                     src={item.thumb}
                     alt={title + '-' + index}
