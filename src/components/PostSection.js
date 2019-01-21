@@ -36,6 +36,7 @@ class PostSection extends React.Component {
             <Link className="item" to={item.slug} key={`post-${item.title}`}>
               <div className="post-card flex">
                 <Image
+                  background
                   className="cover"
                   resolutions="small"
                   src={item.featuredImage}

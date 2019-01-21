@@ -18,23 +18,27 @@ export default class Observer extends Component {
     let threshold = this.getCurrentScrollPos() + window.innerHeight
     if (
       !this.isIntersecting &&
+      this.ref.current !== null &&
       ReactDOM.findDOMNode(this.ref.current).getBoundingClientRect().top <=
         threshold
     ) {
       this.isIntersecting = true
       this.props.onChange(this)
       window.removeEventListener('scroll', this.handleScroll)
+      window.removeEventListener('mousewheel', this.handleScroll)
     }
   }
 
   componentDidMount() {
     this.ref = this.props.children.ref
     window.addEventListener('scroll', e => this.handleScroll(e))
+    window.addEventListener('mousewheel', e => this.handleScroll(e))
     this.handleScroll()
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('mousewheel', this.handleScroll)
   }
 
   render() {

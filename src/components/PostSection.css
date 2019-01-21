@@ -10,6 +10,7 @@
 .posts .item .post-card.flex {
   height: 25rem;
   justify-content: center !important;
+  position: relative;
 }
 
 .posts .item .card {
