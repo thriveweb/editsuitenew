@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import ReactDOM from 'react-dom'
 
 import './Opener.css'
@@ -44,6 +44,7 @@ class OpenerVideo extends Component {
   }
 
   componentDidMount() {
+    if (window.innerWidth <= 900) return
     ReactDOM.findDOMNode(this.ref.current).addEventListener('progress', e =>
       this.videoBufferBar(e)
     )
@@ -72,41 +73,46 @@ class OpenerVideo extends Component {
       backgroundImage: 'url(' + poster + ')'
     }
     return (
-      <div className="opener video background-image" style={style}>
-        <video
-          ref={this.ref}
-          data-keepplaying
-          autoPlay
-          loop
-          muted
-          poster={poster}
-        >
-          <source src={src} type="video/mp4" />
-        </video>
-        <div
-          className="progressBarContainer preload"
-          style={{
-            display:
-              this.state.videoBuffer === 0 &&
-              this.state.videoCurrentTime === 0 &&
-              !this.state.videoLoaded
-                ? 'block'
-                : 'none'
-          }}
-        />
-        <div className="progressBarContainer buffer">
-          <div
-            className="progressBar"
-            style={{ width: this.state.videoBuffer * 100 + '%' }}
-          />
-        </div>
-        <div className="progressBarContainer time">
-          <div
-            className="progressBar"
-            style={{ width: this.state.videoCurrentTime * 100 + '%' }}
-          />
-        </div>
-      </div>
+      <Fragment>
+        {console.log(window.innerWidth > 900)}
+        {window.innerWidth > 900 && (
+          <div className="opener video background-image" style={style}>
+            <video
+              ref={this.ref}
+              data-keepplaying
+              autoPlay
+              loop
+              muted
+              poster={poster}
+            >
+              <source src={src} type="video/mp4" />
+            </video>
+            <div
+              className="progressBarContainer preload"
+              style={{
+                display:
+                  this.state.videoBuffer === 0 &&
+                  this.state.videoCurrentTime === 0 &&
+                  !this.state.videoLoaded
+                    ? 'block'
+                    : 'none'
+              }}
+            />
+            <div className="progressBarContainer buffer">
+              <div
+                className="progressBar"
+                style={{ width: this.state.videoBuffer * 100 + '%' }}
+              />
+            </div>
+            <div className="progressBarContainer time">
+              <div
+                className="progressBar"
+                style={{ width: this.state.videoCurrentTime * 100 + '%' }}
+              />
+            </div>
+          </div>
+        )}
+      </Fragment>
     )
   }
 }
