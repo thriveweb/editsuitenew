@@ -18,7 +18,9 @@ export class SingleClientTemplate extends Component {
             <div className="thin">
               <div className="taCenter">
                 <h1>{title}</h1>
-                <Image className="cover" src={logo} alt={_kebabCase(title)} />
+                <div className="relative">
+                  <Image className="cover" src={logo} alt={_kebabCase(title)} />
+                </div>
                 <p>{excerpt}</p>
               </div>
 

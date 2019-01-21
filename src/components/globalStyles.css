@@ -232,7 +232,7 @@ h5,
   padding: 10rem 0;
 }
 
-.half div {
+.half > div {
   width: 48%;
 }
 
@@ -276,18 +276,32 @@ h5,
 }
 
 .items-title .item {
+  position: relative;
   justify-content: center;
 }
 
-.items-title .item span {
+.items-title .item div {
   display: inline-block;
   height: 100%;
   width: 100%;
 }
 
 .items-title .LazyImage {
-  opacity: 0.4;
   transition: 0.5s ease all;
+}
+
+.items-title .Lazy--Wrap::after {
+  position: absolute;
+  content: '';
+  display: block;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .items-title .item:hover .LazyImage {
@@ -313,11 +327,12 @@ h5,
 }
 
 .items-expand .item {
+  position: relative;
   justify-content: center;
   cursor: pointer;
 }
 
-.items-expand .item span {
+.items-expand .item div {
   width: 100%;
   height: 100%;
 }
@@ -548,6 +563,11 @@ a.back:before {
   z-index: -99;
 }
 
+.map {
+  height: 30rem;
+  position: relative;
+}
+
 /* --- responsive --- */
 
 @media screen and (max-width: 1110px) {
@@ -578,7 +598,7 @@ a.back:before {
     display: block;
   }
 
-  .half div {
+  .half > div {
     width: 100%;
     margin-bottom: 4rem;
   }

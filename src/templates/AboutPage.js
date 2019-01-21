@@ -72,7 +72,7 @@ export class AboutPageTemplate extends React.Component {
                   subtitle={sectionBlurb.subtitle}
                 />
                 <div className="flex half">
-                  <div>
+                  <div className="map">
                     <Image
                       src={sectionBlurb.image}
                       alt={title}

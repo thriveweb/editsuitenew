@@ -95,10 +95,19 @@ class Image extends React.Component {
       <Fragment>
         {isUploadcare && lazy && (
           <Observer onChange={this.handleIntersection}>
-            <span ref={this.ref}>
+            <div
+              className="Lazy--Wrap BackgroundImage"
+              ref={this.ref}
+              style={{
+                backgroundImage: `url(${smallSrc})`,
+                backgroundSize: 'cover'
+              }}
+            >
               {!background && (
                 <img
-                  className={`LazyImage ${className}`}
+                  className={`LazyImage ${
+                    className + this.state.isIntersecting ? ' faded' : ''
+                  }`}
                   src={this.state.isIntersecting ? fullSrc : smallSrc}
                   srcSet={this.state.isIntersecting ? secSet : ''}
                   sizes={'100vw'}
@@ -108,11 +117,13 @@ class Image extends React.Component {
               )}
               {background && (
                 <div
-                  className={`BackgroundImage absolute ${className}`}
+                  className={`LazyImage BackgroundImage ${
+                    className + this.state.isIntersecting ? ' faded' : ''
+                  }`}
                   style={style}
                 />
               )}
-            </span>
+            </div>
           </Observer>
         )}
         {fullImage && (
@@ -125,7 +136,7 @@ class Image extends React.Component {
             )}
             {!background && (
               <img
-                className={`LazyImage ${className}`}
+                className={`${className}`}
                 src={fullSrc}
                 srcSet={secSet}
                 sizes={'100vw'}

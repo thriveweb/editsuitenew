@@ -26,19 +26,25 @@ export default class Observer extends Component {
       this.props.onChange(this)
       window.removeEventListener('scroll', this.handleScroll)
       window.removeEventListener('mousewheel', this.handleScroll)
+      window.removeEventListener('wheel', this.handleScroll)
     }
   }
 
   componentDidMount() {
     this.ref = this.props.children.ref
+    this.handleScroll()
+    setTimeout(() => {
+      this.handleScroll()
+    }, 1000)
     window.addEventListener('scroll', e => this.handleScroll(e))
     window.addEventListener('mousewheel', e => this.handleScroll(e))
-    this.handleScroll()
+    window.addEventListener('wheel', e => this.handleScroll(e))
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
     window.removeEventListener('mousewheel', this.handleScroll)
+    window.removeEventListener('wheel', this.handleScroll)
   }
 
   render() {
