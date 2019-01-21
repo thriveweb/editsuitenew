@@ -61,6 +61,7 @@ class OpenerVideo extends Component {
   }
 
   componentWillUnmount() {
+    if (window.innerWidth <= 900) return
     ReactDOM.findDOMNode(this.ref.current).removeEventListener(
       'progress',
       this.videoBufferBar
