@@ -75,7 +75,6 @@ class OpenerVideo extends Component {
     }
     return (
       <Fragment>
-        {console.log(window.innerWidth > 900)}
         {window.innerWidth > 900 && (
           <div className="opener video background-image" style={style}>
             <video
