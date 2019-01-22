@@ -14,30 +14,16 @@
   height: 22.5rem;
 }
 
-.photography-single .wide .item img {
+.photography-single .wide .item .Lazy--Wrap {
   height: 18rem;
   margin-bottom: 0.5rem;
   align-self: flex-start;
 }
 
-.fancybox-container {
-  z-index: 200000000 !important;
-}
-
-.fancybox-bg {
-  background: black !important;
-}
-
-.fancybox-container .fancybox-button--thumbs,
-.fancybox-container .fancybox-button--play,
-.fancybox-container .fancybox-button--zoom {
-  display: none !important;
-}
-
-.fancybox-container button {
-  background: white;
-}
-
-.fancybox-container .fancybox-button svg {
-  color: black;
+.Gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

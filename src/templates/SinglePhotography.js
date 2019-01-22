@@ -4,15 +4,20 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Footer from '../components/Footer'
 import Image from '../components/Image'
+import Lightbox from 'react-image-lightbox'
+import 'react-image-lightbox/style.css'
 import './SinglePhotography.css'
 
 export class SinglePhotographyTemplate extends React.Component {
+  state = {
+    photoIndex: 0,
+    isOpen: false
+  }
+
   render() {
-    const { title, excerpt, imageList } = this.props
-    var defaults = {
-      buttons: ['close'],
-      arrows: false
-    }
+    const { title, excerpt, imageList } = this.props,
+      { photoIndex, isOpen } = this.state,
+      images = imageList.map(item => item.thumb)
 
     return (
       <Fragment>
@@ -31,21 +36,36 @@ export class SinglePhotographyTemplate extends React.Component {
               {imageList.map((item, index) => (
                 <div
                   className="item flex"
-                  data-fancybox="gallery"
                   key={title + index}
-                  href={item.img}
-                  data-options={defaults}
+                  onClick={() =>
+                    this.setState({ isOpen: true, photoIndex: index })
+                  }
                 >
-                  <Image
-                    className="cover"
-                    src={item.thumb}
-                    alt={title + '-' + index}
-                  />
+                  <Image resolutions="small" src={item.thumb} alt={title} />
                   {!!item.blurb && <p>{item.blurb}</p>}
                 </div>
               ))}
             </div>
           </div>
+
+          {isOpen && (
+            <Lightbox
+              mainSrc={images[photoIndex]}
+              nextSrc={images[(photoIndex + 1) % images.length]}
+              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+              onCloseRequest={() => this.setState({ isOpen: false })}
+              onMovePrevRequest={() =>
+                this.setState({
+                  photoIndex: (photoIndex + images.length - 1) % images.length
+                })
+              }
+              onMoveNextRequest={() =>
+                this.setState({
+                  photoIndex: (photoIndex + 1) % images.length
+                })
+              }
+            />
+          )}
         </div>
         <Footer />
       </Fragment>
