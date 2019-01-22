@@ -36,16 +36,15 @@ export class SinglePhotographyTemplate extends React.Component {
         .then(
           result => {
             const newImage = {
-              src: img.thumb,
-              title: img.blurb,
-              w: result.width,
-              h: result.height
-            }
+                src: img.thumb,
+                title: img.blurb,
+                w: result.width,
+                h: result.height
+              },
+              newImagesArr = [...this.state.images]
+            newImagesArr[i] = newImage
             this.setState({
-              images:
-                this.state.images.length > 0
-                  ? [...this.state.images, newImage]
-                  : [newImage]
+              images: newImagesArr
             })
             if (loopCount === maxCount) {
               this.setState({ loaded: true })
