@@ -32,6 +32,11 @@ body {
   touch-action: none;
 }
 
+.ReactModal__Body--open #___gatsby > div {
+  overflow: hidden;
+  height: calc(100vh -10rem);
+}
+
 progress.pageLoad {
   position: absolute;
   width: 100%;
