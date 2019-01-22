@@ -4,35 +4,63 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Footer from '../components/Footer'
 import Image from '../components/Image'
-import Lightbox from 'react-image-lightbox'
-import 'react-image-lightbox/style.css'
+import { PhotoSwipe } from 'react-photoswipe'
 import './SinglePhotography.css'
+import 'react-photoswipe/lib/photoswipe.css'
 
 export class SinglePhotographyTemplate extends React.Component {
   state = {
-    photoIndex: 0,
+    loaded: false,
     isOpen: false,
-    bodyOverflow: ''
-  }
-
-  open(index) {
-    this.setState({
-      isOpen: true,
-      photoIndex: index,
-      bodyOverflow: document.body.style.overflow
-    })
-    document.body.style.overflow = 'hidden'
+    images: [],
+    index: 0
   }
 
   close() {
-    document.body.style.overflow = this.state.bodyOverflow
-    this.setState({ isOpen: false, bodyOverflow: '' })
+    this.setState({ isOpen: false })
+  }
+
+  open(index) {
+    this.setState({ isOpen: true, index: index })
+  }
+
+  componentDidMount() {
+    const { imageList } = this.props,
+      maxCount = imageList.length
+    let loopCount = 1
+
+    for (let i in imageList) {
+      const img = imageList[i]
+      fetch(img.thumb + '-/json/')
+        .then(res => res.json())
+        .then(
+          result => {
+            const newImage = {
+              src: img.thumb,
+              title: img.blurb,
+              w: result.width,
+              h: result.height
+            }
+            this.setState({
+              images:
+                this.state.images.length > 0
+                  ? [...this.state.images, newImage]
+                  : [newImage]
+            })
+            if (loopCount === maxCount) {
+              this.setState({ loaded: true })
+            }
+            loopCount++
+          },
+          error => {
+            console.log(error)
+          }
+        )
+    }
   }
 
   render() {
-    const { title, excerpt, imageList } = this.props,
-      { photoIndex, isOpen } = this.state,
-      images = imageList.map(item => item.thumb)
+    const { title, excerpt, imageList } = this.props
 
     return (
       <Fragment>
@@ -61,22 +89,14 @@ export class SinglePhotographyTemplate extends React.Component {
             </div>
           </div>
 
-          {isOpen && (
-            <Lightbox
-              mainSrc={images[photoIndex]}
-              nextSrc={images[(photoIndex + 1) % images.length]}
-              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-              onCloseRequest={() => this.close()}
-              onMovePrevRequest={() =>
-                this.setState({
-                  photoIndex: (photoIndex + images.length - 1) % images.length
-                })
-              }
-              onMoveNextRequest={() =>
-                this.setState({
-                  photoIndex: (photoIndex + 1) % images.length
-                })
-              }
+          {this.state.loaded && this.state.images.length > 0 && (
+            <PhotoSwipe
+              isOpen={this.state.isOpen}
+              items={this.state.images}
+              options={{
+                index: this.state.index
+              }}
+              onClose={() => this.close()}
             />
           )}
         </div>
