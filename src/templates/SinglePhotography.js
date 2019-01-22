@@ -11,7 +11,22 @@ import './SinglePhotography.css'
 export class SinglePhotographyTemplate extends React.Component {
   state = {
     photoIndex: 0,
-    isOpen: false
+    isOpen: false,
+    bodyOverflow: ''
+  }
+
+  open(index) {
+    this.setState({
+      isOpen: true,
+      photoIndex: index,
+      bodyOverflow: document.body.style.overflow
+    })
+    document.body.style.overflow = 'hidden'
+  }
+
+  close() {
+    document.body.style.overflow = this.state.bodyOverflow
+    this.setState({ isOpen: false, bodyOverflow: '' })
   }
 
   render() {
@@ -37,9 +52,7 @@ export class SinglePhotographyTemplate extends React.Component {
                 <div
                   className="item flex"
                   key={title + index}
-                  onClick={() =>
-                    this.setState({ isOpen: true, photoIndex: index })
-                  }
+                  onClick={() => this.open(index)}
                 >
                   <Image resolutions="small" src={item.thumb} alt={title} />
                   {!!item.blurb && <p>{item.blurb}</p>}
@@ -53,7 +66,7 @@ export class SinglePhotographyTemplate extends React.Component {
               mainSrc={images[photoIndex]}
               nextSrc={images[(photoIndex + 1) % images.length]}
               prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-              onCloseRequest={() => this.setState({ isOpen: false })}
+              onCloseRequest={() => this.close()}
               onMovePrevRequest={() =>
                 this.setState({
                   photoIndex: (photoIndex + images.length - 1) % images.length
