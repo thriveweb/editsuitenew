@@ -16,8 +16,7 @@ export class SinglePhotographyTemplate extends React.Component {
     index: 0
   }
 
-  close(e) {
-    e.preventDefault()
+  close() {
     this.setState({ isOpen: false })
   }
 
