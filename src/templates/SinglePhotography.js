@@ -18,6 +18,7 @@ export class SinglePhotographyTemplate extends React.Component {
   open(index) {
     this.setState({
       isOpen: true,
+<<<<<<< HEAD
       photoIndex: index,
       bodyOverflow: document.body.style.overflow
     })
@@ -26,6 +27,13 @@ export class SinglePhotographyTemplate extends React.Component {
 
   close() {
     document.body.style.overflow = this.state.bodyOverflow
+=======
+      photoIndex: index
+    })
+  }
+
+  close() {
+>>>>>>> 40c2254fab13e55aeaca359408662fbc22bcbc12
     this.setState({ isOpen: false, bodyOverflow: '' })
   }
 
