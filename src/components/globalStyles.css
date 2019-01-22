@@ -26,6 +26,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.ReactModal__Body--open {
+  overflow: hidden;
+  pointer-events: none;
+  touch-action: none;
+}
+
 progress.pageLoad {
   position: absolute;
   width: 100%;

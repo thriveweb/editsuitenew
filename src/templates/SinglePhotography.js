@@ -18,14 +18,11 @@ export class SinglePhotographyTemplate extends React.Component {
   open(index) {
     this.setState({
       isOpen: true,
-      photoIndex: index,
-      bodyOverflow: document.body.style.overflow
+      photoIndex: index
     })
-    document.body.style.overflow = 'hidden'
   }
 
   close() {
-    document.body.style.overflow = this.state.bodyOverflow
     this.setState({ isOpen: false, bodyOverflow: '' })
   }
 
