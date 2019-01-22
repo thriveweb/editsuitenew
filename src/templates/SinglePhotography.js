@@ -16,7 +16,8 @@ export class SinglePhotographyTemplate extends React.Component {
     index: 0
   }
 
-  close() {
+  close(e) {
+    e.preventDefault()
     this.setState({ isOpen: false })
   }
 
@@ -96,7 +97,7 @@ export class SinglePhotographyTemplate extends React.Component {
               options={{
                 index: this.state.index
               }}
-              onClose={() => this.close()}
+              onClose={e => this.close(e)}
             />
           )}
         </div>
