@@ -93,7 +93,8 @@ export class SinglePhotographyTemplate extends React.Component {
               isOpen={this.state.isOpen}
               items={this.state.images}
               options={{
-                index: this.state.index
+                index: this.state.index,
+                history: false
               }}
               onClose={e => this.close(e)}
             />
