@@ -348,6 +348,8 @@ h5,
   opacity: 0;
   z-index: 10;
   transition: 0.5s ease all;
+  transform: translateY(-50%);
+  top: 9rem;
 }
 
 .items-expand .item:hover:after {
